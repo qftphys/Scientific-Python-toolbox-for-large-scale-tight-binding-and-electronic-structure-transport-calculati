@@ -99,6 +99,7 @@ tar xfz $tmpdir/html.tar.gz
 mv $tmpdir/coverage.txt .
 
 # Add everything (including updated tag)
+git add .buildinfo
 git add * docs/doc.tag
 git commit -s -m "Released documentation of $tag"
 
