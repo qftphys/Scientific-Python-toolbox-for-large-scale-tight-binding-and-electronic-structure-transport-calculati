@@ -1,0 +1,471 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sids.grid module</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="None" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> sids
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0..
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+<ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">sids</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>sids.grid module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/sids.grid.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-sids.grid">
+<span id="sids-grid-module"></span><h1>sids.grid module<a class="headerlink" href="#module-sids.grid" title="Permalink to this headline">¶</a></h1>
+<p>Define a grid</p>
+<p>This grid is the basis of different used models.</p>
+<dl class="class">
+<dt id="sids.grid.Grid">
+<em class="property">class </em><code class="descclassname">sids.grid.</code><code class="descname">Grid</code><span class="sig-paren">(</span><em>size=array([0, 0, 0], dtype=int32), bc=1, sc=None, dtype=&lt;type 'numpy.float64'&gt;, geom=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCellChild" title="sids.supercell.SuperCellChild"><code class="xref py py-class docutils literal"><span class="pre">sids.supercell.SuperCellChild</span></code></a></p>
+<p>Object to retain grid information</p>
+<p>This grid object handles cell vectors and divisions of said grid.</p>
+<p>A grid can be periodic and non-periodic.</p>
+<dl class="attribute">
+<dt id="sids.grid.Grid.Dirichlet">
+<code class="descname">Dirichlet</code><em class="property"> = 3</em><a class="headerlink" href="#sids.grid.Grid.Dirichlet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sids.grid.Grid.Neumann">
+<code class="descname">Neumann</code><em class="property"> = 2</em><a class="headerlink" href="#sids.grid.Grid.Neumann" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sids.grid.Grid.Periodic">
+<code class="descname">Periodic</code><em class="property"> = 1</em><a class="headerlink" href="#sids.grid.Grid.Periodic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>other</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appends other <cite>Grid</cite> to this grid along axis</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.average">
+<code class="descname">average</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.average" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the average grid along direction <cite>axis</cite></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.cross_section">
+<code class="descname">cross_section</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.cross_section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes a cross-section of the grid along axis <cite>axis</cite></p>
+<p>Remark: This API entry might change to handle arbitrary
+cuts via rotation of the axis</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.grid.Grid.dcell">
+<code class="descname">dcell</code><a class="headerlink" href="#sids.grid.Grid.dcell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the delta-cell</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.grid.Grid.dvol">
+<code class="descname">dvol</code><a class="headerlink" href="#sids.grid.Grid.dvol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the delta-volume</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.index">
+<code class="descname">index</code><span class="sig-paren">(</span><em>coord</em>, <em>axis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the index along the axis <cite>axis</cite> where <cite>coord</cite> exists</p>
+<dl class="docutils">
+<dt>coord <span class="classifier-delimiter">:</span> <span class="classifier">array_like / float</span></dt>
+<dd>the coordinate of the axis</dd>
+<dt>axis <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>the axis direction of the index</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.interp">
+<code class="descname">interp</code><span class="sig-paren">(</span><em>size</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.interp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an interpolated version of the grid</p>
+<dl class="docutils">
+<dt>size <span class="classifier-delimiter">:</span> <span class="classifier">int, array_like</span></dt>
+<dd>the new size of the grid</dd>
+<dt><a href="#id1"><span class="problematic" id="id2">*</span></a>args, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs <span class="classifier-delimiter">:</span> <span class="classifier"></span></dt>
+<dd>optional arguments passed to the interpolation algorithm
+The interpolation routine is <cite>scipy.interpolate.interpn</cite></dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.mean">
+<code class="descname">mean</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.mean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the average grid along direction <cite>axis</cite></p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sids.grid.Grid.read">
+<em class="property">static </em><code class="descname">read</code><span class="sig-paren">(</span><em>sile</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads grid from the <code class="docutils literal"><span class="pre">Sile</span></code> using <code class="docutils literal"><span class="pre">sile.read_grid</span></code></p>
+<dl class="docutils">
+<dt>sile <span class="classifier-delimiter">:</span> <span class="classifier">Sile, str</span></dt>
+<dd>a <code class="docutils literal"><span class="pre">Sile</span></code> object which will be used to read the grid
+if it is a string it will create a new sile using <code class="docutils literal"><span class="pre">get_sile</span></code>.</dd>
+</dl>
+<ul class="simple">
+<li>: args passed directly to <cite>read_grid(,**)</cite></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.remove">
+<code class="descname">remove</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes certain indices from a specified axis.</p>
+<p>Works exactly opposite to <cite>sub</cite>.</p>
+<dl class="docutils">
+<dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
+<dd>the indices of the grid axis <cite>axis</cite> to be removed</dd>
+<dt>axis <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>the axis segment from which we remove all indices <cite>idx</cite></dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.remove_part">
+<code class="descname">remove_part</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em>, <em>above</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.remove_part" title="Permalink to this definition">¶</a></dt>
+<dd><p>Removes parts of the grid via above/below designations.</p>
+<p>Works exactly opposite to <cite>sub_part</cite></p>
+<dl class="docutils">
+<dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
+<dd>the indices of the grid axis <cite>axis</cite> to be removed
+for <cite>above=True</cite> grid[:idx,...]
+for <cite>above=False</cite> grid[idx:,...]</dd>
+<dt>axis <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>the axis segment from which we retain the indices <cite>idx</cite></dd>
+<dt>above: bool</dt>
+<dd><dl class="first last docutils">
+<dt>if <cite>True</cite> will retain the grid:</dt>
+<dd><cite>grid[:idx,...]</cite></dd>
+<dt>else it will retain the grid:</dt>
+<dd><cite>grid[idx:,...]</cite></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.set_bc">
+<code class="descname">set_bc</code><span class="sig-paren">(</span><em>boundary=None</em>, <em>a=None</em>, <em>b=None</em>, <em>c=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.set_bc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the boundary conditions on the grid
+boundary: [3], integer, optional</p>
+<blockquote>
+<div>boundary condition for all boundaries (or the same for all)</div></blockquote>
+<dl class="docutils">
+<dt>a: integer, optional</dt>
+<dd>boundary condition for the first unit-cell vector direction</dd>
+<dt>b: integer, optional</dt>
+<dd>boundary condition for the second unit-cell vector direction</dd>
+<dt>c: integer, optional</dt>
+<dd>boundary condition for the third unit-cell vector direction</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.set_boundary">
+<code class="descname">set_boundary</code><span class="sig-paren">(</span><em>boundary=None</em>, <em>a=None</em>, <em>b=None</em>, <em>c=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.set_boundary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the boundary conditions on the grid
+boundary: [3], integer, optional</p>
+<blockquote>
+<div>boundary condition for all boundaries (or the same for all)</div></blockquote>
+<dl class="docutils">
+<dt>a: integer, optional</dt>
+<dd>boundary condition for the first unit-cell vector direction</dd>
+<dt>b: integer, optional</dt>
+<dd>boundary condition for the second unit-cell vector direction</dd>
+<dt>c: integer, optional</dt>
+<dd>boundary condition for the third unit-cell vector direction</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.set_boundary_condition">
+<code class="descname">set_boundary_condition</code><span class="sig-paren">(</span><em>boundary=None</em>, <em>a=None</em>, <em>b=None</em>, <em>c=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.set_boundary_condition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the boundary conditions on the grid
+boundary: [3], integer, optional</p>
+<blockquote>
+<div>boundary condition for all boundaries (or the same for all)</div></blockquote>
+<dl class="docutils">
+<dt>a: integer, optional</dt>
+<dd>boundary condition for the first unit-cell vector direction</dd>
+<dt>b: integer, optional</dt>
+<dd>boundary condition for the second unit-cell vector direction</dd>
+<dt>c: integer, optional</dt>
+<dd>boundary condition for the third unit-cell vector direction</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.set_geom">
+<code class="descname">set_geom</code><span class="sig-paren">(</span><em>geom</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.set_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the <cite>Geometry</cite> for the grid.</p>
+<p>Setting the <cite>Geometry</cite> for the grid is a possibility
+to attach atoms to the grid.</p>
+<p>It is not a necessary entity.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.set_grid">
+<code class="descname">set_grid</code><span class="sig-paren">(</span><em>size</em>, <em>dtype=&lt;type 'numpy.float64'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.set_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create the internal grid of certain size.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.grid.Grid.size">
+<code class="descname">size</code><a class="headerlink" href="#sids.grid.Grid.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns size of the grid</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.sub">
+<code class="descname">sub</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retains certain indices from a specified axis.</p>
+<p>Works exactly opposite to <cite>remove</cite>.</p>
+<dl class="docutils">
+<dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
+<dd>the indices of the grid axis <cite>axis</cite> to be retained</dd>
+<dt>axis <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>the axis segment from which we retain the indices <cite>idx</cite></dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.sub_part">
+<code class="descname">sub_part</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em>, <em>above</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.sub_part" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retains parts of the grid via above/below designations.</p>
+<p>Works exactly opposite to <cite>remove_part</cite></p>
+<dl class="docutils">
+<dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
+<dd>the indices of the grid axis <cite>axis</cite> to be retained
+for <cite>above=True</cite> grid[idx:,...]
+for <cite>above=False</cite> grid[:idx,...]</dd>
+<dt>axis <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>the axis segment from which we retain the indices <cite>idx</cite></dd>
+<dt>above: bool</dt>
+<dd><dl class="first last docutils">
+<dt>if <cite>True</cite> will retain the grid:</dt>
+<dd><cite>grid[idx:,...]</cite></dd>
+<dt>else it will retain the grid:</dt>
+<dd><cite>grid[:idx,...]</cite></dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.sum">
+<code class="descname">sum</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.sum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the grid summed along axis <cite>axis</cite>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.swapaxes">
+<code class="descname">swapaxes</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.swapaxes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Grid with swapped axis</p>
+<p>If <code class="docutils literal"><span class="pre">swapaxes(0,1)</span></code> it returns the 0 in the 1 values.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.grid.Grid.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>sile</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes grid to the <code class="docutils literal"><span class="pre">Sile</span></code> using <code class="docutils literal"><span class="pre">sile.write_grid</span></code></p>
+<dl class="docutils">
+<dt>sile <span class="classifier-delimiter">:</span> <span class="classifier">Sile, str</span></dt>
+<dd>a <code class="docutils literal"><span class="pre">Sile</span></code> object which will be used to write the grid
+if it is a string it will create a new sile using <code class="docutils literal"><span class="pre">get_sile</span></code></dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Nick R. Papior.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.4.3
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

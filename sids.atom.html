@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sids.atom module</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="None" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> sids
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0..
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+<ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">sids</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>sids.atom module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/sids.atom.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-sids.atom">
+<span id="sids-atom-module"></span><h1>sids.atom module<a class="headerlink" href="#module-sids.atom" title="Permalink to this headline">¶</a></h1>
+<p>Class for retaining information about a single atom</p>
+<dl class="class">
+<dt id="sids.atom.PeriodicTable">
+<em class="property">class </em><code class="descclassname">sids.atom.</code><code class="descname">PeriodicTable</code><a class="headerlink" href="#sids.atom.PeriodicTable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Basic periodic table.</p>
+<p>It retains all periodic elements and allows easy conversion
+from full names to the atomic number to their weights.</p>
+<dl class="method">
+<dt id="sids.atom.PeriodicTable.Z">
+<code class="descname">Z</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.PeriodicTable.Z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the atomic number
+Return the atomic number corresponding to the <cite>key</cite> lookup.</p>
+<dl class="docutils">
+<dt>key <span class="classifier-delimiter">:</span> <span class="classifier">array_like, str, int</span></dt>
+<dd>Uses value to lookup the atomic number in the <cite>PeriodicTable</cite>
+object.</dd>
+</dl>
+<dl class="docutils">
+<dt>Z <span class="classifier-delimiter">:</span> <span class="classifier">ndarray, int</span></dt>
+<dd>The atomic number corresponding to <cite>key</cite>, if <cite>key</cite> is array_like, so
+will the returned value be.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.atom.PeriodicTable.Z_int">
+<code class="descname">Z_int</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.PeriodicTable.Z_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the atomic number
+Return the atomic number corresponding to the <cite>key</cite> lookup.</p>
+<dl class="docutils">
+<dt>key <span class="classifier-delimiter">:</span> <span class="classifier">array_like, str, int</span></dt>
+<dd>Uses value to lookup the atomic number in the <cite>PeriodicTable</cite>
+object.</dd>
+</dl>
+<dl class="docutils">
+<dt>Z <span class="classifier-delimiter">:</span> <span class="classifier">ndarray, int</span></dt>
+<dd>The atomic number corresponding to <cite>key</cite>, if <cite>key</cite> is array_like, so
+will the returned value be.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.atom.PeriodicTable.Z_short">
+<code class="descname">Z_short</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.PeriodicTable.Z_short" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the atomic short name
+Return the atomic short name corresponding to the <cite>key</cite> lookup.</p>
+<dl class="docutils">
+<dt>key <span class="classifier-delimiter">:</span> <span class="classifier">array_like, str, int</span></dt>
+<dd>Uses value to lookup the atomic short name in the 
+<cite>PeriodicTable</cite> object.</dd>
+</dl>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">ndarray, str</span></dt>
+<dd>The atomic short name corresponding to <cite>key</cite>, if <cite>key</cite> is array_like, so
+will the returned value be.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.atom.PeriodicTable.atomic_mass">
+<code class="descname">atomic_mass</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.PeriodicTable.atomic_mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the atomic mass
+Return the atomic mass corresponding to the <cite>key</cite> lookup.</p>
+<dl class="docutils">
+<dt>key <span class="classifier-delimiter">:</span> <span class="classifier">array_like, str, int</span></dt>
+<dd>Uses value to lookup the atomic mass in the 
+<cite>PeriodicTable</cite> object.</dd>
+</dl>
+<dl class="docutils">
+<dt>name <span class="classifier-delimiter">:</span> <span class="classifier">ndarray, float</span></dt>
+<dd>The atomic mass in atomic units corresponding to <cite>key</cite>, if <cite>key</cite> is array_like, so
+will the returned value be.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.atom.PeriodicTable.radii">
+<code class="descname">radii</code><span class="sig-paren">(</span><em>key</em>, <em>radii='calc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.PeriodicTable.radii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the atomic radii
+Return the atomic radii.</p>
+<dl class="docutils">
+<dt>key <span class="classifier-delimiter">:</span> <span class="classifier">array_like, str, int</span></dt>
+<dd>Uses value to lookup the atomic mass in the 
+<cite>PeriodicTable</cite> object.</dd>
+<dt>radii <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd><dl class="first last docutils">
+<dt>There are 3 different radii stored:</dt>
+<dd><ol class="first last arabic simple">
+<li><cite>calc</cite>, the calculated</li>
+<li><cite>empirical</cite>, the empirically found values</li>
+<li><cite>vdw</cite>, the van der Waals  found values</li>
+</ol>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="docutils">
+<dt>radii <span class="classifier-delimiter">:</span> <span class="classifier">ndarray, float</span></dt>
+<dd>The atomic radii in <cite>Ang</cite></dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.atom.Atom">
+<em class="property">class </em><code class="descclassname">sids.atom.</code><code class="descname">Atom</code><span class="sig-paren">(</span><em>Z</em>, <em>R=-1.0</em>, <em>orbs=1</em>, <em>mass=None</em>, <em>tag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.Atom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Object to handle atomic mass, name, number of orbitals and 
+orbital range.</p>
+<p>The <cite>Atom</cite> object handles the atomic species with information
+such as
+- atomic number
+- mass
+- number of orbitals
+- radius of each orbital</p>
+<dl class="docutils">
+<dt>Z <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>atomic number</dd>
+<dt>R <span class="classifier-delimiter">:</span> <span class="classifier">ndarray</span></dt>
+<dd>radius of orbitals belonging to the <cite>Atom</cite></dd>
+<dt>orbs <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>number of orbitals belonging to the <cite>Atom</cite></dd>
+<dt>mass <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>mass of <cite>Atom</cite></dd>
+</dl>
+<dl class="docutils">
+<dt>Z <span class="classifier-delimiter">:</span> <span class="classifier">int, str</span></dt>
+<dd>key lookup for the atomic specie, <cite>Atom[key]</cite></dd>
+<dt>R <span class="classifier-delimiter">:</span> <span class="classifier">array_like, float</span></dt>
+<dd>the range of the atomic orbitals</dd>
+<dt>orbs <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>number of orbitals attached to this atom
+NOTE: Length of <cite>R</cite> precedes this quantity.</dd>
+<dt>mass <span class="classifier-delimiter">:</span> <span class="classifier">float, optional</span></dt>
+<dd>the atomic mass, if not specified uses the mass from <cite>PeriodicTable</cite></dd>
+<dt>tag <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
+<dd>arbitrary designation for user handling similar atoms with
+different settings</dd>
+</dl>
+<dl class="method">
+<dt id="sids.atom.Atom.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.Atom.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return copy of this object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.atom.Atom.dR">
+<code class="descname">dR</code><a class="headerlink" href="#sids.atom.Atom.dR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the maximum range of orbitals.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.atom.Atom.radii">
+<code class="descname">radii</code><span class="sig-paren">(</span><em>radii='calc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.Atom.radii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the atomic radii of the atom (in Ang)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.atom.Atom.symbol">
+<code class="descname">symbol</code><a class="headerlink" href="#sids.atom.Atom.symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return short atomic name.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Nick R. Papior.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.4.3
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

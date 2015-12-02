@@ -1,0 +1,7 @@
+sids.geom.special module
+========================
+
+.. automodule:: sids.geom.special
+    :members:
+    :undoc-members:
+    :show-inheritance:

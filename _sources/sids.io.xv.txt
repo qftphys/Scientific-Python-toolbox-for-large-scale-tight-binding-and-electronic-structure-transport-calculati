@@ -1,0 +1,7 @@
+sids.io.xv module
+=================
+
+.. automodule:: sids.io.xv
+    :members:
+    :undoc-members:
+    :show-inheritance:

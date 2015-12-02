@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sids.io.sile module</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="None" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> sids
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0..
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+<ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">sids</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>sids.io.sile module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/sids.io.sile.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-sids.io.sile">
+<span id="sids-io-sile-module"></span><h1>sids.io.sile module<a class="headerlink" href="#module-sids.io.sile" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sids.io.sile.BaseSile">
+<em class="property">class </em><code class="descclassname">sids.io.sile.</code><code class="descname">BaseSile</code><a class="headerlink" href="#sids.io.sile.BaseSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Base class for the Siles</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.sile.Sile">
+<em class="property">class </em><code class="descclassname">sids.io.sile.</code><code class="descname">Sile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.sile.Sile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#sids.io.sile.BaseSile" title="sids.io.sile.BaseSile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.BaseSile</span></code></a></p>
+<p>Class to contain a file with easy access</p>
+<dl class="staticmethod">
+<dt id="sids.io.sile.Sile.line_has_key">
+<em class="property">static </em><code class="descname">line_has_key</code><span class="sig-paren">(</span><em>line</em>, <em>keyword</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.sile.Sile.line_has_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sids.io.sile.Sile.readline">
+<code class="descname">readline</code><span class="sig-paren">(</span><em>comment=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.sile.Sile.readline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the next line of the file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.sile.Sile.step_to">
+<code class="descname">step_to</code><span class="sig-paren">(</span><em>keyword</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.sile.Sile.step_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steps the file-handle until the keyword is found in the input</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.sile.Sile.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.sile.Sile.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for the file-handle write statement</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.sile.NCSile">
+<em class="property">class </em><code class="descclassname">sids.io.sile.</code><code class="descname">NCSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.sile.NCSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#sids.io.sile.BaseSile" title="sids.io.sile.BaseSile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.BaseSile</span></code></a></p>
+<p>Class to contain a file with easy access
+The file format for this file is the NetCDF file format</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="sids.io.sile.SileError">
+<em class="property">exception </em><code class="descclassname">sids.io.sile.</code><code class="descname">SileError</code><span class="sig-paren">(</span><em>value</em>, <em>obj=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.sile.SileError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.IOError</span></code></p>
+<p>Define an error object related to the Sile objects</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sids.io.sile.sile_raise_write">
+<code class="descclassname">sids.io.sile.</code><code class="descname">sile_raise_write</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.sile.sile_raise_write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sids.io.sile.sile_raise_read">
+<code class="descclassname">sids.io.sile.</code><code class="descname">sile_raise_read</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.sile.sile_raise_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Nick R. Papior.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.4.3
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

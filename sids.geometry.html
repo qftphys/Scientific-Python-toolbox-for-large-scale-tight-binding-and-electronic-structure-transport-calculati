@@ -1,0 +1,807 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sids.geometry module</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="None" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> sids
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0..
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+<ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">sids</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>sids.geometry module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/sids.geometry.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-sids.geometry">
+<span id="sids-geometry-module"></span><h1>sids.geometry module<a class="headerlink" href="#module-sids.geometry" title="Permalink to this headline">¶</a></h1>
+<p>Geometry class to retain the atomic structure.</p>
+<dl class="class">
+<dt id="sids.geometry.Geometry">
+<em class="property">class </em><code class="descclassname">sids.geometry.</code><code class="descname">Geometry</code><span class="sig-paren">(</span><em>xyz</em>, <em>atoms=H orbs: 1 mass(au): 1.00794</em>, <em>sc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCellChild" title="sids.supercell.SuperCellChild"><code class="xref py py-class docutils literal"><span class="pre">sids.supercell.SuperCellChild</span></code></a></p>
+<p>Object for retaining a list of atoms.</p>
+<p>Every geometry deals with this information:
+- atomic coordinates
+- atomic species
+- unit cell</p>
+<p>All lengths are assumed to be in units of Angstrom, however, as
+long as units are kept same the exact units are irrespective.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">xyz</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+<span class="go">           [1, 1, 1]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">Geometry</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span><span class="n">Atom</span><span class="p">[</span><span class="s">&#39;H&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">sc</span> <span class="o">=</span> <span class="n">SuperCell</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">Geometry</span><span class="p">(</span><span class="n">xyz</span><span class="p">,</span><span class="n">Atom</span><span class="p">[</span><span class="s">&#39;H&#39;</span><span class="p">],</span><span class="n">sc</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>na <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>number of atoms, <code class="docutils literal"><span class="pre">len(self)</span></code></dd>
+<dt>xyz <span class="classifier-delimiter">:</span> <span class="classifier">ndarray</span></dt>
+<dd>atomic coordinates</dd>
+<dt>atoms <span class="classifier-delimiter">:</span> <span class="classifier">array_like, <code class="docutils literal"><span class="pre">Atom</span></code></span></dt>
+<dd>the atomic objects associated with each atom</dd>
+<dt>sc <span class="classifier-delimiter">:</span> <span class="classifier"><code class="docutils literal"><span class="pre">SuperCell</span></code></span></dt>
+<dd>the supercell describing the periodicity of the 
+geometry</dd>
+<dt>no: int</dt>
+<dd>total number of orbitals in the geometry</dd>
+<dt>dR <span class="classifier-delimiter">:</span> <span class="classifier">float np.max([a.dR for a in self.atoms])</span></dt>
+<dd>maximum orbital range</dd>
+</dl>
+<dl class="docutils">
+<dt>xyz <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
+<dd>atomic coordinates
+<code class="docutils literal"><span class="pre">xyz[i,:]</span></code> is the atomic coordinate of the i&#8217;th atom.</dd>
+<dt>atoms <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
+<dd>atomic species retrieved from the <code class="docutils literal"><span class="pre">PeriodicTable</span></code></dd>
+<dt>sc <span class="classifier-delimiter">:</span> <span class="classifier"><code class="docutils literal"><span class="pre">SuperCell</span></code></span></dt>
+<dd>the unit-cell describing the atoms in a periodic
+super-cell</dd>
+</dl>
+<dl class="method">
+<dt id="sids.geometry.Geometry.a2isc">
+<code class="descname">a2isc</code><span class="sig-paren">(</span><em>a</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.a2isc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the super-cell index for a specific atom</p>
+<p>Hence one can easily figure out the supercell</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.a2o">
+<code class="descname">a2o</code><span class="sig-paren">(</span><em>ia</em>, <em>all=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.a2o" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an orbital index of the first orbital of said atom.
+This is particularly handy if you want to create
+TB models with more than one orbital per atom.</p>
+<dl class="docutils">
+<dt>ia <span class="classifier-delimiter">:</span> <span class="classifier">list, int</span></dt>
+<dd>Atomic indices</dd>
+<dt>all: False, bool</dt>
+<dd><cite>False</cite>, return only the first orbital corresponding to the atom,
+<cite>True</cite>, returns list of the full atom</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>other</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appends structure along <code class="docutils literal"><span class="pre">axis</span></code>. This will automatically
+add the <code class="docutils literal"><span class="pre">self.cell[axis,:]</span></code> to all atomic coordiates in the 
+<code class="docutils literal"><span class="pre">other</span></code> structure before appending.</p>
+<p>The basic algorithm is this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">oxa</span> <span class="o">=</span> <span class="n">other</span><span class="o">.</span><span class="n">xyz</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">cell</span><span class="p">[</span><span class="n">axis</span><span class="p">,:][</span><span class="bp">None</span><span class="p">,:]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="bp">self</span><span class="o">.</span><span class="n">xyz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">xyz</span><span class="p">,</span><span class="n">oxa</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="bp">self</span><span class="o">.</span><span class="n">cell</span><span class="p">[</span><span class="n">axis</span><span class="p">,:]</span> <span class="o">+=</span> <span class="n">other</span><span class="o">.</span><span class="n">cell</span><span class="p">[</span><span class="n">axis</span><span class="p">,:]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="bp">self</span><span class="o">.</span><span class="n">lasto</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">lasto</span><span class="p">,</span><span class="n">other</span><span class="o">.</span><span class="n">lasto</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>NOTE: The cell appended is only in the axis that
+is appended, which means that the other cell directions
+need not conform.</p>
+<dl class="docutils">
+<dt>other <span class="classifier-delimiter">:</span> <span class="classifier">Geometry/SuperCell</span></dt>
+<dd>Other geometry class which needs to be appended
+If a SuperCell only the super cell will be extended</dd>
+<dt>axis <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>Cell direction to which the <code class="docutils literal"><span class="pre">other</span></code> geometry should be
+appended.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.asc2uc">
+<code class="descname">asc2uc</code><span class="sig-paren">(</span><em>atoms</em>, <em>uniq=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.asc2uc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns atoms from super-cell indices to unit-cell indices, possibly removing dublicates</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="sids.geometry.Geometry.ase">
+<em class="property">classmethod </em><code class="descname">ase</code><span class="sig-paren">(</span><em>aseg</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.ase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns geometry from an ASE object.</p>
+<dl class="docutils">
+<dt>aseg <span class="classifier-delimiter">:</span> <span class="classifier">ASE <cite>Atoms</cite> object which contains the following routines:</span></dt>
+<dd><cite>get_atomic_numbers</cite>, <cite>get_positions</cite>, <cite>get_cell</cite>.
+From those methods a <cite>sids</cite> object will be created.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.axyzsc">
+<code class="descname">axyzsc</code><span class="sig-paren">(</span><em>ia</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.axyzsc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.bond_correct">
+<code class="descname">bond_correct</code><span class="sig-paren">(</span><em>ia</em>, <em>atoms</em>, <em>radii='calc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.bond_correct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Corrects the bond between <cite>ia</cite> and the <cite>atoms</cite>.</p>
+<p>Corrects the bond-length between atom <cite>ia</cite> and <cite>atoms</cite> in such
+a way that the atomic radii is preserved.
+I.e. the sum of the bond-lengths minimizes the distance matrix.</p>
+<p>Only atom <cite>ia</cite> is moved.</p>
+<dl class="docutils">
+<dt>ia <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>The atom to be displaced according to the atomic radii</dd>
+<dt>atoms <span class="classifier-delimiter">:</span> <span class="classifier">int, array_like</span></dt>
+<dd>The atom(s) from which the radii should be reduced.</dd>
+<dt>radii <span class="classifier-delimiter">:</span> <span class="classifier">str/float</span></dt>
+<dd>If str will use that as lookup in <cite>Atom.radii</cite>.
+Else it will be the new bond-length.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.center">
+<code class="descname">center</code><span class="sig-paren">(</span><em>atoms=None</em>, <em>which='xyz'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the center of the geometry 
+By specifying <code class="docutils literal"><span class="pre">which</span></code> one can control whether it should be:
+<code class="docutils literal"><span class="pre">xyz``|``position:</span> <span class="pre">Center</span> <span class="pre">of</span> <span class="pre">coordinates</span> <span class="pre">(default)</span>
+<span class="pre">``mass</span></code>: Center of mass
+<code class="docutils literal"><span class="pre">cell</span></code>: Center of cell</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.close">
+<code class="descname">close</code><span class="sig-paren">(</span><em>xyz_ia</em>, <em>dR=None</em>, <em>idx=None</em>, <em>ret_coord=False</em>, <em>ret_dist=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns supercell atomic indices for all atoms connecting to <code class="docutils literal"><span class="pre">xyz_ia</span></code></p>
+<p>This heavily relies on the <code class="docutils literal"><span class="pre">self.close_sc</span></code> method.</p>
+<p>Note that if a connection is made in a neighbouring super-cell
+then the atomic index is shifted by the super-cell index times
+number of atoms.
+This allows one to decipher super-cell atoms from unit-cell atoms.</p>
+<dl class="docutils">
+<dt>xyz_ia <span class="classifier-delimiter">:</span> <span class="classifier">coordinate/index</span></dt>
+<dd>Either a point in space or an index of an atom.
+If an index is passed it is the equivalent of passing
+the atomic coordinate <code class="docutils literal"><span class="pre">self.close_sc(self.xyz[xyz_ia,:])</span></code>.</dd>
+<dt>dR <span class="classifier-delimiter">:</span> <span class="classifier">(None), float/tuple of float</span></dt>
+<dd><p class="first">The radii parameter to where the atomic connections are found.
+If <code class="docutils literal"><span class="pre">dR</span></code> is an array it will return the indices:
+in the ranges:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">(</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">dR[0]</span> <span class="pre">,</span> <span class="pre">dR[0]</span> <span class="pre">&lt;</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">dR[1],</span> <span class="pre">dR[1]</span> <span class="pre">&lt;</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">dR[2]</span> <span class="pre">)</span></code></div></blockquote>
+<dl class="last docutils">
+<dt>If a single float it will return:</dt>
+<dd><code class="docutils literal"><span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">dR</span></code></dd>
+</dl>
+</dd>
+<dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">(None), array_like</span></dt>
+<dd>List of indices for atoms that are to be considered</dd>
+<dt>ret_coord <span class="classifier-delimiter">:</span> <span class="classifier">(False), boolean</span></dt>
+<dd>If true this method will return the coordinates 
+for each of the couplings.</dd>
+<dt>ret_dist <span class="classifier-delimiter">:</span> <span class="classifier">(False), boolean</span></dt>
+<dd>If true this method will return the distances from the <code class="docutils literal"><span class="pre">xyz_ia</span></code> 
+for each of the couplings.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.close_all">
+<code class="descname">close_all</code><span class="sig-paren">(</span><em>xyz_ia</em>, <em>dR=None</em>, <em>idx=None</em>, <em>ret_coord=False</em>, <em>ret_dist=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.close_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns supercell atomic indices for all atoms connecting to <code class="docutils literal"><span class="pre">xyz_ia</span></code></p>
+<p>This heavily relies on the <code class="docutils literal"><span class="pre">self.close_sc</span></code> method.</p>
+<p>Note that if a connection is made in a neighbouring super-cell
+then the atomic index is shifted by the super-cell index times
+number of atoms.
+This allows one to decipher super-cell atoms from unit-cell atoms.</p>
+<dl class="docutils">
+<dt>xyz_ia <span class="classifier-delimiter">:</span> <span class="classifier">coordinate/index</span></dt>
+<dd>Either a point in space or an index of an atom.
+If an index is passed it is the equivalent of passing
+the atomic coordinate <code class="docutils literal"><span class="pre">self.close_sc(self.xyz[xyz_ia,:])</span></code>.</dd>
+<dt>dR <span class="classifier-delimiter">:</span> <span class="classifier">(None), float/tuple of float</span></dt>
+<dd><p class="first">The radii parameter to where the atomic connections are found.
+If <code class="docutils literal"><span class="pre">dR</span></code> is an array it will return the indices:
+in the ranges:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">(</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">dR[0]</span> <span class="pre">,</span> <span class="pre">dR[0]</span> <span class="pre">&lt;</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">dR[1],</span> <span class="pre">dR[1]</span> <span class="pre">&lt;</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">dR[2]</span> <span class="pre">)</span></code></div></blockquote>
+<dl class="last docutils">
+<dt>If a single float it will return:</dt>
+<dd><code class="docutils literal"><span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">dR</span></code></dd>
+</dl>
+</dd>
+<dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">(None), array_like</span></dt>
+<dd>List of indices for atoms that are to be considered</dd>
+<dt>ret_coord <span class="classifier-delimiter">:</span> <span class="classifier">(False), boolean</span></dt>
+<dd>If true this method will return the coordinates 
+for each of the couplings.</dd>
+<dt>ret_dist <span class="classifier-delimiter">:</span> <span class="classifier">(False), boolean</span></dt>
+<dd>If true this method will return the distances from the <code class="docutils literal"><span class="pre">xyz_ia</span></code> 
+for each of the couplings.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.close_sc">
+<code class="descname">close_sc</code><span class="sig-paren">(</span><em>xyz_ia, isc=[0, 0, 0], dR=None, idx=None, ret_coord=False, ret_dist=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.close_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates which atoms are close to some atom or point
+in space, only returns so relative to a super-cell.</p>
+<p>This returns a set of atomic indices which are within a 
+sphere of radius <code class="docutils literal"><span class="pre">dR</span></code>.</p>
+<p>If dR is a tuple/list/array it will return the indices:
+in the ranges:</p>
+<blockquote>
+<div>( x &lt;= dR[0] , dR[0] &lt; x &lt;= dR[1], dR[1] &lt; x &lt;= dR[2] )</div></blockquote>
+<dl class="docutils">
+<dt>xyz_ia <span class="classifier-delimiter">:</span> <span class="classifier">coordinate/index</span></dt>
+<dd>Either a point in space or an index of an atom.
+If an index is passed it is the equivalent of passing
+the atomic coordinate <code class="docutils literal"><span class="pre">self.close_sc(self.xyz[xyz_ia,:])</span></code>.</dd>
+<dt>isc <span class="classifier-delimiter">:</span> <span class="classifier">([0,0,0]), array_like, optional</span></dt>
+<dd>The super-cell which the coordinates are checked in.</dd>
+<dt>dR <span class="classifier-delimiter">:</span> <span class="classifier">(None), float/tuple of float</span></dt>
+<dd><p class="first">The radii parameter to where the atomic connections are found.
+If <code class="docutils literal"><span class="pre">dR</span></code> is an array it will return the indices:
+in the ranges:</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">(</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">dR[0]</span> <span class="pre">,</span> <span class="pre">dR[0]</span> <span class="pre">&lt;</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">dR[1],</span> <span class="pre">dR[1]</span> <span class="pre">&lt;</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">dR[2]</span> <span class="pre">)</span></code></div></blockquote>
+<dl class="last docutils">
+<dt>If a single float it will return:</dt>
+<dd><code class="docutils literal"><span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">dR</span></code></dd>
+</dl>
+</dd>
+<dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">(None), array_like</span></dt>
+<dd>List of atoms that will be considered. This can
+be used to only take out a certain atoms.</dd>
+<dt>ret_coord <span class="classifier-delimiter">:</span> <span class="classifier">(False), boolean</span></dt>
+<dd>If true this method will return the coordinates 
+for each of the couplings.</dd>
+<dt>ret_dist <span class="classifier-delimiter">:</span> <span class="classifier">(False), boolean</span></dt>
+<dd>If true this method will return the distance
+for each of the couplings.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.coords">
+<code class="descname">coords</code><span class="sig-paren">(</span><em>isc=[0, 0, 0], idx=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.coords" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the coordinates of a given super-cell index</p>
+<dl class="docutils">
+<dt>isc <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
+<dd>Returns the atomic coordinates shifted according to the integer
+parts of the cell.</dd>
+<dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">int/array_like</span></dt>
+<dd>Only return the coordinates of these indices</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">geom</span> <span class="o">=</span> <span class="n">Geometry</span><span class="p">(</span><span class="n">cell</span><span class="o">=</span><span class="p">[[</span><span class="mf">1.</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">0.</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.</span><span class="p">]],</span><span class="n">xyz</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">geom</span><span class="o">.</span><span class="n">coords</span><span class="p">(</span><span class="n">isc</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">[[ 1.   0.   0. ]</span>
+<span class="go"> [ 1.5  0.   0. ]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.cut">
+<code class="descname">cut</code><span class="sig-paren">(</span><em>seps</em>, <em>axis</em>, <em>seg=0</em>, <em>rtol=0.0001</em>, <em>atol=0.0001</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.cut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a subset of atoms from the geometry by cutting the 
+geometry into <code class="docutils literal"><span class="pre">seps</span></code> parts along the direction <code class="docutils literal"><span class="pre">axis</span></code>.
+It will then _only_ return the first cut.</p>
+<p>This will effectively change the unit-cell in the <code class="docutils literal"><span class="pre">axis</span></code> as-well
+as removing <code class="docutils literal"><span class="pre">self.na_u/seps</span></code> atoms.
+It requires that <code class="docutils literal"><span class="pre">self.na_u</span> <span class="pre">%</span> <span class="pre">seps</span> <span class="pre">==</span> <span class="pre">0</span></code>.</p>
+<p>REMARK: You need to ensure that all atoms within the first 
+cut out region are within the primary unit-cell.</p>
+<p>Doing <code class="docutils literal"><span class="pre">geom.cut(2,1).tile(reps=2,axis=1)</span></code>, could for symmetric setups,
+be equivalent to a no-op operation. A <cite>UserWarning</cite> will be issued
+if this is not the case.</p>
+<dl class="docutils">
+<dt>axis <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>the axis that will be cut</dd>
+<dt>seps <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
+<dd>number of times the structure will be cut.</dd>
+<dt>seg <span class="classifier-delimiter">:</span> <span class="classifier">int, optional (0)</span></dt>
+<dd>returns the i&#8217;th segment of the cut structure
+Currently the atomic coordinates are not translated,
+this may change in the future.</dd>
+</dl>
+<p>rtol : (tolerance for checking tiling, see <code class="docutils literal"><span class="pre">numpy.allclose</span></code>)
+atol : (tolerance for checking tiling, see <code class="docutils literal"><span class="pre">numpy.allclose</span></code>)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.insert">
+<code class="descname">insert</code><span class="sig-paren">(</span><em>atom</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inserts other atoms right before index</p>
+<p>We insert the <cite>other</cite> <code class="docutils literal"><span class="pre">Geometry</span></code> before obj</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.iter_block">
+<code class="descname">iter_block</code><span class="sig-paren">(</span><em>iR=10</em>, <em>dR=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.iter_block" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an iterator for performance critical looping.</p>
+<dl class="docutils">
+<dt>iR <span class="classifier-delimiter">:</span> <span class="classifier">(10) integer</span></dt>
+<dd>the number of <code class="docutils literal"><span class="pre">dR</span></code> ranges taken into account when doing the iterator</dd>
+<dt>dR <span class="classifier-delimiter">:</span> <span class="classifier">(self.dR), float</span></dt>
+<dd>enables overwriting the local dR quantity.</dd>
+</dl>
+<p>Returns two lists with [0] being a list of atoms to be looped and [1] being the atoms that 
+need searched.</p>
+<p>NOTE: This requires that dR has been set correctly as the maximum interaction range.</p>
+<p>I.e. the loop would look like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ias</span><span class="p">,</span> <span class="n">idxs</span> <span class="ow">in</span> <span class="n">Geometry</span><span class="o">.</span><span class="n">iter_block</span><span class="p">():</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="k">for</span> <span class="n">ia</span> <span class="ow">in</span> <span class="n">ias</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>       <span class="n">idx_a</span> <span class="o">=</span> <span class="n">dev</span><span class="o">.</span><span class="n">close</span><span class="p">(</span><span class="n">ia</span><span class="p">,</span> <span class="n">dR</span> <span class="o">=</span> <span class="n">dR</span><span class="p">,</span> <span class="n">idx</span> <span class="o">=</span> <span class="n">idxs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This iterator is intended for systems with more than 1000 atoms.</p>
+<p>Remark that the iterator used is non-deterministic, i.e. any two iterators need
+not return the same atoms in any way.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.iter_linear">
+<code class="descname">iter_linear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.iter_linear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an iterator for simple linear ranges.</p>
+<p>This iterator is the same as:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ia</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)):</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="o">&lt;</span><span class="n">do</span> <span class="n">something</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<dl class="docutils">
+<dt>or equivalently</dt>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ia</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="o">&lt;</span><span class="n">do</span> <span class="n">something</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.iter_species">
+<code class="descname">iter_species</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.iter_species" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an iterator over all atoms and species as a tuple in this geometry</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ia</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">idx_specie</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">iter_species</span><span class="p">():</span>
+</pre></div>
+</div>
+<p>with <code class="docutils literal"><span class="pre">ia</span></code> being the atomic index, <code class="docutils literal"><span class="pre">a</span></code> the <code class="docutils literal"><span class="pre">Atom</span></code> object, <code class="docutils literal"><span class="pre">idx_specie</span></code>
+is the index of the species</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.mirror">
+<code class="descname">mirror</code><span class="sig-paren">(</span><em>plane</em>, <em>atoms=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.mirror" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mirrors the structure around the center of the atoms</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.geometry.Geometry.no_s">
+<code class="descname">no_s</code><a class="headerlink" href="#sids.geometry.Geometry.no_s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of supercell orbitals</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.o2a">
+<code class="descname">o2a</code><span class="sig-paren">(</span><em>io</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.o2a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an atomic index corresponding to the orbital indicies.</p>
+<p>This is a particurlaly slow algorithm.</p>
+<dl class="docutils">
+<dt>io: list, int</dt>
+<dd>List of indices to return the atoms for</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.o2isc">
+<code class="descname">o2isc</code><span class="sig-paren">(</span><em>o</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.o2isc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the super-cell index for a specific orbital.</p>
+<p>Hence one can easily figure out the supercell</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.osc2uc">
+<code class="descname">osc2uc</code><span class="sig-paren">(</span><em>orbs</em>, <em>uniq=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.osc2uc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns orbitals from super-cell indices to unit-cell indices, possibly removing dublicates</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sids.geometry.Geometry.read">
+<em class="property">static </em><code class="descname">read</code><span class="sig-paren">(</span><em>sile</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads geometry from the <code class="docutils literal"><span class="pre">Sile</span></code> using <code class="docutils literal"><span class="pre">sile.read_geom</span></code></p>
+<dl class="docutils">
+<dt>sile <span class="classifier-delimiter">:</span> <span class="classifier">Sile, str</span></dt>
+<dd>a <code class="docutils literal"><span class="pre">Sile</span></code> object which will be used to read the geometry
+if it is a string it will create a new sile using <code class="docutils literal"><span class="pre">get_sile</span></code>.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.remove">
+<code class="descname">remove</code><span class="sig-paren">(</span><em>atoms</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove atoms from the geometry.</p>
+<p>Indices passed <em>MUST</em> be unique.</p>
+<dl class="docutils">
+<dt>atoms <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
+<dd>indices of all atoms to be removed.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.repeat">
+<code class="descname">repeat</code><span class="sig-paren">(</span><em>reps</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.repeat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a geometry repeated, i.e. copied in a special way.</p>
+<p>The atomic indices are <em>NOT</em> retained for the base structure.</p>
+<p>The expansion of the atoms are basically performed using this
+algorithm:</p>
+<blockquote>
+<div><p>ja = 0
+for ia in range(self.na):</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>for id,r in args:</dt>
+<dd><dl class="first last docutils">
+<dt>for i in range(r):</dt>
+<dd>ja = ia + cell[id,:] * i</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+</div></blockquote>
+<p>This method allows to utilise Bloch&#8217;s theorem when creating
+tight-binding parameter sets for TBtrans.</p>
+<p>For geometries with a single atom this routine returns the same as
+<code class="docutils literal"><span class="pre">self.tile</span></code>.</p>
+<p>It is adviced to only use this for electrode Bloch&#8217;s theorem
+purposes as <code class="docutils literal"><span class="pre">self.tile</span></code> is faster.</p>
+<p>reps  : number of repetitions
+axis  : direction of repetition</p>
+<blockquote>
+<div>0, 1, 2 according to the cell-direction</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">geom</span> <span class="o">=</span> <span class="n">Geometry</span><span class="p">(</span><span class="n">cell</span><span class="o">=</span><span class="p">[[</span><span class="mf">1.</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">0.</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.</span><span class="p">]],</span><span class="n">xyz</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">xyz</span><span class="p">)</span>
+<span class="go">[[ 0.   0.   0. ]</span>
+<span class="go"> [ 1.   0.   0. ]</span>
+<span class="go"> [ 0.5  0.   0. ]</span>
+<span class="go"> [ 1.5  0.   0. ]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">xyz</span><span class="p">)</span>
+<span class="go">[[ 0.   0.   0. ]</span>
+<span class="go"> [ 1.   0.   0. ]</span>
+<span class="go"> [ 0.   1.   0. ]</span>
+<span class="go"> [ 1.   1.   0. ]</span>
+<span class="go"> [ 0.5  0.   0. ]</span>
+<span class="go"> [ 1.5  0.   0. ]</span>
+<span class="go"> [ 0.5  1.   0. ]</span>
+<span class="go"> [ 1.5  1.   0. ]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.reverse">
+<code class="descname">reverse</code><span class="sig-paren">(</span><em>atoms=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.reverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reversed geometry</p>
+<p>Also enables reversing a subset</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.rotate">
+<code class="descname">rotate</code><span class="sig-paren">(</span><em>angle</em>, <em>v</em>, <em>only='abc+xyz'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotates the geometry, in-place by the angle around the vector</p>
+<p>Per default will the entire geometry be rotated, such that everything
+is aligned as before rotation.</p>
+<p>However, by supplying <code class="docutils literal"><span class="pre">only='abc|xyz'</span></code> one can designate which
+part of the geometry that will be rotated.</p>
+<dl class="docutils">
+<dt>angle <span class="classifier-delimiter">:</span> <span class="classifier">float</span></dt>
+<dd>the angle in radians of which the geometry should be rotated</dd>
+<dt>v <span class="classifier-delimiter">:</span> <span class="classifier">array_like [3]</span></dt>
+<dd>the vector around the rotation is going to happen
+v = [1,0,0] will rotate in the <code class="docutils literal"><span class="pre">yz</span></code> plane</dd>
+<dt>only <span class="classifier-delimiter">:</span> <span class="classifier">(&#8216;abc+xyz&#8217;), str, optional</span></dt>
+<dd>which coordinate subject should be rotated,
+if <code class="docutils literal"><span class="pre">abc</span></code> is in this string the cell will be rotated
+if <code class="docutils literal"><span class="pre">xyz</span></code> is in this string the coordinates will be rotated</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.rotate_miller">
+<code class="descname">rotate_miller</code><span class="sig-paren">(</span><em>m</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.rotate_miller" title="Permalink to this definition">¶</a></dt>
+<dd><p>Align Miller direction along <code class="docutils literal"><span class="pre">v</span></code></p>
+<p>Rotate geometry and cell such that the Miller direction 
+points along the Cartesian vector <code class="docutils literal"><span class="pre">v</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.rotatea">
+<code class="descname">rotatea</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc+xyz'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.rotatea" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.rotateb">
+<code class="descname">rotateb</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc+xyz'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.rotateb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.rotatec">
+<code class="descname">rotatec</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc+xyz'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.rotatec" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.sc2uc">
+<code class="descname">sc2uc</code><span class="sig-paren">(</span><em>atoms</em>, <em>uniq=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.sc2uc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns atoms from super-cell indices to unit-cell indices, possibly removing dublicates</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.sub">
+<code class="descname">sub</code><span class="sig-paren">(</span><em>atoms</em>, <em>cell=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a subset of atoms from the geometry.</p>
+<p>Indices passed <em>MUST</em> be unique.</p>
+<dl class="docutils">
+<dt>atoms <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
+<dd>indices of all atoms to be removed.</dd>
+<dt>cell <span class="classifier-delimiter">:</span> <span class="classifier">(<a href="#id1"><span class="problematic" id="id2">``</span></a>self.cell`), array_like, optional</span></dt>
+<dd>the new associated cell of the geometry</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.swapaxes">
+<code class="descname">swapaxes</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>swap='cell+xyz'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.swapaxes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns geometry with swapped axis</p>
+<p>If <code class="docutils literal"><span class="pre">swapaxes(0,1)</span></code> it returns the 0 and 1 values
+swapped in the <code class="docutils literal"><span class="pre">cell</span></code> variable.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.tile">
+<code class="descname">tile</code><span class="sig-paren">(</span><em>reps</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.tile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a geometry tiled, i.e. copied.</p>
+<p>The atomic indices are retained for the base structure.</p>
+<p>reps  : number of tiles (repetitions)
+axis  : direction of tiling</p>
+<blockquote>
+<div>0, 1, 2 according to the cell-direction</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">geom</span> <span class="o">=</span> <span class="n">Geometry</span><span class="p">(</span><span class="n">cell</span><span class="o">=</span><span class="p">[[</span><span class="mf">1.</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">0.</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.</span><span class="p">]],</span><span class="n">xyz</span><span class="o">=</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],[</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">xyz</span><span class="p">)</span>
+<span class="go">[[ 0.   0.   0. ]</span>
+<span class="go"> [ 0.5  0.   0. ]</span>
+<span class="go"> [ 1.   0.   0. ]</span>
+<span class="go"> [ 1.5  0.   0. ]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">g</span> <span class="o">=</span> <span class="n">geom</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">tile</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span><span class="p">(</span><span class="n">g</span><span class="o">.</span><span class="n">xyz</span><span class="p">)</span>
+<span class="go">[[ 0.   0.   0. ]</span>
+<span class="go"> [ 0.5  0.   0. ]</span>
+<span class="go"> [ 1.   0.   0. ]</span>
+<span class="go"> [ 1.5  0.   0. ]</span>
+<span class="go"> [ 0.   1.   0. ]</span>
+<span class="go"> [ 0.5  1.   0. ]</span>
+<span class="go"> [ 1.   1.   0. ]</span>
+<span class="go"> [ 1.5  1.   0. ]]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.translate">
+<code class="descname">translate</code><span class="sig-paren">(</span><em>v</em>, <em>atoms=None</em>, <em>cell=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.translate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Translates the geometry by <code class="docutils literal"><span class="pre">v</span></code></p>
+<p>One can translate a subset of the atoms by supplying <code class="docutils literal"><span class="pre">atoms</span></code>.</p>
+<p>Returns a copy of the structure translated by <code class="docutils literal"><span class="pre">v</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.geometry.Geometry.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>sile</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes geometry to the <code class="docutils literal"><span class="pre">Sile</span></code> using <code class="docutils literal"><span class="pre">sile.write_geom</span></code></p>
+<dl class="docutils">
+<dt>sile <span class="classifier-delimiter">:</span> <span class="classifier">Sile, str</span></dt>
+<dd>a <code class="docutils literal"><span class="pre">Sile</span></code> object which will be used to write the geometry
+if it is a string it will create a new sile using <code class="docutils literal"><span class="pre">get_sile</span></code></dd>
+<dt><a href="#id3"><span class="problematic" id="id4">*</span></a>args, <a href="#id5"><span class="problematic" id="id6">**</span></a>kwargs: Any other args will be passed directly to the</dt>
+<dd>underlying routine</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Nick R. Papior.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.4.3
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
