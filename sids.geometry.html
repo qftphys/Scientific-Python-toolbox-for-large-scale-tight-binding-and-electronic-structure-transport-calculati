@@ -191,8 +191,8 @@ TB models with more than one orbital per atom.</p>
 <dt>ia <span class="classifier-delimiter">:</span> <span class="classifier">list, int</span></dt>
 <dd>Atomic indices</dd>
 <dt>all: False, bool</dt>
-<dd><cite>False</cite>, return only the first orbital corresponding to the atom,
-<cite>True</cite>, returns list of the full atom</dd>
+<dd><code class="xref any docutils literal"><span class="pre">False</span></code>, return only the first orbital corresponding to the atom,
+<code class="xref any docutils literal"><span class="pre">True</span></code>, returns list of the full atom</dd>
 </dl>
 </dd></dl>
 
@@ -233,9 +233,9 @@ appended.</dd>
 <em class="property">classmethod </em><code class="descname">ase</code><span class="sig-paren">(</span><em>aseg</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.ase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns geometry from an ASE object.</p>
 <dl class="docutils">
-<dt>aseg <span class="classifier-delimiter">:</span> <span class="classifier">ASE <cite>Atoms</cite> object which contains the following routines:</span></dt>
-<dd><cite>get_atomic_numbers</cite>, <cite>get_positions</cite>, <cite>get_cell</cite>.
-From those methods a <cite>sids</cite> object will be created.</dd>
+<dt>aseg <span class="classifier-delimiter">:</span> <span class="classifier">ASE <code class="xref any docutils literal"><span class="pre">Atoms</span></code> object which contains the following routines:</span></dt>
+<dd><code class="xref any docutils literal"><span class="pre">get_atomic_numbers</span></code>, <code class="xref any docutils literal"><span class="pre">get_positions</span></code>, <code class="xref any docutils literal"><span class="pre">get_cell</span></code>.
+From those methods a <a class="reference internal" href="sids.html"><em>sids package</em></a> object will be created.</dd>
 </dl>
 </dd></dl>
 
@@ -247,18 +247,18 @@ From those methods a <cite>sids</cite> object will be created.</dd>
 <dl class="method">
 <dt id="sids.geometry.Geometry.bond_correct">
 <code class="descname">bond_correct</code><span class="sig-paren">(</span><em>ia</em>, <em>atoms</em>, <em>radii='calc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.bond_correct" title="Permalink to this definition">¶</a></dt>
-<dd><p>Corrects the bond between <cite>ia</cite> and the <cite>atoms</cite>.</p>
-<p>Corrects the bond-length between atom <cite>ia</cite> and <cite>atoms</cite> in such
+<dd><p>Corrects the bond between <code class="xref any docutils literal"><span class="pre">ia</span></code> and the <code class="xref any docutils literal"><span class="pre">atoms</span></code>.</p>
+<p>Corrects the bond-length between atom <code class="xref any docutils literal"><span class="pre">ia</span></code> and <code class="xref any docutils literal"><span class="pre">atoms</span></code> in such
 a way that the atomic radii is preserved.
 I.e. the sum of the bond-lengths minimizes the distance matrix.</p>
-<p>Only atom <cite>ia</cite> is moved.</p>
+<p>Only atom <code class="xref any docutils literal"><span class="pre">ia</span></code> is moved.</p>
 <dl class="docutils">
 <dt>ia <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
 <dd>The atom to be displaced according to the atomic radii</dd>
 <dt>atoms <span class="classifier-delimiter">:</span> <span class="classifier">int, array_like</span></dt>
 <dd>The atom(s) from which the radii should be reduced.</dd>
 <dt>radii <span class="classifier-delimiter">:</span> <span class="classifier">str/float</span></dt>
-<dd>If str will use that as lookup in <cite>Atom.radii</cite>.
+<dd>If str will use that as lookup in <a class="reference internal" href="sids.atom.html#sids.atom.Atom.radii" title="sids.atom.Atom.radii"><code class="xref any py py-meth docutils literal"><span class="pre">Atom.radii</span></code></a>.
 Else it will be the new bond-length.</dd>
 </dl>
 </dd></dl>
@@ -423,7 +423,7 @@ It requires that <code class="docutils literal"><span class="pre">self.na_u</spa
 <p>REMARK: You need to ensure that all atoms within the first 
 cut out region are within the primary unit-cell.</p>
 <p>Doing <code class="docutils literal"><span class="pre">geom.cut(2,1).tile(reps=2,axis=1)</span></code>, could for symmetric setups,
-be equivalent to a no-op operation. A <cite>UserWarning</cite> will be issued
+be equivalent to a no-op operation. A <code class="xref any docutils literal"><span class="pre">UserWarning</span></code> will be issued
 if this is not the case.</p>
 <dl class="docutils">
 <dt>axis <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
@@ -443,7 +443,7 @@ atol : (tolerance for checking tiling, see <code class="docutils literal"><span 
 <dt id="sids.geometry.Geometry.insert">
 <code class="descname">insert</code><span class="sig-paren">(</span><em>atom</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.insert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inserts other atoms right before index</p>
-<p>We insert the <cite>other</cite> <code class="docutils literal"><span class="pre">Geometry</span></code> before obj</p>
+<p>We insert the <code class="xref any docutils literal"><span class="pre">other</span></code> <code class="docutils literal"><span class="pre">Geometry</span></code> before obj</p>
 </dd></dl>
 
 <dl class="method">

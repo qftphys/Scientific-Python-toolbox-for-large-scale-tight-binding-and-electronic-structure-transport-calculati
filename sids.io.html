@@ -159,19 +159,19 @@ users to attach files for the IOSile function call</p>
 <dl class="docutils">
 <dt>ending <span class="classifier-delimiter">:</span> <span class="classifier">str</span></dt>
 <dd>The file-name ending, it can be several file endings (.TBT.nc)</dd>
-<dt>obj <span class="classifier-delimiter">:</span> <span class="classifier"><cite>BaseSile</cite> child</span></dt>
+<dt>obj <span class="classifier-delimiter">:</span> <span class="classifier"><a class="reference internal" href="#sids.io.BaseSile" title="sids.io.BaseSile"><code class="xref any py py-class docutils literal"><span class="pre">BaseSile</span></code></a> child</span></dt>
 <dd>An object that is associated with the respective file.
-It must be inherited from a <cite>BaseSile</cite>.</dd>
+It must be inherited from a <a class="reference internal" href="#sids.io.BaseSile" title="sids.io.BaseSile"><code class="xref any py py-class docutils literal"><span class="pre">BaseSile</span></code></a>.</dd>
 <dt>case <span class="classifier-delimiter">:</span> <span class="classifier">bool, (True)</span></dt>
 <dd>Whether case sensitivity is applicable for determining
 file.</dd>
 <dt>gzip <span class="classifier-delimiter">:</span> <span class="classifier">bool, (False)</span></dt>
-<dd><p class="first">Whether files with <cite>.gz</cite> endings can be read.
+<dd><p class="first">Whether files with <code class="xref any docutils literal"><span class="pre">.gz</span></code> endings can be read.
 This option should only be given to files with ASCII text
 output.
 It will automatically call:</p>
 <blockquote>
-<div><cite>add_sile(ending+&#8217;.gz&#8217;,...,gzip=False)</cite></div></blockquote>
+<div><code class="xref any docutils literal"><span class="pre">add_sile(ending+'.gz',...,gzip=False)</span></code></div></blockquote>
 <p class="last">to add the gzipped file to the list of possible files.</p>
 </dd>
 </dl>
@@ -273,26 +273,26 @@ The file format for this file is the NetCDF file format</p>
 <dl class="method">
 <dt id="sids.io.CUBESile.read_geom">
 <code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.CUBESile.read_geom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <cite>Geometry</cite> object from the CUBE file</p>
+<dd><p>Returns <a class="reference internal" href="sids.geometry.html#sids.geometry.Geometry" title="sids.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> object from the CUBE file</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.CUBESile.read_grid">
 <code class="descname">read_grid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.CUBESile.read_grid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <cite>Grid</cite> object from the CUBE file</p>
+<dd><p>Returns <a class="reference internal" href="sids.grid.html#sids.grid.Grid" title="sids.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> object from the CUBE file</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.CUBESile.read_sc">
 <code class="descname">read_sc</code><span class="sig-paren">(</span><em>na=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.CUBESile.read_sc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <cite>SuperCell</cite> object from the CUBE file</p>
-<p>If <cite>na=True</cite> it will return a tuple (na,SuperCell)</p>
+<dd><p>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from the CUBE file</p>
+<p>If <code class="xref any docutils literal"><span class="pre">na=True</span></code> it will return a tuple (na,SuperCell)</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.CUBESile.write_geom">
 <code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em>, <em>size=array([ 1.</em>, <em>1.</em>, <em>1.])</em>, <em>fmt='15.10e'</em>, <em>origo=array([ 0.</em>, <em>0.</em>, <em>0.])</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.CUBESile.write_geom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Writes the <cite>Geometry</cite> object attached to this grid</p>
+<dd><p>Writes the <a class="reference internal" href="sids.geometry.html#sids.geometry.Geometry" title="sids.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> object attached to this grid</p>
 </dd></dl>
 
 <dl class="method">
@@ -318,7 +318,7 @@ The file format for this file is the NetCDF file format</p>
 <dl class="method">
 <dt id="sids.io.FDFSile.read_sc">
 <code class="descname">read_sc</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.FDFSile.read_sc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <cite>SuperCell</cite> object from the FDF file</p>
+<dd><p>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from the FDF file</p>
 </dd></dl>
 
 <dl class="method">
@@ -349,7 +349,7 @@ The file format for this file is the NetCDF file format</p>
 <dl class="method">
 <dt id="sids.io.GULPSile.read_sc">
 <code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_sc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads a <cite>SuperCell</cite> and creates the GULP cell</p>
+<dd><p>Reads a <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> and creates the GULP cell</p>
 </dd></dl>
 
 <dl class="method">
@@ -488,7 +488,7 @@ hermitian : boolean</p>
 <dl class="method">
 <dt id="sids.io.TBtransSile.read_sc">
 <code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.TBtransSile.read_sc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <cite>SuperCell</cite> object from a <a href="#id3"><span class="problematic" id="id4">*</span></a>.TBT.nc file</p>
+<dd><p>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from a <a href="#id3"><span class="problematic" id="id4">*</span></a>.TBT.nc file</p>
 </dd></dl>
 
 <dl class="method">
@@ -521,7 +521,7 @@ This file-object handles both POSCAR and CONTCAR files</p>
 <dl class="method">
 <dt id="sids.io.POSCARSile.read_sc">
 <code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.POSCARSile.read_sc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <cite>SuperCell</cite> object from the CONTCAR/POSCAR file</p>
+<dd><p>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from the CONTCAR/POSCAR file</p>
 </dd></dl>
 
 <dl class="method">
@@ -566,7 +566,7 @@ This file-object handles both POSCAR and CONTCAR files</p>
 <dl class="method">
 <dt id="sids.io.XVSile.read_sc">
 <code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.XVSile.read_sc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <cite>SuperCell</cite> object from the XV file</p>
+<dd><p>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from the XV file</p>
 </dd></dl>
 
 <dl class="method">

@@ -143,16 +143,16 @@ parameter set.</p>
 <dl class="method">
 <dt id="sids.tb.tightbinding.TightBinding.construct">
 <code class="descname">construct</code><span class="sig-paren">(</span><em>dR</em>, <em>param</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.construct" title="Permalink to this definition">¶</a></dt>
-<dd><p>Automatically construct the tight-binding model based on <cite>dR</cite> and associated hopping integrals <cite>param</cite>.</p>
+<dd><p>Automatically construct the tight-binding model based on <a class="reference internal" href="sids.atom.html#sids.atom.Atom.dR" title="sids.atom.Atom.dR"><code class="xref any py py-attr docutils literal"><span class="pre">dR</span></code></a> and associated hopping integrals <code class="xref any docutils literal"><span class="pre">param</span></code>.</p>
 <dl class="docutils">
 <dt>dR <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
 <dd>radii parameters for tight-binding parameters.
-Must have same length as <cite>param</cite> or one less.
-If one less it will be extended with <cite>dR[0]/100</cite></dd>
+Must have same length as <code class="xref any docutils literal"><span class="pre">param</span></code> or one less.
+If one less it will be extended with <code class="xref any docutils literal"><span class="pre">dR[0]/100</span></code></dd>
 <dt>param <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
-<dd>tight-binding parameters corresponding to the <cite>dR</cite> 
-ranges. <cite>param[0,:]</cite> are the tight-binding parameter
-for the all atoms within <cite>dR[0]</cite> of each atom.</dd>
+<dd>tight-binding parameters corresponding to the <a class="reference internal" href="sids.atom.html#sids.atom.Atom.dR" title="sids.atom.Atom.dR"><code class="xref any py py-attr docutils literal"><span class="pre">dR</span></code></a> 
+ranges. <code class="xref any docutils literal"><span class="pre">param[0,:]</span></code> are the tight-binding parameter
+for the all atoms within <code class="xref any docutils literal"><span class="pre">dR[0]</span></code> of each atom.</dd>
 </dl>
 </dd></dl>
 
@@ -226,7 +226,7 @@ created with.</p>
 <dl class="method">
 <dt id="sids.tb.tightbinding.TightBinding.tile">
 <code class="descname">tile</code><span class="sig-paren">(</span><em>reps</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.tile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns a repeated tight-binding model for this, much like the <cite>Geometry</cite>.</p>
+<dd><p>Returns a repeated tight-binding model for this, much like the <a class="reference internal" href="sids.geometry.html#sids.geometry.Geometry" title="sids.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a>.</p>
 <p>The already existing tight-binding parameters are extrapolated 
 to the new supercell by repeating them in blocks like the coordinates.</p>
 <p>reps  : number of tiles (repetitions)

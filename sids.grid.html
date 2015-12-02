@@ -155,13 +155,13 @@
 <dl class="method">
 <dt id="sids.grid.Grid.append">
 <code class="descname">append</code><span class="sig-paren">(</span><em>other</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.append" title="Permalink to this definition">¶</a></dt>
-<dd><p>Appends other <cite>Grid</cite> to this grid along axis</p>
+<dd><p>Appends other <a class="reference internal" href="#sids.grid.Grid" title="sids.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> to this grid along axis</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.grid.Grid.average">
 <code class="descname">average</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.average" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the average grid along direction <cite>axis</cite></p>
+<dd><p>Returns the average grid along direction <code class="xref any docutils literal"><span class="pre">axis</span></code></p>
 </dd></dl>
 
 <dl class="method">
@@ -173,7 +173,7 @@
 <dl class="method">
 <dt id="sids.grid.Grid.cross_section">
 <code class="descname">cross_section</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.cross_section" title="Permalink to this definition">¶</a></dt>
-<dd><p>Takes a cross-section of the grid along axis <cite>axis</cite></p>
+<dd><p>Takes a cross-section of the grid along axis <code class="xref any docutils literal"><span class="pre">axis</span></code></p>
 <p>Remark: This API entry might change to handle arbitrary
 cuts via rotation of the axis</p>
 </dd></dl>
@@ -193,7 +193,7 @@ cuts via rotation of the axis</p>
 <dl class="method">
 <dt id="sids.grid.Grid.index">
 <code class="descname">index</code><span class="sig-paren">(</span><em>coord</em>, <em>axis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.index" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the index along the axis <cite>axis</cite> where <cite>coord</cite> exists</p>
+<dd><p>Returns the index along the axis <code class="xref any docutils literal"><span class="pre">axis</span></code> where <code class="xref any docutils literal"><span class="pre">coord</span></code> exists</p>
 <dl class="docutils">
 <dt>coord <span class="classifier-delimiter">:</span> <span class="classifier">array_like / float</span></dt>
 <dd>the coordinate of the axis</dd>
@@ -211,14 +211,14 @@ cuts via rotation of the axis</p>
 <dd>the new size of the grid</dd>
 <dt><a href="#id1"><span class="problematic" id="id2">*</span></a>args, <a href="#id3"><span class="problematic" id="id4">**</span></a>kwargs <span class="classifier-delimiter">:</span> <span class="classifier"></span></dt>
 <dd>optional arguments passed to the interpolation algorithm
-The interpolation routine is <cite>scipy.interpolate.interpn</cite></dd>
+The interpolation routine is <code class="xref any docutils literal"><span class="pre">scipy.interpolate.interpn</span></code></dd>
 </dl>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.grid.Grid.mean">
 <code class="descname">mean</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.mean" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the average grid along direction <cite>axis</cite></p>
+<dd><p>Returns the average grid along direction <code class="xref any docutils literal"><span class="pre">axis</span></code></p>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -231,7 +231,7 @@ The interpolation routine is <cite>scipy.interpolate.interpn</cite></dd>
 if it is a string it will create a new sile using <code class="docutils literal"><span class="pre">get_sile</span></code>.</dd>
 </dl>
 <ul class="simple">
-<li>: args passed directly to <cite>read_grid(,**)</cite></li>
+<li>: args passed directly to <code class="xref any docutils literal"><span class="pre">read_grid(,**)</span></code></li>
 </ul>
 </dd></dl>
 
@@ -239,12 +239,12 @@ if it is a string it will create a new sile using <code class="docutils literal"
 <dt id="sids.grid.Grid.remove">
 <code class="descname">remove</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.remove" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes certain indices from a specified axis.</p>
-<p>Works exactly opposite to <cite>sub</cite>.</p>
+<p>Works exactly opposite to <a class="reference internal" href="#sids.grid.Grid.sub" title="sids.grid.Grid.sub"><code class="xref any py py-meth docutils literal"><span class="pre">sub</span></code></a>.</p>
 <dl class="docutils">
 <dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
-<dd>the indices of the grid axis <cite>axis</cite> to be removed</dd>
+<dd>the indices of the grid axis <code class="xref any docutils literal"><span class="pre">axis</span></code> to be removed</dd>
 <dt>axis <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>the axis segment from which we remove all indices <cite>idx</cite></dd>
+<dd>the axis segment from which we remove all indices <code class="xref any docutils literal"><span class="pre">idx</span></code></dd>
 </dl>
 </dd></dl>
 
@@ -252,20 +252,20 @@ if it is a string it will create a new sile using <code class="docutils literal"
 <dt id="sids.grid.Grid.remove_part">
 <code class="descname">remove_part</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em>, <em>above</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.remove_part" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes parts of the grid via above/below designations.</p>
-<p>Works exactly opposite to <cite>sub_part</cite></p>
+<p>Works exactly opposite to <a class="reference internal" href="#sids.grid.Grid.sub_part" title="sids.grid.Grid.sub_part"><code class="xref any py py-meth docutils literal"><span class="pre">sub_part</span></code></a></p>
 <dl class="docutils">
 <dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
-<dd>the indices of the grid axis <cite>axis</cite> to be removed
-for <cite>above=True</cite> grid[:idx,...]
-for <cite>above=False</cite> grid[idx:,...]</dd>
+<dd>the indices of the grid axis <code class="xref any docutils literal"><span class="pre">axis</span></code> to be removed
+for <code class="xref any docutils literal"><span class="pre">above=True</span></code> grid[:idx,...]
+for <code class="xref any docutils literal"><span class="pre">above=False</span></code> grid[idx:,...]</dd>
 <dt>axis <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>the axis segment from which we retain the indices <cite>idx</cite></dd>
+<dd>the axis segment from which we retain the indices <code class="xref any docutils literal"><span class="pre">idx</span></code></dd>
 <dt>above: bool</dt>
 <dd><dl class="first last docutils">
-<dt>if <cite>True</cite> will retain the grid:</dt>
-<dd><cite>grid[:idx,...]</cite></dd>
+<dt>if <code class="xref any docutils literal"><span class="pre">True</span></code> will retain the grid:</dt>
+<dd><code class="xref any docutils literal"><span class="pre">grid[:idx,...]</span></code></dd>
 <dt>else it will retain the grid:</dt>
-<dd><cite>grid[idx:,...]</cite></dd>
+<dd><code class="xref any docutils literal"><span class="pre">grid[idx:,...]</span></code></dd>
 </dl>
 </dd>
 </dl>
@@ -325,8 +325,8 @@ boundary: [3], integer, optional</p>
 <dl class="method">
 <dt id="sids.grid.Grid.set_geom">
 <code class="descname">set_geom</code><span class="sig-paren">(</span><em>geom</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.set_geom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the <cite>Geometry</cite> for the grid.</p>
-<p>Setting the <cite>Geometry</cite> for the grid is a possibility
+<dd><p>Sets the <a class="reference internal" href="sids.geometry.html#sids.geometry.Geometry" title="sids.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> for the grid.</p>
+<p>Setting the <a class="reference internal" href="sids.geometry.html#sids.geometry.Geometry" title="sids.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> for the grid is a possibility
 to attach atoms to the grid.</p>
 <p>It is not a necessary entity.</p>
 </dd></dl>
@@ -347,12 +347,12 @@ to attach atoms to the grid.</p>
 <dt id="sids.grid.Grid.sub">
 <code class="descname">sub</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.sub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retains certain indices from a specified axis.</p>
-<p>Works exactly opposite to <cite>remove</cite>.</p>
+<p>Works exactly opposite to <a class="reference internal" href="#sids.grid.Grid.remove" title="sids.grid.Grid.remove"><code class="xref any py py-meth docutils literal"><span class="pre">remove</span></code></a>.</p>
 <dl class="docutils">
 <dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
-<dd>the indices of the grid axis <cite>axis</cite> to be retained</dd>
+<dd>the indices of the grid axis <code class="xref any docutils literal"><span class="pre">axis</span></code> to be retained</dd>
 <dt>axis <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>the axis segment from which we retain the indices <cite>idx</cite></dd>
+<dd>the axis segment from which we retain the indices <code class="xref any docutils literal"><span class="pre">idx</span></code></dd>
 </dl>
 </dd></dl>
 
@@ -360,20 +360,20 @@ to attach atoms to the grid.</p>
 <dt id="sids.grid.Grid.sub_part">
 <code class="descname">sub_part</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em>, <em>above</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.sub_part" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retains parts of the grid via above/below designations.</p>
-<p>Works exactly opposite to <cite>remove_part</cite></p>
+<p>Works exactly opposite to <a class="reference internal" href="#sids.grid.Grid.remove_part" title="sids.grid.Grid.remove_part"><code class="xref any py py-meth docutils literal"><span class="pre">remove_part</span></code></a></p>
 <dl class="docutils">
 <dt>idx <span class="classifier-delimiter">:</span> <span class="classifier">array_like</span></dt>
-<dd>the indices of the grid axis <cite>axis</cite> to be retained
-for <cite>above=True</cite> grid[idx:,...]
-for <cite>above=False</cite> grid[:idx,...]</dd>
+<dd>the indices of the grid axis <code class="xref any docutils literal"><span class="pre">axis</span></code> to be retained
+for <code class="xref any docutils literal"><span class="pre">above=True</span></code> grid[idx:,...]
+for <code class="xref any docutils literal"><span class="pre">above=False</span></code> grid[:idx,...]</dd>
 <dt>axis <span class="classifier-delimiter">:</span> <span class="classifier">int</span></dt>
-<dd>the axis segment from which we retain the indices <cite>idx</cite></dd>
+<dd>the axis segment from which we retain the indices <code class="xref any docutils literal"><span class="pre">idx</span></code></dd>
 <dt>above: bool</dt>
 <dd><dl class="first last docutils">
-<dt>if <cite>True</cite> will retain the grid:</dt>
-<dd><cite>grid[idx:,...]</cite></dd>
+<dt>if <code class="xref any docutils literal"><span class="pre">True</span></code> will retain the grid:</dt>
+<dd><code class="xref any docutils literal"><span class="pre">grid[idx:,...]</span></code></dd>
 <dt>else it will retain the grid:</dt>
-<dd><cite>grid[:idx,...]</cite></dd>
+<dd><code class="xref any docutils literal"><span class="pre">grid[:idx,...]</span></code></dd>
 </dl>
 </dd>
 </dl>
@@ -382,7 +382,7 @@ for <cite>above=False</cite> grid[:idx,...]</dd>
 <dl class="method">
 <dt id="sids.grid.Grid.sum">
 <code class="descname">sum</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.sum" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the grid summed along axis <cite>axis</cite>.</p>
+<dd><p>Returns the grid summed along axis <code class="xref any docutils literal"><span class="pre">axis</span></code>.</p>
 </dd></dl>
 
 <dl class="method">

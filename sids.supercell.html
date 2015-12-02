@@ -139,7 +139,7 @@
 <dl class="method">
 <dt id="sids.supercell.SuperCell.append">
 <code class="descname">append</code><span class="sig-paren">(</span><em>other</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.append" title="Permalink to this definition">¶</a></dt>
-<dd><p>Appends other <cite>SuperCell</cite> to this grid along axis</p>
+<dd><p>Appends other <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> to this grid along axis</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -150,7 +150,7 @@
 <dl class="method">
 <dt id="sids.supercell.SuperCell.center">
 <code class="descname">center</code><span class="sig-paren">(</span><em>axis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.center" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns center of the <cite>SuperCell</cite>, possibly with respect to an axis</p>
+<dd><p>Returns center of the <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a>, possibly with respect to an axis</p>
 </dd></dl>
 
 <dl class="method">
@@ -190,7 +190,7 @@
 <dl class="attribute">
 <dt id="sids.supercell.SuperCell.rcell">
 <code class="descname">rcell</code><a class="headerlink" href="#sids.supercell.SuperCell.rcell" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the reciprocal cell for the <cite>SuperCell</cite></p>
+<dd><p>Returns the reciprocal cell for the <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a></p>
 <p>Note: The returned vectors are still in [0,:] format
 and not as returned by an inverse LAPACK algorithm.</p>
 </dd></dl>
@@ -232,7 +232,7 @@ v = [1,0,0] will rotate in the <code class="docutils literal"><span class="pre">
 <dl class="method">
 <dt id="sids.supercell.SuperCell.sc_index">
 <code class="descname">sc_index</code><span class="sig-paren">(</span><em>sc_off</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.sc_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the integer index in the sc_off list that corresponds to <cite>sc_off</cite></p>
+<dd><p>Returns the integer index in the sc_off list that corresponds to <a class="reference internal" href="#sids.supercell.SuperCell.sc_off" title="sids.supercell.SuperCell.sc_off"><code class="xref any py py-attr docutils literal"><span class="pre">sc_off</span></code></a></p>
 <p>Returns the integer for the supercell</p>
 </dd></dl>
 
@@ -276,8 +276,8 @@ v = [1,0,0] will rotate in the <code class="docutils literal"><span class="pre">
 <dl class="method">
 <dt id="sids.supercell.SuperCell.swapaxes">
 <code class="descname">swapaxes</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.swapaxes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <cite>SuperCell</cite> with swapped axis</p>
-<p>If <cite>swapaxes(0,1)</cite> it returns the 0 in the 1 values.</p>
+<dd><p>Returns <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> with swapped axis</p>
+<p>If <code class="xref any docutils literal"><span class="pre">swapaxes(0,1)</span></code> it returns the 0 in the 1 values.</p>
 </dd></dl>
 
 <dl class="classmethod">
@@ -311,9 +311,9 @@ The angles should be provided in degree (not radians).</p>
 <dt id="sids.supercell.SuperCellChild">
 <em class="property">class </em><code class="descclassname">sids.supercell.</code><code class="descname">SuperCellChild</code><a class="headerlink" href="#sids.supercell.SuperCellChild" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>Class to be inherited by using the <cite>self.sc</cite> as a <cite>SuperCell</cite> object</p>
-<p>Initialize by a <cite>SuperCell</cite> object and get access to several different
-routines directly related to the <cite>SuperCell</cite> class.</p>
+<p>Class to be inherited by using the <code class="xref any docutils literal"><span class="pre">self.sc</span></code> as a <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object</p>
+<p>Initialize by a <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object and get access to several different
+routines directly related to the <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> class.</p>
 <dl class="attribute">
 <dt id="sids.supercell.SuperCellChild.Bohr">
 <code class="descname">Bohr</code><em class="property"> = 0.529177</em><a class="headerlink" href="#sids.supercell.SuperCellChild.Bohr" title="Permalink to this definition">¶</a></dt>
@@ -322,7 +322,7 @@ routines directly related to the <cite>SuperCell</cite> class.</p>
 <dl class="attribute">
 <dt id="sids.supercell.SuperCellChild.cell">
 <code class="descname">cell</code><a class="headerlink" href="#sids.supercell.SuperCellChild.cell" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the inherent <cite>SuperCell</cite> objects <cite>cell</cite></p>
+<dd><p>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.cell" title="sids.supercell.SuperCellChild.cell"><code class="xref any py py-attr docutils literal"><span class="pre">cell</span></code></a></p>
 </dd></dl>
 
 <dl class="method">
@@ -334,37 +334,37 @@ routines directly related to the <cite>SuperCell</cite> class.</p>
 <dl class="attribute">
 <dt id="sids.supercell.SuperCellChild.n_s">
 <code class="descname">n_s</code><a class="headerlink" href="#sids.supercell.SuperCellChild.n_s" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the inherent <cite>SuperCell</cite> objects <cite>n_s</cite></p>
+<dd><p>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.n_s" title="sids.supercell.SuperCellChild.n_s"><code class="xref any py py-attr docutils literal"><span class="pre">n_s</span></code></a></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sids.supercell.SuperCellChild.nsc">
 <code class="descname">nsc</code><a class="headerlink" href="#sids.supercell.SuperCellChild.nsc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the inherent <cite>SuperCell</cite> objects <cite>nsc</cite></p>
+<dd><p>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.nsc" title="sids.supercell.SuperCellChild.nsc"><code class="xref any py py-attr docutils literal"><span class="pre">nsc</span></code></a></p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sids.supercell.SuperCellChild.rcell">
 <code class="descname">rcell</code><a class="headerlink" href="#sids.supercell.SuperCellChild.rcell" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the inherent <cite>SuperCell</cite> objects <cite>rcell</cite></p>
+<dd><p>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.rcell" title="sids.supercell.SuperCellChild.rcell"><code class="xref any py py-attr docutils literal"><span class="pre">rcell</span></code></a></p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.supercell.SuperCellChild.sc_index">
 <code class="descname">sc_index</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCellChild.sc_index" title="Permalink to this definition">¶</a></dt>
-<dd><p>Call local <cite>SuperCell</cite> object <cite>sc_index</cite> function</p>
+<dd><p>Call local <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="#sids.supercell.SuperCellChild.sc_index" title="sids.supercell.SuperCellChild.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sids.supercell.SuperCellChild.sc_off">
 <code class="descname">sc_off</code><a class="headerlink" href="#sids.supercell.SuperCellChild.sc_off" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the inherent <cite>SuperCell</cite> objects <cite>sc_off</cite></p>
+<dd><p>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.sc_off" title="sids.supercell.SuperCellChild.sc_off"><code class="xref any py py-attr docutils literal"><span class="pre">sc_off</span></code></a></p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.supercell.SuperCellChild.set_nsc">
 <code class="descname">set_nsc</code><span class="sig-paren">(</span><em>nsc</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCellChild.set_nsc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the number of super-cells in the <cite>SuperCell</cite> object</p>
+<dd><p>Set the number of super-cells in the <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object</p>
 </dd></dl>
 
 <dl class="method">
@@ -382,7 +382,7 @@ routines directly related to the <cite>SuperCell</cite> class.</p>
 <dl class="attribute">
 <dt id="sids.supercell.SuperCellChild.vol">
 <code class="descname">vol</code><a class="headerlink" href="#sids.supercell.SuperCellChild.vol" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the inherent <cite>SuperCell</cite> objects <cite>vol</cite></p>
+<dd><p>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.vol" title="sids.supercell.SuperCellChild.vol"><code class="xref any py py-attr docutils literal"><span class="pre">vol</span></code></a></p>
 </dd></dl>
 
 </dd></dl>
