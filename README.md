@@ -11,4 +11,7 @@ Here are the needed steps:
 2. Run `docs/autodoc.sh` for creating the documentation,
    This will automatically created and commit the documentation
    of the latest tag on the `master` branch.
+
+	To skip the actual commit of the documentation call it via
+	`docs/autodoc.sh --skip-commit|-sc`
 	

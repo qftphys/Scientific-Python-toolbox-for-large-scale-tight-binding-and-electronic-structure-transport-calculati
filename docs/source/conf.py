@@ -37,8 +37,18 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
+    'sphinx.ext.viewcode',
 ]
 
+# Enable plots in documentation
+extensions += [
+    'matplotlib.sphinxext.only_directives',
+    'matplotlib.sphinxext.plot_directive',
+    'matplotlib.sphinxext.ipython_directive',
+    'matplotlib.sphinxext.ipython_console_highlighting'
+]
+
+# Enable automatic summary
 autosummary_generate = True
 
 # Add any paths that contain templates here, relative to this directory.
