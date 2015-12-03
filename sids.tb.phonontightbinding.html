@@ -131,12 +131,69 @@
 <p>Tight-binding class to create tight-binding models.</p>
 <dl class="class">
 <dt id="sids.tb.phonontightbinding.PhononTightBinding">
-<em class="property">class </em><code class="descclassname">sids.tb.phonontightbinding.</code><code class="descname">PhononTightBinding</code><span class="sig-paren">(</span><em>geom</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.phonontightbinding.PhononTightBinding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sids.tb.phonontightbinding.</code><code class="descname">PhononTightBinding</code><span class="sig-paren">(</span><em>geom</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/tb/phonontightbinding.html#PhononTightBinding"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.tb.phonontightbinding.PhononTightBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="sids.tb.tightbinding.html#sids.tb.tightbinding.TightBinding" title="sids.tb.tightbinding.TightBinding"><code class="xref py py-class docutils literal"><span class="pre">sids.tb.tightbinding.TightBinding</span></code></a></p>
 <p>Phonon tight-binding model with slight modifications</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">nnzs</span></code></td>
+<td>Returns number of non-zero elements in the tight-binding model</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></td>
+<td>Returns number of orbitals as used when the object was created</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.tb.phonontightbinding.PhononTightBinding.correct_Newton" title="sids.tb.phonontightbinding.PhononTightBinding.correct_Newton"><code class="xref py py-obj docutils literal"><span class="pre">correct_Newton</span></code></a>()</td>
+<td>Sometimes the dynamical matrix does not obey Newtons laws.</td>
+</tr>
+</tbody>
+</table>
+<p>Create tight-binding model from geometry</p>
+<p>Initializes a tight-binding model using the <code class="docutils literal"><span class="pre">geom</span></code> object
+as the underlying geometry for the tight-binding parameters.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">nnzs</span></code></td>
+<td>Returns number of non-zero elements in the tight-binding model</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></td>
+<td>Returns number of orbitals as used when the object was created</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.tb.phonontightbinding.PhononTightBinding.correct_Newton" title="sids.tb.phonontightbinding.PhononTightBinding.correct_Newton"><code class="xref py py-obj docutils literal"><span class="pre">correct_Newton</span></code></a>()</td>
+<td>Sometimes the dynamical matrix does not obey Newtons laws.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="sids.tb.phonontightbinding.PhononTightBinding.correct_Newton">
-<code class="descname">correct_Newton</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.phonontightbinding.PhononTightBinding.correct_Newton" title="Permalink to this definition">¶</a></dt>
+<code class="descname">correct_Newton</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/tb/phonontightbinding.html#PhononTightBinding.correct_Newton"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.tb.phonontightbinding.PhononTightBinding.correct_Newton" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sometimes the dynamical matrix does not obey Newtons laws.</p>
 <p>We correct the dynamical matrix by imposing zero force.</p>
 <p>Correcting for Newton forces the matrix to be finalized.</p>

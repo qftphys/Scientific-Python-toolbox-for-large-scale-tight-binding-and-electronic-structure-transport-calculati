@@ -131,19 +131,34 @@
 <p>Sile object for reading/writing SIESTA Grid files</p>
 <dl class="class">
 <dt id="sids.io.siesta_grid.SIESTAGridSile">
-<em class="property">class </em><code class="descclassname">sids.io.siesta_grid.</code><code class="descname">SIESTAGridSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta_grid.SIESTAGridSile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sids.io.siesta_grid.</code><code class="descname">SIESTAGridSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/siesta_grid.html#SIESTAGridSile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.siesta_grid.SIESTAGridSile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.NCSile" title="sids.io.sile.NCSile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.NCSile</span></code></a></p>
 <p>SIESTA Grid file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.io.siesta_grid.SIESTAGridSile.read_grid" title="sids.io.siesta_grid.SIESTAGridSile.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>([name,&nbsp;idx])</td>
+<td>Reads a grid in the current SIESTA.grid.nc file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.io.siesta_grid.SIESTAGridSile.read_sc" title="sids.io.siesta_grid.SIESTAGridSile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<td>Returns a SuperCell object from a SIESTA.grid.nc file</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="sids.io.siesta_grid.SIESTAGridSile.read_grid">
-<code class="descname">read_grid</code><span class="sig-paren">(</span><em>name='gridfunc'</em>, <em>idx=0</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta_grid.SIESTAGridSile.read_grid" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_grid</code><span class="sig-paren">(</span><em>name='gridfunc'</em>, <em>idx=0</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/siesta_grid.html#SIESTAGridSile.read_grid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.siesta_grid.SIESTAGridSile.read_grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads a grid in the current SIESTA.grid.nc file</p>
 <p>Enables the reading and processing of the grids created by SIESTA</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.siesta_grid.SIESTAGridSile.read_sc">
-<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta_grid.SIESTAGridSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/siesta_grid.html#SIESTAGridSile.read_sc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.siesta_grid.SIESTAGridSile.read_sc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a SuperCell object from a SIESTA.grid.nc file</p>
 </dd></dl>
 

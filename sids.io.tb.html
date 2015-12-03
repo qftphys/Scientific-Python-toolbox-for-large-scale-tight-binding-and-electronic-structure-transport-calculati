@@ -131,35 +131,64 @@
 <p>Sile object for reading/writing TB in/output</p>
 <dl class="class">
 <dt id="sids.io.tb.TBSile">
-<em class="property">class </em><code class="descclassname">sids.io.tb.</code><code class="descname">TBSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.tb.TBSile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sids.io.tb.</code><code class="descname">TBSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/tb.html#TBSile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.tb.TBSile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.Sile" title="sids.io.sile.Sile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.Sile</span></code></a></p>
 <p>Tight-binding file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.io.tb.TBSile.read_geom" title="sids.io.tb.TBSile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
+<td>Reading a geometry in regular TB format</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.io.tb.TBSile.read_tb" title="sids.io.tb.TBSile.read_tb"><code class="xref py py-obj docutils literal"><span class="pre">read_tb</span></code></a>([hermitian,&nbsp;dtype])</td>
+<td>Reads a tight-binding model (including the geometry)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.io.tb.TBSile.write_geom" title="sids.io.tb.TBSile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom,&nbsp;**kwargs)</td>
+<td>Writes the geometry to the output file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.io.tb.TBSile.write_tb" title="sids.io.tb.TBSile.write_tb"><code class="xref py py-obj docutils literal"><span class="pre">write_tb</span></code></a>(tb[,&nbsp;hermitian])</td>
+<td>Writes the tight-binding model to the file</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="sids.io.tb.TBSile.read_geom">
-<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.tb.TBSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/tb.html#TBSile.read_geom"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.tb.TBSile.read_geom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reading a geometry in regular TB format</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.tb.TBSile.read_tb">
-<code class="descname">read_tb</code><span class="sig-paren">(</span><em>hermitian=True</em>, <em>dtype=&lt;type 'numpy.float64'&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.tb.TBSile.read_tb" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_tb</code><span class="sig-paren">(</span><em>hermitian=True</em>, <em>dtype=&lt;type 'numpy.float64'&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/tb.html#TBSile.read_tb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.tb.TBSile.read_tb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads a tight-binding model (including the geometry)</p>
 <p>Reads the tight-binding model</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.tb.TBSile.write_geom">
-<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.tb.TBSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/tb.html#TBSile.write_geom"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.tb.TBSile.write_geom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes the geometry to the output file</p>
-<dl class="docutils">
-<dt>geom: Geometry</dt>
-<dd>The geometry we wish to write</dd>
-</dl>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>geom: Geometry</strong></p>
+<blockquote class="last">
+<div><p>The geometry we wish to write</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.tb.TBSile.write_tb">
-<code class="descname">write_tb</code><span class="sig-paren">(</span><em>tb</em>, <em>hermitian=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.tb.TBSile.write_tb" title="Permalink to this definition">¶</a></dt>
+<code class="descname">write_tb</code><span class="sig-paren">(</span><em>tb</em>, <em>hermitian=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/tb.html#TBSile.write_tb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.tb.TBSile.write_tb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes the tight-binding model to the file</p>
 <p>Writes a tight-binding model to the tight-binding file.
 The file can be constructed by the implict force of Hermiticity,
