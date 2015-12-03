@@ -37,6 +37,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
+    'sphinx.ext.inheritance_diagram',
 ]
 
 # Enable plots in documentation
@@ -120,7 +121,7 @@ default_role = 'any'
 pygments_style = 'sphinx'
 
 # A list of ignored prefixes for module index sorting.
-modindex_common_prefix = []
+modindex_common_prefix = ['sids']
 
 # If true, keep warnings as "system message" paragraphs in the built documents.
 #keep_warnings = False

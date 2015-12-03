@@ -133,6 +133,8 @@ git rm -rf [^dR]*
 tar xfz $tmpdir/html.tar.gz
 mv $tmpdir/coverage.txt .
 
+# Now we can safely update the documentation tag
+echo "$doc_tag" > docs/doc.tag
 # Add everything (including updated tag)
 git add .buildinfo docs/doc.tag
 # Add all created html files
