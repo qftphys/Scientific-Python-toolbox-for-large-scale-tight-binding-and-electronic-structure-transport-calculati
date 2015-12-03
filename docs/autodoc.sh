@@ -79,6 +79,9 @@ git archive --prefix=$docdir/ -o $tmpdir/gh-pages.tar.gz $hashid
 git checkout docs/doc.tag
 
 # Move to the latest committed version
+# We first checkout master, in case the user has specified 
+# a custom tag
+git checkout master
 git checkout $tag
 
 # Extract the just created tar of the documentation repository
