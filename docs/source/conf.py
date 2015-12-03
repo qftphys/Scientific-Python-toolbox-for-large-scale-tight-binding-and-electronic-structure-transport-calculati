@@ -44,8 +44,8 @@ extensions = [
 extensions += [
     'matplotlib.sphinxext.only_directives',
     'matplotlib.sphinxext.plot_directive',
-    'matplotlib.sphinxext.ipython_directive',
-    'matplotlib.sphinxext.ipython_console_highlighting'
+#    'matplotlib.sphinxext.ipython_directive',
+#    'matplotlib.sphinxext.ipython_console_highlighting'
 ]
 
 # Enable automatic summary
