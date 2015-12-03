@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to sids’s documentation!</title>
+  <title>Welcome to sids’s 0.4.4-2-gc0a7ccd documentation!</title>
   
 
   
@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0..
+                0.4
               </div>
             
           
@@ -112,7 +112,8 @@
   <ul class="wy-breadcrumbs">
     <li><a href="#">Docs</a> &raquo;</li>
       
-    <li>Welcome to sids&#8217;s documentation!</li>
+    <li>Welcome to sids&#8217;s 0.4.4-2-gc0a7ccd
+ documentation!</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -126,11 +127,33 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="welcome-to-sids-s-documentation">
-<h1>Welcome to sids&#8217;s documentation!<a class="headerlink" href="#welcome-to-sids-s-documentation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="welcome-to-sids-s-release-documentation">
+<h1>Welcome to sids&#8217;s 0.4.4-2-gc0a7ccd
+ documentation!<a class="headerlink" href="#welcome-to-sids-s-release-documentation" title="Permalink to this headline">¶</a></h1>
 <p>sids is a tool to easily create geometries and handle input/output files
 from various DFT codes. Although this is based on the SIESTA/TranSIESTA
-DFT code it is far from limited to handle this code.</p>
+DFT code it is far from limited to deal with <em>only</em> this code.</p>
+<p>A list of key components are</p>
+<dl class="docutils">
+<dt><strong class="program">sgeom</strong></dt>
+<dd>Read and transform generic coordinate files from
+one format into several others.</dd>
+<dt><strong class="program">sgrid</strong></dt>
+<dd>Read and transform <em>grid</em> data, such as electronic
+densities, electrostatic potentials etc. and save them in various
+formats.</dd>
+</dl>
+<p>Script based handling via Python classes and objects that handles</p>
+<blockquote>
+<div><ul class="simple">
+<li>Atomic species</li>
+<li>Unit cells (using a super cell approach)</li>
+<li>Geometries, with associated atomic species and unit cells</li>
+<li>Grids, with associated unit cells</li>
+<li>Tight-binding models using a sparse data structure for easy
+creation and calculation of eigenvalues</li>
+</ul>
+</div></blockquote>
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul class="simple">
@@ -144,8 +167,7 @@ DFT code it is far from limited to handle this code.</p>
 <tbody valign="top">
 </tbody>
 </table>
-<span class="target" id="module-sids"></span><p>sids package</p>
-<p>Geometry and tight-binding setups using pure python.</p>
+<p>The API documentation of the <a class="reference internal" href="sids.html"><em>sids package</em></a> package can be found <a class="reference internal" href="sids.html"><em>here</em></a>.</p>
 </div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
@@ -188,7 +210,7 @@ DFT code it is far from limited to handle this code.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.4.4-1-gad2aa88
+            VERSION:'0.4.4-2-gc0a7ccd
 ',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
