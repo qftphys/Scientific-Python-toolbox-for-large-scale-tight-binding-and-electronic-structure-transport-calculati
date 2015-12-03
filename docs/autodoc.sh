@@ -1,6 +1,10 @@
 #!/bin/bash
 
+# Default options
+skip_commit=0
+
 # Create documentation...
+# Parse options
 
 # Get top-level directory of repository
 top_dir=`git rev-parse --show-toplevel`
@@ -14,21 +18,44 @@ git stash
 # Get latest tag version on master
 git checkout master
 tag=`git describe --abbrev=0`
+doc_tag=$tag
+head_tag=`git describe`
 git checkout gh-pages
+
+while [[ $# -gt 0 ]]; do
+    opt=$1
+    shift
+
+    case $opt in
+	--tag|-t)
+	    tag=$1
+	    doc_tag=$head_tag
+	    shift
+	    ;;
+	--skip-commit|-sc)
+	    skip_commit=1
+	    ;;
+	*)
+	    echo "Unrecognized option: $opt"
+	    ;;
+    esac
+    
+done
+
 
 
 # Check if the current documentation is the same
 # If so, quit immediately
 cur_tag=`head -1 docs/doc.tag`
 
-if [[ $tag == $cur_tag ]]; then
+if [[ $doc_tag == $cur_tag ]]; then
     echo "The current documented tag is the same as the latest available tag."
     echo "Will not update documentation..."
     exit 1
 fi
 
 # Now we can safely update the documentation tag
-echo "$tag" > docs/doc.tag
+echo "$doc_tag" > docs/doc.tag
 
 # Create a temporary directory
 tmpdir=`mktemp -d`
@@ -86,6 +113,11 @@ mv build/coverage/python.txt $tmpdir/coverage.txt
 
 popd
 
+# Quick exit if not needed
+if [[ $skip_commit -eq 1 ]]; then
+    exit 0
+fi
+
 rm -r $docdir
 
 # Jump back to the gh-pages branch
@@ -99,8 +131,9 @@ tar xfz $tmpdir/html.tar.gz
 mv $tmpdir/coverage.txt .
 
 # Add everything (including updated tag)
-git add .buildinfo
-git add * docs/doc.tag
+git add .buildinfo docs/doc.tag
+# Add all created html files
+git add * 
 git commit -s -m "Released documentation of $tag"
 
 # Clean-up
