@@ -139,7 +139,7 @@ echo "$doc_tag" > docs/doc.tag
 git add .buildinfo docs/doc.tag
 # Add all created html files
 git add * 
-git commit -s -m "Released documentation of $tag"
+git commit -s -m "Released documentation of $doc_tag"
 
 # Clean-up
 rm -r $tmpdir
