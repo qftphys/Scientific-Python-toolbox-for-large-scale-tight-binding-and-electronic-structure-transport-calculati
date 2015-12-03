@@ -33,6 +33,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.doctest',
+    'numpydoc',
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
@@ -77,6 +78,9 @@ from sids_info import version, release
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
 language = None
+
+# Add __init__ classes to the documentation
+autoclass_content = 'both'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
