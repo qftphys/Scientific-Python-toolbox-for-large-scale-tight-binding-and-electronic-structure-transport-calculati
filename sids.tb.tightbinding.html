@@ -131,7 +131,7 @@
 <p>Tight-binding class to create tight-binding models.</p>
 <dl class="class">
 <dt id="sids.tb.tightbinding.TightBinding">
-<em class="property">class </em><code class="descclassname">sids.tb.tightbinding.</code><code class="descname">TightBinding</code><span class="sig-paren">(</span><em>geom</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/tb/tightbinding.html#TightBinding"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.tb.tightbinding.TightBinding" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sids.tb.tightbinding.</code><code class="descname">TightBinding</code><span class="sig-paren">(</span><em>geom</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.tightbinding.TightBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>The defining tight-binding model for constructing models
 in python for easy manipulation in tbtrans.</p>
@@ -253,7 +253,7 @@ as the underlying geometry for the tight-binding parameters.</p>
 </table>
 <dl class="method">
 <dt id="sids.tb.tightbinding.TightBinding.construct">
-<code class="descname">construct</code><span class="sig-paren">(</span><em>dR</em>, <em>param</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/tb/tightbinding.html#TightBinding.construct"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.construct" title="Permalink to this definition">¶</a></dt>
+<code class="descname">construct</code><span class="sig-paren">(</span><em>dR</em>, <em>param</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.construct" title="Permalink to this definition">¶</a></dt>
 <dd><p>Automatically construct the tight-binding model based on <a class="reference internal" href="sids.atom.html#sids.atom.Atom.dR" title="sids.atom.Atom.dR"><code class="xref any py py-attr docutils literal"><span class="pre">dR</span></code></a> and associated hopping integrals <code class="xref any docutils literal"><span class="pre">param</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -279,7 +279,7 @@ for the all atoms within <code class="xref any docutils literal"><span class="pr
 
 <dl class="method">
 <dt id="sids.tb.tightbinding.TightBinding.cut">
-<code class="descname">cut</code><span class="sig-paren">(</span><em>seps</em>, <em>axis</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/tb/tightbinding.html#TightBinding.cut"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.cut" title="Permalink to this definition">¶</a></dt>
+<code class="descname">cut</code><span class="sig-paren">(</span><em>seps</em>, <em>axis</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.cut" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cuts the tight-binding model into different parts.</p>
 <p>Creates a tight-binding model by retaining the parameters
 for the cut-out region, possibly creating a super-cell.</p>
@@ -303,7 +303,7 @@ for the cut-out region, possibly creating a super-cell.</p>
 
 <dl class="method">
 <dt id="sids.tb.tightbinding.TightBinding.eigh">
-<code class="descname">eigh</code><span class="sig-paren">(</span><em>k=None</em>, <em>atoms=None</em>, <em>eigvals_only=True</em>, <em>overwrite_a=True</em>, <em>overwrite_b=True</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/tb/tightbinding.html#TightBinding.eigh"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.eigh" title="Permalink to this definition">¶</a></dt>
+<code class="descname">eigh</code><span class="sig-paren">(</span><em>k=None</em>, <em>atoms=None</em>, <em>eigvals_only=True</em>, <em>overwrite_a=True</em>, <em>overwrite_b=True</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.eigh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the eigenvalues of the tight-binding model</p>
 <p>Setup the Hamiltonian and overlap matrix with respect to
 the given k-point, then reduce the space to the specified atoms
@@ -313,7 +313,7 @@ and calculate the eigenvalues.</p>
 
 <dl class="method">
 <dt id="sids.tb.tightbinding.TightBinding.finalize">
-<code class="descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/tb/tightbinding.html#TightBinding.finalize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.finalize" title="Permalink to this definition">¶</a></dt>
+<code class="descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.finalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finalizes the tight-binding model</p>
 <p>Finalizes the tight-binding model so that no new sparse
 elements can be added.</p>
@@ -334,13 +334,13 @@ elements can be added.</p>
 
 <dl class="method">
 <dt id="sids.tb.tightbinding.TightBinding.repeat">
-<code class="descname">repeat</code><span class="sig-paren">(</span><em>reps</em>, <em>axis</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/tb/tightbinding.html#TightBinding.repeat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.repeat" title="Permalink to this definition">¶</a></dt>
+<code class="descname">repeat</code><span class="sig-paren">(</span><em>reps</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.repeat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Refer to <code class="docutils literal"><span class="pre">self.tile</span></code> instead</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.tb.tightbinding.TightBinding.reset">
-<code class="descname">reset</code><span class="sig-paren">(</span><em>nc=None</em>, <em>dtype=&lt;type 'numpy.float64'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/tb/tightbinding.html#TightBinding.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.reset" title="Permalink to this definition">¶</a></dt>
+<code class="descname">reset</code><span class="sig-paren">(</span><em>nc=None</em>, <em>dtype=&lt;type 'numpy.float64'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>The sparsity pattern is cleaned and every thing 
 is reset.</p>
 <p>The object will be the same as if it had been
@@ -350,13 +350,13 @@ created with.</p>
 
 <dl class="classmethod">
 <dt id="sids.tb.tightbinding.TightBinding.sp2tb">
-<em class="property">classmethod </em><code class="descname">sp2tb</code><span class="sig-paren">(</span><em>geom</em>, <em>H</em>, <em>S</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/tb/tightbinding.html#TightBinding.sp2tb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.sp2tb" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">sp2tb</code><span class="sig-paren">(</span><em>geom</em>, <em>H</em>, <em>S</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.sp2tb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a tight-binding model from a preset H, S and Geometry</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.tb.tightbinding.TightBinding.tile">
-<code class="descname">tile</code><span class="sig-paren">(</span><em>reps</em>, <em>axis</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/tb/tightbinding.html#TightBinding.tile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.tile" title="Permalink to this definition">¶</a></dt>
+<code class="descname">tile</code><span class="sig-paren">(</span><em>reps</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.tile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a repeated tight-binding model for this, much like the <a class="reference internal" href="sids.geometry.html#sids.geometry.Geometry" title="sids.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a>.</p>
 <p>The already existing tight-binding parameters are extrapolated 
 to the new supercell by repeating them in blocks like the coordinates.</p>
@@ -377,7 +377,7 @@ to the new supercell by repeating them in blocks like the coordinates.</p>
 
 <dl class="method">
 <dt id="sids.tb.tightbinding.TightBinding.tocsr">
-<code class="descname">tocsr</code><span class="sig-paren">(</span><em>k=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/tb/tightbinding.html#TightBinding.tocsr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.tocsr" title="Permalink to this definition">¶</a></dt>
+<code class="descname">tocsr</code><span class="sig-paren">(</span><em>k=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.tocsr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns <code class="docutils literal"><span class="pre">scipy.sparse</span></code> matrices for the tight-binding model</p>
 <p>Returns a CSR sparse matrix for both the Hamiltonian
 and the overlap matrix using the scipy package.</p>
@@ -386,7 +386,7 @@ and the overlap matrix using the scipy package.</p>
 
 <dl class="method">
 <dt id="sids.tb.tightbinding.TightBinding.write">
-<code class="descname">write</code><span class="sig-paren">(</span><em>sile</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/tb/tightbinding.html#TightBinding.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.write" title="Permalink to this definition">¶</a></dt>
+<code class="descname">write</code><span class="sig-paren">(</span><em>sile</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.tb.tightbinding.TightBinding.write" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes a tight-binding model to the <code class="docutils literal"><span class="pre">sile</span></code> as implemented in the <code class="docutils literal"><span class="pre">ObjSile.write_tb</span></code>
 method</p>
 </dd></dl>

@@ -131,7 +131,7 @@
 <p>Geometry class to retain the atomic structure.</p>
 <dl class="class">
 <dt id="sids.geometry.Geometry">
-<em class="property">class </em><code class="descclassname">sids.geometry.</code><code class="descname">Geometry</code><span class="sig-paren">(</span><em>xyz</em>, <em>atoms=H orbs: 1 mass(au): 1.00794</em>, <em>sc=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sids.geometry.</code><code class="descname">Geometry</code><span class="sig-paren">(</span><em>xyz</em>, <em>atoms=H orbs: 1 mass(au): 1.00794</em>, <em>sc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCellChild" title="sids.supercell.SuperCellChild"><code class="xref py py-class docutils literal"><span class="pre">sids.supercell.SuperCellChild</span></code></a></p>
 <p>Object for retaining a list of atoms.</p>
 <p>Every geometry deals with this information:
@@ -349,14 +349,14 @@ From those methods a <a class="reference internal" href="sids.html"><em>sids pac
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.a2isc">
-<code class="descname">a2isc</code><span class="sig-paren">(</span><em>a</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.a2isc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.a2isc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">a2isc</code><span class="sig-paren">(</span><em>a</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.a2isc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the super-cell index for a specific atom</p>
 <p>Hence one can easily figure out the supercell</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.a2o">
-<code class="descname">a2o</code><span class="sig-paren">(</span><em>ia</em>, <em>all=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.a2o"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.a2o" title="Permalink to this definition">¶</a></dt>
+<code class="descname">a2o</code><span class="sig-paren">(</span><em>ia</em>, <em>all=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.a2o" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an orbital index of the first orbital of said atom.
 This is particularly handy if you want to create
 TB models with more than one orbital per atom.</p>
@@ -381,7 +381,7 @@ TB models with more than one orbital per atom.</p>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.append">
-<code class="descname">append</code><span class="sig-paren">(</span><em>other</em>, <em>axis</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.append"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.append" title="Permalink to this definition">¶</a></dt>
+<code class="descname">append</code><span class="sig-paren">(</span><em>other</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.append" title="Permalink to this definition">¶</a></dt>
 <dd><p>Appends structure along <code class="docutils literal"><span class="pre">axis</span></code>. This will automatically
 add the <code class="docutils literal"><span class="pre">self.cell[axis,:]</span></code> to all atomic coordiates in the 
 <code class="docutils literal"><span class="pre">other</span></code> structure before appending.</p>
@@ -423,7 +423,7 @@ appended.</p>
 
 <dl class="classmethod">
 <dt id="sids.geometry.Geometry.ase">
-<em class="property">classmethod </em><code class="descname">ase</code><span class="sig-paren">(</span><em>aseg</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.ase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.ase" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">ase</code><span class="sig-paren">(</span><em>aseg</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.ase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns geometry from an ASE object.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -442,12 +442,12 @@ From those methods a <a class="reference internal" href="sids.html"><em>sids pac
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.axyzsc">
-<code class="descname">axyzsc</code><span class="sig-paren">(</span><em>ia</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.axyzsc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.axyzsc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">axyzsc</code><span class="sig-paren">(</span><em>ia</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.axyzsc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.bond_correct">
-<code class="descname">bond_correct</code><span class="sig-paren">(</span><em>ia</em>, <em>atoms</em>, <em>radii='calc'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.bond_correct"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.bond_correct" title="Permalink to this definition">¶</a></dt>
+<code class="descname">bond_correct</code><span class="sig-paren">(</span><em>ia</em>, <em>atoms</em>, <em>radii='calc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.bond_correct" title="Permalink to this definition">¶</a></dt>
 <dd><p>Corrects the bond between <code class="xref any docutils literal"><span class="pre">ia</span></code> and the <code class="xref any docutils literal"><span class="pre">atoms</span></code>.</p>
 <p>Corrects the bond-length between atom <code class="xref any docutils literal"><span class="pre">ia</span></code> and <code class="xref any docutils literal"><span class="pre">atoms</span></code> in such
 a way that the atomic radii is preserved.
@@ -478,7 +478,7 @@ Else it will be the new bond-length.</p>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.center">
-<code class="descname">center</code><span class="sig-paren">(</span><em>atoms=None</em>, <em>which='xyz'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.center"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.center" title="Permalink to this definition">¶</a></dt>
+<code class="descname">center</code><span class="sig-paren">(</span><em>atoms=None</em>, <em>which='xyz'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.center" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the center of the geometry 
 By specifying <code class="docutils literal"><span class="pre">which</span></code> one can control whether it should be:
 <code class="docutils literal"><span class="pre">xyz``|``position:</span> <span class="pre">Center</span> <span class="pre">of</span> <span class="pre">coordinates</span> <span class="pre">(default)</span>
@@ -488,7 +488,7 @@ By specifying <code class="docutils literal"><span class="pre">which</span></cod
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.close">
-<code class="descname">close</code><span class="sig-paren">(</span><em>xyz_ia</em>, <em>dR=None</em>, <em>idx=None</em>, <em>ret_coord=False</em>, <em>ret_dist=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.close" title="Permalink to this definition">¶</a></dt>
+<code class="descname">close</code><span class="sig-paren">(</span><em>xyz_ia</em>, <em>dR=None</em>, <em>idx=None</em>, <em>ret_coord=False</em>, <em>ret_dist=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns supercell atomic indices for all atoms connecting to <code class="docutils literal"><span class="pre">xyz_ia</span></code></p>
 <p>This heavily relies on the <code class="docutils literal"><span class="pre">self.close_sc</span></code> method.</p>
 <p>Note that if a connection is made in a neighbouring super-cell
@@ -594,7 +594,7 @@ for each of the couplings.</p>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.close_sc">
-<code class="descname">close_sc</code><span class="sig-paren">(</span><em>xyz_ia, isc=[0, 0, 0], dR=None, idx=None, ret_coord=False, ret_dist=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.close_sc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.close_sc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">close_sc</code><span class="sig-paren">(</span><em>xyz_ia, isc=[0, 0, 0], dR=None, idx=None, ret_coord=False, ret_dist=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.close_sc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates which atoms are close to some atom or point
 in space, only returns so relative to a super-cell.</p>
 <p>This returns a set of atomic indices which are within a 
@@ -654,7 +654,7 @@ for each of the couplings.</p>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.coords">
-<code class="descname">coords</code><span class="sig-paren">(</span><em>isc=[0, 0, 0], idx=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.coords"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.coords" title="Permalink to this definition">¶</a></dt>
+<code class="descname">coords</code><span class="sig-paren">(</span><em>isc=[0, 0, 0], idx=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.coords" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the coordinates of a given super-cell index</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -684,13 +684,13 @@ parts of the cell.</p>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.copy">
-<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.copy" title="Permalink to this definition">¶</a></dt>
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a copy of the object.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.cut">
-<code class="descname">cut</code><span class="sig-paren">(</span><em>seps</em>, <em>axis</em>, <em>seg=0</em>, <em>rtol=0.0001</em>, <em>atol=0.0001</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.cut"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.cut" title="Permalink to this definition">¶</a></dt>
+<code class="descname">cut</code><span class="sig-paren">(</span><em>seps</em>, <em>axis</em>, <em>seg=0</em>, <em>rtol=0.0001</em>, <em>atol=0.0001</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.cut" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a subset of atoms from the geometry by cutting the 
 geometry into <code class="docutils literal"><span class="pre">seps</span></code> parts along the direction <code class="docutils literal"><span class="pre">axis</span></code>.
 It will then _only_ return the first cut.</p>
@@ -730,14 +730,14 @@ this may change in the future.</p>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.insert">
-<code class="descname">insert</code><span class="sig-paren">(</span><em>atom</em>, <em>other</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.insert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.insert" title="Permalink to this definition">¶</a></dt>
+<code class="descname">insert</code><span class="sig-paren">(</span><em>atom</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.insert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inserts other atoms right before index</p>
 <p>We insert the <code class="xref any docutils literal"><span class="pre">other</span></code> <code class="docutils literal"><span class="pre">Geometry</span></code> before obj</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.iter_block">
-<code class="descname">iter_block</code><span class="sig-paren">(</span><em>iR=10</em>, <em>dR=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.iter_block"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.iter_block" title="Permalink to this definition">¶</a></dt>
+<code class="descname">iter_block</code><span class="sig-paren">(</span><em>iR=10</em>, <em>dR=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.iter_block" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an iterator for performance critical looping.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -769,7 +769,7 @@ this may change in the future.</p>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.iter_linear">
-<code class="descname">iter_linear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.iter_linear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.iter_linear" title="Permalink to this definition">¶</a></dt>
+<code class="descname">iter_linear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.iter_linear" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an iterator for simple linear ranges.</p>
 <p>This iterator is the same as:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ia</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)):</span>
@@ -788,7 +788,7 @@ this may change in the future.</p>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.iter_species">
-<code class="descname">iter_species</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.iter_species"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.iter_species" title="Permalink to this definition">¶</a></dt>
+<code class="descname">iter_species</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.iter_species" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an iterator over all atoms and species as a tuple in this geometry</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ia</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">idx_specie</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">iter_species</span><span class="p">():</span>
 </pre></div>
@@ -799,7 +799,7 @@ is the index of the species</p>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.mirror">
-<code class="descname">mirror</code><span class="sig-paren">(</span><em>plane</em>, <em>atoms=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.mirror"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.mirror" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mirror</code><span class="sig-paren">(</span><em>plane</em>, <em>atoms=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.mirror" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mirrors the structure around the center of the atoms</p>
 </dd></dl>
 
@@ -811,7 +811,7 @@ is the index of the species</p>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.o2a">
-<code class="descname">o2a</code><span class="sig-paren">(</span><em>io</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.o2a"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.o2a" title="Permalink to this definition">¶</a></dt>
+<code class="descname">o2a</code><span class="sig-paren">(</span><em>io</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.o2a" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an atomic index corresponding to the orbital indicies.</p>
 <p>This is a particurlaly slow algorithm.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -830,20 +830,20 @@ is the index of the species</p>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.o2isc">
-<code class="descname">o2isc</code><span class="sig-paren">(</span><em>o</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.o2isc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.o2isc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">o2isc</code><span class="sig-paren">(</span><em>o</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.o2isc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the super-cell index for a specific orbital.</p>
 <p>Hence one can easily figure out the supercell</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.osc2uc">
-<code class="descname">osc2uc</code><span class="sig-paren">(</span><em>orbs</em>, <em>uniq=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.osc2uc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.osc2uc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">osc2uc</code><span class="sig-paren">(</span><em>orbs</em>, <em>uniq=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.osc2uc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns orbitals from super-cell indices to unit-cell indices, possibly removing dublicates</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="sids.geometry.Geometry.read">
-<em class="property">static </em><code class="descname">read</code><span class="sig-paren">(</span><em>sile</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.read" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">read</code><span class="sig-paren">(</span><em>sile</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.read" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads geometry from the <code class="docutils literal"><span class="pre">Sile</span></code> using <code class="docutils literal"><span class="pre">sile.read_geom</span></code></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -862,7 +862,7 @@ if it is a string it will create a new sile using <code class="docutils literal"
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.remove">
-<code class="descname">remove</code><span class="sig-paren">(</span><em>atoms</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.remove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.remove" title="Permalink to this definition">¶</a></dt>
+<code class="descname">remove</code><span class="sig-paren">(</span><em>atoms</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.remove" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove atoms from the geometry.</p>
 <p>Indices passed <em>MUST</em> be unique.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -881,7 +881,7 @@ if it is a string it will create a new sile using <code class="docutils literal"
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.repeat">
-<code class="descname">repeat</code><span class="sig-paren">(</span><em>reps</em>, <em>axis</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.repeat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.repeat" title="Permalink to this definition">¶</a></dt>
+<code class="descname">repeat</code><span class="sig-paren">(</span><em>reps</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.repeat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a geometry repeated, i.e. copied in a special way.</p>
 <p>The atomic indices are <em>NOT</em> retained for the base structure.</p>
 <p>The expansion of the atoms are basically performed using this
@@ -943,14 +943,14 @@ purposes as <code class="docutils literal"><span class="pre">self.tile</span></c
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.reverse">
-<code class="descname">reverse</code><span class="sig-paren">(</span><em>atoms=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.reverse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.reverse" title="Permalink to this definition">¶</a></dt>
+<code class="descname">reverse</code><span class="sig-paren">(</span><em>atoms=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.reverse" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a reversed geometry</p>
 <p>Also enables reversing a subset</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.rotate">
-<code class="descname">rotate</code><span class="sig-paren">(</span><em>angle</em>, <em>v</em>, <em>only='abc+xyz'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.rotate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.rotate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rotate</code><span class="sig-paren">(</span><em>angle</em>, <em>v</em>, <em>only='abc+xyz'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.rotate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotates the geometry, in-place by the angle around the vector</p>
 <p>Per default will the entire geometry be rotated, such that everything
 is aligned as before rotation.</p>
@@ -983,7 +983,7 @@ if <code class="docutils literal"><span class="pre">xyz</span></code> is in this
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.rotate_miller">
-<code class="descname">rotate_miller</code><span class="sig-paren">(</span><em>m</em>, <em>v</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.rotate_miller"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.rotate_miller" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rotate_miller</code><span class="sig-paren">(</span><em>m</em>, <em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.rotate_miller" title="Permalink to this definition">¶</a></dt>
 <dd><p>Align Miller direction along <code class="docutils literal"><span class="pre">v</span></code></p>
 <p>Rotate geometry and cell such that the Miller direction 
 points along the Cartesian vector <code class="docutils literal"><span class="pre">v</span></code>.</p>
@@ -991,28 +991,28 @@ points along the Cartesian vector <code class="docutils literal"><span class="pr
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.rotatea">
-<code class="descname">rotatea</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc+xyz'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.rotatea"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.rotatea" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rotatea</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc+xyz'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.rotatea" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.rotateb">
-<code class="descname">rotateb</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc+xyz'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.rotateb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.rotateb" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rotateb</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc+xyz'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.rotateb" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.rotatec">
-<code class="descname">rotatec</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc+xyz'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.rotatec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.rotatec" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rotatec</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc+xyz'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.rotatec" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.sc2uc">
-<code class="descname">sc2uc</code><span class="sig-paren">(</span><em>atoms</em>, <em>uniq=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.sc2uc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.sc2uc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">sc2uc</code><span class="sig-paren">(</span><em>atoms</em>, <em>uniq=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.sc2uc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns atoms from super-cell indices to unit-cell indices, possibly removing dublicates</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.sub">
-<code class="descname">sub</code><span class="sig-paren">(</span><em>atoms</em>, <em>cell=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.sub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.sub" title="Permalink to this definition">¶</a></dt>
+<code class="descname">sub</code><span class="sig-paren">(</span><em>atoms</em>, <em>cell=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.sub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a subset of atoms from the geometry.</p>
 <p>Indices passed <em>MUST</em> be unique.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1035,7 +1035,7 @@ points along the Cartesian vector <code class="docutils literal"><span class="pr
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.swapaxes">
-<code class="descname">swapaxes</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>swap='cell+xyz'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.swapaxes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.swapaxes" title="Permalink to this definition">¶</a></dt>
+<code class="descname">swapaxes</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>swap='cell+xyz'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.swapaxes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns geometry with swapped axis</p>
 <p>If <code class="docutils literal"><span class="pre">swapaxes(0,1)</span></code> it returns the 0 and 1 values
 swapped in the <code class="docutils literal"><span class="pre">cell</span></code> variable.</p>
@@ -1043,7 +1043,7 @@ swapped in the <code class="docutils literal"><span class="pre">cell</span></cod
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.tile">
-<code class="descname">tile</code><span class="sig-paren">(</span><em>reps</em>, <em>axis</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.tile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.tile" title="Permalink to this definition">¶</a></dt>
+<code class="descname">tile</code><span class="sig-paren">(</span><em>reps</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.tile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a geometry tiled, i.e. copied.</p>
 <p>The atomic indices are retained for the base structure.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1121,7 +1121,7 @@ From those methods a <a class="reference internal" href="sids.html"><em>sids pac
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.translate">
-<code class="descname">translate</code><span class="sig-paren">(</span><em>v</em>, <em>atoms=None</em>, <em>cell=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.translate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.translate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">translate</code><span class="sig-paren">(</span><em>v</em>, <em>atoms=None</em>, <em>cell=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.translate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Translates the geometry by <code class="docutils literal"><span class="pre">v</span></code></p>
 <p>One can translate a subset of the atoms by supplying <code class="docutils literal"><span class="pre">atoms</span></code>.</p>
 <p>Returns a copy of the structure translated by <code class="docutils literal"><span class="pre">v</span></code>.</p>
@@ -1129,7 +1129,7 @@ From those methods a <a class="reference internal" href="sids.html"><em>sids pac
 
 <dl class="method">
 <dt id="sids.geometry.Geometry.write">
-<code class="descname">write</code><span class="sig-paren">(</span><em>sile</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/geometry.html#Geometry.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.geometry.Geometry.write" title="Permalink to this definition">¶</a></dt>
+<code class="descname">write</code><span class="sig-paren">(</span><em>sile</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.write" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes geometry to the <code class="docutils literal"><span class="pre">Sile</span></code> using <code class="docutils literal"><span class="pre">sile.write_geom</span></code></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />

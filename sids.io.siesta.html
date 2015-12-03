@@ -131,7 +131,7 @@
 <p>Sile object for reading/writing SIESTA binary files</p>
 <dl class="class">
 <dt id="sids.io.siesta.SIESTASile">
-<em class="property">class </em><code class="descclassname">sids.io.siesta.</code><code class="descname">SIESTASile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/siesta.html#SIESTASile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.siesta.SIESTASile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sids.io.siesta.</code><code class="descname">SIESTASile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.NCSile" title="sids.io.sile.NCSile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.NCSile</span></code></a></p>
 <p>SIESTA file object</p>
 <p class="rubric">Methods</p>
@@ -166,45 +166,45 @@
 </table>
 <dl class="method">
 <dt id="sids.io.siesta.SIESTASile.grids">
-<code class="descname">grids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/siesta.html#SIESTASile.grids"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.siesta.SIESTASile.grids" title="Permalink to this definition">¶</a></dt>
+<code class="descname">grids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.grids" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a list of available grids in this file.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.siesta.SIESTASile.read_geom">
-<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/siesta.html#SIESTASile.read_geom"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.siesta.SIESTASile.read_geom" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.read_geom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns Geometry object from a SIESTA.nc file</p>
 <p>NOTE: Interaction range of the Atoms are currently not read.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.siesta.SIESTASile.read_grid">
-<code class="descname">read_grid</code><span class="sig-paren">(</span><em>name</em>, <em>idx=0</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/siesta.html#SIESTASile.read_grid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.siesta.SIESTASile.read_grid" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_grid</code><span class="sig-paren">(</span><em>name</em>, <em>idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.read_grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads a grid in the current SIESTA.nc file</p>
 <p>Enables the reading and processing of the grids created by SIESTA</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.siesta.SIESTASile.read_sc">
-<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/siesta.html#SIESTASile.read_sc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.siesta.SIESTASile.read_sc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.read_sc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a SuperCell object from a SIESTA.nc file</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.siesta.SIESTASile.read_tb">
-<code class="descname">read_tb</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/siesta.html#SIESTASile.read_tb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.siesta.SIESTASile.read_tb" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_tb</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.read_tb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a tight-binding model from the underlying NetCDF file</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.siesta.SIESTASile.write_geom">
-<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/siesta.html#SIESTASile.write_geom"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.siesta.SIESTASile.write_geom" title="Permalink to this definition">¶</a></dt>
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.write_geom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates the NetCDF file and writes the geometry information</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.siesta.SIESTASile.write_tb">
-<code class="descname">write_tb</code><span class="sig-paren">(</span><em>tb</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/io/siesta.html#SIESTASile.write_tb"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.io.siesta.SIESTASile.write_tb" title="Permalink to this definition">¶</a></dt>
+<code class="descname">write_tb</code><span class="sig-paren">(</span><em>tb</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.write_tb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes tight-binding model to file</p>
 </dd></dl>
 

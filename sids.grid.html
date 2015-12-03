@@ -132,7 +132,7 @@
 <p>This grid is the basis of different used models.</p>
 <dl class="class">
 <dt id="sids.grid.Grid">
-<em class="property">class </em><code class="descclassname">sids.grid.</code><code class="descname">Grid</code><span class="sig-paren">(</span><em>size=array([0, 0, 0], dtype=int32), bc=1, sc=None, dtype=&lt;type 'numpy.float64'&gt;, geom=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sids.grid.</code><code class="descname">Grid</code><span class="sig-paren">(</span><em>size=array([0, 0, 0], dtype=int32), bc=1, sc=None, dtype=&lt;type 'numpy.float64'&gt;, geom=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCellChild" title="sids.supercell.SuperCellChild"><code class="xref py py-class docutils literal"><span class="pre">sids.supercell.SuperCellChild</span></code></a></p>
 <p>Object to retain grid information</p>
 <p>This grid object handles cell vectors and divisions of said grid.</p>
@@ -366,7 +366,7 @@
 
 <dl class="method">
 <dt id="sids.grid.Grid.append">
-<code class="descname">append</code><span class="sig-paren">(</span><em>other</em>, <em>axis</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.append"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.append" title="Permalink to this definition">¶</a></dt>
+<code class="descname">append</code><span class="sig-paren">(</span><em>other</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.append" title="Permalink to this definition">¶</a></dt>
 <dd><p>Appends other <a class="reference internal" href="#sids.grid.Grid" title="sids.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> to this grid along axis</p>
 </dd></dl>
 
@@ -378,13 +378,13 @@
 
 <dl class="method">
 <dt id="sids.grid.Grid.copy">
-<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.copy" title="Permalink to this definition">¶</a></dt>
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a copy of the object.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.grid.Grid.cross_section">
-<code class="descname">cross_section</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.cross_section"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.cross_section" title="Permalink to this definition">¶</a></dt>
+<code class="descname">cross_section</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.cross_section" title="Permalink to this definition">¶</a></dt>
 <dd><p>Takes a cross-section of the grid along axis <code class="xref any docutils literal"><span class="pre">axis</span></code></p>
 <p>Remark: This API entry might change to handle arbitrary
 cuts via rotation of the axis</p>
@@ -404,7 +404,7 @@ cuts via rotation of the axis</p>
 
 <dl class="method">
 <dt id="sids.grid.Grid.index">
-<code class="descname">index</code><span class="sig-paren">(</span><em>coord</em>, <em>axis=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.index" title="Permalink to this definition">¶</a></dt>
+<code class="descname">index</code><span class="sig-paren">(</span><em>coord</em>, <em>axis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.index" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the index along the axis <code class="xref any docutils literal"><span class="pre">axis</span></code> where <code class="xref any docutils literal"><span class="pre">coord</span></code> exists</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -426,7 +426,7 @@ cuts via rotation of the axis</p>
 
 <dl class="method">
 <dt id="sids.grid.Grid.interp">
-<code class="descname">interp</code><span class="sig-paren">(</span><em>size</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.interp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.interp" title="Permalink to this definition">¶</a></dt>
+<code class="descname">interp</code><span class="sig-paren">(</span><em>size</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.interp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an interpolated version of the grid</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -449,13 +449,13 @@ The interpolation routine is <code class="xref any docutils literal"><span class
 
 <dl class="method">
 <dt id="sids.grid.Grid.mean">
-<code class="descname">mean</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.mean"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.mean" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mean</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.mean" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the average grid along direction <code class="xref any docutils literal"><span class="pre">axis</span></code></p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="sids.grid.Grid.read">
-<em class="property">static </em><code class="descname">read</code><span class="sig-paren">(</span><em>sile</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.read" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">read</code><span class="sig-paren">(</span><em>sile</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.read" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads grid from the <code class="docutils literal"><span class="pre">Sile</span></code> using <code class="docutils literal"><span class="pre">sile.read_grid</span></code></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -475,7 +475,7 @@ if it is a string it will create a new sile using <code class="docutils literal"
 
 <dl class="method">
 <dt id="sids.grid.Grid.remove">
-<code class="descname">remove</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.remove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.remove" title="Permalink to this definition">¶</a></dt>
+<code class="descname">remove</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.remove" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes certain indices from a specified axis.</p>
 <p>Works exactly opposite to <a class="reference internal" href="#sids.grid.Grid.sub" title="sids.grid.Grid.sub"><code class="xref any py py-meth docutils literal"><span class="pre">sub</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -498,7 +498,7 @@ if it is a string it will create a new sile using <code class="docutils literal"
 
 <dl class="method">
 <dt id="sids.grid.Grid.remove_part">
-<code class="descname">remove_part</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em>, <em>above</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.remove_part"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.remove_part" title="Permalink to this definition">¶</a></dt>
+<code class="descname">remove_part</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em>, <em>above</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.remove_part" title="Permalink to this definition">¶</a></dt>
 <dd><p>Removes parts of the grid via above/below designations.</p>
 <p>Works exactly opposite to <a class="reference internal" href="#sids.grid.Grid.sub_part" title="sids.grid.Grid.sub_part"><code class="xref any py py-meth docutils literal"><span class="pre">sub_part</span></code></a></p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -534,7 +534,7 @@ for <code class="xref any docutils literal"><span class="pre">above=False</span>
 
 <dl class="method">
 <dt id="sids.grid.Grid.set_bc">
-<code class="descname">set_bc</code><span class="sig-paren">(</span><em>boundary=None</em>, <em>a=None</em>, <em>b=None</em>, <em>c=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.set_bc"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.set_bc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_bc</code><span class="sig-paren">(</span><em>boundary=None</em>, <em>a=None</em>, <em>b=None</em>, <em>c=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.set_bc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the boundary conditions on the grid
 boundary: [3], integer, optional</p>
 <blockquote>
@@ -585,7 +585,7 @@ boundary: [3], integer, optional</p>
 
 <dl class="method">
 <dt id="sids.grid.Grid.set_geom">
-<code class="descname">set_geom</code><span class="sig-paren">(</span><em>geom</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.set_geom"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.set_geom" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_geom</code><span class="sig-paren">(</span><em>geom</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.set_geom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the <a class="reference internal" href="sids.geometry.html#sids.geometry.Geometry" title="sids.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> for the grid.</p>
 <p>Setting the <a class="reference internal" href="sids.geometry.html#sids.geometry.Geometry" title="sids.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> for the grid is a possibility
 to attach atoms to the grid.</p>
@@ -594,7 +594,7 @@ to attach atoms to the grid.</p>
 
 <dl class="method">
 <dt id="sids.grid.Grid.set_grid">
-<code class="descname">set_grid</code><span class="sig-paren">(</span><em>size</em>, <em>dtype=&lt;type 'numpy.float64'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.set_grid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.set_grid" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_grid</code><span class="sig-paren">(</span><em>size</em>, <em>dtype=&lt;type 'numpy.float64'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.set_grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create the internal grid of certain size.</p>
 </dd></dl>
 
@@ -606,7 +606,7 @@ to attach atoms to the grid.</p>
 
 <dl class="method">
 <dt id="sids.grid.Grid.sub">
-<code class="descname">sub</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.sub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.sub" title="Permalink to this definition">¶</a></dt>
+<code class="descname">sub</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.sub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retains certain indices from a specified axis.</p>
 <p>Works exactly opposite to <a class="reference internal" href="#sids.grid.Grid.remove" title="sids.grid.Grid.remove"><code class="xref any py py-meth docutils literal"><span class="pre">remove</span></code></a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -629,7 +629,7 @@ to attach atoms to the grid.</p>
 
 <dl class="method">
 <dt id="sids.grid.Grid.sub_part">
-<code class="descname">sub_part</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em>, <em>above</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.sub_part"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.sub_part" title="Permalink to this definition">¶</a></dt>
+<code class="descname">sub_part</code><span class="sig-paren">(</span><em>idx</em>, <em>axis</em>, <em>above</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.sub_part" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retains parts of the grid via above/below designations.</p>
 <p>Works exactly opposite to <a class="reference internal" href="#sids.grid.Grid.remove_part" title="sids.grid.Grid.remove_part"><code class="xref any py py-meth docutils literal"><span class="pre">remove_part</span></code></a></p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -665,20 +665,20 @@ for <code class="xref any docutils literal"><span class="pre">above=False</span>
 
 <dl class="method">
 <dt id="sids.grid.Grid.sum">
-<code class="descname">sum</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.sum"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.sum" title="Permalink to this definition">¶</a></dt>
+<code class="descname">sum</code><span class="sig-paren">(</span><em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.sum" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the grid summed along axis <code class="xref any docutils literal"><span class="pre">axis</span></code>.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.grid.Grid.swapaxes">
-<code class="descname">swapaxes</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.swapaxes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.swapaxes" title="Permalink to this definition">¶</a></dt>
+<code class="descname">swapaxes</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.swapaxes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns Grid with swapped axis</p>
 <p>If <code class="docutils literal"><span class="pre">swapaxes(0,1)</span></code> it returns the 0 in the 1 values.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.grid.Grid.write">
-<code class="descname">write</code><span class="sig-paren">(</span><em>sile</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sids/grid.html#Grid.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#sids.grid.Grid.write" title="Permalink to this definition">¶</a></dt>
+<code class="descname">write</code><span class="sig-paren">(</span><em>sile</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.grid.Grid.write" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes grid to the <code class="docutils literal"><span class="pre">Sile</span></code> using <code class="docutils literal"><span class="pre">sile.write_grid</span></code></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
