@@ -50,3 +50,28 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+Documentation in other layout
+=============================
+
+The `sids` documentation has been created with several different themes
+of documentation.
+This is mainly of convenience until I have figured out which one is the
+best suited theme for this documentation.
+
+If you have any preferences please let me know.
+
+* `Alabaster`_ theme
+* `Agogo`_ theme
+* `Bizstyle`_ theme
+* `Classic`_ theme
+* `Scrolls`_ theme
+* `Sphinx RTD`_ theme (default)
+
+
+.. _Alabaster: ../alabaster/index.html
+.. _Agogo: ../agogo/index.html
+.. _Bizstyle: ../bizstyle/index.html
+.. _Classic: ../classic/index.html
+.. _Scrolls: ../classic/index.html
+.. _Sphinx RTD: ../sphinx_rtd_theme/index.html
+

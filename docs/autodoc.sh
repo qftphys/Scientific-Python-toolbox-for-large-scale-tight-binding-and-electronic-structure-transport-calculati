@@ -92,8 +92,8 @@ mkdir -p $docdir/docs/build
 mkdir -p $docdir/docs/static
 mkdir -p $docdir/docs/templates
 
+# Define all themes that we want to create
 themes="sphinx_rtd_theme alabaster classic scrolls agogo bizstyle"
-
 
 # Now move into the documentation folder and create the documentation
 # that we can then copy to the gh-pages branch
