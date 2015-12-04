@@ -62,10 +62,10 @@ If you have any preferences please let me know.
 
 * `Alabaster`_ theme
 * `Agogo`_ theme
-* `Bizstyle`_ theme
+* `Bizstyle`_ theme (default)
 * `Classic`_ theme
 * `Scrolls`_ theme
-* `Sphinx RTD`_ theme (default)
+* `Sphinx RTD`_ theme
 
 
 .. _Alabaster: ../alabaster/index.html
