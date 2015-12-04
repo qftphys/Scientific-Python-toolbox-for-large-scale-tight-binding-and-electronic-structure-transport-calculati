@@ -50,7 +50,7 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
-Documentation in other layout
+Documentation in other themes
 =============================
 
 The `sids` documentation has been created with several different themes
