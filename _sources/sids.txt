@@ -22,6 +22,7 @@ Submodules
    sids.setup
    sids.supercell
    sids.units
+   sids.version
 
 Module contents
 ---------------
