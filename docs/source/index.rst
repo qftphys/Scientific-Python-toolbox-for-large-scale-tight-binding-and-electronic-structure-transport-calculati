@@ -3,8 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to sids's |release| documentation!
-==========================================
+Welcome to sids documentation!
+==============================
+
+This documentation has been created from version: |release|.
 
 sids is a tool to easily create geometries and handle input/output files
 from various DFT codes. Although this is based on the SIESTA/TranSIESTA
