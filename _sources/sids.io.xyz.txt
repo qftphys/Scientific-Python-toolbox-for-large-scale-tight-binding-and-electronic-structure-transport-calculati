@@ -1,7 +1,0 @@
-sids.io.xyz module
-==================
-
-.. automodule:: sids.io.xyz
-    :members:
-    :undoc-members:
-    :show-inheritance:

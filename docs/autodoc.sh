@@ -92,19 +92,34 @@ mkdir -p $docdir/docs/build
 mkdir -p $docdir/docs/static
 mkdir -p $docdir/docs/templates
 
+themes="sphinx_rtd_theme alabaster classic scrolls agogo bizstyle"
+
+
 # Now move into the documentation folder and create the documentation
 # that we can then copy to the gh-pages branch
 pushd $docdir/docs
 
-# Update API documentation
-sphinx-apidoc -fe \
-	      -o source ../../
+for theme in $themes
+do
 
-# Create the HTML pages
-make html
+    # Update theme file to tell sphinx to create
+    # documentation for this theme
+    echo "$theme" > html.theme
 
-# tar the html output to an tar.gz file
-tar cfz $tmpdir/html.tar.gz --directory build/html .
+    # Update API documentation
+    sphinx-apidoc -fe \
+	-o source ../../
+
+    # Create the HTML pages
+    make html
+
+    # tar the html output to an tar.gz file
+    tar cfz $tmpdir/$theme.tar.gz --directory build/html .
+    
+    # Clean up the build directories
+    make clean
+
+done
 
 # Create the manual.pdf
 #make latexpdf
@@ -118,6 +133,8 @@ popd
 
 # Quick exit if not needed
 if [[ $skip_commit -eq 1 ]]; then
+    echo "Content of temporary folder: $tmpdir"
+    ls -l $tmpdir
     exit 0
 fi
 
@@ -126,19 +143,32 @@ rm -r $docdir
 # Jump back to the gh-pages branch
 git checkout gh-pages
 
-# Remove everything but the docs folder and README.md
-git rm -rf [^dR]*
-
 # Extract documentation
-tar xfz $tmpdir/html.tar.gz
+for theme in $themes
+do
+
+    # Ensure directory exists
+    mkdir $theme
+    pushd $theme
+
+    # Extract theme site here
+    tar xfz $tmpdir/$theme.tar.gz
+
+    popd
+done
 mv $tmpdir/coverage.txt .
 
 # Now we can safely update the documentation tag
 echo "$doc_tag" > docs/doc.tag
+
 # Add everything (including updated tag)
 git add .buildinfo docs/doc.tag
+
+# Remove all themes that have been re-created
+git rm -rf $themes
+
 # Add all created html files
-git add * 
+git add $themes
 git commit -s -m "Released documentation of $doc_tag"
 
 # Clean-up

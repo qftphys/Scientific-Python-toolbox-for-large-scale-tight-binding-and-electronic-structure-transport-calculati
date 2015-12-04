@@ -1,7 +1,0 @@
-sids.tb.phonontightbinding module
-=================================
-
-.. automodule:: sids.tb.phonontightbinding
-    :members:
-    :undoc-members:
-    :show-inheritance:
