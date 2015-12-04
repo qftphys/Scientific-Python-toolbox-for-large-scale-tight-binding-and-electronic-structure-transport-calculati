@@ -1,0 +1,32 @@
+sids package
+============
+
+Subpackages
+-----------
+
+.. toctree::
+
+    sids.geom
+    sids.io
+    sids.tb
+
+Submodules
+----------
+
+.. toctree::
+
+   sids.atom
+   sids.geometry
+   sids.grid
+   sids.quaternion
+   sids.setup
+   sids.supercell
+   sids.units
+
+Module contents
+---------------
+
+.. automodule:: sids
+    :members:
+    :undoc-members:
+    :show-inheritance:

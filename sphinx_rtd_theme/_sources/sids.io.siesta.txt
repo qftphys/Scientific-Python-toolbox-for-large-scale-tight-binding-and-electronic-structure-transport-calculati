@@ -1,0 +1,7 @@
+sids.io.siesta module
+=====================
+
+.. automodule:: sids.io.siesta
+    :members:
+    :undoc-members:
+    :show-inheritance:

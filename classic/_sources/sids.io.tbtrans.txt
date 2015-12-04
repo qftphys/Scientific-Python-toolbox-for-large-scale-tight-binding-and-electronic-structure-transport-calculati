@@ -1,0 +1,7 @@
+sids.io.tbtrans module
+======================
+
+.. automodule:: sids.io.tbtrans
+    :members:
+    :undoc-members:
+    :show-inheritance:

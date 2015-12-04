@@ -1,0 +1,7 @@
+sids.io.cube module
+===================
+
+.. automodule:: sids.io.cube
+    :members:
+    :undoc-members:
+    :show-inheritance:

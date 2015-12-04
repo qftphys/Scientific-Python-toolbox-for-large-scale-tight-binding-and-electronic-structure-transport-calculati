@@ -1,0 +1,7 @@
+sids.grid module
+================
+
+.. automodule:: sids.grid
+    :members:
+    :undoc-members:
+    :show-inheritance:

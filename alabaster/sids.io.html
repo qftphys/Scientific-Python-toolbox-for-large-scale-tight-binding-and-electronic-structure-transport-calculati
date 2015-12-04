@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sids.io package</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.4.5-1-gbf7dd50
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="None" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sids-io-package">
+<h1>sids.io package<a class="headerlink" href="#sids-io-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sids.io.bigdft_ascii.html">sids.io.bigdft_ascii module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sids.io.cube.html">sids.io.cube module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sids.io.fdf.html">sids.io.fdf module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sids.io.gulp.html">sids.io.gulp module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sids.io.setup.html">sids.io.setup module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sids.io.siesta.html">sids.io.siesta module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sids.io.siesta_grid.html">sids.io.siesta_grid module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sids.io.sile.html">sids.io.sile module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sids.io.tb.html">sids.io.tb module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sids.io.tbtrans.html">sids.io.tbtrans module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sids.io.vasp.html">sids.io.vasp module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sids.io.xv.html">sids.io.xv module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sids.io.xyz.html">sids.io.xyz module</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="module-sids.io">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sids.io" title="Permalink to this headline">¶</a></h2>
+<p>IO imports</p>
+<dl class="function">
+<dt id="sids.io.add_sile">
+<code class="descclassname">sids.io.</code><code class="descname">add_sile</code><span class="sig-paren">(</span><em>ending</em>, <em>obj</em>, <em>case=True</em>, <em>gzip=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.add_sile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Public for attaching lookup tables for allowing
+users to attach files for the IOSile function call</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ending</strong> : str</p>
+<blockquote>
+<div><p>The file-name ending, it can be several file endings (.TBT.nc)</p>
+</div></blockquote>
+<p><strong>obj</strong> : <a class="reference internal" href="#sids.io.BaseSile" title="sids.io.BaseSile"><code class="xref any py py-class docutils literal"><span class="pre">BaseSile</span></code></a> child</p>
+<blockquote>
+<div><p>An object that is associated with the respective file.
+It must be inherited from a <a class="reference internal" href="#sids.io.BaseSile" title="sids.io.BaseSile"><code class="xref any py py-class docutils literal"><span class="pre">BaseSile</span></code></a>.</p>
+</div></blockquote>
+<p><strong>case</strong> : bool, (True)</p>
+<blockquote>
+<div><p>Whether case sensitivity is applicable for determining
+file.</p>
+</div></blockquote>
+<p><strong>gzip</strong> : bool, (False)</p>
+<blockquote class="last">
+<div><p>Whether files with <code class="xref any docutils literal"><span class="pre">.gz</span></code> endings can be read.
+This option should only be given to files with ASCII text
+output.
+It will automatically call:</p>
+<blockquote>
+<div><p><code class="xref any docutils literal"><span class="pre">add_sile(ending+'.gz',...,gzip=False)</span></code></p>
+</div></blockquote>
+<p>to add the gzipped file to the list of possible files.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="sids.io.get_sile">
+<code class="descclassname">sids.io.</code><code class="descname">get_sile</code><span class="sig-paren">(</span><em>file</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.get_sile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Guess the file handle for the input file and return
+and object with the file handle.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.BaseSile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">BaseSile</code><a class="headerlink" href="#sids.io.BaseSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Base class for the Siles</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.Sile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">Sile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.BaseSile" title="sids.io.sile.BaseSile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.BaseSile</span></code></a></p>
+<p>Class to contain a file with easy access</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="staticmethod">
+<dt id="sids.io.Sile.line_has_key">
+<em class="property">static </em><code class="descname">line_has_key</code><span class="sig-paren">(</span><em>line</em>, <em>keyword</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.line_has_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sids.io.Sile.readline">
+<code class="descname">readline</code><span class="sig-paren">(</span><em>comment=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.readline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the next line of the file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.Sile.step_either">
+<code class="descname">step_either</code><span class="sig-paren">(</span><em>keywords</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.step_either" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steps the file-handle until the keyword is found in the input</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.Sile.step_to">
+<code class="descname">step_to</code><span class="sig-paren">(</span><em>keyword</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.step_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steps the file-handle until the keyword is found in the input</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.Sile.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for the file-handle write statement</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.NCSile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">NCSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.NCSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.BaseSile" title="sids.io.sile.BaseSile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.BaseSile</span></code></a></p>
+<p>Class to contain a file with easy access
+The file format for this file is the NetCDF file format</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="sids.io.SileError">
+<em class="property">exception </em><code class="descclassname">sids.io.</code><code class="descname">SileError</code><span class="sig-paren">(</span><em>value</em>, <em>obj=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.SileError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.IOError</span></code></p>
+<p>Define an error object related to the Sile objects</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sids.io.sile_raise_write">
+<code class="descclassname">sids.io.</code><code class="descname">sile_raise_write</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.sile_raise_write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sids.io.sile_raise_read">
+<code class="descclassname">sids.io.</code><code class="descname">sile_raise_read</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.sile_raise_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="sids.io.BigDFTASCIISile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">BigDFTASCIISile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.BigDFTASCIISile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.Sile" title="sids.io.sile.Sile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.Sile</span></code></a></p>
+<p>ASCII file object for BigDFT</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.io.BigDFTASCIISile.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.BigDFTASCIISile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a supercell from the Sile</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.BigDFTASCIISile.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em>, <em>fmt='.5f'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.BigDFTASCIISile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the geometry to the contained file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.CUBESile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">CUBESile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.CUBESile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.Sile" title="sids.io.sile.Sile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.Sile</span></code></a></p>
+<p>CUBE file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.io.CUBESile.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.CUBESile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="sids.geometry.html#sids.geometry.Geometry" title="sids.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> object from the CUBE file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.CUBESile.read_grid">
+<code class="descname">read_grid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.CUBESile.read_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="sids.grid.html#sids.grid.Grid" title="sids.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> object from the CUBE file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.CUBESile.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><em>na=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.CUBESile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from the CUBE file</p>
+<p>If <code class="xref any docutils literal"><span class="pre">na=True</span></code> it will return a tuple (na,SuperCell)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.CUBESile.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em>, <em>size=array([ 1.</em>, <em>1.</em>, <em>1.])</em>, <em>fmt='15.10e'</em>, <em>origo=array([ 0.</em>, <em>0.</em>, <em>0.])</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.CUBESile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the <a class="reference internal" href="sids.geometry.html#sids.geometry.Geometry" title="sids.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> object attached to this grid</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.CUBESile.write_grid">
+<code class="descname">write_grid</code><span class="sig-paren">(</span><em>grid</em>, <em>fmt='%.5e'</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.CUBESile.write_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the geometry to the contained file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.FDFSile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">FDFSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>base=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.FDFSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.Sile" title="sids.io.sile.Sile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.Sile</span></code></a></p>
+<p>FDF file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<p>Initialize an FDF file from the filename</p>
+<p>By supplying base you can reference files in other directories.
+By default the <code class="docutils literal"><span class="pre">base</span></code> is the directory given in the file name.</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.io.FDFSile.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.FDFSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Geometry object from the FDF file</p>
+<p>NOTE: Interaction range of the Atoms are currently not read.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.FDFSile.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.FDFSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from the FDF file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.FDFSile.readline">
+<code class="descname">readline</code><span class="sig-paren">(</span><em>comment=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.FDFSile.readline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the next line of the file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.FDFSile.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em>, <em>fmt='.5f'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.FDFSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the geometry to the contained file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.GULPSile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">GULPSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.Sile" title="sids.io.sile.Sile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.Sile</span></code></a></p>
+<p>GULP file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.io.GULPSile.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><em>key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a geometry and creates the GULP dynamical geometry</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.GULPSile.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><em>key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> and creates the GULP cell</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.GULPSile.read_tb">
+<code class="descname">read_tb</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_tb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a GULP tight-binding model for the output of GULP</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.GULPSile.set_dyn_key">
+<code class="descname">set_dyn_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_dyn_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the dynamical matrix vectors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.GULPSile.set_geom_key">
+<code class="descname">set_geom_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_geom_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the geometry vectors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.GULPSile.set_key">
+<code class="descname">set_key</code><span class="sig-paren">(</span><em>segment</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the segment lookup key</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.GULPSile.set_sc_key">
+<code class="descname">set_sc_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_sc_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the cell vectors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.GULPSile.set_tb_key">
+<code class="descname">set_tb_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_tb_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the dynamical matrix vectors</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.SIESTASile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">SIESTASile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.SIESTASile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.NCSile" title="sids.io.sile.NCSile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.NCSile</span></code></a></p>
+<p>SIESTA file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.io.SIESTASile.grids">
+<code class="descname">grids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.SIESTASile.grids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of available grids in this file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.SIESTASile.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.SIESTASile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Geometry object from a SIESTA.nc file</p>
+<p>NOTE: Interaction range of the Atoms are currently not read.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.SIESTASile.read_grid">
+<code class="descname">read_grid</code><span class="sig-paren">(</span><em>name</em>, <em>idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.SIESTASile.read_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a grid in the current SIESTA.nc file</p>
+<p>Enables the reading and processing of the grids created by SIESTA</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.SIESTASile.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.SIESTASile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a SuperCell object from a SIESTA.nc file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.SIESTASile.read_tb">
+<code class="descname">read_tb</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.SIESTASile.read_tb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a tight-binding model from the underlying NetCDF file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.SIESTASile.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.SIESTASile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the NetCDF file and writes the geometry information</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.SIESTASile.write_tb">
+<code class="descname">write_tb</code><span class="sig-paren">(</span><em>tb</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.SIESTASile.write_tb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes tight-binding model to file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.SIESTAGridSile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">SIESTAGridSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.SIESTAGridSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.NCSile" title="sids.io.sile.NCSile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.NCSile</span></code></a></p>
+<p>SIESTA Grid file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.io.SIESTAGridSile.read_grid">
+<code class="descname">read_grid</code><span class="sig-paren">(</span><em>name='gridfunc'</em>, <em>idx=0</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.SIESTAGridSile.read_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a grid in the current SIESTA.grid.nc file</p>
+<p>Enables the reading and processing of the grids created by SIESTA</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.SIESTAGridSile.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.SIESTAGridSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a SuperCell object from a SIESTA.grid.nc file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.TBSile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">TBSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.TBSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.Sile" title="sids.io.sile.Sile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.Sile</span></code></a></p>
+<p>Tight-binding file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.io.TBSile.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.TBSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reading a geometry in regular TB format</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.TBSile.read_tb">
+<code class="descname">read_tb</code><span class="sig-paren">(</span><em>hermitian=True</em>, <em>dtype=&lt;type 'numpy.float64'&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.TBSile.read_tb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a tight-binding model (including the geometry)</p>
+<p>Reads the tight-binding model</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.TBSile.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.TBSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the geometry to the output file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>geom: Geometry</strong></p>
+<blockquote class="last">
+<div><p>The geometry we wish to write</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.TBSile.write_tb">
+<code class="descname">write_tb</code><span class="sig-paren">(</span><em>tb</em>, <em>hermitian=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.TBSile.write_tb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the tight-binding model to the file</p>
+<p>Writes a tight-binding model to the tight-binding file.
+The file can be constructed by the implict force of Hermiticity,
+or without.</p>
+<p>Utilizing the Hermiticity we reduce the file-size by approximately
+50%.</p>
+<p>tb : TightBinding model
+hermitian : boolean</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.TBtransSile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">TBtransSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.TBtransSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.NCSile" title="sids.io.sile.NCSile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.NCSile</span></code></a></p>
+<p>TBtrans file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.io.TBtransSile.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.TBtransSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Geometry object from a <a href="#id1"><span class="problematic" id="id2">*</span></a>.TBT.nc file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.TBtransSile.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.TBtransSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from a <a href="#id3"><span class="problematic" id="id4">*</span></a>.TBT.nc file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.TBtransSile.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.TBtransSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>This does not work</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.PHtransSile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">PHtransSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.PHtransSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.tbtrans.html#sids.io.tbtrans.TBtransSile" title="sids.io.tbtrans.TBtransSile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.tbtrans.TBtransSile</span></code></a></p>
+<p>PHtrans file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.POSCARSile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">POSCARSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.POSCARSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.Sile" title="sids.io.sile.Sile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.Sile</span></code></a></p>
+<p>CAR file object 
+This file-object handles both POSCAR and CONTCAR files</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.io.POSCARSile.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.POSCARSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Geometry object from the CONTCAR/POSCAR file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.POSCARSile.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.POSCARSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from the CONTCAR/POSCAR file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.POSCARSile.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.POSCARSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the geometry to the contained file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.XYZSile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">XYZSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.XYZSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.Sile" title="sids.io.sile.Sile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.Sile</span></code></a></p>
+<p>XYZ file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.io.XYZSile.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.XYZSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Geometry object from the XYZ file</p>
+<p>NOTE: Unit-cell is the Eucledian 3D space.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.XYZSile.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em>, <em>fmt='.5f'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.XYZSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the geometry to the contained file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.XVSile">
+<em class="property">class </em><code class="descclassname">sids.io.</code><code class="descname">XVSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.XVSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.Sile" title="sids.io.sile.Sile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.Sile</span></code></a></p>
+<p>XV file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.io.XVSile.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.XVSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Geometry object from the XV file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.XVSile.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.XVSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from the XV file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.XVSile.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.XVSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes the geometry to the contained file</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">sids.io package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-sids.io">Module contents</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sids.io.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Nick R. Papior.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/sids.io.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

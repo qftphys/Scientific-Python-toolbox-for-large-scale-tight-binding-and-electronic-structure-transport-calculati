@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sids.io.tbtrans module</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.4.5-1-gbf7dd50
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="None" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-sids.io.tbtrans">
+<span id="sids-io-tbtrans-module"></span><h1>sids.io.tbtrans module<a class="headerlink" href="#module-sids.io.tbtrans" title="Permalink to this headline">¶</a></h1>
+<p>Sile object for reading TBtrans binary files</p>
+<dl class="class">
+<dt id="sids.io.tbtrans.TBtransSile">
+<em class="property">class </em><code class="descclassname">sids.io.tbtrans.</code><code class="descname">TBtransSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.tbtrans.TBtransSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.NCSile" title="sids.io.sile.NCSile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.NCSile</span></code></a></p>
+<p>TBtrans file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.io.tbtrans.TBtransSile.read_geom" title="sids.io.tbtrans.TBtransSile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
+<td>Returns Geometry object from a <a href="#id1"><span class="problematic" id="id2">*</span></a>.TBT.nc file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.io.tbtrans.TBtransSile.read_sc" title="sids.io.tbtrans.TBtransSile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<td>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from a <a href="#id3"><span class="problematic" id="id4">*</span></a>.TBT.nc file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.io.tbtrans.TBtransSile.write_geom" title="sids.io.tbtrans.TBtransSile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>()</td>
+<td>This does not work</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.io.tbtrans.TBtransSile.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.tbtrans.TBtransSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Geometry object from a <a href="#id5"><span class="problematic" id="id6">*</span></a>.TBT.nc file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.tbtrans.TBtransSile.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.tbtrans.TBtransSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from a <a href="#id7"><span class="problematic" id="id8">*</span></a>.TBT.nc file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.tbtrans.TBtransSile.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.tbtrans.TBtransSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>This does not work</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.io.tbtrans.PHtransSile">
+<em class="property">class </em><code class="descclassname">sids.io.tbtrans.</code><code class="descname">PHtransSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.tbtrans.PHtransSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#sids.io.tbtrans.TBtransSile" title="sids.io.tbtrans.TBtransSile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.tbtrans.TBtransSile</span></code></a></p>
+<p>PHtrans file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code>()</td>
+<td>Returns Geometry object from a <a href="#id9"><span class="problematic" id="id10">*</span></a>.TBT.nc file</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code>()</td>
+<td>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from a <a href="#id11"><span class="problematic" id="id12">*</span></a>.TBT.nc file</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code>()</td>
+<td>This does not work</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sids.io.tbtrans.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Nick R. Papior.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/sids.io.tbtrans.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

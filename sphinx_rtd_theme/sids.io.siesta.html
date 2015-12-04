@@ -1,0 +1,276 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sids.io.siesta module</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="None" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> sids
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="simple">
+</ul>
+<ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">sids</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>sids.io.siesta module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/sids.io.siesta.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-sids.io.siesta">
+<span id="sids-io-siesta-module"></span><h1>sids.io.siesta module<a class="headerlink" href="#module-sids.io.siesta" title="Permalink to this headline">¶</a></h1>
+<p>Sile object for reading/writing SIESTA binary files</p>
+<dl class="class">
+<dt id="sids.io.siesta.SIESTASile">
+<em class="property">class </em><code class="descclassname">sids.io.siesta.</code><code class="descname">SIESTASile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sids.io.sile.html#sids.io.sile.NCSile" title="sids.io.sile.NCSile"><code class="xref py py-class docutils literal"><span class="pre">sids.io.sile.NCSile</span></code></a></p>
+<p>SIESTA file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.io.siesta.SIESTASile.grids" title="sids.io.siesta.SIESTASile.grids"><code class="xref py py-obj docutils literal"><span class="pre">grids</span></code></a>()</td>
+<td>Return a list of available grids in this file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.io.siesta.SIESTASile.read_geom" title="sids.io.siesta.SIESTASile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
+<td>Returns Geometry object from a SIESTA.nc file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.io.siesta.SIESTASile.read_grid" title="sids.io.siesta.SIESTASile.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>(name[,&nbsp;idx])</td>
+<td>Reads a grid in the current SIESTA.nc file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.io.siesta.SIESTASile.read_sc" title="sids.io.siesta.SIESTASile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<td>Returns a SuperCell object from a SIESTA.nc file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.io.siesta.SIESTASile.read_tb" title="sids.io.siesta.SIESTASile.read_tb"><code class="xref py py-obj docutils literal"><span class="pre">read_tb</span></code></a>(**kwargs)</td>
+<td>Returns a tight-binding model from the underlying NetCDF file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.io.siesta.SIESTASile.write_geom" title="sids.io.siesta.SIESTASile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom)</td>
+<td>Creates the NetCDF file and writes the geometry information</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.io.siesta.SIESTASile.write_tb" title="sids.io.siesta.SIESTASile.write_tb"><code class="xref py py-obj docutils literal"><span class="pre">write_tb</span></code></a>(tb,&nbsp;**kwargs)</td>
+<td>Writes tight-binding model to file</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.io.siesta.SIESTASile.grids">
+<code class="descname">grids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.grids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of available grids in this file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.siesta.SIESTASile.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Geometry object from a SIESTA.nc file</p>
+<p>NOTE: Interaction range of the Atoms are currently not read.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.siesta.SIESTASile.read_grid">
+<code class="descname">read_grid</code><span class="sig-paren">(</span><em>name</em>, <em>idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.read_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a grid in the current SIESTA.nc file</p>
+<p>Enables the reading and processing of the grids created by SIESTA</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.siesta.SIESTASile.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a SuperCell object from a SIESTA.nc file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.siesta.SIESTASile.read_tb">
+<code class="descname">read_tb</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.read_tb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a tight-binding model from the underlying NetCDF file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.siesta.SIESTASile.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the NetCDF file and writes the geometry information</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.siesta.SIESTASile.write_tb">
+<code class="descname">write_tb</code><span class="sig-paren">(</span><em>tb</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.siesta.SIESTASile.write_tb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes tight-binding model to file</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Nick R. Papior.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.4.5-1-gbf7dd50
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

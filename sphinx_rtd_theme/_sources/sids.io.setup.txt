@@ -1,0 +1,7 @@
+sids.io.setup module
+====================
+
+.. automodule:: sids.io.setup
+    :members:
+    :undoc-members:
+    :show-inheritance:

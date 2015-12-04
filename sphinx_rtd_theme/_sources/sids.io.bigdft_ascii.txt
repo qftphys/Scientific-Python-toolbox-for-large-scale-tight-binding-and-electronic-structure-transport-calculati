@@ -1,0 +1,7 @@
+sids.io.bigdft_ascii module
+===========================
+
+.. automodule:: sids.io.bigdft_ascii
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,571 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sids.supercell module</title>
+    
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.4.5-1-gbf7dd50
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="top" title="None" href="index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">None</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sids.supercell.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-sids.supercell">
+<span id="sids-supercell-module"></span><h1>sids.supercell module<a class="headerlink" href="#module-sids.supercell" title="Permalink to this headline">¶</a></h1>
+<p>Define a supercell</p>
+<p>This class is the basis of many different objects.</p>
+<dl class="class">
+<dt id="sids.supercell.SuperCell">
+<em class="property">class </em><code class="descclassname">sids.supercell.</code><code class="descname">SuperCell</code><span class="sig-paren">(</span><em>cell, nsc=array([1, 1, 1], dtype=int32)</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Object to retain a super-cell and its nested values.</p>
+<p>This supercell object handles cell vectors and its supercell mirrors.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.rcell" title="sids.supercell.SuperCell.rcell"><code class="xref py py-obj docutils literal"><span class="pre">rcell</span></code></a></td>
+<td>Returns the reciprocal cell for the <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.append" title="sids.supercell.SuperCell.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(other,&nbsp;axis)</td>
+<td>Appends other <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> to this grid along axis</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.center" title="sids.supercell.SuperCell.center"><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></a>([axis])</td>
+<td>Returns center of the <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a>, possibly with respect to an axis</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.copy" title="sids.supercell.SuperCell.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
+<td>Returns a copy of the object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.cut" title="sids.supercell.SuperCell.cut"><code class="xref py py-obj docutils literal"><span class="pre">cut</span></code></a>(seps,&nbsp;axis)</td>
+<td>Cuts the cell into several different sections.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.is_orthogonal" title="sids.supercell.SuperCell.is_orthogonal"><code class="xref py py-obj docutils literal"><span class="pre">is_orthogonal</span></code></a>()</td>
+<td>Returns true if the cell vectors are orthogonal</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.offset" title="sids.supercell.SuperCell.offset"><code class="xref py py-obj docutils literal"><span class="pre">offset</span></code></a>([isc])</td>
+<td>Returns the supercell offset of the supercell index</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.rotate" title="sids.supercell.SuperCell.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>(angle,&nbsp;v[,&nbsp;only,&nbsp;degree])</td>
+<td>Rotates the supercell, in-place by the angle around the vector</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.rotatea" title="sids.supercell.SuperCell.rotatea"><code class="xref py py-obj docutils literal"><span class="pre">rotatea</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.rotateb" title="sids.supercell.SuperCell.rotateb"><code class="xref py py-obj docutils literal"><span class="pre">rotateb</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.rotatec" title="sids.supercell.SuperCell.rotatec"><code class="xref py py-obj docutils literal"><span class="pre">rotatec</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.sc_index" title="sids.supercell.SuperCell.sc_index"><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code></a>(sc_off)</td>
+<td>Returns the integer index in the sc_off list that corresponds to <a class="reference internal" href="#sids.supercell.SuperCell.sc_off" title="sids.supercell.SuperCell.sc_off"><code class="xref any py py-attr docutils literal"><span class="pre">sc_off</span></code></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.set_nsc" title="sids.supercell.SuperCell.set_nsc"><code class="xref py py-obj docutils literal"><span class="pre">set_nsc</span></code></a>([nsc,&nbsp;a,&nbsp;b,&nbsp;c])</td>
+<td>Sets the number of supercells in the 3 different cell directions</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.set_supercell" title="sids.supercell.SuperCell.set_supercell"><code class="xref py py-obj docutils literal"><span class="pre">set_supercell</span></code></a>([nsc,&nbsp;a,&nbsp;b,&nbsp;c])</td>
+<td>Sets the number of supercells in the 3 different cell directions</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.swapaxes" title="sids.supercell.SuperCell.swapaxes"><code class="xref py py-obj docutils literal"><span class="pre">swapaxes</span></code></a>(a,&nbsp;b)</td>
+<td>Returns <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> with swapped axis</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.tocell" title="sids.supercell.SuperCell.tocell"><code class="xref py py-obj docutils literal"><span class="pre">tocell</span></code></a>(*args)</td>
+<td>Returns a 3x3 unit-cell dependent on the input</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.translate" title="sids.supercell.SuperCell.translate"><code class="xref py py-obj docutils literal"><span class="pre">translate</span></code></a>(v)</td>
+<td>Appends additional space in the SuperCell object</td>
+</tr>
+</tbody>
+</table>
+<p>Initialize a <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from initial quantities</p>
+<p>Initialize a <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object with cell information
+and number of supercells in each direction.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.rcell" title="sids.supercell.SuperCell.rcell"><code class="xref py py-obj docutils literal"><span class="pre">rcell</span></code></a></td>
+<td>Returns the reciprocal cell for the <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.append" title="sids.supercell.SuperCell.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(other,&nbsp;axis)</td>
+<td>Appends other <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> to this grid along axis</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.center" title="sids.supercell.SuperCell.center"><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></a>([axis])</td>
+<td>Returns center of the <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a>, possibly with respect to an axis</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.copy" title="sids.supercell.SuperCell.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
+<td>Returns a copy of the object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.cut" title="sids.supercell.SuperCell.cut"><code class="xref py py-obj docutils literal"><span class="pre">cut</span></code></a>(seps,&nbsp;axis)</td>
+<td>Cuts the cell into several different sections.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.is_orthogonal" title="sids.supercell.SuperCell.is_orthogonal"><code class="xref py py-obj docutils literal"><span class="pre">is_orthogonal</span></code></a>()</td>
+<td>Returns true if the cell vectors are orthogonal</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.offset" title="sids.supercell.SuperCell.offset"><code class="xref py py-obj docutils literal"><span class="pre">offset</span></code></a>([isc])</td>
+<td>Returns the supercell offset of the supercell index</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.rotate" title="sids.supercell.SuperCell.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>(angle,&nbsp;v[,&nbsp;only,&nbsp;degree])</td>
+<td>Rotates the supercell, in-place by the angle around the vector</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.rotatea" title="sids.supercell.SuperCell.rotatea"><code class="xref py py-obj docutils literal"><span class="pre">rotatea</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.rotateb" title="sids.supercell.SuperCell.rotateb"><code class="xref py py-obj docutils literal"><span class="pre">rotateb</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.rotatec" title="sids.supercell.SuperCell.rotatec"><code class="xref py py-obj docutils literal"><span class="pre">rotatec</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.sc_index" title="sids.supercell.SuperCell.sc_index"><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code></a>(sc_off)</td>
+<td>Returns the integer index in the sc_off list that corresponds to <a class="reference internal" href="#sids.supercell.SuperCell.sc_off" title="sids.supercell.SuperCell.sc_off"><code class="xref any py py-attr docutils literal"><span class="pre">sc_off</span></code></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.set_nsc" title="sids.supercell.SuperCell.set_nsc"><code class="xref py py-obj docutils literal"><span class="pre">set_nsc</span></code></a>([nsc,&nbsp;a,&nbsp;b,&nbsp;c])</td>
+<td>Sets the number of supercells in the 3 different cell directions</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.set_supercell" title="sids.supercell.SuperCell.set_supercell"><code class="xref py py-obj docutils literal"><span class="pre">set_supercell</span></code></a>([nsc,&nbsp;a,&nbsp;b,&nbsp;c])</td>
+<td>Sets the number of supercells in the 3 different cell directions</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.swapaxes" title="sids.supercell.SuperCell.swapaxes"><code class="xref py py-obj docutils literal"><span class="pre">swapaxes</span></code></a>(a,&nbsp;b)</td>
+<td>Returns <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> with swapped axis</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCell.tocell" title="sids.supercell.SuperCell.tocell"><code class="xref py py-obj docutils literal"><span class="pre">tocell</span></code></a>(*args)</td>
+<td>Returns a 3x3 unit-cell dependent on the input</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCell.translate" title="sids.supercell.SuperCell.translate"><code class="xref py py-obj docutils literal"><span class="pre">translate</span></code></a>(v)</td>
+<td>Appends additional space in the SuperCell object</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.supercell.SuperCell.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>other</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appends other <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> to this grid along axis</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.supercell.SuperCell.cell">
+<code class="descname">cell</code><a class="headerlink" href="#sids.supercell.SuperCell.cell" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.center">
+<code class="descname">center</code><span class="sig-paren">(</span><em>axis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns center of the <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a>, possibly with respect to an axis</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a copy of the object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.cut">
+<code class="descname">cut</code><span class="sig-paren">(</span><em>seps</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.cut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cuts the cell into several different sections.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.is_orthogonal">
+<code class="descname">is_orthogonal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.is_orthogonal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the cell vectors are orthogonal</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.supercell.SuperCell.n_s">
+<code class="descname">n_s</code><a class="headerlink" href="#sids.supercell.SuperCell.n_s" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sids.supercell.SuperCell.nsc">
+<code class="descname">nsc</code><a class="headerlink" href="#sids.supercell.SuperCell.nsc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.offset">
+<code class="descname">offset</code><span class="sig-paren">(</span><em>isc=[0, 0, 0]</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the supercell offset of the supercell index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.supercell.SuperCell.rcell">
+<code class="descname">rcell</code><a class="headerlink" href="#sids.supercell.SuperCell.rcell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the reciprocal cell for the <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a></p>
+<p>Note: The returned vectors are still in [0,:] format
+and not as returned by an inverse LAPACK algorithm.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.rotate">
+<code class="descname">rotate</code><span class="sig-paren">(</span><em>angle</em>, <em>v</em>, <em>only='abc'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotates the supercell, in-place by the angle around the vector</p>
+<p>One can control which cell vectors are rotated by designating them
+individually with <code class="docutils literal"><span class="pre">only='[abc]'</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>angle</strong> : float</p>
+<blockquote>
+<div><p>the angle in radians of which the geometry should be rotated</p>
+</div></blockquote>
+<p><strong>v</strong> : array_like [3]</p>
+<blockquote>
+<div><p>the vector around the rotation is going to happen
+v = [1,0,0] will rotate in the <code class="docutils literal"><span class="pre">yz</span></code> plane</p>
+</div></blockquote>
+<p><strong>degree</strong> : bool</p>
+<blockquote>
+<div><p>Whether the angle is in radians (False) or in degrees (True, default)</p>
+</div></blockquote>
+<p><strong>only</strong> : (&#8216;abc&#8217;), str, optional</p>
+<blockquote class="last">
+<div><p>only rotate the designated cell vectors.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.rotatea">
+<code class="descname">rotatea</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.rotatea" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.rotateb">
+<code class="descname">rotateb</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.rotateb" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.rotatec">
+<code class="descname">rotatec</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.rotatec" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.sc_index">
+<code class="descname">sc_index</code><span class="sig-paren">(</span><em>sc_off</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.sc_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the integer index in the sc_off list that corresponds to <a class="reference internal" href="#sids.supercell.SuperCell.sc_off" title="sids.supercell.SuperCell.sc_off"><code class="xref any py py-attr docutils literal"><span class="pre">sc_off</span></code></a></p>
+<p>Returns the integer for the supercell</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.supercell.SuperCell.sc_off">
+<code class="descname">sc_off</code><a class="headerlink" href="#sids.supercell.SuperCell.sc_off" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.set_nsc">
+<code class="descname">set_nsc</code><span class="sig-paren">(</span><em>nsc=None</em>, <em>a=None</em>, <em>b=None</em>, <em>c=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.set_nsc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the number of supercells in the 3 different cell directions</p>
+<dl class="docutils">
+<dt>nsc: [3], integer, optional</dt>
+<dd>number of supercells in each direction</dd>
+<dt>a: integer, optional</dt>
+<dd>number of supercells in the first unit-cell vector direction</dd>
+<dt>b: integer, optional</dt>
+<dd>number of supercells in the second unit-cell vector direction</dd>
+<dt>c: integer, optional</dt>
+<dd>number of supercells in the third unit-cell vector direction</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.set_supercell">
+<code class="descname">set_supercell</code><span class="sig-paren">(</span><em>nsc=None</em>, <em>a=None</em>, <em>b=None</em>, <em>c=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.set_supercell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the number of supercells in the 3 different cell directions</p>
+<dl class="docutils">
+<dt>nsc: [3], integer, optional</dt>
+<dd>number of supercells in each direction</dd>
+<dt>a: integer, optional</dt>
+<dd>number of supercells in the first unit-cell vector direction</dd>
+<dt>b: integer, optional</dt>
+<dd>number of supercells in the second unit-cell vector direction</dd>
+<dt>c: integer, optional</dt>
+<dd>number of supercells in the third unit-cell vector direction</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.swapaxes">
+<code class="descname">swapaxes</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.swapaxes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> with swapped axis</p>
+<p>If <code class="xref any docutils literal"><span class="pre">swapaxes(0,1)</span></code> it returns the 0 in the 1 values.</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="sids.supercell.SuperCell.tocell">
+<em class="property">classmethod </em><code class="descname">tocell</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.tocell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a 3x3 unit-cell dependent on the input</p>
+<p>If you supply a single argument it is regarded as either
+a) a proper unit-cell
+b) the diagonal elements in the unit-cell</p>
+<p>If you supply 3 arguments it will be the same as the
+diagonal elements of the unit-cell</p>
+<p>If you supply 6 arguments it will be the same as the 
+cell parameters, a, b, c, alpha, beta, gamma.
+The angles should be provided in degree (not radians).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCell.translate">
+<code class="descname">translate</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCell.translate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Appends additional space in the SuperCell object</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.supercell.SuperCell.vol">
+<code class="descname">vol</code><a class="headerlink" href="#sids.supercell.SuperCell.vol" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.supercell.SuperCellChild">
+<em class="property">class </em><code class="descclassname">sids.supercell.</code><code class="descname">SuperCellChild</code><a class="headerlink" href="#sids.supercell.SuperCellChild" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class to be inherited by using the <code class="xref any docutils literal"><span class="pre">self.sc</span></code> as a <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object</p>
+<p>Initialize by a <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object and get access to several different
+routines directly related to the <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> class.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCellChild.cell" title="sids.supercell.SuperCellChild.cell"><code class="xref py py-obj docutils literal"><span class="pre">cell</span></code></a></td>
+<td>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.cell" title="sids.supercell.SuperCellChild.cell"><code class="xref any py py-attr docutils literal"><span class="pre">cell</span></code></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCellChild.n_s" title="sids.supercell.SuperCellChild.n_s"><code class="xref py py-obj docutils literal"><span class="pre">n_s</span></code></a></td>
+<td>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.n_s" title="sids.supercell.SuperCellChild.n_s"><code class="xref any py py-attr docutils literal"><span class="pre">n_s</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCellChild.nsc" title="sids.supercell.SuperCellChild.nsc"><code class="xref py py-obj docutils literal"><span class="pre">nsc</span></code></a></td>
+<td>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.nsc" title="sids.supercell.SuperCellChild.nsc"><code class="xref any py py-attr docutils literal"><span class="pre">nsc</span></code></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCellChild.rcell" title="sids.supercell.SuperCellChild.rcell"><code class="xref py py-obj docutils literal"><span class="pre">rcell</span></code></a></td>
+<td>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.rcell" title="sids.supercell.SuperCellChild.rcell"><code class="xref any py py-attr docutils literal"><span class="pre">rcell</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCellChild.sc_off" title="sids.supercell.SuperCellChild.sc_off"><code class="xref py py-obj docutils literal"><span class="pre">sc_off</span></code></a></td>
+<td>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.sc_off" title="sids.supercell.SuperCellChild.sc_off"><code class="xref any py py-attr docutils literal"><span class="pre">sc_off</span></code></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCellChild.vol" title="sids.supercell.SuperCellChild.vol"><code class="xref py py-obj docutils literal"><span class="pre">vol</span></code></a></td>
+<td>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.vol" title="sids.supercell.SuperCellChild.vol"><code class="xref any py py-attr docutils literal"><span class="pre">vol</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCellChild.is_orthogonal" title="sids.supercell.SuperCellChild.is_orthogonal"><code class="xref py py-obj docutils literal"><span class="pre">is_orthogonal</span></code></a>()</td>
+<td>Return true if all cell vectors are linearly independent</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCellChild.sc_index" title="sids.supercell.SuperCellChild.sc_index"><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Call local <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="#sids.supercell.SuperCellChild.sc_index" title="sids.supercell.SuperCellChild.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCellChild.set_nsc" title="sids.supercell.SuperCellChild.set_nsc"><code class="xref py py-obj docutils literal"><span class="pre">set_nsc</span></code></a>(nsc)</td>
+<td>Set the number of super-cells in the <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.supercell.SuperCellChild.set_sc" title="sids.supercell.SuperCellChild.set_sc"><code class="xref py py-obj docutils literal"><span class="pre">set_sc</span></code></a>(sc)</td>
+<td>Overwrites the local supercell</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.supercell.SuperCellChild.set_supercell" title="sids.supercell.SuperCellChild.set_supercell"><code class="xref py py-obj docutils literal"><span class="pre">set_supercell</span></code></a>(sc)</td>
+<td>Overwrites the local supercell</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="sids.supercell.SuperCellChild.Bohr">
+<code class="descname">Bohr</code><em class="property"> = 0.529177</em><a class="headerlink" href="#sids.supercell.SuperCellChild.Bohr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="sids.supercell.SuperCellChild.cell">
+<code class="descname">cell</code><a class="headerlink" href="#sids.supercell.SuperCellChild.cell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.cell" title="sids.supercell.SuperCellChild.cell"><code class="xref any py py-attr docutils literal"><span class="pre">cell</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCellChild.is_orthogonal">
+<code class="descname">is_orthogonal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCellChild.is_orthogonal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return true if all cell vectors are linearly independent</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.supercell.SuperCellChild.n_s">
+<code class="descname">n_s</code><a class="headerlink" href="#sids.supercell.SuperCellChild.n_s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.n_s" title="sids.supercell.SuperCellChild.n_s"><code class="xref any py py-attr docutils literal"><span class="pre">n_s</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.supercell.SuperCellChild.nsc">
+<code class="descname">nsc</code><a class="headerlink" href="#sids.supercell.SuperCellChild.nsc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.nsc" title="sids.supercell.SuperCellChild.nsc"><code class="xref any py py-attr docutils literal"><span class="pre">nsc</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.supercell.SuperCellChild.rcell">
+<code class="descname">rcell</code><a class="headerlink" href="#sids.supercell.SuperCellChild.rcell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.rcell" title="sids.supercell.SuperCellChild.rcell"><code class="xref any py py-attr docutils literal"><span class="pre">rcell</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCellChild.sc_index">
+<code class="descname">sc_index</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCellChild.sc_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call local <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="#sids.supercell.SuperCellChild.sc_index" title="sids.supercell.SuperCellChild.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.supercell.SuperCellChild.sc_off">
+<code class="descname">sc_off</code><a class="headerlink" href="#sids.supercell.SuperCellChild.sc_off" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.sc_off" title="sids.supercell.SuperCellChild.sc_off"><code class="xref any py py-attr docutils literal"><span class="pre">sc_off</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCellChild.set_nsc">
+<code class="descname">set_nsc</code><span class="sig-paren">(</span><em>nsc</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCellChild.set_nsc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the number of super-cells in the <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCellChild.set_sc">
+<code class="descname">set_sc</code><span class="sig-paren">(</span><em>sc</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCellChild.set_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites the local supercell</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.supercell.SuperCellChild.set_supercell">
+<code class="descname">set_supercell</code><span class="sig-paren">(</span><em>sc</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.supercell.SuperCellChild.set_supercell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites the local supercell</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.supercell.SuperCellChild.vol">
+<code class="descname">vol</code><a class="headerlink" href="#sids.supercell.SuperCellChild.vol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the inherent <a class="reference internal" href="#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="#sids.supercell.SuperCellChild.vol" title="sids.supercell.SuperCellChild.vol"><code class="xref any py py-attr docutils literal"><span class="pre">vol</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">None</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

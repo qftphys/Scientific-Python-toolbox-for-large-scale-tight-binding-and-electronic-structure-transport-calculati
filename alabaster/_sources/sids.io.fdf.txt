@@ -1,0 +1,7 @@
+sids.io.fdf module
+==================
+
+.. automodule:: sids.io.fdf
+    :members:
+    :undoc-members:
+    :show-inheritance:

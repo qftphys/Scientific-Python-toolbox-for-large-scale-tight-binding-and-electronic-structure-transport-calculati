@@ -1,0 +1,7 @@
+sids.geom.setup module
+======================
+
+.. automodule:: sids.geom.setup
+    :members:
+    :undoc-members:
+    :show-inheritance:

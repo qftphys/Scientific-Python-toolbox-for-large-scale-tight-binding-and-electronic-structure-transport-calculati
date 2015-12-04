@@ -1,0 +1,7 @@
+sids.quaternion module
+======================
+
+.. automodule:: sids.quaternion
+    :members:
+    :undoc-members:
+    :show-inheritance:

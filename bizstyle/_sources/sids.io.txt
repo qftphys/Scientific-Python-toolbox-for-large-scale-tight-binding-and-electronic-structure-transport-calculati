@@ -1,0 +1,29 @@
+sids.io package
+===============
+
+Submodules
+----------
+
+.. toctree::
+
+   sids.io.bigdft_ascii
+   sids.io.cube
+   sids.io.fdf
+   sids.io.gulp
+   sids.io.setup
+   sids.io.siesta
+   sids.io.siesta_grid
+   sids.io.sile
+   sids.io.tb
+   sids.io.tbtrans
+   sids.io.vasp
+   sids.io.xv
+   sids.io.xyz
+
+Module contents
+---------------
+
+.. automodule:: sids.io
+    :members:
+    :undoc-members:
+    :show-inheritance:

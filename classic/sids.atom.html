@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sids.atom module</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.4.5-1-gbf7dd50
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="None" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">None</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-sids.atom">
+<span id="sids-atom-module"></span><h1>sids.atom module<a class="headerlink" href="#module-sids.atom" title="Permalink to this headline">¶</a></h1>
+<p>Class for retaining information about a single atom</p>
+<dl class="class">
+<dt id="sids.atom.PeriodicTable">
+<em class="property">class </em><code class="descclassname">sids.atom.</code><code class="descname">PeriodicTable</code><a class="headerlink" href="#sids.atom.PeriodicTable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Basic periodic table.</p>
+<p>It retains all periodic elements and allows easy conversion
+from full names to the atomic number to their weights.</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.atom.PeriodicTable.Z" title="sids.atom.PeriodicTable.Z"><code class="xref py py-obj docutils literal"><span class="pre">Z</span></code></a>(key)</td>
+<td>Returns the atomic number Return the atomic number corresponding to the <code class="xref any docutils literal"><span class="pre">key</span></code> lookup.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.atom.PeriodicTable.Z_int" title="sids.atom.PeriodicTable.Z_int"><code class="xref py py-obj docutils literal"><span class="pre">Z_int</span></code></a>(key)</td>
+<td>Returns the atomic number Return the atomic number corresponding to the <code class="xref any docutils literal"><span class="pre">key</span></code> lookup.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.atom.PeriodicTable.Z_short" title="sids.atom.PeriodicTable.Z_short"><code class="xref py py-obj docutils literal"><span class="pre">Z_short</span></code></a>(key)</td>
+<td>Returns the atomic short name Return the atomic short name corresponding to the <code class="xref any docutils literal"><span class="pre">key</span></code> lookup.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.atom.PeriodicTable.atomic_mass" title="sids.atom.PeriodicTable.atomic_mass"><code class="xref py py-obj docutils literal"><span class="pre">atomic_mass</span></code></a>(key)</td>
+<td>Returns the atomic mass Return the atomic mass corresponding to the <code class="xref any docutils literal"><span class="pre">key</span></code> lookup.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.atom.PeriodicTable.radii" title="sids.atom.PeriodicTable.radii"><code class="xref py py-obj docutils literal"><span class="pre">radii</span></code></a>(key[,&nbsp;radii])</td>
+<td>Returns the atomic radii Return the atomic radii.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.atom.PeriodicTable.Z">
+<code class="descname">Z</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.PeriodicTable.Z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the atomic number
+Return the atomic number corresponding to the <code class="xref any docutils literal"><span class="pre">key</span></code> lookup.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>key</strong> : array_like, str, int</p>
+<blockquote>
+<div><p>Uses value to lookup the atomic number in the <a class="reference internal" href="#sids.atom.PeriodicTable" title="sids.atom.PeriodicTable"><code class="xref any py py-class docutils literal"><span class="pre">PeriodicTable</span></code></a>
+object.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>Z</strong> : ndarray, int</p>
+<blockquote class="last">
+<div><p>The atomic number corresponding to <code class="xref any docutils literal"><span class="pre">key</span></code>, if <code class="xref any docutils literal"><span class="pre">key</span></code> is array_like, so
+will the returned value be.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.atom.PeriodicTable.Z_int">
+<code class="descname">Z_int</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.PeriodicTable.Z_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the atomic number
+Return the atomic number corresponding to the <code class="xref any docutils literal"><span class="pre">key</span></code> lookup.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>key</strong> : array_like, str, int</p>
+<blockquote>
+<div><p>Uses value to lookup the atomic number in the <a class="reference internal" href="#sids.atom.PeriodicTable" title="sids.atom.PeriodicTable"><code class="xref any py py-class docutils literal"><span class="pre">PeriodicTable</span></code></a>
+object.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>Z</strong> : ndarray, int</p>
+<blockquote class="last">
+<div><p>The atomic number corresponding to <code class="xref any docutils literal"><span class="pre">key</span></code>, if <code class="xref any docutils literal"><span class="pre">key</span></code> is array_like, so
+will the returned value be.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.atom.PeriodicTable.Z_short">
+<code class="descname">Z_short</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.PeriodicTable.Z_short" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the atomic short name
+Return the atomic short name corresponding to the <code class="xref any docutils literal"><span class="pre">key</span></code> lookup.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>key</strong> : array_like, str, int</p>
+<blockquote>
+<div><p>Uses value to lookup the atomic short name in the 
+<a class="reference internal" href="#sids.atom.PeriodicTable" title="sids.atom.PeriodicTable"><code class="xref any py py-class docutils literal"><span class="pre">PeriodicTable</span></code></a> object.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>name</strong> : ndarray, str</p>
+<blockquote class="last">
+<div><p>The atomic short name corresponding to <code class="xref any docutils literal"><span class="pre">key</span></code>, if <code class="xref any docutils literal"><span class="pre">key</span></code> is array_like, so
+will the returned value be.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.atom.PeriodicTable.atomic_mass">
+<code class="descname">atomic_mass</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.PeriodicTable.atomic_mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the atomic mass
+Return the atomic mass corresponding to the <code class="xref any docutils literal"><span class="pre">key</span></code> lookup.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>key</strong> : array_like, str, int</p>
+<blockquote>
+<div><p>Uses value to lookup the atomic mass in the 
+<a class="reference internal" href="#sids.atom.PeriodicTable" title="sids.atom.PeriodicTable"><code class="xref any py py-class docutils literal"><span class="pre">PeriodicTable</span></code></a> object.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>name</strong> : ndarray, float</p>
+<blockquote class="last">
+<div><p>The atomic mass in atomic units corresponding to <code class="xref any docutils literal"><span class="pre">key</span></code>, if <code class="xref any docutils literal"><span class="pre">key</span></code> is array_like, so
+will the returned value be.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.atom.PeriodicTable.radii">
+<code class="descname">radii</code><span class="sig-paren">(</span><em>key</em>, <em>radii='calc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.PeriodicTable.radii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the atomic radii
+Return the atomic radii.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>key</strong> : array_like, str, int</p>
+<blockquote>
+<div><p>Uses value to lookup the atomic mass in the 
+<a class="reference internal" href="#sids.atom.PeriodicTable" title="sids.atom.PeriodicTable"><code class="xref any py py-class docutils literal"><span class="pre">PeriodicTable</span></code></a> object.</p>
+</div></blockquote>
+<p><strong>radii</strong> : str</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>There are 3 different radii stored:</dt>
+<dd><ol class="first last arabic simple">
+<li><code class="xref any docutils literal"><span class="pre">calc</span></code>, the calculated</li>
+<li><code class="xref any docutils literal"><span class="pre">empirical</span></code>, the empirically found values</li>
+<li><code class="xref any docutils literal"><span class="pre">vdw</span></code>, the van der Waals  found values</li>
+</ol>
+</dd>
+</dl>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>radii</strong> : ndarray, float</p>
+<blockquote class="last">
+<div><p>The atomic radii in <code class="xref any docutils literal"><span class="pre">Ang</span></code></p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sids.atom.Atom">
+<em class="property">class </em><code class="descclassname">sids.atom.</code><code class="descname">Atom</code><span class="sig-paren">(</span><em>Z</em>, <em>R=-1.0</em>, <em>orbs=1</em>, <em>mass=None</em>, <em>tag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.Atom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Object to handle atomic mass, name, number of orbitals and 
+orbital range.</p>
+<p>The <a class="reference internal" href="#sids.atom.Atom" title="sids.atom.Atom"><code class="xref any py py-class docutils literal"><span class="pre">Atom</span></code></a> object handles the atomic species with information
+such as
+- atomic number
+- mass
+- number of orbitals
+- radius of each orbital</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>Z</strong> : int, str</p>
+<blockquote>
+<div><p>key lookup for the atomic specie, <code class="xref any docutils literal"><span class="pre">Atom[key]</span></code></p>
+</div></blockquote>
+<p><strong>R</strong> : array_like, float</p>
+<blockquote>
+<div><p>the range of the atomic orbitals</p>
+</div></blockquote>
+<p><strong>orbs</strong> : int</p>
+<blockquote>
+<div><p>number of orbitals attached to this atom
+NOTE: Length of <code class="xref any docutils literal"><span class="pre">R</span></code> precedes this quantity.</p>
+</div></blockquote>
+<p><strong>mass</strong> : float, optional</p>
+<blockquote>
+<div><p>the atomic mass, if not specified uses the mass from <a class="reference internal" href="#sids.atom.PeriodicTable" title="sids.atom.PeriodicTable"><code class="xref any py py-class docutils literal"><span class="pre">PeriodicTable</span></code></a></p>
+</div></blockquote>
+<p><strong>tag</strong> : str</p>
+<blockquote class="last">
+<div><p>arbitrary designation for user handling similar atoms with
+different settings</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="93%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>Z</td>
+<td>(int) atomic number</td>
+</tr>
+<tr class="row-even"><td>R</td>
+<td>(ndarray) radius of orbitals belonging to the <a class="reference internal" href="#sids.atom.Atom" title="sids.atom.Atom"><code class="xref any py py-class docutils literal"><span class="pre">Atom</span></code></a></td>
+</tr>
+<tr class="row-odd"><td>orbs</td>
+<td>(int) number of orbitals belonging to the <a class="reference internal" href="#sids.atom.Atom" title="sids.atom.Atom"><code class="xref any py py-class docutils literal"><span class="pre">Atom</span></code></a></td>
+</tr>
+<tr class="row-even"><td>mass</td>
+<td>(float) mass of <a class="reference internal" href="#sids.atom.Atom" title="sids.atom.Atom"><code class="xref any py py-class docutils literal"><span class="pre">Atom</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sids.atom.Atom.copy" title="sids.atom.Atom.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
+<td>Return copy of this object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.atom.Atom.radii" title="sids.atom.Atom.radii"><code class="xref py py-obj docutils literal"><span class="pre">radii</span></code></a>([radii])</td>
+<td>Return the atomic radii of the atom (in Ang)</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sids.atom.Atom.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.Atom.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return copy of this object.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.atom.Atom.dR">
+<code class="descname">dR</code><a class="headerlink" href="#sids.atom.Atom.dR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the maximum range of orbitals.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.atom.Atom.radii">
+<code class="descname">radii</code><span class="sig-paren">(</span><em>radii='calc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.atom.Atom.radii" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the atomic radii of the atom (in Ang)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sids.atom.Atom.symbol">
+<code class="descname">symbol</code><a class="headerlink" href="#sids.atom.Atom.symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return short atomic name.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sids.atom.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">None</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

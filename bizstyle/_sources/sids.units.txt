@@ -1,0 +1,7 @@
+sids.units module
+=================
+
+.. automodule:: sids.units
+    :members:
+    :undoc-members:
+    :show-inheritance:

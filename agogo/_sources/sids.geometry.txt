@@ -1,0 +1,7 @@
+sids.geometry module
+====================
+
+.. automodule:: sids.geometry
+    :members:
+    :undoc-members:
+    :show-inheritance:

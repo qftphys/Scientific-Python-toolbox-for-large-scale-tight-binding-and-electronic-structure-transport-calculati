@@ -1,0 +1,20 @@
+sids.geom package
+=================
+
+Submodules
+----------
+
+.. toctree::
+
+   sids.geom.basic
+   sids.geom.flat
+   sids.geom.setup
+   sids.geom.special
+
+Module contents
+---------------
+
+.. automodule:: sids.geom
+    :members:
+    :undoc-members:
+    :show-inheritance:
