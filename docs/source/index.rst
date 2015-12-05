@@ -62,18 +62,18 @@ best suited theme for this documentation.
 
 If you have any preferences please let me know.
 
-* `Alabaster`_ theme
-* `Agogo`_ theme
-* `Bizstyle`_ theme (default)
-* `Classic`_ theme
-* `Scrolls`_ theme
-* `Sphinx RTD`_ theme
+* `Alabaster`_ theme (good)
+* `Agogo`_ theme (good)
+* `Bizstyle`_ theme (default, good)
+* `Classic`_ theme (ok)
+* `Scrolls`_ theme (good)
+* `Sphinx RTD`_ theme (ok)
 
 
 .. _Alabaster: ../alabaster/index.html
 .. _Agogo: ../agogo/index.html
 .. _Bizstyle: ../bizstyle/index.html
 .. _Classic: ../classic/index.html
-.. _Scrolls: ../classic/index.html
+.. _Scrolls: ../scrolls/index.html
 .. _Sphinx RTD: ../sphinx_rtd_theme/index.html
 
