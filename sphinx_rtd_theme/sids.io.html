@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>sids.io package</title>
+  <title>sids.io package &mdash; sids |release| documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="None" href="index.html"/> 
+    <link rel="top" title="sids |release| documentation" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -255,12 +255,6 @@ and object with the file handle.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sids.io.Sile.step_either">
-<code class="descname">step_either</code><span class="sig-paren">(</span><em>keywords</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.step_either" title="Permalink to this definition">¶</a></dt>
-<dd><p>Steps the file-handle until the keyword is found in the input</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="sids.io.Sile.step_to">
 <code class="descname">step_to</code><span class="sig-paren">(</span><em>keyword</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.step_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Steps the file-handle until the keyword is found in the input</p>
@@ -443,13 +437,13 @@ By default the <code class="docutils literal"><span class="pre">base</span></cod
 </table>
 <dl class="method">
 <dt id="sids.io.GULPSile.read_geom">
-<code class="descname">read_geom</code><span class="sig-paren">(</span><em>key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_geom</code><span class="sig-paren">(</span><em>key='Final fractional coordinates'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_geom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads a geometry and creates the GULP dynamical geometry</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.GULPSile.read_sc">
-<code class="descname">read_sc</code><span class="sig-paren">(</span><em>key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_sc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads a <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> and creates the GULP cell</p>
 </dd></dl>
 
@@ -457,36 +451,6 @@ By default the <code class="docutils literal"><span class="pre">base</span></cod
 <dt id="sids.io.GULPSile.read_tb">
 <code class="descname">read_tb</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_tb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a GULP tight-binding model for the output of GULP</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="sids.io.GULPSile.set_dyn_key">
-<code class="descname">set_dyn_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_dyn_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overwrites internal key lookup value for the dynamical matrix vectors</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="sids.io.GULPSile.set_geom_key">
-<code class="descname">set_geom_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_geom_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overwrites internal key lookup value for the geometry vectors</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="sids.io.GULPSile.set_key">
-<code class="descname">set_key</code><span class="sig-paren">(</span><em>segment</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>Sets the segment lookup key</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="sids.io.GULPSile.set_sc_key">
-<code class="descname">set_sc_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_sc_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overwrites internal key lookup value for the cell vectors</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="sids.io.GULPSile.set_tb_key">
-<code class="descname">set_tb_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_tb_key" title="Permalink to this definition">¶</a></dt>
-<dd><p>Overwrites internal key lookup value for the dynamical matrix vectors</p>
 </dd></dl>
 
 </dd></dl>
@@ -823,7 +787,7 @@ This file-object handles both POSCAR and CONTCAR files</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.4.5-1-gbf7dd50
+            VERSION:'0.4.6
 ',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
