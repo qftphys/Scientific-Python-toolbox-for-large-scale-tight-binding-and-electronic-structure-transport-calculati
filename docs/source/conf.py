@@ -19,7 +19,7 @@ import shlex
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('../../..'))
 
 # -- General configuration ------------------------------------------------
 
@@ -76,7 +76,6 @@ author = u'Nick R. Papior'
 #
 # The short X.Y version.
 # Import sids_info
-import os.path, sys
 # Extend path, to ensure that it is the correct sids_info that we
 # grab
 sys.path.insert(0, os.path.dirname(__file__) )
@@ -149,7 +148,7 @@ from sids_info import html_theme
 html_title = "sids |release| documentation"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = "sids doc"
+html_short_title = "sids"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
