@@ -94,6 +94,7 @@ mkdir -p $docdir/docs/templates
 
 # Define all themes that we want to create
 themes="sphinx_rtd_theme alabaster classic scrolls agogo bizstyle"
+themes="bizstyle"
 
 # Create scripts
 pushd scripts
@@ -155,14 +156,22 @@ git checkout gh-pages
 for theme in $themes
 do
 
+    # Remove theme that have been re-created
+    git rm -rf $theme/*
+
     # Ensure directory exists
-    mkdir $theme
+    mkdir -p $theme
+
     pushd $theme
 
     # Extract theme site here
     tar xfz $tmpdir/$theme.tar.gz
 
     popd
+
+    # Add the theme again to the repository
+    git add -f $theme
+
 done
 mv $tmpdir/coverage.txt .
 
@@ -172,11 +181,7 @@ echo "$doc_tag" > docs/doc.tag
 # Add everything (including updated tag)
 git add .buildinfo docs/doc.tag
 
-# Remove all themes that have been re-created
-git rm -rf $themes
-
-# Add all created html files
-git add $themes
+# Create commit
 git commit -s -m "Released documentation of $doc_tag"
 
 # Clean-up
