@@ -94,7 +94,6 @@ mkdir -p $docdir/docs/templates
 
 # Define all themes that we want to create
 themes="sphinx_rtd_theme alabaster classic scrolls agogo bizstyle"
-themes="bizstyle"
 
 # Create scripts
 pushd scripts
