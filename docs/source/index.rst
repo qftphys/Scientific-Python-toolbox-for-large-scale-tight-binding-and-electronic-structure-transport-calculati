@@ -16,7 +16,7 @@ A list of key components are
 
 :program:`sgeom`
    Read and transform generic coordinate files from
-   one format into several others.
+   one format into other formats.
 
 :program:`sgrid`
    Read and transform *grid* data, such as electronic
