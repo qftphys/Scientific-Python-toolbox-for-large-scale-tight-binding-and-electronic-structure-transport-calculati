@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.4.6
+        VERSION:     '0.4.6-5-gde61120
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">sids doc</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">sids</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -64,23 +64,38 @@
 <tr class="row-odd"><td><a class="reference internal" href="#sids.io.gulp.GULPSile.read_geom" title="sids.io.gulp.GULPSile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>([key])</td>
 <td>Reads a geometry and creates the GULP dynamical geometry</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sids.io.gulp.GULPSile.read_sc" title="sids.io.gulp.GULPSile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sids.io.gulp.GULPSile.read_sc" title="sids.io.gulp.GULPSile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>([key])</td>
 <td>Reads a <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> and creates the GULP cell</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sids.io.gulp.GULPSile.read_tb" title="sids.io.gulp.GULPSile.read_tb"><code class="xref py py-obj docutils literal"><span class="pre">read_tb</span></code></a>(**kwargs)</td>
 <td>Returns a GULP tight-binding model for the output of GULP</td>
 </tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.io.gulp.GULPSile.set_dyn_key" title="sids.io.gulp.GULPSile.set_dyn_key"><code class="xref py py-obj docutils literal"><span class="pre">set_dyn_key</span></code></a>(key)</td>
+<td>Overwrites internal key lookup value for the dynamical matrix vectors</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.io.gulp.GULPSile.set_geom_key" title="sids.io.gulp.GULPSile.set_geom_key"><code class="xref py py-obj docutils literal"><span class="pre">set_geom_key</span></code></a>(key)</td>
+<td>Overwrites internal key lookup value for the geometry vectors</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.io.gulp.GULPSile.set_key" title="sids.io.gulp.GULPSile.set_key"><code class="xref py py-obj docutils literal"><span class="pre">set_key</span></code></a>(segment,&nbsp;key)</td>
+<td>Sets the segment lookup key</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sids.io.gulp.GULPSile.set_sc_key" title="sids.io.gulp.GULPSile.set_sc_key"><code class="xref py py-obj docutils literal"><span class="pre">set_sc_key</span></code></a>(key)</td>
+<td>Overwrites internal key lookup value for the cell vectors</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sids.io.gulp.GULPSile.set_tb_key" title="sids.io.gulp.GULPSile.set_tb_key"><code class="xref py py-obj docutils literal"><span class="pre">set_tb_key</span></code></a>(key)</td>
+<td>Overwrites internal key lookup value for the dynamical matrix vectors</td>
+</tr>
 </tbody>
 </table>
 <dl class="method">
 <dt id="sids.io.gulp.GULPSile.read_geom">
-<code class="descname">read_geom</code><span class="sig-paren">(</span><em>key='Final fractional coordinates'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.gulp.GULPSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_geom</code><span class="sig-paren">(</span><em>key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.gulp.GULPSile.read_geom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads a geometry and creates the GULP dynamical geometry</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.gulp.GULPSile.read_sc">
-<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.gulp.GULPSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_sc</code><span class="sig-paren">(</span><em>key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.gulp.GULPSile.read_sc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads a <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> and creates the GULP cell</p>
 </dd></dl>
 
@@ -88,6 +103,36 @@
 <dt id="sids.io.gulp.GULPSile.read_tb">
 <code class="descname">read_tb</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.gulp.GULPSile.read_tb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a GULP tight-binding model for the output of GULP</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.gulp.GULPSile.set_dyn_key">
+<code class="descname">set_dyn_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.gulp.GULPSile.set_dyn_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the dynamical matrix vectors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.gulp.GULPSile.set_geom_key">
+<code class="descname">set_geom_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.gulp.GULPSile.set_geom_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the geometry vectors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.gulp.GULPSile.set_key">
+<code class="descname">set_key</code><span class="sig-paren">(</span><em>segment</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.gulp.GULPSile.set_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the segment lookup key</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.gulp.GULPSile.set_sc_key">
+<code class="descname">set_sc_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.gulp.GULPSile.set_sc_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the cell vectors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.gulp.GULPSile.set_tb_key">
+<code class="descname">set_tb_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.gulp.GULPSile.set_tb_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the dynamical matrix vectors</p>
 </dd></dl>
 
 </dd></dl>
@@ -133,7 +178,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">sids doc</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">sids</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

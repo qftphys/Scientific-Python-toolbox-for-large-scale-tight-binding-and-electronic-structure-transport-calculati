@@ -204,9 +204,9 @@ file.</p>
 This option should only be given to files with ASCII text
 output.
 It will automatically call:</p>
-<blockquote>
-<div><p><code class="xref any docutils literal"><span class="pre">add_sile(ending+'.gz',...,gzip=False)</span></code></p>
-</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">add_sile</span><span class="p">(</span><span class="n">ending</span><span class="o">+</span><span class="s">&#39;.gz&#39;</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">gzip</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+</pre></div>
+</div>
 <p>to add the gzipped file to the list of possible files.</p>
 </div></blockquote>
 </td>
@@ -244,8 +244,31 @@ and object with the file handle.</p>
 </tbody>
 </table>
 <dl class="staticmethod">
+<dt id="sids.io.Sile.is_keys">
+<em class="property">static </em><code class="descname">is_keys</code><span class="sig-paren">(</span><em>keys</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.is_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sids.io.Sile.key2case">
+<em class="property">static </em><code class="descname">key2case</code><span class="sig-paren">(</span><em>key</em>, <em>case</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.key2case" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts str/list of keywords to proper case</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sids.io.Sile.keys2case">
+<em class="property">static </em><code class="descname">keys2case</code><span class="sig-paren">(</span><em>keys</em>, <em>case</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.keys2case" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts str/list of keywords to proper case</p>
+</dd></dl>
+
+<dl class="staticmethod">
 <dt id="sids.io.Sile.line_has_key">
-<em class="property">static </em><code class="descname">line_has_key</code><span class="sig-paren">(</span><em>line</em>, <em>keyword</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.line_has_key" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">line_has_key</code><span class="sig-paren">(</span><em>line</em>, <em>key</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.line_has_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="sids.io.Sile.line_has_keys">
+<em class="property">static </em><code class="descname">line_has_keys</code><span class="sig-paren">(</span><em>line</em>, <em>keys</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.line_has_keys" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -255,8 +278,14 @@ and object with the file handle.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="sids.io.Sile.step_either">
+<code class="descname">step_either</code><span class="sig-paren">(</span><em>keywords</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.step_either" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steps the file-handle until the keyword is found in the input</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="sids.io.Sile.step_to">
-<code class="descname">step_to</code><span class="sig-paren">(</span><em>keyword</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.step_to" title="Permalink to this definition">¶</a></dt>
+<code class="descname">step_to</code><span class="sig-paren">(</span><em>keywords</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.Sile.step_to" title="Permalink to this definition">¶</a></dt>
 <dd><p>Steps the file-handle until the keyword is found in the input</p>
 </dd></dl>
 
@@ -437,13 +466,13 @@ By default the <code class="docutils literal"><span class="pre">base</span></cod
 </table>
 <dl class="method">
 <dt id="sids.io.GULPSile.read_geom">
-<code class="descname">read_geom</code><span class="sig-paren">(</span><em>key='Final fractional coordinates'</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_geom</code><span class="sig-paren">(</span><em>key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_geom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads a geometry and creates the GULP dynamical geometry</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.GULPSile.read_sc">
-<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<code class="descname">read_sc</code><span class="sig-paren">(</span><em>key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_sc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads a <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> and creates the GULP cell</p>
 </dd></dl>
 
@@ -451,6 +480,36 @@ By default the <code class="docutils literal"><span class="pre">base</span></cod
 <dt id="sids.io.GULPSile.read_tb">
 <code class="descname">read_tb</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.read_tb" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a GULP tight-binding model for the output of GULP</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.GULPSile.set_dyn_key">
+<code class="descname">set_dyn_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_dyn_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the dynamical matrix vectors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.GULPSile.set_geom_key">
+<code class="descname">set_geom_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_geom_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the geometry vectors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.GULPSile.set_key">
+<code class="descname">set_key</code><span class="sig-paren">(</span><em>segment</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the segment lookup key</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.GULPSile.set_sc_key">
+<code class="descname">set_sc_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_sc_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the cell vectors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sids.io.GULPSile.set_tb_key">
+<code class="descname">set_tb_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.GULPSile.set_tb_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the dynamical matrix vectors</p>
 </dd></dl>
 
 </dd></dl>
@@ -621,13 +680,13 @@ hermitian : boolean</p>
 <dl class="method">
 <dt id="sids.io.TBtransSile.read_geom">
 <code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.TBtransSile.read_geom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns Geometry object from a <a href="#id1"><span class="problematic" id="id2">*</span></a>.TBT.nc file</p>
+<dd><p>Returns Geometry object from a .TBT.nc file</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="sids.io.TBtransSile.read_sc">
 <code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sids.io.TBtransSile.read_sc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from a <a href="#id3"><span class="problematic" id="id4">*</span></a>.TBT.nc file</p>
+<dd><p>Returns <a class="reference internal" href="sids.supercell.html#sids.supercell.SuperCell" title="sids.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from a .TBT.nc file</p>
 </dd></dl>
 
 <dl class="method">
@@ -787,7 +846,7 @@ This file-object handles both POSCAR and CONTCAR files</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.4.6
+            VERSION:'0.4.6-5-gde61120
 ',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

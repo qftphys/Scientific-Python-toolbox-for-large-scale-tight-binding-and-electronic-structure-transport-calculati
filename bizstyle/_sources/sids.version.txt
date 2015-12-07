@@ -1,0 +1,7 @@
+sids.version module
+===================
+
+.. automodule:: sids.version
+    :members:
+    :undoc-members:
+    :show-inheritance:
