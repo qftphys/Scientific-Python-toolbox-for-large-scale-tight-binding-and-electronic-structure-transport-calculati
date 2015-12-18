@@ -30,9 +30,24 @@ Script based handling via Python classes and objects that handles
   - Geometries, with associated atomic species and unit cells
   - Grids, with associated unit cells
   - Tight-binding models using a sparse data structure for easy
-    creation and calculation of eigenvalues
+  creation and calculation of eigenvalues
 
+Installation
+============
 
+The easiest way to install `sids` is via the :program:`pypi` interface.
+Install via:
+.. code-block:: bash
+
+   pip install sids
+
+Alternatively you can download the releases on the
+`release page <gh-releases_>`_. And install via the regular :program:`setup.py`
+interface:
+.. code-block:: bash
+
+   python setup.py install
+  
 Contents:
 
 .. toctree::
@@ -76,4 +91,5 @@ If you have any preferences please let me know.
 .. _Classic: ../classic/index.html
 .. _Scrolls: ../scrolls/index.html
 .. _Sphinx RTD: ../sphinx_rtd_theme/index.html
-
+.. _gh-releases: http://github.com/zerothi/sids/releases
+.. _pypi-releases: http://pypi.python.org/pypi/sids/

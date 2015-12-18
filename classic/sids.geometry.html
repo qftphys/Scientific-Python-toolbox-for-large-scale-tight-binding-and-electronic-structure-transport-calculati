@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.4.6-5-gde61120
+        VERSION:     '0.4.8
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -785,6 +785,7 @@ if it is a string it will create a new sile using <a class="reference internal" 
 <code class="descname">remove</code><span class="sig-paren">(</span><em>atoms</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.remove" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove atoms from the geometry.</p>
 <p>Indices passed <em>MUST</em> be unique.</p>
+<p>Negative indices are wrapped and thus works.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -928,6 +929,7 @@ points along the Cartesian vector <code class="docutils literal"><span class="pr
 <code class="descname">sub</code><span class="sig-paren">(</span><em>atoms</em>, <em>cell=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sids.geometry.Geometry.sub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a subset of atoms from the geometry.</p>
 <p>Indices passed <em>MUST</em> be unique.</p>
+<p>Negative indices are wrapped and thus works.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
