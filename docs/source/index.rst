@@ -37,6 +37,7 @@ Installation
 
 The easiest way to install `sids` is via the :program:`pypi` interface.
 Install via:
+
 .. code-block:: bash
 
    pip install sids
@@ -44,6 +45,7 @@ Install via:
 Alternatively you can download the releases on the
 `release page <gh-releases_>`_. And install via the regular :program:`setup.py`
 interface:
+
 .. code-block:: bash
 
    python setup.py install
