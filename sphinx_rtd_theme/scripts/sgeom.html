@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sgeom &mdash; sids |release| documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="sids |release| documentation" href="../index.html"/>
+        <link rel="next" title="sgrid" href="sgrid.html"/>
+        <link rel="prev" title="Welcome to sids documentation!" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> sids
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href=""><code class="docutils literal"><span class="pre">sgeom</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#conversion">Conversion</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#available-formats">Available formats</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-features">Advanced Features</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#repeating-tiling-structures">Repeating/Tiling structures</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rotating-structure">Rotating structure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sgrid.html"><code class="docutils literal"><span class="pre">sgrid</span></code></a></li>
+</ul>
+<ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">sids</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li><code class="docutils literal"><span class="pre">sgeom</span></code></li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/scripts/sgeom.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sgeom">
+<h1><a class="reference internal" href=""><em>sgeom</em></a><a class="headerlink" href="#sgeom" title="Permalink to this headline">¶</a></h1>
+<p>The <strong class="program">sgeom</strong> executable is a tool for reading and transforming general
+coordinate formats to other formats, or alter them.</p>
+<p>For a short help description of the possible uses do:</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>sgeom &#8211;help</dd>
+</dl>
+<p>Here we list a few of the most frequent used commands.</p>
+<div class="section" id="conversion">
+<h2>Conversion<a class="headerlink" href="#conversion" title="Permalink to this headline">¶</a></h2>
+<p>The simplest usage is transforming from one format to another format.
+<code class="docutils literal"><span class="pre">sgeom</span></code> takes at least two mandatory arguments, the first being the
+input file format, and the second (and any third + argumets) the output
+file formats</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>sgeom &lt;in&gt; &lt;out&gt; [&lt;out2&gt;] [[&lt;out3&gt;] ...]</dd>
+</dl>
+<p>Hence to convert from an <strong>*fdf*</strong> SIESTA input file to an <strong>*xyz*</strong> file
+for plotting in a GUI program one can do this:</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>sgeom RUN.fdf RUN.xyz</dd>
+</dl>
+<p>and the <code class="docutils literal"><span class="pre">RUN.xyz</span></code> file will be created.</p>
+<div class="section" id="available-formats">
+<h3>Available formats<a class="headerlink" href="#available-formats" title="Permalink to this headline">¶</a></h3>
+<p>The currently available formats are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>*xyz*</strong>, standard coordinate format</li>
+</ul>
+<p>Note that the the <em>xyz</em> file format does not <em>per see</em> contain the cell size.
+The <a class="reference internal" href="../sids.io.html#sids.io.XYZSile" title="sids.io.XYZSile"><code class="xref any py py-class docutils literal"><span class="pre">XYZSile</span></code></a> writes the cell information in the <code class="docutils literal"><span class="pre">xyz</span></code> file comment section (2nd line). Hence if the file was written with sids you retain the cell information.
+- <strong>*gout*</strong>, reads geometries from GULP output
+- <strong>*nc*</strong>, reads/writes NetCDF4 files created by SIESTA
+- <strong>*TBT.nc*</strong>/<strong>*PHT.nc*</strong>, reads NetCDF4 files created by TBtrans/PHtrans
+- <strong>*tb*</strong>, intrinsic file format for geometry/tight-binding models
+- <strong>*fdf*</strong>, SIESTA native format
+- <strong>*XV*</strong>, SIESTA coordinate format with velocities
+- <strong>*POSCAR*</strong>/<strong>*CONTCAR*</strong>, VASP coordinate format, does <em>not</em> contain species, i.e. returns Hydrogen geometry.
+- <strong>*ASCII*</strong>, BigDFT coordinate format</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="advanced-features">
+<h2>Advanced Features<a class="headerlink" href="#advanced-features" title="Permalink to this headline">¶</a></h2>
+<p>More advanced features can be represented here.</p>
+<div class="section" id="repeating-tiling-structures">
+<h3>Repeating/Tiling structures<a class="headerlink" href="#repeating-tiling-structures" title="Permalink to this headline">¶</a></h3>
+<p>Often one wishes to expand a structure an integer number of times along
+certain cell directions. This is useful for creating larger bulk structures.
+To repeat a structure do</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>sgeom &#8211;repeat [ax|yb|zc] &lt;int&gt; &lt;in&gt; &lt;out&gt;</dd>
+</dl>
+<p>which repeats the structure one atom at a time, <code class="docutils literal"><span class="pre">&lt;int&gt;</span></code> times, in the corresponding direction.
+Note that <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">a</span></code> correspond to the same cell direction.</p>
+<p>To repeat the structure in <em>chunks</em> one can use the <code class="docutils literal"><span class="pre">tiling</span></code>:</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>sgeom &#8211;tile [ax|yb|zc] &lt;int&gt; &lt;in&gt; &lt;out&gt;</dd>
+</dl>
+<p>which results in the same structure as <code class="docutils literal"><span class="pre">--repeat</span></code> however with different atomic ordering.</p>
+<p>Both tiling and repeating have the variants:</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>sgeom -t[xyz] &lt;int&gt; -r[xyz] &lt;int&gt;</dd>
+</dl>
+<p>for shorthand commands.</p>
+<p>To repeat a structure 4 times along the <em>x</em> cell direction:</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>sgeom &#8211;repeat x 4 RUN.fdf RUN4x.fdf
+sgeom &#8211;repeat-x 4 RUN.fdf RUN4x.fdf
+sgeom &#8211;tile x 4 RUN.fdf RUN4x.fdf
+sgeom &#8211;tile-x 4 RUN.fdf RUN4x.fdf</dd>
+</dl>
+<p>where all the above yields the same structure.</p>
+</div>
+<div class="section" id="rotating-structure">
+<h3>Rotating structure<a class="headerlink" href="#rotating-structure" title="Permalink to this headline">¶</a></h3>
+<p>To rotate the structure around certain cell directions one can do:</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>sgeom &#8211;rotate [ax|yb|zc] &lt;angle&gt; &lt;in&gt; &lt;out&gt;</dd>
+</dl>
+<p>which rotates the structure around the origo with a normal vector along the
+specified cell direction. The input angle is in degrees and <em>not</em> in radians.</p>
+<p>Again there are shorthand commands:</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd>sgeom -R[xyz] &lt;angle&gt;</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sgrid.html" class="btn btn-neutral float-right" title="sgrid" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Welcome to sids documentation!" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Nick R. Papior.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.5.0-3-g8bfe94d
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
