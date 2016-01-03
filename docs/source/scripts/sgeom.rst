@@ -42,17 +42,19 @@ Available formats
 
 The currently available formats are:
 
-  - **xyz**, standard coordinate format
-  Note that the the *xyz* file format does not *per see* contain the cell size.
-  The `XYZSile` writes the cell information in the ``xyz`` file comment section (2nd line). Hence if the file was written with sids you retain the cell information.
-  - **gout**, reads geometries from GULP output
-  - **nc**, reads/writes NetCDF4 files created by SIESTA
-  - **TBT.nc**/**PHT.nc**, reads NetCDF4 files created by TBtrans/PHtrans
-  - **tb**, intrinsic file format for geometry/tight-binding models
-  - **fdf**, SIESTA native format
-  - **XV**, SIESTA coordinate format with velocities
-  - **POSCAR**/**CONTCAR**, VASP coordinate format, does *not* contain species, i.e. returns Hydrogen geometry.
-  - **ASCII**, BigDFT coordinate format
+  * **xyz**, standard coordinate format
+    Note that the the *xyz* file format does not *per see* contain the cell size.
+    The `XYZSile` writes the cell information in the ``xyz`` file comment
+    section (2nd line). Hence if the file was written with sids you retain
+    the cell information.
+  * **gout**, reads geometries from GULP output
+  * **nc**, reads/writes NetCDF4 files created by SIESTA
+  * **TBT.nc**/**PHT.nc**, reads NetCDF4 files created by TBtrans/PHtrans
+  * **tb**, intrinsic file format for geometry/tight-binding models
+  * **fdf**, SIESTA native format
+  * **XV**, SIESTA coordinate format with velocities
+  * **POSCAR**/**CONTCAR**, VASP coordinate format, does *not* contain species, i.e. returns Hydrogen geometry.
+  * **ASCII**, BigDFT coordinate format
 
 
 Advanced Features
