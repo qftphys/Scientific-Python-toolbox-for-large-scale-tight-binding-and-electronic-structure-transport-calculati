@@ -14,11 +14,11 @@ DFT code it is far from limited to deal with *only* this code.
 
 A list of key components are
 
-:program:`sgeom`
+:ref:`scripts/sgeom`
    Read and transform generic coordinate files from
    one format into other formats.
 
-:program:`sgrid`
+:ref:`scripts/sgrid`
    Read and transform *grid* data, such as electronic
    densities, electrostatic potentials etc. and save them in various
    formats.
@@ -35,7 +35,7 @@ Script based handling via Python classes and objects that handles
 Installation
 ============
 
-The easiest way to install `sids` is via the :program:`pypi` interface.
+The easiest way to install ``sids`` is via the :program:`pypi` interface.
 Install via:
 
 .. code-block:: bash
@@ -49,17 +49,32 @@ interface:
 .. code-block:: bash
 
    python setup.py install
-  
+
+which will install ``sids`` in your default location, use :program:`--prefix <path>` for
+manual control of the placement.
+
+Requirements
+------------
+
+To succesfully use ``sids`` these Python packages must be installed:
+
+ - `numpy`_
+ - `scipy`_ 
+ - `netcdf4-python`_
+
 Contents:
 
 .. toctree::
    :maxdepth: 3
 
+   scripts/sgeom
+   scripts/sgrid
+	      
 .. autosummary::
    :toctree: _autosummary
 
 
-The API documentation of the `sids` package can be found `here <sids>`.
+The API documentation of the ``sids`` package can be found `here <sids>`.
 
       
 Indices and tables
@@ -72,7 +87,7 @@ Indices and tables
 Documentation in other themes
 =============================
 
-The `sids` documentation has been created with several different themes
+The ``sids`` documentation has been created with several different themes
 of documentation.
 This is mainly of convenience until I have figured out which one is the
 best suited theme for this documentation.
@@ -95,3 +110,9 @@ If you have any preferences please let me know.
 .. _Sphinx RTD: ../sphinx_rtd_theme/index.html
 .. _gh-releases: http://github.com/zerothi/sids/releases
 .. _pypi-releases: http://pypi.python.org/pypi/sids/
+
+.. These are external links:
+.. _netcdf4-python: http://github.com/Unidata/netcdf4-python
+.. _numpy: http://github.com/numpy/numpy
+.. _scipy: http://github.com/scipy/scipy
+
