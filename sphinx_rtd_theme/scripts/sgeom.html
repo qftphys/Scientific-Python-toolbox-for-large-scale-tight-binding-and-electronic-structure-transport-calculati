@@ -146,6 +146,9 @@
 <p>The <strong class="program">sgeom</strong> executable is a tool for reading and transforming general
 coordinate formats to other formats, or alter them.</p>
 <p>For a short help description of the possible uses do:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sgeom --help
+</pre></div>
+</div>
 <p>Here we list a few of the most frequent used commands.</p>
 <div class="section" id="conversion">
 <h2>Conversion<a class="headerlink" href="#conversion" title="Permalink to this headline">¶</a></h2>
@@ -153,8 +156,14 @@ coordinate formats to other formats, or alter them.</p>
 <code class="docutils literal"><span class="pre">sgeom</span></code> takes at least two mandatory arguments, the first being the
 input file format, and the second (and any third + argumets) the output
 file formats</p>
+<div class="highlight-bash"><div class="highlight"><pre>sgeom &lt;in&gt; &lt;out&gt; <span class="o">[</span>&lt;out2&gt;<span class="o">]</span> <span class="o">[[</span>&lt;out3&gt;<span class="o">]</span> ...<span class="o">]</span>
+</pre></div>
+</div>
 <p>Hence to convert from an <strong>fdf</strong> SIESTA input file to an <strong>xyz</strong> file
 for plotting in a GUI program one can do this:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sgeom RUN.fdf RUN.xyz
+</pre></div>
+</div>
 <p>and the <code class="docutils literal"><span class="pre">RUN.xyz</span></code> file will be created.</p>
 <div class="section" id="available-formats">
 <h3>Available formats<a class="headerlink" href="#available-formats" title="Permalink to this headline">¶</a></h3>
@@ -184,22 +193,43 @@ The <a class="reference internal" href="../sids.io.html#sids.io.XYZSile" title="
 <p>Often one wishes to expand a structure an integer number of times along
 certain cell directions. This is useful for creating larger bulk structures.
 To repeat a structure do</p>
+<div class="highlight-bash"><div class="highlight"><pre>sgeom --repeat <span class="o">[</span>ax<span class="p">|</span>yb<span class="p">|</span>zc<span class="o">]</span> &lt;int&gt; &lt;in&gt; &lt;out&gt;
+</pre></div>
+</div>
 <p>which repeats the structure one atom at a time, <code class="docutils literal"><span class="pre">&lt;int&gt;</span></code> times, in the corresponding direction.
 Note that <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">a</span></code> correspond to the same cell direction.</p>
 <p>To repeat the structure in <em>chunks</em> one can use the <code class="docutils literal"><span class="pre">tiling</span></code>:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sgeom --tile <span class="o">[</span>ax<span class="p">|</span>yb<span class="p">|</span>zc<span class="o">]</span> &lt;int&gt; &lt;in&gt; &lt;out&gt;
+</pre></div>
+</div>
 <p>which results in the same structure as <code class="docutils literal"><span class="pre">--repeat</span></code> however with different atomic ordering.</p>
 <p>Both tiling and repeating have the variants:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sgeom -t<span class="o">[</span>xyz<span class="o">]</span> &lt;int&gt; -r<span class="o">[</span>xyz<span class="o">]</span> &lt;int&gt;
+</pre></div>
+</div>
 <p>for shorthand commands.</p>
 <p>To repeat a structure 4 times along the <em>x</em> cell direction:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sgeom --repeat x <span class="m">4</span> RUN.fdf RUN4x.fdf
+sgeom --repeat-x <span class="m">4</span> RUN.fdf RUN4x.fdf
+sgeom --tile x <span class="m">4</span> RUN.fdf RUN4x.fdf
+sgeom --tile-x <span class="m">4</span> RUN.fdf RUN4x.fdf
+</pre></div>
+</div>
 <p>where all the above yields the same structure.</p>
 </div>
 <div class="section" id="rotating-structure">
 <h3>Rotating structure<a class="headerlink" href="#rotating-structure" title="Permalink to this headline">¶</a></h3>
 <p>To rotate the structure around certain cell directions one can do:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sgeom --rotate <span class="o">[</span>ax<span class="p">|</span>yb<span class="p">|</span>zc<span class="o">]</span> &lt;angle&gt; &lt;in&gt; &lt;out&gt;
+</pre></div>
+</div>
 <p>which rotates the structure around the origo with a normal vector along the
 specified cell direction. The input angle is in degrees and <em>not</em> in radians.
 If one wish to use radians append <em>pi</em> in the angle specification.</p>
 <p>Again there are shorthand commands:</p>
+<div class="highlight-bash"><div class="highlight"><pre>sgeom -R<span class="o">[</span>xyz<span class="o">]</span> &lt;angle&gt;
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -245,7 +275,7 @@ If one wish to use radians append <em>pi</em> in the angle specification.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.5.1
+            VERSION:'0.5.1-1-g3b2fff4
 ',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
