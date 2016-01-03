@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.5.0-3-g8bfe94d
+        VERSION:     '0.5.1
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -67,10 +67,6 @@
 <p>The <strong class="program">sgeom</strong> executable is a tool for reading and transforming general
 coordinate formats to other formats, or alter them.</p>
 <p>For a short help description of the possible uses do:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgeom &#8211;help</dd>
-</dl>
 <p>Here we list a few of the most frequent used commands.</p>
 <div class="section" id="conversion">
 <h2>Conversion<a class="headerlink" href="#conversion" title="Permalink to this headline">¶</a></h2>
@@ -78,34 +74,26 @@ coordinate formats to other formats, or alter them.</p>
 <code class="docutils literal"><span class="pre">sgeom</span></code> takes at least two mandatory arguments, the first being the
 input file format, and the second (and any third + argumets) the output
 file formats</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgeom &lt;in&gt; &lt;out&gt; [&lt;out2&gt;] [[&lt;out3&gt;] ...]</dd>
-</dl>
-<p>Hence to convert from an <strong>*fdf*</strong> SIESTA input file to an <strong>*xyz*</strong> file
+<p>Hence to convert from an <strong>fdf</strong> SIESTA input file to an <strong>xyz</strong> file
 for plotting in a GUI program one can do this:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgeom RUN.fdf RUN.xyz</dd>
-</dl>
 <p>and the <code class="docutils literal"><span class="pre">RUN.xyz</span></code> file will be created.</p>
 <div class="section" id="available-formats">
 <h3>Available formats<a class="headerlink" href="#available-formats" title="Permalink to this headline">¶</a></h3>
 <p>The currently available formats are:</p>
 <blockquote>
 <div><ul class="simple">
-<li><strong>*xyz*</strong>, standard coordinate format</li>
+<li><strong>xyz</strong>, standard coordinate format</li>
 </ul>
 <p>Note that the the <em>xyz</em> file format does not <em>per see</em> contain the cell size.
 The <a class="reference internal" href="../sids.io.html#sids.io.XYZSile" title="sids.io.XYZSile"><code class="xref any py py-class docutils literal"><span class="pre">XYZSile</span></code></a> writes the cell information in the <code class="docutils literal"><span class="pre">xyz</span></code> file comment section (2nd line). Hence if the file was written with sids you retain the cell information.
-- <strong>*gout*</strong>, reads geometries from GULP output
-- <strong>*nc*</strong>, reads/writes NetCDF4 files created by SIESTA
-- <strong>*TBT.nc*</strong>/<strong>*PHT.nc*</strong>, reads NetCDF4 files created by TBtrans/PHtrans
-- <strong>*tb*</strong>, intrinsic file format for geometry/tight-binding models
-- <strong>*fdf*</strong>, SIESTA native format
-- <strong>*XV*</strong>, SIESTA coordinate format with velocities
-- <strong>*POSCAR*</strong>/<strong>*CONTCAR*</strong>, VASP coordinate format, does <em>not</em> contain species, i.e. returns Hydrogen geometry.
-- <strong>*ASCII*</strong>, BigDFT coordinate format</p>
+- <strong>gout</strong>, reads geometries from GULP output
+- <strong>nc</strong>, reads/writes NetCDF4 files created by SIESTA
+- <strong>TBT.nc</strong>/<strong>PHT.nc</strong>, reads NetCDF4 files created by TBtrans/PHtrans
+- <strong>tb</strong>, intrinsic file format for geometry/tight-binding models
+- <strong>fdf</strong>, SIESTA native format
+- <strong>XV</strong>, SIESTA coordinate format with velocities
+- <strong>POSCAR</strong>/<strong>CONTCAR</strong>, VASP coordinate format, does <em>not</em> contain species, i.e. returns Hydrogen geometry.
+- <strong>ASCII</strong>, BigDFT coordinate format</p>
 </div></blockquote>
 </div>
 </div>
@@ -117,48 +105,22 @@ The <a class="reference internal" href="../sids.io.html#sids.io.XYZSile" title="
 <p>Often one wishes to expand a structure an integer number of times along
 certain cell directions. This is useful for creating larger bulk structures.
 To repeat a structure do</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgeom &#8211;repeat [ax|yb|zc] &lt;int&gt; &lt;in&gt; &lt;out&gt;</dd>
-</dl>
 <p>which repeats the structure one atom at a time, <code class="docutils literal"><span class="pre">&lt;int&gt;</span></code> times, in the corresponding direction.
 Note that <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">a</span></code> correspond to the same cell direction.</p>
 <p>To repeat the structure in <em>chunks</em> one can use the <code class="docutils literal"><span class="pre">tiling</span></code>:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgeom &#8211;tile [ax|yb|zc] &lt;int&gt; &lt;in&gt; &lt;out&gt;</dd>
-</dl>
 <p>which results in the same structure as <code class="docutils literal"><span class="pre">--repeat</span></code> however with different atomic ordering.</p>
 <p>Both tiling and repeating have the variants:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgeom -t[xyz] &lt;int&gt; -r[xyz] &lt;int&gt;</dd>
-</dl>
 <p>for shorthand commands.</p>
 <p>To repeat a structure 4 times along the <em>x</em> cell direction:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgeom &#8211;repeat x 4 RUN.fdf RUN4x.fdf
-sgeom &#8211;repeat-x 4 RUN.fdf RUN4x.fdf
-sgeom &#8211;tile x 4 RUN.fdf RUN4x.fdf
-sgeom &#8211;tile-x 4 RUN.fdf RUN4x.fdf</dd>
-</dl>
 <p>where all the above yields the same structure.</p>
 </div>
 <div class="section" id="rotating-structure">
 <h3>Rotating structure<a class="headerlink" href="#rotating-structure" title="Permalink to this headline">¶</a></h3>
 <p>To rotate the structure around certain cell directions one can do:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgeom &#8211;rotate [ax|yb|zc] &lt;angle&gt; &lt;in&gt; &lt;out&gt;</dd>
-</dl>
 <p>which rotates the structure around the origo with a normal vector along the
-specified cell direction. The input angle is in degrees and <em>not</em> in radians.</p>
+specified cell direction. The input angle is in degrees and <em>not</em> in radians.
+If one wish to use radians append <em>pi</em> in the angle specification.</p>
 <p>Again there are shorthand commands:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgeom -R[xyz] &lt;angle&gt;</dd>
-</dl>
 </div>
 </div>
 </div>

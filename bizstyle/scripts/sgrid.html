@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.5.0-3-g8bfe94d
+        VERSION:     '0.5.1
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -100,38 +100,22 @@
 it into CUBE format for plotting 3D data in, <em>e.g.</em> VMD or XCrySDen.</p>
 <p>Currently this is primarily intended for usage with SIESTA.</p>
 <p>For a short help description of the possible uses do:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgrid &#8211;help</dd>
-</dl>
 <p>Here we list a few of the most frequent used commands.
 Note that all commands are available via Python scripts and the <a class="reference internal" href="../sids.grid.html#sids.grid.Grid" title="sids.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> class.</p>
 <div class="section" id="creating-cube-files">
 <h2>Creating CUBE files<a class="headerlink" href="#creating-cube-files" title="Permalink to this headline">¶</a></h2>
 <p>The simplest usage is converting a grid file to CUBE file using</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgrid Rho.grid.nc Rho.cube</dd>
-</dl>
 <p>which converts a SIESTA grid file of the electron density into a corresponding
 CUBE file.</p>
 <p>Conveniently CUBE files can accomodate geometries and species for inclusion in the 3D
 plot and this can be added to the file via the <code class="docutils literal"><span class="pre">--geometry</span></code> flag, any geometry format
 implemented in <a class="reference internal" href="../sids.html#module-sids" title="sids"><code class="xref any py py-mod docutils literal"><span class="pre">sids</span></code></a> are also compatible with <code class="docutils literal"><span class="pre">sgrid</span></code>, see <span class="xref std std-ref">sgrid</span>.</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgrid &#8211;geometry RUN.fdf Rho.grid.nc Rho.cube</dd>
-</dl>
 <p>the shorthand is <code class="docutils literal"><span class="pre">-g</span></code>.</p>
 </div>
 <div class="section" id="grid-differences">
 <h2>Grid differences<a class="headerlink" href="#grid-differences" title="Permalink to this headline">¶</a></h2>
 <p>Often differences between two grids are needed. For this one can use the <code class="docutils literal"><span class="pre">--diff</span></code> flag which
 takes one additional grid file for the difference. I.e.</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgrid -g RUN.fdf &#8211;diff Rho.grid.nc[1] Rho.grid.nc[0] diff_up-down.cube</dd>
-</dl>
 <p>which takes the difference between the spin up and spin down in the same <code class="docutils literal"><span class="pre">Rho.grid.nc</span></code> file.</p>
 </div>
 <div class="section" id="reducing-grid-sizes">
@@ -140,23 +124,9 @@ takes one additional grid file for the difference. I.e.</p>
 One can remove certain parts of the grid after reading, before writing. This will greatly decrease
 the output file <em>and</em> greatly speed-up the process as writing huge ASCII files is <em>extremely</em> time
 consuming. There are two methods for reducing grids:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgrid &#8211;grid-part &lt;part=above|+|below|-&gt; &lt;[xa|yb|zc&gt; &lt;pos|&lt;frac&gt;f&gt;
-sgrid &#8211;grid-remove &lt;remove=above|+|below|-&gt; &lt;[xa|yb|zc&gt; &lt;pos|&lt;frac&gt;f&gt;</dd>
-</dl>
 <p>the shorthand commands are:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgrid -gp &lt;part=above|+|below|-&gt; &lt;[xa|yb|zc&gt; &lt;pos|&lt;frac&gt;f&gt;
-sgrid -gr &lt;remove=above|+|below|-&gt; &lt;[xa|yb|zc&gt; &lt;pos|&lt;frac&gt;f&gt;</dd>
-</dl>
 <p>This needs an example, say the unit cell is a square unit-cell with side lengths 10x10x20 Angstrom.
 To reduce the cell to a middle square of 5x5x5 Angstrom you can do:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgrid -gp + x 2.5 -gp + y 2.5 -gp + z 7.5 -gr + 5 x -gr + 5 y -gr + z 5 Rho.grid.nc 5x5x5.cube</dd>
-</dl>
 <p>note that <code class="docutils literal"><span class="pre">-gp</span></code> will <em>always</em> be performed before <code class="docutils literal"><span class="pre">-gr</span></code>, irrespective of the order of commands.
 The individual commands can be understood via</p>
 <blockquote>
@@ -172,17 +142,12 @@ The individual commands can be understood via</p>
 <p>note that <code class="docutils literal"><span class="pre">--gr</span></code> and <code class="docutils literal"><span class="pre">--gp</span></code> essentially performs the same operation, while one is removing and
 the other is retaining.</p>
 <p>When one is dealing with fractional coordinates is can be convenient to use fractional grid operations.
-The length unit for the position is <em>always</em> in Ångstrøm, unless an optional <strong>*f*</strong> is appended which
+The length unit for the position is <em>always</em> in Ångstrøm, unless an optional <strong>f</strong> is appended which
 forces the unit to be in fractional position (must be between 0 and 1).</p>
 </div>
 <div class="section" id="averaging-and-summing">
 <h2>Averaging and summing<a class="headerlink" href="#averaging-and-summing" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes it is convenient to average or sum grids along cell directions:</p>
-<dl class="docutils">
-<dt>::</dt>
-<dd>sgrid &#8211;mean x Rho.grid.nc meanx.cube
-sgrid &#8211;sum x Rho.grid.nc sumx.cube</dd>
-</dl>
 <p>which takes the average or the sum along the first cell direction, respectively. Note that this results
 in the number of partitions along that direction to be 1 (not all 3D software is capable of reading such a
 CUBE file).</p>
