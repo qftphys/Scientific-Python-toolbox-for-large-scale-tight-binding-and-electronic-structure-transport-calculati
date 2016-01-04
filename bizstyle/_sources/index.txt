@@ -27,12 +27,12 @@ A list of key components are
 
 Script based handling via Python classes and objects that handles 
 
-  - Atomic species
-  - Unit cells (using a super cell approach)
-  - Geometries, with associated atomic species and unit cells
-  - Grids, with associated unit cells
-  - Tight-binding models using a sparse data structure for easy
-  creation and calculation of eigenvalues
+  * Atomic species
+  * Unit cells (using a super cell approach)
+  * Geometries, with associated atomic species and unit cells
+  * Grids, with associated unit cells
+  * Tight-binding models using a sparse data structure for easy
+    creation and calculation of eigenvalues
 
 Installation
 ============

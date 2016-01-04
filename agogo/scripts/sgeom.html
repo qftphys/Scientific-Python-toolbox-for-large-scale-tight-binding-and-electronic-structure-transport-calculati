@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.5.1-1-g3b2fff4
+        VERSION:     '0.5.1
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -57,7 +57,7 @@
             
   <div class="section" id="sgeom">
 <h1><a class="reference internal" href=""><em>sgeom</em></a><a class="headerlink" href="#sgeom" title="Permalink to this headline">¶</a></h1>
-<p>The <strong class="program">sgeom</strong> executable is a tool for reading and transforming general
+<p>The <code class="docutils literal"><span class="pre">sgeom</span></code> executable is a tool for reading and transforming general
 coordinate formats to other formats, or alter them.</p>
 <p>For a short help description of the possible uses do:</p>
 <div class="highlight-bash"><div class="highlight"><pre>sgeom --help
@@ -84,18 +84,20 @@ for plotting in a GUI program one can do this:</p>
 <p>The currently available formats are:</p>
 <blockquote>
 <div><ul class="simple">
-<li><strong>xyz</strong>, standard coordinate format</li>
+<li><strong>xyz</strong>, standard coordinate format
+Note that the the <em>xyz</em> file format does not <em>per see</em> contain the cell size.
+The <a class="reference internal" href="../sids.io.html#sids.io.XYZSile" title="sids.io.XYZSile"><code class="xref any py py-class docutils literal"><span class="pre">XYZSile</span></code></a> writes the cell information in the <code class="docutils literal"><span class="pre">xyz</span></code> file comment
+section (2nd line). Hence if the file was written with sids you retain
+the cell information.</li>
+<li><strong>gout</strong>, reads geometries from GULP output</li>
+<li><strong>nc</strong>, reads/writes NetCDF4 files created by SIESTA</li>
+<li><strong>TBT.nc</strong>/<strong>PHT.nc</strong>, reads NetCDF4 files created by TBtrans/PHtrans</li>
+<li><strong>tb</strong>, intrinsic file format for geometry/tight-binding models</li>
+<li><strong>fdf</strong>, SIESTA native format</li>
+<li><strong>XV</strong>, SIESTA coordinate format with velocities</li>
+<li><strong>POSCAR</strong>/<strong>CONTCAR</strong>, VASP coordinate format, does <em>not</em> contain species, i.e. returns Hydrogen geometry.</li>
+<li><strong>ASCII</strong>, BigDFT coordinate format</li>
 </ul>
-<p>Note that the the <em>xyz</em> file format does not <em>per see</em> contain the cell size.
-The <a class="reference internal" href="../sids.io.html#sids.io.XYZSile" title="sids.io.XYZSile"><code class="xref any py py-class docutils literal"><span class="pre">XYZSile</span></code></a> writes the cell information in the <code class="docutils literal"><span class="pre">xyz</span></code> file comment section (2nd line). Hence if the file was written with sids you retain the cell information.
-- <strong>gout</strong>, reads geometries from GULP output
-- <strong>nc</strong>, reads/writes NetCDF4 files created by SIESTA
-- <strong>TBT.nc</strong>/<strong>PHT.nc</strong>, reads NetCDF4 files created by TBtrans/PHtrans
-- <strong>tb</strong>, intrinsic file format for geometry/tight-binding models
-- <strong>fdf</strong>, SIESTA native format
-- <strong>XV</strong>, SIESTA coordinate format with velocities
-- <strong>POSCAR</strong>/<strong>CONTCAR</strong>, VASP coordinate format, does <em>not</em> contain species, i.e. returns Hydrogen geometry.
-- <strong>ASCII</strong>, BigDFT coordinate format</p>
 </div></blockquote>
 </div>
 </div>
@@ -145,6 +147,11 @@ If one wish to use radians append <em>pi</em> in the angle specification.</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="scripting">
+<h3>Scripting<a class="headerlink" href="#scripting" title="Permalink to this headline">¶</a></h3>
+<p>For even more complex capabilities, you need to prepare your own scripts by using the
+<a class="reference internal" href="../sids.geometry.html#sids.geometry.Geometry" title="sids.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> class.</p>
+</div>
 </div>
 </div>
 
@@ -164,6 +171,7 @@ If one wish to use radians append <em>pi</em> in the angle specification.</p>
 <li class="toctree-l2"><a class="reference internal" href="#advanced-features">Advanced Features</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#repeating-tiling-structures">Repeating/Tiling structures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#rotating-structure">Rotating structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scripting">Scripting</a></li>
 </ul>
 </li>
 </ul>
