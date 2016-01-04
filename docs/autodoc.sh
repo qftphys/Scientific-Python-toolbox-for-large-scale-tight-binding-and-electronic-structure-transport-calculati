@@ -96,14 +96,6 @@ mkdir -p $docdir/docs/templates
 # Define all themes that we want to create
 themes="sphinx_rtd_theme alabaster classic scrolls agogo bizstyle"
 
-# Create scripts
-pushd scripts
-for script in * 
-do
-    ln -s $script $script.py
-done
-popd
-
 # Now move into the documentation folder and create the documentation
 # that we can then copy to the gh-pages branch
 pushd $docdir/docs
