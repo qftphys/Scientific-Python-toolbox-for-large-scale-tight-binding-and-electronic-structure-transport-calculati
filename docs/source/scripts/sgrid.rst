@@ -3,7 +3,7 @@
 `sgrid`
 =======
 
-The :program:`sgrid` executable is a tool for manipulating a simulation grid and transforming
+The ``sgrid`` executable is a tool for manipulating a simulation grid and transforming
 it into CUBE format for plotting 3D data in, *e.g.* VMD or XCrySDen.
 
 Currently this is primarily intended for usage with SIESTA.
@@ -27,11 +27,11 @@ The simplest usage is converting a grid file to CUBE file using
     sgrid Rho.grid.nc Rho.cube
 
 which converts a SIESTA grid file of the electron density into a corresponding
-CUBE file.
+CUBE file. The CUBE file writeout is implemented in `Cube`.
 
 Conveniently CUBE files can accomodate geometries and species for inclusion in the 3D
 plot and this can be added to the file via the ``--geometry`` flag, any geometry format
-implemented in `sids` are also compatible with ``sgrid``, see :ref:`sgrid`.
+implemented in `sids` are also compatible with ``sgrid``, see :ref:`sgeom`.
 
 ::
 		
@@ -109,6 +109,14 @@ Sometimes it is convenient to average or sum grids along cell directions:
 which takes the average or the sum along the first cell direction, respectively. Note that this results
 in the number of partitions along that direction to be 1 (not all 3D software is capable of reading such a
 CUBE file).
+
+
+Advanced features
+-----------------
+
+The above operations are not the limited use of the `sids` library. However, to accomblish more complex
+things you need to manually script the actions using the `Grid` class and the methods available for that method.
+For inspiration you can check the ``sgrid`` executable to see how the commands are used in the script.
 
 
 .. highlight:: python

@@ -3,7 +3,7 @@
 `sgeom`
 =======
 
-The :program:`sgeom` executable is a tool for reading and transforming general
+The ``sgeom`` executable is a tool for reading and transforming general
 coordinate formats to other formats, or alter them.
 
 For a short help description of the possible uses do:
@@ -122,6 +122,12 @@ Again there are shorthand commands:
    
     sgeom -R[xyz] <angle>
 
+
+Scripting
+^^^^^^^^^
+
+For even more complex capabilities, you need to prepare your own scripts by using the
+`Geometry` class.
 
 
 .. highlight:: python
