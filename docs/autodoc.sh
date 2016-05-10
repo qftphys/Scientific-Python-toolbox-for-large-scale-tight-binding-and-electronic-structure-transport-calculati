@@ -85,8 +85,6 @@ git checkout docs/doc.tag
 git checkout master
 git checkout $tag
 
-# There are some problems related to the setupegg.py file
-rm setupegg.py
 
 # Extract the just created tar of the documentation repository
 tar xfz $tmpdir/gh-pages.tar.gz
