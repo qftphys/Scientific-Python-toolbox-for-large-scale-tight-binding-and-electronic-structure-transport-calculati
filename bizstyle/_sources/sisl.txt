@@ -1,0 +1,33 @@
+sisl package
+============
+
+Subpackages
+-----------
+
+.. toctree::
+
+    sisl.geom
+    sisl.io
+    sisl.tb
+
+Submodules
+----------
+
+.. toctree::
+
+   sisl.atom
+   sisl.geometry
+   sisl.grid
+   sisl.quaternion
+   sisl.setup
+   sisl.supercell
+   sisl.units
+   sisl.version
+
+Module contents
+---------------
+
+.. automodule:: sisl
+    :members:
+    :undoc-members:
+    :show-inheritance:

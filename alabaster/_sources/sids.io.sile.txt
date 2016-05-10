@@ -1,7 +1,0 @@
-sids.io.sile module
-===================
-
-.. automodule:: sids.io.sile
-    :members:
-    :undoc-members:
-    :show-inheritance:

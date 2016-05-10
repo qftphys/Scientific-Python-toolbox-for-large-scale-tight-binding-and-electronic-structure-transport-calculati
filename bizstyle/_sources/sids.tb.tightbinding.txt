@@ -1,7 +1,0 @@
-sids.tb.tightbinding module
-===========================
-
-.. automodule:: sids.tb.tightbinding
-    :members:
-    :undoc-members:
-    :show-inheritance:

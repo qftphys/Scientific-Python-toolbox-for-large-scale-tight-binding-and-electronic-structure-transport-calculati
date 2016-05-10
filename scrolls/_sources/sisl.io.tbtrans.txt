@@ -1,0 +1,7 @@
+sisl.io.tbtrans module
+======================
+
+.. automodule:: sisl.io.tbtrans
+    :members:
+    :undoc-members:
+    :show-inheritance:

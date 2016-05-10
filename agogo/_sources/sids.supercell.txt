@@ -1,7 +1,0 @@
-sids.supercell module
-=====================
-
-.. automodule:: sids.supercell
-    :members:
-    :undoc-members:
-    :show-inheritance:

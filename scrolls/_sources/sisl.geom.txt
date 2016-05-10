@@ -1,0 +1,20 @@
+sisl.geom package
+=================
+
+Submodules
+----------
+
+.. toctree::
+
+   sisl.geom.basic
+   sisl.geom.flat
+   sisl.geom.setup
+   sisl.geom.special
+
+Module contents
+---------------
+
+.. automodule:: sisl.geom
+    :members:
+    :undoc-members:
+    :show-inheritance:

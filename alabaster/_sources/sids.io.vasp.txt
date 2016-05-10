@@ -1,7 +1,0 @@
-sids.io.vasp module
-===================
-
-.. automodule:: sids.io.vasp
-    :members:
-    :undoc-members:
-    :show-inheritance:

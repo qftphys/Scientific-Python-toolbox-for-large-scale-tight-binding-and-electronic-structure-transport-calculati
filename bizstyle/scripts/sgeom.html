@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>sgeom &mdash; sids |release| documentation</title>
+    <title>sgeom &mdash; sisl |release| documentation</title>
     
     <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.5.1
+        VERSION:     '0.6.1
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -27,9 +27,9 @@
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="../_static/bizstyle.js"></script>
-    <link rel="top" title="sids |release| documentation" href="../index.html" />
+    <link rel="top" title="sisl |release| documentation" href="../index.html" />
     <link rel="next" title="sgrid" href="sgrid.html" />
-    <link rel="prev" title="Welcome to sids documentation!" href="../index.html" />
+    <link rel="prev" title="Welcome to sisl documentation!" href="../index.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
@@ -49,9 +49,9 @@
           <a href="sgrid.html" title="sgrid"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="../index.html" title="Welcome to sids documentation!"
+          <a href="../index.html" title="Welcome to sisl documentation!"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">sids</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">sisl</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -75,7 +75,7 @@
 
   <h4>Previous topic</h4>
   <p class="topless"><a href="../index.html"
-                        title="previous chapter">Welcome to sids documentation!</a></p>
+                        title="previous chapter">Welcome to sisl documentation!</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="sgrid.html"
                         title="next chapter"><code class="docutils literal"><span class="pre">sgrid</span></code></a></p>
@@ -94,9 +94,6 @@
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -108,11 +105,11 @@
           <div class="body" role="main">
             
   <div class="section" id="sgeom">
-<h1><a class="reference internal" href=""><em>sgeom</em></a><a class="headerlink" href="#sgeom" title="Permalink to this headline">¶</a></h1>
+<h1><a class="reference internal" href="#"><span class="doc">sgeom</span></a><a class="headerlink" href="#sgeom" title="Permalink to this headline">¶</a></h1>
 <p>The <code class="docutils literal"><span class="pre">sgeom</span></code> executable is a tool for reading and transforming general
 coordinate formats to other formats, or alter them.</p>
 <p>For a short help description of the possible uses do:</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgeom --help
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgeom --help
 </pre></div>
 </div>
 <p>Here we list a few of the most frequent used commands.</p>
@@ -122,12 +119,12 @@ coordinate formats to other formats, or alter them.</p>
 <code class="docutils literal"><span class="pre">sgeom</span></code> takes at least two mandatory arguments, the first being the
 input file format, and the second (and any third + argumets) the output
 file formats</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgeom &lt;in&gt; &lt;out&gt; <span class="o">[</span>&lt;out2&gt;<span class="o">]</span> <span class="o">[[</span>&lt;out3&gt;<span class="o">]</span> ...<span class="o">]</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgeom &lt;in&gt; &lt;out&gt; <span class="o">[</span>&lt;out2&gt;<span class="o">]</span> <span class="o">[[</span>&lt;out3&gt;<span class="o">]</span> ...<span class="o">]</span>
 </pre></div>
 </div>
 <p>Hence to convert from an <strong>fdf</strong> SIESTA input file to an <strong>xyz</strong> file
 for plotting in a GUI program one can do this:</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgeom RUN.fdf RUN.xyz
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgeom RUN.fdf RUN.xyz
 </pre></div>
 </div>
 <p>and the <code class="docutils literal"><span class="pre">RUN.xyz</span></code> file will be created.</p>
@@ -138,8 +135,8 @@ for plotting in a GUI program one can do this:</p>
 <div><ul class="simple">
 <li><strong>xyz</strong>, standard coordinate format
 Note that the the <em>xyz</em> file format does not <em>per see</em> contain the cell size.
-The <a class="reference internal" href="../sids.io.html#sids.io.XYZSile" title="sids.io.XYZSile"><code class="xref any py py-class docutils literal"><span class="pre">XYZSile</span></code></a> writes the cell information in the <code class="docutils literal"><span class="pre">xyz</span></code> file comment
-section (2nd line). Hence if the file was written with sids you retain
+The <a class="reference internal" href="../sisl.io.xyz.html#sisl.io.xyz.XYZSile" title="sisl.io.xyz.XYZSile"><code class="xref any py py-class docutils literal"><span class="pre">XYZSile</span></code></a> writes the cell information in the <code class="docutils literal"><span class="pre">xyz</span></code> file comment
+section (2nd line). Hence if the file was written with sisl you retain
 the cell information.</li>
 <li><strong>gout</strong>, reads geometries from GULP output</li>
 <li><strong>nc</strong>, reads/writes NetCDF4 files created by SIESTA</li>
@@ -161,23 +158,23 @@ the cell information.</li>
 <p>Often one wishes to expand a structure an integer number of times along
 certain cell directions. This is useful for creating larger bulk structures.
 To repeat a structure do</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgeom --repeat <span class="o">[</span>ax<span class="p">|</span>yb<span class="p">|</span>zc<span class="o">]</span> &lt;int&gt; &lt;in&gt; &lt;out&gt;
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgeom --repeat <span class="o">[</span>ax<span class="p">|</span>yb<span class="p">|</span>zc<span class="o">]</span> &lt;int&gt; &lt;in&gt; &lt;out&gt;
 </pre></div>
 </div>
 <p>which repeats the structure one atom at a time, <code class="docutils literal"><span class="pre">&lt;int&gt;</span></code> times, in the corresponding direction.
 Note that <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">a</span></code> correspond to the same cell direction.</p>
 <p>To repeat the structure in <em>chunks</em> one can use the <code class="docutils literal"><span class="pre">tiling</span></code>:</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgeom --tile <span class="o">[</span>ax<span class="p">|</span>yb<span class="p">|</span>zc<span class="o">]</span> &lt;int&gt; &lt;in&gt; &lt;out&gt;
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgeom --tile <span class="o">[</span>ax<span class="p">|</span>yb<span class="p">|</span>zc<span class="o">]</span> &lt;int&gt; &lt;in&gt; &lt;out&gt;
 </pre></div>
 </div>
 <p>which results in the same structure as <code class="docutils literal"><span class="pre">--repeat</span></code> however with different atomic ordering.</p>
 <p>Both tiling and repeating have the variants:</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgeom -t<span class="o">[</span>xyz<span class="o">]</span> &lt;int&gt; -r<span class="o">[</span>xyz<span class="o">]</span> &lt;int&gt;
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgeom -t<span class="o">[</span>xyz<span class="o">]</span> &lt;int&gt; -r<span class="o">[</span>xyz<span class="o">]</span> &lt;int&gt;
 </pre></div>
 </div>
 <p>for shorthand commands.</p>
 <p>To repeat a structure 4 times along the <em>x</em> cell direction:</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgeom --repeat x <span class="m">4</span> RUN.fdf RUN4x.fdf
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgeom --repeat x <span class="m">4</span> RUN.fdf RUN4x.fdf
 sgeom --repeat-x <span class="m">4</span> RUN.fdf RUN4x.fdf
 sgeom --tile x <span class="m">4</span> RUN.fdf RUN4x.fdf
 sgeom --tile-x <span class="m">4</span> RUN.fdf RUN4x.fdf
@@ -188,21 +185,21 @@ sgeom --tile-x <span class="m">4</span> RUN.fdf RUN4x.fdf
 <div class="section" id="rotating-structure">
 <h3>Rotating structure<a class="headerlink" href="#rotating-structure" title="Permalink to this headline">¶</a></h3>
 <p>To rotate the structure around certain cell directions one can do:</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgeom --rotate <span class="o">[</span>ax<span class="p">|</span>yb<span class="p">|</span>zc<span class="o">]</span> &lt;angle&gt; &lt;in&gt; &lt;out&gt;
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgeom --rotate <span class="o">[</span>ax<span class="p">|</span>yb<span class="p">|</span>zc<span class="o">]</span> &lt;angle&gt; &lt;in&gt; &lt;out&gt;
 </pre></div>
 </div>
 <p>which rotates the structure around the origo with a normal vector along the
 specified cell direction. The input angle is in degrees and <em>not</em> in radians.
 If one wish to use radians append <em>pi</em> in the angle specification.</p>
 <p>Again there are shorthand commands:</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgeom -R<span class="o">[</span>xyz<span class="o">]</span> &lt;angle&gt;
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgeom -R<span class="o">[</span>xyz<span class="o">]</span> &lt;angle&gt;
 </pre></div>
 </div>
 </div>
 <div class="section" id="scripting">
 <h3>Scripting<a class="headerlink" href="#scripting" title="Permalink to this headline">¶</a></h3>
 <p>For even more complex capabilities, you need to prepare your own scripts by using the
-<a class="reference internal" href="../sids.geometry.html#sids.geometry.Geometry" title="sids.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> class.</p>
+<a class="reference internal" href="../sisl.geometry.html#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> class.</p>
 </div>
 </div>
 </div>
@@ -226,14 +223,14 @@ If one wish to use radians append <em>pi</em> in the angle specification.</p>
           <a href="sgrid.html" title="sgrid"
              >next</a> |</li>
         <li class="right" >
-          <a href="../index.html" title="Welcome to sids documentation!"
+          <a href="../index.html" title="Welcome to sisl documentation!"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">sids</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../index.html">sisl</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Nick R. Papior.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
     </div>
   </body>
 </html>

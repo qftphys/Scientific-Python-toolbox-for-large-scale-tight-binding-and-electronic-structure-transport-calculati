@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>sgrid &mdash; sids |release| documentation</title>
+    <title>sgrid &mdash; sisl |release| documentation</title>
     
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     '0.5.1
+        VERSION:     '0.6.1
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -25,14 +25,16 @@
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="sids |release| documentation" href="../index.html" />
+    <link rel="top" title="sisl |release| documentation" href="../index.html" />
     <link rel="prev" title="sgeom" href="sgeom.html" />
    
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">  
+  <body role="document">
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -40,28 +42,28 @@
           <div class="body" role="main">
             
   <div class="section" id="sgrid">
-<h1><a class="reference internal" href=""><em>sgrid</em></a><a class="headerlink" href="#sgrid" title="Permalink to this headline">¶</a></h1>
+<h1><a class="reference internal" href="#"><span class="doc">sgrid</span></a><a class="headerlink" href="#sgrid" title="Permalink to this headline">¶</a></h1>
 <p>The <code class="docutils literal"><span class="pre">sgrid</span></code> executable is a tool for manipulating a simulation grid and transforming
 it into CUBE format for plotting 3D data in, <em>e.g.</em> VMD or XCrySDen.</p>
 <p>Currently this is primarily intended for usage with SIESTA.</p>
 <p>For a short help description of the possible uses do:</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgrid --help
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid --help
 </pre></div>
 </div>
 <p>Here we list a few of the most frequent used commands.
-Note that all commands are available via Python scripts and the <a class="reference internal" href="../sids.grid.html#sids.grid.Grid" title="sids.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> class.</p>
+Note that all commands are available via Python scripts and the <a class="reference internal" href="../sisl.grid.html#sisl.grid.Grid" title="sisl.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> class.</p>
 <div class="section" id="creating-cube-files">
 <h2>Creating CUBE files<a class="headerlink" href="#creating-cube-files" title="Permalink to this headline">¶</a></h2>
 <p>The simplest usage is converting a grid file to CUBE file using</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgrid Rho.grid.nc Rho.cube
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc Rho.cube
 </pre></div>
 </div>
 <p>which converts a SIESTA grid file of the electron density into a corresponding
 CUBE file. The CUBE file writeout is implemented in <code class="xref any docutils literal"><span class="pre">Cube</span></code>.</p>
 <p>Conveniently CUBE files can accomodate geometries and species for inclusion in the 3D
 plot and this can be added to the file via the <code class="docutils literal"><span class="pre">--geometry</span></code> flag, any geometry format
-implemented in <a class="reference internal" href="../sids.html#module-sids" title="sids"><code class="xref any py py-mod docutils literal"><span class="pre">sids</span></code></a> are also compatible with <code class="docutils literal"><span class="pre">sgrid</span></code>, see <span class="xref std std-ref">sgeom</span>.</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgrid --geometry RUN.fdf Rho.grid.nc Rho.cube
+implemented in <a class="reference internal" href="../sisl.html#module-sisl" title="sisl"><code class="xref any py py-mod docutils literal"><span class="pre">sisl</span></code></a> are also compatible with <code class="docutils literal"><span class="pre">sgrid</span></code>, see <span class="xref std std-ref">sgeom</span>.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid --geometry RUN.fdf Rho.grid.nc Rho.cube
 </pre></div>
 </div>
 <p>the shorthand is <code class="docutils literal"><span class="pre">-g</span></code>.</p>
@@ -70,7 +72,7 @@ implemented in <a class="reference internal" href="../sids.html#module-sids" tit
 <h2>Grid differences<a class="headerlink" href="#grid-differences" title="Permalink to this headline">¶</a></h2>
 <p>Often differences between two grids are needed. For this one can use the <code class="docutils literal"><span class="pre">--diff</span></code> flag which
 takes one additional grid file for the difference. I.e.</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgrid -g RUN.fdf --diff Rho.grid.nc<span class="o">[</span>1<span class="o">]</span> Rho.grid.nc<span class="o">[</span>0<span class="o">]</span> diff_up-down.cube
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid -g RUN.fdf --diff Rho.grid.nc<span class="o">[</span>1<span class="o">]</span> Rho.grid.nc<span class="o">[</span>0<span class="o">]</span> diff_up-down.cube
 </pre></div>
 </div>
 <p>which takes the difference between the spin up and spin down in the same <code class="docutils literal"><span class="pre">Rho.grid.nc</span></code> file.</p>
@@ -81,18 +83,18 @@ takes one additional grid file for the difference. I.e.</p>
 One can remove certain parts of the grid after reading, before writing. This will greatly decrease
 the output file <em>and</em> greatly speed-up the process as writing huge ASCII files is <em>extremely</em> time
 consuming. There are two methods for reducing grids:</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgrid --grid-part &lt;<span class="nv">part</span><span class="o">=</span>above<span class="p">|</span>+<span class="p">|</span>below<span class="p">|</span>-&gt; &lt;<span class="o">[</span>xa<span class="p">|</span>yb<span class="p">|</span>zc&gt; &lt;pos<span class="p">|</span>&lt;frac&gt;f&gt;
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid --grid-part &lt;<span class="nv">part</span><span class="o">=</span>above<span class="p">|</span>+<span class="p">|</span>below<span class="p">|</span>-&gt; &lt;<span class="o">[</span>xa<span class="p">|</span>yb<span class="p">|</span>zc&gt; &lt;pos<span class="p">|</span>&lt;frac&gt;f&gt;
 sgrid --grid-remove &lt;<span class="nv">remove</span><span class="o">=</span>above<span class="p">|</span>+<span class="p">|</span>below<span class="p">|</span>-&gt; &lt;<span class="o">[</span>xa<span class="p">|</span>yb<span class="p">|</span>zc&gt; &lt;pos<span class="p">|</span>&lt;frac&gt;f&gt;
 </pre></div>
 </div>
 <p>the shorthand commands are:</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgrid -gp &lt;<span class="nv">part</span><span class="o">=</span>above<span class="p">|</span>+<span class="p">|</span>below<span class="p">|</span>-&gt; &lt;<span class="o">[</span>xa<span class="p">|</span>yb<span class="p">|</span>zc&gt; &lt;pos<span class="p">|</span>&lt;frac&gt;f&gt;
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid -gp &lt;<span class="nv">part</span><span class="o">=</span>above<span class="p">|</span>+<span class="p">|</span>below<span class="p">|</span>-&gt; &lt;<span class="o">[</span>xa<span class="p">|</span>yb<span class="p">|</span>zc&gt; &lt;pos<span class="p">|</span>&lt;frac&gt;f&gt;
 sgrid -gr &lt;<span class="nv">remove</span><span class="o">=</span>above<span class="p">|</span>+<span class="p">|</span>below<span class="p">|</span>-&gt; &lt;<span class="o">[</span>xa<span class="p">|</span>yb<span class="p">|</span>zc&gt; &lt;pos<span class="p">|</span>&lt;frac&gt;f&gt;
 </pre></div>
 </div>
 <p>This needs an example, say the unit cell is a square unit-cell with side lengths 10x10x20 Angstrom.
 To reduce the cell to a middle square of 5x5x5 Angstrom you can do:</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgrid -gp + x 2.5 -gp + y 2.5 -gp + z 7.5 -gr + <span class="m">5</span> x -gr + <span class="m">5</span> y -gr + z <span class="m">5</span> Rho.grid.nc 5x5x5.cube
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid -gp + x 2.5 -gp + y 2.5 -gp + z 7.5 -gr + <span class="m">5</span> x -gr + <span class="m">5</span> y -gr + z <span class="m">5</span> Rho.grid.nc 5x5x5.cube
 </pre></div>
 </div>
 <p>note that <code class="docutils literal"><span class="pre">-gp</span></code> will <em>always</em> be performed before <code class="docutils literal"><span class="pre">-gr</span></code>, irrespective of the order of commands.
@@ -116,7 +118,7 @@ forces the unit to be in fractional position (must be between 0 and 1).</p>
 <div class="section" id="averaging-and-summing">
 <h2>Averaging and summing<a class="headerlink" href="#averaging-and-summing" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes it is convenient to average or sum grids along cell directions:</p>
-<div class="highlight-bash"><div class="highlight"><pre>sgrid --mean x Rho.grid.nc meanx.cube
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid --mean x Rho.grid.nc meanx.cube
 sgrid --sum x Rho.grid.nc sumx.cube
 </pre></div>
 </div>
@@ -126,8 +128,8 @@ CUBE file).</p>
 </div>
 <div class="section" id="advanced-features">
 <h2>Advanced features<a class="headerlink" href="#advanced-features" title="Permalink to this headline">¶</a></h2>
-<p>The above operations are not the limited use of the <a class="reference internal" href="../sids.html#module-sids" title="sids"><code class="xref any py py-mod docutils literal"><span class="pre">sids</span></code></a> library. However, to accomblish more complex
-things you need to manually script the actions using the <a class="reference internal" href="../sids.grid.html#sids.grid.Grid" title="sids.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> class and the methods available for that method.
+<p>The above operations are not the limited use of the <a class="reference internal" href="../sisl.html#module-sisl" title="sisl"><code class="xref any py py-mod docutils literal"><span class="pre">sisl</span></code></a> library. However, to accomblish more complex
+things you need to manually script the actions using the <a class="reference internal" href="../sisl.grid.html#sisl.grid.Grid" title="sisl.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> class and the methods available for that method.
 For inspiration you can check the <code class="docutils literal"><span class="pre">sgrid</span></code> executable to see how the commands are used in the script.</p>
 </div>
 </div>
@@ -172,9 +174,6 @@ For inspiration you can check the <code class="docutils literal"><span class="pr
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -185,8 +184,8 @@ For inspiration you can check the <code class="docutils literal"><span class="pr
       &copy;2015, Nick R. Papior.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
       
       |
       <a href="../_sources/scripts/sgrid.txt"

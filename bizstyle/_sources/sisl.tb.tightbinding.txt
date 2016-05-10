@@ -1,0 +1,7 @@
+sisl.tb.tightbinding module
+===========================
+
+.. automodule:: sisl.tb.tightbinding
+    :members:
+    :undoc-members:
+    :show-inheritance:

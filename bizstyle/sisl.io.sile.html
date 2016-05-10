@@ -1,0 +1,240 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sisl.io.sile module &mdash; sisl |release| documentation</title>
+    
+    <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.6.1
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="top" title="sisl |release| documentation" href="index.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">sisl</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sisl.io.sile.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-sisl.io.sile">
+<span id="sisl-io-sile-module"></span><h1>sisl.io.sile module<a class="headerlink" href="#module-sisl.io.sile" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="sisl.io.sile.BaseSile">
+<em class="property">class </em><code class="descclassname">sisl.io.sile.</code><code class="descname">BaseSile</code><a class="headerlink" href="#sisl.io.sile.BaseSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Base class for the Siles</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="sisl.io.sile.Sile">
+<em class="property">class </em><code class="descclassname">sisl.io.sile.</code><code class="descname">Sile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#sisl.io.sile.BaseSile" title="sisl.io.sile.BaseSile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.BaseSile</span></code></a></p>
+<p>Class to contain a file with easy access</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.sile.Sile.is_keys" title="sisl.io.sile.Sile.is_keys"><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code></a>(keys)</td>
+<td>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.sile.Sile.key2case" title="sisl.io.sile.Sile.key2case"><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code></a>(key,&nbsp;case)</td>
+<td>Converts str/list of keywords to proper case</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.sile.Sile.keys2case" title="sisl.io.sile.Sile.keys2case"><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code></a>(keys,&nbsp;case)</td>
+<td>Converts str/list of keywords to proper case</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.sile.Sile.line_has_key" title="sisl.io.sile.Sile.line_has_key"><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code></a>(line,&nbsp;key[,&nbsp;case])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.sile.Sile.line_has_keys" title="sisl.io.sile.Sile.line_has_keys"><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code></a>(line,&nbsp;keys[,&nbsp;case])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.sile.Sile.readline" title="sisl.io.sile.Sile.readline"><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code></a>([comment])</td>
+<td>Reads the next line of the file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.sile.Sile.step_either" title="sisl.io.sile.Sile.step_either"><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code></a>(keywords[,&nbsp;case])</td>
+<td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.sile.Sile.step_to" title="sisl.io.sile.Sile.step_to"><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code></a>(keywords[,&nbsp;case])</td>
+<td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.sile.Sile.write" title="sisl.io.sile.Sile.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Wrapper for the file-handle write statement</td>
+</tr>
+</tbody>
+</table>
+<dl class="staticmethod">
+<dt id="sisl.io.sile.Sile.is_keys">
+<em class="property">static </em><code class="descname">is_keys</code><span class="sig-paren">(</span><em>keys</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile.is_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sisl.io.sile.Sile.key2case">
+<em class="property">static </em><code class="descname">key2case</code><span class="sig-paren">(</span><em>key</em>, <em>case</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile.key2case" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts str/list of keywords to proper case</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sisl.io.sile.Sile.keys2case">
+<em class="property">static </em><code class="descname">keys2case</code><span class="sig-paren">(</span><em>keys</em>, <em>case</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile.keys2case" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts str/list of keywords to proper case</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sisl.io.sile.Sile.line_has_key">
+<em class="property">static </em><code class="descname">line_has_key</code><span class="sig-paren">(</span><em>line</em>, <em>key</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile.line_has_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="sisl.io.sile.Sile.line_has_keys">
+<em class="property">static </em><code class="descname">line_has_keys</code><span class="sig-paren">(</span><em>line</em>, <em>keys</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile.line_has_keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.sile.Sile.readline">
+<code class="descname">readline</code><span class="sig-paren">(</span><em>comment=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile.readline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads the next line of the file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.sile.Sile.step_either">
+<code class="descname">step_either</code><span class="sig-paren">(</span><em>keywords</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile.step_either" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steps the file-handle until the keyword is found in the input</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.sile.Sile.step_to">
+<code class="descname">step_to</code><span class="sig-paren">(</span><em>keywords</em>, <em>case=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile.step_to" title="Permalink to this definition">¶</a></dt>
+<dd><p>Steps the file-handle until the keyword is found in the input</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.sile.Sile.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for the file-handle write statement</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sisl.io.sile.NCSile">
+<em class="property">class </em><code class="descclassname">sisl.io.sile.</code><code class="descname">NCSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em>, <em>access=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.NCSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#sisl.io.sile.BaseSile" title="sisl.io.sile.BaseSile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.BaseSile</span></code></a></p>
+<p>Class to contain a file with easy access
+The file format for this file is the NetCDF file format</p>
+<p>Creates/Opens a NCSile</p>
+<p>Opens a NCSile with <code class="xref any docutils literal"><span class="pre">mode</span></code> and compression level <code class="xref any docutils literal"><span class="pre">lvl</span></code>.
+If <code class="xref any docutils literal"><span class="pre">mode</span></code> is in read-mode (r) the compression level
+is ignored.</p>
+<p>The final <code class="xref any docutils literal"><span class="pre">access</span></code> parameter sets how the file should be
+open and subsequently accessed.</p>
+<ol class="arabic simple" start="0">
+<li>means direct file access for every variable read</li>
+<li>means stores certain variables in the object.</li>
+</ol>
+</dd></dl>
+
+<dl class="exception">
+<dt id="sisl.io.sile.SileError">
+<em class="property">exception </em><code class="descclassname">sisl.io.sile.</code><code class="descname">SileError</code><span class="sig-paren">(</span><em>value</em>, <em>obj=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.SileError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.IOError</span></code></p>
+<p>Define an error object related to the Sile objects</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.io.sile.sile_raise_write">
+<code class="descclassname">sisl.io.sile.</code><code class="descname">sile_raise_write</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.sile_raise_write" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sisl.io.sile.sile_raise_read">
+<code class="descclassname">sisl.io.sile.</code><code class="descname">sile_raise_read</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.sile_raise_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">sisl</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

@@ -1,7 +1,0 @@
-sids.io.tb module
-=================
-
-.. automodule:: sids.io.tb
-    :members:
-    :undoc-members:
-    :show-inheritance:

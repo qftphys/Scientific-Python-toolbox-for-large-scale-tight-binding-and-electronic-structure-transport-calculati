@@ -1,7 +1,0 @@
-sids.atom module
-================
-
-.. automodule:: sids.atom
-    :members:
-    :undoc-members:
-    :show-inheritance:

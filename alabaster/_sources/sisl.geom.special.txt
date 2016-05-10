@@ -1,0 +1,7 @@
+sisl.geom.special module
+========================
+
+.. automodule:: sisl.geom.special
+    :members:
+    :undoc-members:
+    :show-inheritance:

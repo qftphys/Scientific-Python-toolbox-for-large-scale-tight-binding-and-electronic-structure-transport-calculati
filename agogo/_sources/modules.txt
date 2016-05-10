@@ -1,8 +1,8 @@
-..
-==
+sisl-doc
+========
 
 .. toctree::
    :maxdepth: 4
 
    setup
-   sids
+   sisl

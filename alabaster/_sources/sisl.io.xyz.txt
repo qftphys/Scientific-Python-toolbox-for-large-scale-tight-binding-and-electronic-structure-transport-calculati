@@ -1,0 +1,7 @@
+sisl.io.xyz module
+==================
+
+.. automodule:: sisl.io.xyz
+    :members:
+    :undoc-members:
+    :show-inheritance:

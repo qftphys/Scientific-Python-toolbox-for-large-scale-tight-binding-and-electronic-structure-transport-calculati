@@ -1,0 +1,7 @@
+sisl.version module
+===================
+
+.. automodule:: sisl.version
+    :members:
+    :undoc-members:
+    :show-inheritance:

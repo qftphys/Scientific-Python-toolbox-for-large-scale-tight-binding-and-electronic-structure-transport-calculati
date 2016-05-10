@@ -1,7 +1,0 @@
-sids.io.siesta_grid module
-==========================
-
-.. automodule:: sids.io.siesta_grid
-    :members:
-    :undoc-members:
-    :show-inheritance:

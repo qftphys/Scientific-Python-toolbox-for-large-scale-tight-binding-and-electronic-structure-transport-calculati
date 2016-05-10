@@ -1,7 +1,0 @@
-sids.geom.flat module
-=====================
-
-.. automodule:: sids.geom.flat
-    :members:
-    :undoc-members:
-    :show-inheritance:

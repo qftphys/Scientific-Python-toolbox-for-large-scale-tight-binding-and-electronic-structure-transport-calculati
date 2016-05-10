@@ -1,0 +1,7 @@
+sisl.geom.setup module
+======================
+
+.. automodule:: sisl.geom.setup
+    :members:
+    :undoc-members:
+    :show-inheritance:

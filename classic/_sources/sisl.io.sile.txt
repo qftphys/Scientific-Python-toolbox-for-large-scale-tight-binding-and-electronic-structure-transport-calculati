@@ -1,0 +1,7 @@
+sisl.io.sile module
+===================
+
+.. automodule:: sisl.io.sile
+    :members:
+    :undoc-members:
+    :show-inheritance:

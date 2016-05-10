@@ -1,7 +1,0 @@
-sids.io.gulp module
-===================
-
-.. automodule:: sids.io.gulp
-    :members:
-    :undoc-members:
-    :show-inheritance:

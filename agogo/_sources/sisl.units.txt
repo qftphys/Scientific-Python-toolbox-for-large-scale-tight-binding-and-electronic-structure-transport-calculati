@@ -1,0 +1,7 @@
+sisl.units module
+=================
+
+.. automodule:: sisl.units
+    :members:
+    :undoc-members:
+    :show-inheritance:

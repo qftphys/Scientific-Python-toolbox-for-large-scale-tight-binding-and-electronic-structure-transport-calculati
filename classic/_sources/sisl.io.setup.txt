@@ -1,0 +1,7 @@
+sisl.io.setup module
+====================
+
+.. automodule:: sisl.io.setup
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,7 +1,0 @@
-sids.tb.setup module
-====================
-
-.. automodule:: sids.tb.setup
-    :members:
-    :undoc-members:
-    :show-inheritance:

@@ -1,16 +1,16 @@
 .. highlight:: python
 
-.. sids documentation master file, created by
+.. sisl documentation master file, created by
    sphinx-quickstart on Wed Dec  2 19:55:34 2015.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to sids documentation!
+Welcome to sisl documentation!
 ==============================
 
 This documentation has been created from version: |release|.
 
-sids is a tool to easily create geometries and handle input/output files
+sisl is a tool to easily create geometries and handle input/output files
 from various DFT codes. Although this is based on the SIESTA/TranSIESTA
 DFT code it is far from limited to deal with *only* this code. 
 
@@ -37,12 +37,12 @@ Script based handling via Python classes and objects that handles
 Installation
 ============
 
-The easiest way to install ``sids`` is via the :program:`pypi` interface.
+The easiest way to install ``sisl`` is via the :program:`pypi` interface.
 Install via:
 
 .. code-block:: bash
 
-   pip install sids
+   pip install sisl
 
 Alternatively you can download the releases on the
 `release page <gh-releases_>`_. And install via the regular :program:`setup.py`
@@ -52,13 +52,13 @@ interface:
 
    python setup.py install
 
-which will install ``sids`` in your default location, use :program:`--prefix <path>` for
+which will install ``sisl`` in your default location, use :program:`--prefix <path>` for
 manual control of the placement.
 
 Requirements
 ------------
 
-To succesfully use ``sids`` these Python packages must be installed:
+To succesfully use ``sisl`` these Python packages must be installed:
 
  - `numpy`_
  - `scipy`_ 
@@ -76,7 +76,7 @@ Contents:
    :toctree: _autosummary
 
 
-The API documentation of the ``sids`` package can be found `here <sids>`.
+The API documentation of the ``sisl`` package can be found `here <sisl>`.
 
       
 Indices and tables
@@ -89,7 +89,7 @@ Indices and tables
 Documentation in other themes
 =============================
 
-The ``sids`` documentation has been created with several different themes
+The ``sisl`` documentation has been created with several different themes
 of documentation.
 This is mainly of convenience until I have figured out which one is the
 best suited theme for this documentation.
@@ -110,8 +110,8 @@ If you have any preferences please let me know.
 .. _Classic: ../classic/index.html
 .. _Scrolls: ../scrolls/index.html
 .. _Sphinx RTD: ../sphinx_rtd_theme/index.html
-.. _gh-releases: http://github.com/zerothi/sids/releases
-.. _pypi-releases: http://pypi.python.org/pypi/sids/
+.. _gh-releases: http://github.com/zerothi/sisl/releases
+.. _pypi-releases: http://pypi.python.org/pypi/sisl/
 
 .. These are external links:
 .. _netcdf4-python: http://github.com/Unidata/netcdf4-python
