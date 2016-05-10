@@ -20,7 +20,7 @@ git checkout master
 tag=`git describe --abbrev=0`
 doc_tag=$tag
 head_tag=`git describe`
-python -c "from setup import write_version ; write_version"
+python -c "from setup import write_version ; write_version()"
 git checkout gh-pages
 
 while [[ $# -gt 0 ]]; do
