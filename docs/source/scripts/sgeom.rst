@@ -45,7 +45,7 @@ The currently available formats are:
   * **xyz**, standard coordinate format
     Note that the the *xyz* file format does not *per see* contain the cell size.
     The `XYZSile` writes the cell information in the ``xyz`` file comment
-    section (2nd line). Hence if the file was written with sids you retain
+    section (2nd line). Hence if the file was written with sisl you retain
     the cell information.
   * **gout**, reads geometries from GULP output
   * **nc**, reads/writes NetCDF4 files created by SIESTA
