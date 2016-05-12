@@ -1,11 +1,11 @@
 Undocumented Python objects
 ===========================
-sids.atom
+sisl.atom
 ---------
 Classes:
  * AtomMeta
 
-sids.io
+sisl.io
 -------
 Functions:
  * extendall
