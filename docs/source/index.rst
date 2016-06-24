@@ -16,11 +16,11 @@ DFT code it is far from limited to deal with *only* this code.
 
 A list of key components are
 
-:ref:`scripts/sgeom`
+:ref:`scripts_sgeom`
    Read and transform generic coordinate files from
    one format into other formats.
 
-:ref:`scripts/sgrid`
+:ref:`scripts_sgrid`
    Read and transform *grid* data, such as electronic
    densities, electrostatic potentials etc. and save them in various
    formats.
