@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.6.1
+        VERSION:     '0.6.1-1-g515c564
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -144,14 +144,14 @@ to be used.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.ASE" title="sisl.geometry.Geometry.ASE"><code class="xref py py-obj docutils literal"><span class="pre">ASE</span></code></a>(aseg)</td>
-<td>Returns geometry from an ASE object.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.a2isc" title="sisl.geometry.Geometry.a2isc"><code class="xref py py-obj docutils literal"><span class="pre">a2isc</span></code></a>(a)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.a2isc" title="sisl.geometry.Geometry.a2isc"><code class="xref py py-obj docutils literal"><span class="pre">a2isc</span></code></a>(a)</td>
 <td>Returns the super-cell index for a specific atom</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.a2o" title="sisl.geometry.Geometry.a2o"><code class="xref py py-obj docutils literal"><span class="pre">a2o</span></code></a>(ia[,&nbsp;all])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.a2o" title="sisl.geometry.Geometry.a2o"><code class="xref py py-obj docutils literal"><span class="pre">a2o</span></code></a>(ia[,&nbsp;all])</td>
 <td>Returns an orbital index of the first orbital of said atom.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.add" title="sisl.geometry.Geometry.add"><code class="xref py py-obj docutils literal"><span class="pre">add</span></code></a>(other)</td>
+<td>Adds atoms (as is) from the <code class="docutils literal"><span class="pre">other</span></code> geometry.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.append" title="sisl.geometry.Geometry.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(other,&nbsp;axis)</td>
 <td>Appends structure along <code class="docutils literal"><span class="pre">axis</span></code>.</td>
@@ -186,117 +186,101 @@ to be used.</p>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.cut" title="sisl.geometry.Geometry.cut"><code class="xref py py-obj docutils literal"><span class="pre">cut</span></code></a>(seps,&nbsp;axis[,&nbsp;seg,&nbsp;rtol,&nbsp;atol])</td>
 <td>Returns a subset of atoms from the geometry by cutting the geometry into <code class="docutils literal"><span class="pre">seps</span></code> parts along the direction <code class="docutils literal"><span class="pre">axis</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.insert" title="sisl.geometry.Geometry.insert"><code class="xref py py-obj docutils literal"><span class="pre">insert</span></code></a>(atom,&nbsp;other)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.fromASE" title="sisl.geometry.Geometry.fromASE"><code class="xref py py-obj docutils literal"><span class="pre">fromASE</span></code></a>(aseg)</td>
+<td>Returns geometry from an ASE object.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.insert" title="sisl.geometry.Geometry.insert"><code class="xref py py-obj docutils literal"><span class="pre">insert</span></code></a>(atom,&nbsp;other)</td>
 <td>Inserts other atoms right before index</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_orthogonal</span></code>()</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_orthogonal</span></code>()</td>
 <td>Return true if all cell vectors are linearly independent</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.iter_block" title="sisl.geometry.Geometry.iter_block"><code class="xref py py-obj docutils literal"><span class="pre">iter_block</span></code></a>([iR,&nbsp;dR])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.iter_block" title="sisl.geometry.Geometry.iter_block"><code class="xref py py-obj docutils literal"><span class="pre">iter_block</span></code></a>([iR,&nbsp;dR])</td>
 <td>Returns an iterator for performance critical looping.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.iter_linear" title="sisl.geometry.Geometry.iter_linear"><code class="xref py py-obj docutils literal"><span class="pre">iter_linear</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.iter_linear" title="sisl.geometry.Geometry.iter_linear"><code class="xref py py-obj docutils literal"><span class="pre">iter_linear</span></code></a>()</td>
 <td>Returns an iterator for simple linear ranges.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.iter_species" title="sisl.geometry.Geometry.iter_species"><code class="xref py py-obj docutils literal"><span class="pre">iter_species</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.iter_species" title="sisl.geometry.Geometry.iter_species"><code class="xref py py-obj docutils literal"><span class="pre">iter_species</span></code></a>()</td>
 <td>Returns an iterator over all atoms and species as a tuple in this geometry</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.mirror" title="sisl.geometry.Geometry.mirror"><code class="xref py py-obj docutils literal"><span class="pre">mirror</span></code></a>(plane[,&nbsp;atoms])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.mirror" title="sisl.geometry.Geometry.mirror"><code class="xref py py-obj docutils literal"><span class="pre">mirror</span></code></a>(plane[,&nbsp;atoms])</td>
 <td>Mirrors the structure around the center of the atoms</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.o2a" title="sisl.geometry.Geometry.o2a"><code class="xref py py-obj docutils literal"><span class="pre">o2a</span></code></a>(io)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.o2a" title="sisl.geometry.Geometry.o2a"><code class="xref py py-obj docutils literal"><span class="pre">o2a</span></code></a>(io)</td>
 <td>Returns an atomic index corresponding to the orbital indicies.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.o2isc" title="sisl.geometry.Geometry.o2isc"><code class="xref py py-obj docutils literal"><span class="pre">o2isc</span></code></a>(o)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.o2isc" title="sisl.geometry.Geometry.o2isc"><code class="xref py py-obj docutils literal"><span class="pre">o2isc</span></code></a>(o)</td>
 <td>Returns the super-cell index for a specific orbital.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.osc2uc" title="sisl.geometry.Geometry.osc2uc"><code class="xref py py-obj docutils literal"><span class="pre">osc2uc</span></code></a>(orbs[,&nbsp;uniq])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.osc2uc" title="sisl.geometry.Geometry.osc2uc"><code class="xref py py-obj docutils literal"><span class="pre">osc2uc</span></code></a>(orbs[,&nbsp;uniq])</td>
 <td>Returns orbitals from super-cell indices to unit-cell indices, possibly removing dublicates</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.read" title="sisl.geometry.Geometry.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.read" title="sisl.geometry.Geometry.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile)</td>
 <td>Reads geometry from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <code class="xref any docutils literal"><span class="pre">Sile.read_geom</span></code></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.remove" title="sisl.geometry.Geometry.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>(atoms)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.remove" title="sisl.geometry.Geometry.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>(atoms)</td>
 <td>Remove atoms from the geometry.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.repeat" title="sisl.geometry.Geometry.repeat"><code class="xref py py-obj docutils literal"><span class="pre">repeat</span></code></a>(reps,&nbsp;axis)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.repeat" title="sisl.geometry.Geometry.repeat"><code class="xref py py-obj docutils literal"><span class="pre">repeat</span></code></a>(reps,&nbsp;axis)</td>
 <td>Returns a geometry repeated, i.e.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.reverse" title="sisl.geometry.Geometry.reverse"><code class="xref py py-obj docutils literal"><span class="pre">reverse</span></code></a>([atoms])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.reverse" title="sisl.geometry.Geometry.reverse"><code class="xref py py-obj docutils literal"><span class="pre">reverse</span></code></a>([atoms])</td>
 <td>Returns a reversed geometry</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.rotate" title="sisl.geometry.Geometry.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>(angle,&nbsp;v[,&nbsp;only,&nbsp;degree])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.rotate" title="sisl.geometry.Geometry.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>(angle,&nbsp;v[,&nbsp;only,&nbsp;degree])</td>
 <td>Rotates the geometry, in-place by the angle around the vector</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.rotate_miller" title="sisl.geometry.Geometry.rotate_miller"><code class="xref py py-obj docutils literal"><span class="pre">rotate_miller</span></code></a>(m,&nbsp;v)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.rotate_miller" title="sisl.geometry.Geometry.rotate_miller"><code class="xref py py-obj docutils literal"><span class="pre">rotate_miller</span></code></a>(m,&nbsp;v)</td>
 <td>Align Miller direction along <code class="docutils literal"><span class="pre">v</span></code></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.rotatea" title="sisl.geometry.Geometry.rotatea"><code class="xref py py-obj docutils literal"><span class="pre">rotatea</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.rotatea" title="sisl.geometry.Geometry.rotatea"><code class="xref py py-obj docutils literal"><span class="pre">rotatea</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.rotateb" title="sisl.geometry.Geometry.rotateb"><code class="xref py py-obj docutils literal"><span class="pre">rotateb</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.rotateb" title="sisl.geometry.Geometry.rotateb"><code class="xref py py-obj docutils literal"><span class="pre">rotateb</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.rotatec" title="sisl.geometry.Geometry.rotatec"><code class="xref py py-obj docutils literal"><span class="pre">rotatec</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.rotatec" title="sisl.geometry.Geometry.rotatec"><code class="xref py py-obj docutils literal"><span class="pre">rotatec</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.sc2uc" title="sisl.geometry.Geometry.sc2uc"><code class="xref py py-obj docutils literal"><span class="pre">sc2uc</span></code></a>(atoms[,&nbsp;uniq])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.sc2uc" title="sisl.geometry.Geometry.sc2uc"><code class="xref py py-obj docutils literal"><span class="pre">sc2uc</span></code></a>(atoms[,&nbsp;uniq])</td>
 <td>Returns atoms from super-cell indices to unit-cell indices, possibly removing dublicates</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code>(*args,&nbsp;**kwargs)</td>
-<td>Call local <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.sc_index" title="sisl.supercell.SuperCell.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Call local <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.sc_index" title="sisl.supercell.SuperCellChild.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">set_nsc</span></code>(nsc)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">set_nsc</span></code>(nsc)</td>
 <td>Set the number of super-cells in the <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">set_sc</span></code>(sc)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">set_sc</span></code>(sc)</td>
 <td>Overwrites the local supercell</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">set_supercell</span></code>(sc)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">set_supercell</span></code>(sc)</td>
 <td>Overwrites the local supercell</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.sub" title="sisl.geometry.Geometry.sub"><code class="xref py py-obj docutils literal"><span class="pre">sub</span></code></a>(atoms[,&nbsp;cell])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.sub" title="sisl.geometry.Geometry.sub"><code class="xref py py-obj docutils literal"><span class="pre">sub</span></code></a>(atoms[,&nbsp;cell])</td>
 <td>Returns a subset of atoms from the geometry.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.swap" title="sisl.geometry.Geometry.swap"><code class="xref py py-obj docutils literal"><span class="pre">swap</span></code></a>(a,&nbsp;b)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.swap" title="sisl.geometry.Geometry.swap"><code class="xref py py-obj docutils literal"><span class="pre">swap</span></code></a>(a,&nbsp;b)</td>
 <td>Returns a geometry with swapped atoms</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.swapaxes" title="sisl.geometry.Geometry.swapaxes"><code class="xref py py-obj docutils literal"><span class="pre">swapaxes</span></code></a>(a,&nbsp;b[,&nbsp;swap])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.swapaxes" title="sisl.geometry.Geometry.swapaxes"><code class="xref py py-obj docutils literal"><span class="pre">swapaxes</span></code></a>(a,&nbsp;b[,&nbsp;swap])</td>
 <td>Returns geometry with swapped axis</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.tile" title="sisl.geometry.Geometry.tile"><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code></a>(reps,&nbsp;axis)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.tile" title="sisl.geometry.Geometry.tile"><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code></a>(reps,&nbsp;axis)</td>
 <td>Returns a geometry tiled, i.e.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.toASE" title="sisl.geometry.Geometry.toASE"><code class="xref py py-obj docutils literal"><span class="pre">toASE</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.toASE" title="sisl.geometry.Geometry.toASE"><code class="xref py py-obj docutils literal"><span class="pre">toASE</span></code></a>()</td>
 <td>Returns the geometry as an ASE <code class="docutils literal"><span class="pre">Atoms</span></code> object</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.translate" title="sisl.geometry.Geometry.translate"><code class="xref py py-obj docutils literal"><span class="pre">translate</span></code></a>(v[,&nbsp;atoms,&nbsp;cell])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.translate" title="sisl.geometry.Geometry.translate"><code class="xref py py-obj docutils literal"><span class="pre">translate</span></code></a>(v[,&nbsp;atoms,&nbsp;cell])</td>
 <td>Translates the geometry by <code class="docutils literal"><span class="pre">v</span></code></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.geometry.Geometry.write" title="sisl.geometry.Geometry.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.geometry.Geometry.write" title="sisl.geometry.Geometry.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Writes geometry to the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <code class="xref any docutils literal"><span class="pre">sile.write_geom</span></code></td>
 </tr>
 </tbody>
 </table>
-<dl class="classmethod">
-<dt id="sisl.geometry.Geometry.ASE">
-<em class="property">classmethod </em><code class="descname">ASE</code><span class="sig-paren">(</span><em>aseg</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.geometry.Geometry.ASE" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns geometry from an ASE object.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>aseg</strong> : ASE <code class="docutils literal"><span class="pre">Atoms</span></code> object which contains the following routines:</p>
-<blockquote class="last">
-<div><p><code class="docutils literal"><span class="pre">get_atomic_numbers</span></code>, <code class="docutils literal"><span class="pre">get_positions</span></code>, <code class="docutils literal"><span class="pre">get_cell</span></code>.
-From those methods a <a class="reference internal" href="sisl.html"><span class="doc">sisl package</span></a> object will be created.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 <dl class="method">
 <dt id="sisl.geometry.Geometry.a2isc">
 <code class="descname">a2isc</code><span class="sig-paren">(</span><em>a</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.geometry.Geometry.a2isc" title="Permalink to this definition">¶</a></dt>
@@ -322,6 +306,25 @@ TB models with more than one orbital per atom.</p>
 <blockquote class="last">
 <div><p><code class="docutils literal"><span class="pre">False</span></code>, return only the first orbital corresponding to the atom,
 <code class="docutils literal"><span class="pre">True</span></code>, returns list of the full atom</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.geometry.Geometry.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.geometry.Geometry.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds atoms (as is) from the <code class="docutils literal"><span class="pre">other</span></code> geometry.
+This will not alter the residing cell vectors.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>other</strong> : <a class="reference internal" href="#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a></p>
+<blockquote class="last">
+<div><p>Other geometry class which is added</p>
 </div></blockquote>
 </td>
 </tr>
@@ -681,6 +684,25 @@ this may change in the future.</p>
 <dd><p>Returns the maximum orbital range of the atoms</p>
 </dd></dl>
 
+<dl class="classmethod">
+<dt id="sisl.geometry.Geometry.fromASE">
+<em class="property">classmethod </em><code class="descname">fromASE</code><span class="sig-paren">(</span><em>aseg</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.geometry.Geometry.fromASE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns geometry from an ASE object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>aseg</strong> : ASE <code class="docutils literal"><span class="pre">Atoms</span></code> object which contains the following routines:</p>
+<blockquote class="last">
+<div><p><code class="docutils literal"><span class="pre">get_atomic_numbers</span></code>, <code class="docutils literal"><span class="pre">get_positions</span></code>, <code class="docutils literal"><span class="pre">get_cell</span></code>.
+From those methods a <a class="reference internal" href="sisl.html"><span class="doc">sisl package</span></a> object will be created.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="method">
 <dt id="sisl.geometry.Geometry.insert">
 <code class="descname">insert</code><span class="sig-paren">(</span><em>atom</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.geometry.Geometry.insert" title="Permalink to this definition">¶</a></dt>
@@ -750,6 +772,12 @@ not return the same atoms in any way.</p>
 </div>
 <p>with <code class="docutils literal"><span class="pre">ia</span></code> being the atomic index, <code class="docutils literal"><span class="pre">a</span></code> the <a class="reference internal" href="sisl.atom.html#sisl.atom.Atom" title="sisl.atom.Atom"><code class="xref any py py-class docutils literal"><span class="pre">Atom</span></code></a> object, <code class="xref any docutils literal"><span class="pre">idx_specie</span></code>
 is the index of the species</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.geometry.Geometry.mass">
+<code class="descname">mass</code><a class="headerlink" href="#sisl.geometry.Geometry.mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the mass of all atoms as an array</p>
 </dd></dl>
 
 <dl class="method">

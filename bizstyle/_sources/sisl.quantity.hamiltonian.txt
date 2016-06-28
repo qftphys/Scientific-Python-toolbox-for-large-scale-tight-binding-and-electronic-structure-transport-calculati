@@ -1,0 +1,7 @@
+sisl.quantity.hamiltonian module
+================================
+
+.. automodule:: sisl.quantity.hamiltonian
+    :members:
+    :undoc-members:
+    :show-inheritance:

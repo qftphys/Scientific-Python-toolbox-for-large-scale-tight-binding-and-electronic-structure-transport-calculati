@@ -1,23 +1,25 @@
 sisl.io package
 ===============
 
+Subpackages
+-----------
+
+.. toctree::
+
+    sisl.io.bigdft
+    sisl.io.gulp
+    sisl.io.siesta
+    sisl.io.vasp
+
 Submodules
 ----------
 
 .. toctree::
 
-   sisl.io.bigdft_ascii
    sisl.io.cube
-   sisl.io.fdf
-   sisl.io.gulp
+   sisl.io.ham
    sisl.io.setup
-   sisl.io.siesta
-   sisl.io.siesta_grid
    sisl.io.sile
-   sisl.io.tb
-   sisl.io.tbtrans
-   sisl.io.vasp
-   sisl.io.xv
    sisl.io.xyz
 
 Module contents

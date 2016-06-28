@@ -1,5 +1,7 @@
 .. highlight:: bash
 
+.. _script_sgrid:
+
 `sgrid`
 =======
 

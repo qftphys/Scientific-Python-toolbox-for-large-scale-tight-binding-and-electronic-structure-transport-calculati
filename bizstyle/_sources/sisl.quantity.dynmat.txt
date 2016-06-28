@@ -1,0 +1,7 @@
+sisl.quantity.dynmat module
+===========================
+
+.. automodule:: sisl.quantity.dynmat
+    :members:
+    :undoc-members:
+    :show-inheritance:

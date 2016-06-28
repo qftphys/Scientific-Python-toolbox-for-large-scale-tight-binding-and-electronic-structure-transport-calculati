@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sisl.io.siesta.siesta_grid module &mdash; sisl |release| documentation</title>
+    
+    <link rel="stylesheet" href="_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.6.1-1-g515c564
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="sisl |release| documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>sisl.io.siesta.siesta_grid module</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="#">sisl.io.siesta.siesta_grid module</a>
+      </div>
+      <div id="contentwrapper">
+        
+  <div class="section" id="module-sisl.io.siesta.siesta_grid">
+<span id="sisl-io-siesta-siesta-grid-module"></span><h1>sisl.io.siesta.siesta_grid module<a class="headerlink" href="#module-sisl.io.siesta.siesta_grid" title="Permalink to this headline">¶</a></h1>
+<p>Sile object for reading/writing SIESTA Grid files</p>
+<dl class="class">
+<dt id="sisl.io.siesta.siesta_grid.SIESTAGridSile">
+<em class="property">class </em><code class="descclassname">sisl.io.siesta.siesta_grid.</code><code class="descname">SIESTAGridSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>lvl=0</em>, <em>access=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta_grid.SIESTAGridSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.siesta.sile.html#sisl.io.siesta.sile.NCSileSIESTA" title="sisl.io.siesta.sile.NCSileSIESTA"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.sile.NCSileSIESTA</span></code></a></p>
+<p>SIESTA Grid file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta_grid.SIESTAGridSile.read_grid" title="sisl.io.siesta.siesta_grid.SIESTAGridSile.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta_grid.SIESTAGridSile.read_sc" title="sisl.io.siesta.siesta_grid.SIESTAGridSile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Creates/Opens a NCSile</p>
+<p>Opens a NCSile with <code class="xref any docutils literal"><span class="pre">mode</span></code> and compression level <code class="xref any docutils literal"><span class="pre">lvl</span></code>.
+If <code class="xref any docutils literal"><span class="pre">mode</span></code> is in read-mode (r) the compression level
+is ignored.</p>
+<p>The final <code class="xref any docutils literal"><span class="pre">access</span></code> parameter sets how the file should be
+open and subsequently accessed.</p>
+<ol class="arabic simple" start="0">
+<li>means direct file access for every variable read</li>
+<li>means stores certain variables in the object.</li>
+</ol>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta_grid.SIESTAGridSile.read_grid" title="sisl.io.siesta.siesta_grid.SIESTAGridSile.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta_grid.SIESTAGridSile.read_sc" title="sisl.io.siesta.siesta_grid.SIESTAGridSile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sisl.io.siesta.siesta_grid.SIESTAGridSile.read_grid">
+<code class="descname">read_grid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta_grid.SIESTAGridSile.read_grid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.siesta_grid.SIESTAGridSile.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta_grid.SIESTAGridSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

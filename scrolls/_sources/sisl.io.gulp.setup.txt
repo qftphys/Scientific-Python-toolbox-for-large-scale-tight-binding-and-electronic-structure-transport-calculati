@@ -1,0 +1,7 @@
+sisl.io.gulp.setup module
+=========================
+
+.. automodule:: sisl.io.gulp.setup
+    :members:
+    :undoc-members:
+    :show-inheritance:

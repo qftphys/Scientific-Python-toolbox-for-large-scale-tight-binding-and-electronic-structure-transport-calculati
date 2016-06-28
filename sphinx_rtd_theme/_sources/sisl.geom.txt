@@ -8,6 +8,7 @@ Submodules
 
    sisl.geom.basic
    sisl.geom.flat
+   sisl.geom.nanotube
    sisl.geom.setup
    sisl.geom.special
 

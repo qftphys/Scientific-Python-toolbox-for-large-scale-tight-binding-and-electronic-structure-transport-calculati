@@ -1,5 +1,7 @@
 .. highlight:: bash
 
+.. _script_sgeom:
+	       
 `sgeom`
 =======
 

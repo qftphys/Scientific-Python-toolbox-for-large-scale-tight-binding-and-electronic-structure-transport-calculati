@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sisl.io.gulp.gout module &mdash; sisl |release| documentation</title>
+    
+    <link rel="stylesheet" href="_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.6.1-1-g515c564
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="sisl |release| documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>sisl.io.gulp.gout module</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="#">sisl.io.gulp.gout module</a>
+      </div>
+      <div id="contentwrapper">
+        
+  <div class="section" id="module-sisl.io.gulp.gout">
+<span id="sisl-io-gulp-gout-module"></span><h1>sisl.io.gulp.gout module<a class="headerlink" href="#module-sisl.io.gulp.gout" title="Permalink to this headline">¶</a></h1>
+<p>Sile object for reading/writing GULP in/output</p>
+<dl class="class">
+<dt id="sisl.io.gulp.gout.GULPgoutSile">
+<em class="property">class </em><code class="descclassname">sisl.io.gulp.gout.</code><code class="descname">GULPgoutSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.gulp.gout.GULPgoutSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.gulp.sile.html#sisl.io.gulp.sile.SileGULP" title="sisl.io.gulp.sile.SileGULP"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.gulp.sile.SileGULP</span></code></a></p>
+<p>GULP output file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
+<td>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
+<td>Converts str/list of keywords to proper case</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
+<td>Converts str/list of keywords to proper case</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.gulp.gout.GULPgoutSile.read_dynmat" title="sisl.io.gulp.gout.GULPgoutSile.read_dynmat"><code class="xref py py-obj docutils literal"><span class="pre">read_dynmat</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.gulp.gout.GULPgoutSile.read_es" title="sisl.io.gulp.gout.GULPgoutSile.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.gulp.gout.GULPgoutSile.read_geom" title="sisl.io.gulp.gout.GULPgoutSile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.gulp.gout.GULPgoutSile.read_sc" title="sisl.io.gulp.gout.GULPgoutSile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.gulp.gout.GULPgoutSile.read_super" title="sisl.io.gulp.gout.GULPgoutSile.read_super"><code class="xref py py-obj docutils literal"><span class="pre">read_super</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
+<td>Reads the next line of the file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.gulp.gout.GULPgoutSile.set_dyn_key" title="sisl.io.gulp.gout.GULPgoutSile.set_dyn_key"><code class="xref py py-obj docutils literal"><span class="pre">set_dyn_key</span></code></a>(key)</td>
+<td>Overwrites internal key lookup value for the dynamical matrix vectors</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.gulp.gout.GULPgoutSile.set_es_key" title="sisl.io.gulp.gout.GULPgoutSile.set_es_key"><code class="xref py py-obj docutils literal"><span class="pre">set_es_key</span></code></a>(key)</td>
+<td>Overwrites internal key lookup value for the dynamical matrix vectors</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.gulp.gout.GULPgoutSile.set_geom_key" title="sisl.io.gulp.gout.GULPgoutSile.set_geom_key"><code class="xref py py-obj docutils literal"><span class="pre">set_geom_key</span></code></a>(key)</td>
+<td>Overwrites internal key lookup value for the geometry vectors</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.gulp.gout.GULPgoutSile.set_key" title="sisl.io.gulp.gout.GULPgoutSile.set_key"><code class="xref py py-obj docutils literal"><span class="pre">set_key</span></code></a>(segment,&nbsp;key)</td>
+<td>Sets the segment lookup key</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.gulp.gout.GULPgoutSile.set_sc_key" title="sisl.io.gulp.gout.GULPgoutSile.set_sc_key"><code class="xref py py-obj docutils literal"><span class="pre">set_sc_key</span></code></a>(key)</td>
+<td>Overwrites internal key lookup value for the cell vectors</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Wrapper for the file-handle write statement</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sisl.io.gulp.gout.GULPgoutSile.read_dynmat">
+<code class="descname">read_dynmat</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.gulp.gout.GULPgoutSile.read_dynmat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.gulp.gout.GULPgoutSile.read_es">
+<code class="descname">read_es</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.gulp.gout.GULPgoutSile.read_es" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.gulp.gout.GULPgoutSile.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.gulp.gout.GULPgoutSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.gulp.gout.GULPgoutSile.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.gulp.gout.GULPgoutSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.gulp.gout.GULPgoutSile.read_super">
+<code class="descname">read_super</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.gulp.gout.GULPgoutSile.read_super" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.gulp.gout.GULPgoutSile.set_dyn_key">
+<code class="descname">set_dyn_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.gulp.gout.GULPgoutSile.set_dyn_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the dynamical matrix vectors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.gulp.gout.GULPgoutSile.set_es_key">
+<code class="descname">set_es_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.gulp.gout.GULPgoutSile.set_es_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the dynamical matrix vectors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.gulp.gout.GULPgoutSile.set_geom_key">
+<code class="descname">set_geom_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.gulp.gout.GULPgoutSile.set_geom_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the geometry vectors</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.gulp.gout.GULPgoutSile.set_key">
+<code class="descname">set_key</code><span class="sig-paren">(</span><em>segment</em>, <em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.gulp.gout.GULPgoutSile.set_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the segment lookup key</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.gulp.gout.GULPgoutSile.set_sc_key">
+<code class="descname">set_sc_key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.gulp.gout.GULPgoutSile.set_sc_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrites internal key lookup value for the cell vectors</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

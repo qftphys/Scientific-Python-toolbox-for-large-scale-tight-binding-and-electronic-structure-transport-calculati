@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.6.1
+        VERSION:     '0.6.1-1-g515c564
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -51,7 +51,7 @@
 <p>Sile object for reading/writing XYZ files</p>
 <dl class="class">
 <dt id="sisl.io.xyz.XYZSile">
-<em class="property">class </em><code class="descclassname">sisl.io.xyz.</code><code class="descname">XYZSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.xyz.XYZSile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sisl.io.xyz.</code><code class="descname">XYZSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.xyz.XYZSile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.Sile</span></code></a></p>
 <p>XYZ file object</p>
 <p class="rubric">Methods</p>
@@ -76,8 +76,8 @@
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.xyz.XYZSile.read_geom" title="sisl.io.xyz.XYZSile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
-<td>Returns Geometry object from the XYZ file</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.xyz.XYZSile.read_geom" title="sisl.io.xyz.XYZSile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
 <td>Reads the next line of the file</td>
@@ -91,23 +91,20 @@
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
 <td>Wrapper for the file-handle write statement</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.xyz.XYZSile.write_geom" title="sisl.io.xyz.XYZSile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom[,&nbsp;fmt])</td>
-<td>Writes the geometry to the contained file</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.xyz.XYZSile.write_geom" title="sisl.io.xyz.XYZSile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
 <dt id="sisl.io.xyz.XYZSile.read_geom">
-<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.xyz.XYZSile.read_geom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns Geometry object from the XYZ file</p>
-<p>NOTE: Unit-cell is the Eucledian 3D space.</p>
-</dd></dl>
+<code class="descname">read_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.xyz.XYZSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="sisl.io.xyz.XYZSile.write_geom">
-<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em>, <em>fmt='.5f'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.xyz.XYZSile.write_geom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Writes the geometry to the contained file</p>
-</dd></dl>
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.xyz.XYZSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

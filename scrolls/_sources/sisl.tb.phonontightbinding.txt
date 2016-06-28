@@ -1,7 +1,0 @@
-sisl.tb.phonontightbinding module
-=================================
-
-.. automodule:: sisl.tb.phonontightbinding
-    :members:
-    :undoc-members:
-    :show-inheritance:

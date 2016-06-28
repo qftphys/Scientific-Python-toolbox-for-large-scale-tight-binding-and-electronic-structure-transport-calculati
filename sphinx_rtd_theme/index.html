@@ -131,17 +131,17 @@
             
   <div class="section" id="welcome-to-sisl-documentation">
 <h1>Welcome to sisl documentation!<a class="headerlink" href="#welcome-to-sisl-documentation" title="Permalink to this headline">¶</a></h1>
-<p>This documentation has been created from version: 0.6.1
+<p>This documentation has been created from version: 0.6.1-1-g515c564
 .</p>
 <p>sisl is a tool to easily create geometries and handle input/output files
 from various DFT codes. Although this is based on the SIESTA/TranSIESTA
 DFT code it is far from limited to deal with <em>only</em> this code.</p>
 <p>A list of key components are</p>
 <dl class="docutils">
-<dt><span class="xref std std-ref">scripts/sgeom</span></dt>
+<dt><span class="xref std std-ref">scripts_sgeom</span></dt>
 <dd>Read and transform generic coordinate files from
 one format into other formats.</dd>
-<dt><span class="xref std std-ref">scripts/sgrid</span></dt>
+<dt><span class="xref std std-ref">scripts_sgrid</span></dt>
 <dd>Read and transform <em>grid</em> data, such as electronic
 densities, electrostatic potentials etc. and save them in various
 formats.</dd>
@@ -154,7 +154,9 @@ formats.</dd>
 <li>Geometries, with associated atomic species and unit cells</li>
 <li>Grids, with associated unit cells</li>
 <li>Tight-binding models using a sparse data structure for easy
-creation and calculation of eigenvalues</li>
+creation and calculation of eigenvalues
+The electronic structure may comprise of orthogonal or non-orthogonal
+basis sets.</li>
 </ul>
 </div></blockquote>
 </div>
@@ -178,6 +180,7 @@ manual control of the placement.</p>
 <p>To succesfully use <code class="docutils literal"><span class="pre">sisl</span></code> these Python packages must be installed:</p>
 <blockquote>
 <div><ul class="simple">
+<li><a class="reference external" href="https://pypi.python.org/pypi/six">six</a></li>
 <li><a class="reference external" href="http://github.com/numpy/numpy">numpy</a></li>
 <li><a class="reference external" href="http://github.com/scipy/scipy">scipy</a></li>
 <li><a class="reference external" href="http://github.com/Unidata/netcdf4-python">netcdf4-python</a></li>
@@ -284,7 +287,7 @@ best suited theme for this documentation.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.6.1
+            VERSION:'0.6.1-1-g515c564
 ',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

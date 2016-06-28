@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sisl.sparse module &mdash; sisl |release| documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.6.1-1-g515c564
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="sisl |release| documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">sisl</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-sisl.sparse">
+<span id="sisl-sparse-module"></span><h1>sisl.sparse module<a class="headerlink" href="#module-sisl.sparse" title="Permalink to this headline">¶</a></h1>
+<p>Sparsity pattern used to express matrices in concise manners.</p>
+<dl class="class">
+<dt id="sisl.sparse.SparseCSR">
+<em class="property">class </em><code class="descclassname">sisl.sparse.</code><code class="descname">SparseCSR</code><span class="sig-paren">(</span><em>arg1</em>, <em>dim=1</em>, <em>dtype=None</em>, <em>nnzpr=None</em>, <em>nnz=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.sparse.SparseCSR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A compressed sparse row matrix, slightly different than <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code>.</p>
+<p>This class holds all required information regarding the CSR matrix format.</p>
+<p>Note that this sparse matrix of data does not retain the number of columns
+in the matrix, i.e. it has no way of determining whether the input is 
+correct.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.dim" title="sisl.sparse.SparseCSR.dim"><code class="xref py py-obj docutils literal"><span class="pre">dim</span></code></a></td>
+<td>Return extra dimensionality of the sparse matrix</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.dtype" title="sisl.sparse.SparseCSR.dtype"><code class="xref py py-obj docutils literal"><span class="pre">dtype</span></code></a></td>
+<td>Return the data-type in the sparse matrix</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.finalized" title="sisl.sparse.SparseCSR.finalized"><code class="xref py py-obj docutils literal"><span class="pre">finalized</span></code></a></td>
+<td>Whether the contained data is finalized and non-used elements have been removed</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.nnz" title="sisl.sparse.SparseCSR.nnz"><code class="xref py py-obj docutils literal"><span class="pre">nnz</span></code></a></td>
+<td>Return number of non-zero elements in the sparsity pattern</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.shape" title="sisl.sparse.SparseCSR.shape"><code class="xref py py-obj docutils literal"><span class="pre">shape</span></code></a></td>
+<td>Return shape of the sparse matrix</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.copy" title="sisl.sparse.SparseCSR.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>([dims])</td>
+<td>Returns an exact copy of the sparse matrix</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.empty" title="sisl.sparse.SparseCSR.empty"><code class="xref py py-obj docutils literal"><span class="pre">empty</span></code></a>([keep])</td>
+<td>Delete all sparse information from the sparsity pattern</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.finalize" title="sisl.sparse.SparseCSR.finalize"><code class="xref py py-obj docutils literal"><span class="pre">finalize</span></code></a>([sort])</td>
+<td>Finalizes the sparse matrix by removing all non-set elements</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.fromcsr" title="sisl.sparse.SparseCSR.fromcsr"><code class="xref py py-obj docutils literal"><span class="pre">fromcsr</span></code></a>(csr[,&nbsp;dim])</td>
+<td>Return a new <code class="docutils literal"><span class="pre">SparseData</span></code> object from a csr matrix</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.tocsr" title="sisl.sparse.SparseCSR.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>([dim])</td>
+<td>Return the data in <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> format</td>
+</tr>
+</tbody>
+</table>
+<p>Initialize a new sparse CSR matrix</p>
+<p>This sparse matrix class tries to resemble the
+<code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> as much as possible with
+the difference of this class being multi-dimensional.</p>
+<p>Creating a new sparse matrix is much similar to the 
+<code class="docutils literal"><span class="pre">scipy</span></code> equivalent.</p>
+<p><code class="xref any docutils literal"><span class="pre">nzs</span></code> is only used if <code class="xref any docutils literal"><span class="pre">nzs</span> <span class="pre">&gt;</span> <span class="pre">nr</span> <span class="pre">*</span> <span class="pre">nzsr</span></code>.</p>
+<p>This class may be instantiated by verious means.</p>
+<ul class="simple">
+<li><code class="xref any docutils literal"><span class="pre">SparseCSR(S)</span></code>
+where <a class="reference internal" href="sisl.quantity.hamiltonian.html#sisl.quantity.hamiltonian.Hamiltonian.S" title="sisl.quantity.hamiltonian.Hamiltonian.S"><code class="xref any py py-attr docutils literal"><span class="pre">S</span></code></a> is a <code class="docutils literal"><span class="pre">scipy.sparse</span></code> matrix</li>
+<li><code class="xref any docutils literal"><span class="pre">SparseCSR((M,N)[,</span> <span class="pre">dtype])</span></code>
+the shape of the sparse matrix (equivalent
+to <code class="xref any docutils literal"><span class="pre">SparseCSR((M,N,K)[,</span> <span class="pre">dtype])</span></code>.</li>
+<li><code class="xref any docutils literal"><span class="pre">SparseCSR((M,N,K)[,</span> <span class="pre">dtype])</span></code>
+creating a sparse matrix with <code class="xref any docutils literal"><span class="pre">M</span></code> rows, <code class="xref any docutils literal"><span class="pre">N</span></code> columns
+and <code class="xref any docutils literal"><span class="pre">K</span></code> elements per sparse element.</li>
+</ul>
+<p>Additionally these parameters control the
+creation of the sparse matrix</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nnzpr</strong> : int, 20</p>
+<blockquote>
+<div><p>initial number of non-zero elements per row.
+If <a class="reference internal" href="#sisl.sparse.SparseCSR.nnz" title="sisl.sparse.SparseCSR.nnz"><code class="xref any py py-attr docutils literal"><span class="pre">nnz</span></code></a> is supplied it will set:
+<code class="xref any docutils literal"><span class="pre">nnzpr</span> <span class="pre">=</span> <span class="pre">max(nnzpr,</span> <span class="pre">nnz</span> <span class="pre">//</span> <span class="pre">M)</span></code></p>
+</div></blockquote>
+<p><strong>nnz</strong> : int</p>
+<blockquote>
+<div><p>initial total number of non-zero elements
+If <code class="xref any docutils literal"><span class="pre">nnzpr</span></code> is supplied it will set:
+<code class="xref any docutils literal"><span class="pre">nnzpr</span> <span class="pre">=</span> <span class="pre">max(nnzpr,</span> <span class="pre">nnz</span> <span class="pre">//</span> <span class="pre">M)</span></code></p>
+</div></blockquote>
+<p><strong>dim</strong> : int, 1</p>
+<blockquote>
+<div><p>number of elements stored per sparse element</p>
+</div></blockquote>
+<p><strong>dtype</strong> : numpy data type, <code class="xref any docutils literal"><span class="pre">numpy.float64</span></code></p>
+<blockquote class="last">
+<div><p>data type of the matrix</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="68%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>ncol: int-array, <code class="xref any docutils literal"><span class="pre">self.shape[0]</span></code></td>
+<td>number of entries per row</td>
+</tr>
+<tr class="row-even"><td>ptr: int-array, <code class="xref any docutils literal"><span class="pre">self.shape[0]+1</span></code></td>
+<td>pointer index in the 1D column indices of the corresponding row</td>
+</tr>
+<tr class="row-odd"><td>col: int-array,</td>
+<td>column indices of the sparse elements</td>
+</tr>
+<tr class="row-even"><td>dim: int</td>
+<td>the extra dimension of the sparse matrix</td>
+</tr>
+<tr class="row-odd"><td>nnz: int</td>
+<td>number of contained sparse elements</td>
+</tr>
+<tr class="row-even"><td>shape: tuple, 3*(,)</td>
+<td>size of contained matrix, M, N, K</td>
+</tr>
+<tr class="row-odd"><td>finalized: boolean</td>
+<td>whether the sparse matrix is finalized and non-set elements are removed</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.copy" title="sisl.sparse.SparseCSR.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>([dims])</td>
+<td>Returns an exact copy of the sparse matrix</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.empty" title="sisl.sparse.SparseCSR.empty"><code class="xref py py-obj docutils literal"><span class="pre">empty</span></code></a>([keep])</td>
+<td>Delete all sparse information from the sparsity pattern</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.finalize" title="sisl.sparse.SparseCSR.finalize"><code class="xref py py-obj docutils literal"><span class="pre">finalize</span></code></a>([sort])</td>
+<td>Finalizes the sparse matrix by removing all non-set elements</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.fromcsr" title="sisl.sparse.SparseCSR.fromcsr"><code class="xref py py-obj docutils literal"><span class="pre">fromcsr</span></code></a>(csr[,&nbsp;dim])</td>
+<td>Return a new <code class="docutils literal"><span class="pre">SparseData</span></code> object from a csr matrix</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.tocsr" title="sisl.sparse.SparseCSR.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>([dim])</td>
+<td>Return the data in <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> format</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sisl.sparse.SparseCSR.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><em>dims=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.sparse.SparseCSR.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an exact copy of the sparse matrix</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>dims: array-like, (all)</strong></p>
+<blockquote class="last">
+<div><p>which dimensions to store in the copy</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.sparse.SparseCSR.dim">
+<code class="descname">dim</code><a class="headerlink" href="#sisl.sparse.SparseCSR.dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return extra dimensionality of the sparse matrix</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.sparse.SparseCSR.dtype">
+<code class="descname">dtype</code><a class="headerlink" href="#sisl.sparse.SparseCSR.dtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the data-type in the sparse matrix</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.sparse.SparseCSR.empty">
+<code class="descname">empty</code><span class="sig-paren">(</span><em>keep=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.sparse.SparseCSR.empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete all sparse information from the sparsity pattern</p>
+<p>Essentially this deletes all entries.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>keep: boolean, False</strong></p>
+<blockquote class="last">
+<div><p>if <code class="xref any docutils literal"><span class="pre">True</span></code> it will keep the sparse elements _as <a href="#id1"><span class="problematic" id="id2">is_</span></a>.
+I.e. it will merely set the stored sparse elements as zero.
+This may be advantagegous when re-constructing a new sparse 
+matrix from an old sparse matrix</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.sparse.SparseCSR.finalize">
+<code class="descname">finalize</code><span class="sig-paren">(</span><em>sort=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.sparse.SparseCSR.finalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finalizes the sparse matrix by removing all non-set elements</p>
+<p>One may still interact with the sparse matrix as one would previously.</p>
+<p>NOTE: This is mainly an internal used routine to ensure data structure
+when converting to <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sort: bool, True</strong></p>
+<blockquote class="last">
+<div><p>sort the column indices for each row</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.sparse.SparseCSR.finalized">
+<code class="descname">finalized</code><a class="headerlink" href="#sisl.sparse.SparseCSR.finalized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the contained data is finalized and non-used elements have been removed</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="sisl.sparse.SparseCSR.fromcsr">
+<em class="property">static </em><code class="descname">fromcsr</code><span class="sig-paren">(</span><em>csr</em>, <em>dim=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.sparse.SparseCSR.fromcsr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a new <code class="docutils literal"><span class="pre">SparseData</span></code> object from a csr matrix</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.sparse.SparseCSR.nnz">
+<code class="descname">nnz</code><a class="headerlink" href="#sisl.sparse.SparseCSR.nnz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return number of non-zero elements in the sparsity pattern</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.sparse.SparseCSR.shape">
+<code class="descname">shape</code><a class="headerlink" href="#sisl.sparse.SparseCSR.shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return shape of the sparse matrix</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.sparse.SparseCSR.tocsr">
+<code class="descname">tocsr</code><span class="sig-paren">(</span><em>dim=0</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.sparse.SparseCSR.tocsr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the data in <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> format</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>dim: int</strong></p>
+<blockquote class="last">
+<div><p>the dimension of the data to create the sparse matrix</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sisl.sparse.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">sisl</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

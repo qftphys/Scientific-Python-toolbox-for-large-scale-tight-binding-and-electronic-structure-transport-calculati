@@ -159,7 +159,7 @@
 <td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.n_s" title="sisl.supercell.SuperCell.n_s"><code class="xref any py py-attr docutils literal"><span class="pre">n_s</span></code></a></td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">nsc</span></code></td>
-<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.nsc" title="sisl.supercell.SuperCell.nsc"><code class="xref any py py-attr docutils literal"><span class="pre">nsc</span></code></a></td>
+<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.nsc" title="sisl.supercell.SuperCellChild.nsc"><code class="xref any py py-attr docutils literal"><span class="pre">nsc</span></code></a></td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rcell</span></code></td>
 <td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.rcell" title="sisl.supercell.SuperCellChild.rcell"><code class="xref any py py-attr docutils literal"><span class="pre">rcell</span></code></a></td>
@@ -207,7 +207,7 @@
 <td>Returns the average grid along direction <code class="docutils literal"><span class="pre">axis</span></code></td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.read" title="sisl.grid.Grid.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
-<td>Reads grid from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta_grid.html#sisl.io.siesta_grid.SIESTAGridSile.read_grid" title="sisl.io.siesta_grid.SIESTAGridSile.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></td>
+<td>Reads grid from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta.siesta.html#sisl.io.siesta.siesta.SIESTASile.read_grid" title="sisl.io.siesta.siesta.SIESTASile.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.remove" title="sisl.grid.Grid.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>(idx,&nbsp;axis)</td>
 <td>Removes certain indices from a specified axis.</td>
@@ -216,7 +216,7 @@
 <td>Removes parts of the grid via above/below designations.</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code>(*args,&nbsp;**kwargs)</td>
-<td>Call local <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.sc_index" title="sisl.supercell.SuperCell.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</td>
+<td>Call local <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.sc_index" title="sisl.supercell.SuperCellChild.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.set_bc" title="sisl.grid.Grid.set_bc"><code class="xref py py-obj docutils literal"><span class="pre">set_bc</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
 <td>Set the boundary conditions on the grid</td>
@@ -281,7 +281,7 @@
 <td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.n_s" title="sisl.supercell.SuperCell.n_s"><code class="xref any py py-attr docutils literal"><span class="pre">n_s</span></code></a></td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">nsc</span></code></td>
-<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.nsc" title="sisl.supercell.SuperCell.nsc"><code class="xref any py py-attr docutils literal"><span class="pre">nsc</span></code></a></td>
+<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.nsc" title="sisl.supercell.SuperCellChild.nsc"><code class="xref any py py-attr docutils literal"><span class="pre">nsc</span></code></a></td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rcell</span></code></td>
 <td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.rcell" title="sisl.supercell.SuperCellChild.rcell"><code class="xref any py py-attr docutils literal"><span class="pre">rcell</span></code></a></td>
@@ -329,7 +329,7 @@
 <td>Returns the average grid along direction <code class="docutils literal"><span class="pre">axis</span></code></td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.read" title="sisl.grid.Grid.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
-<td>Reads grid from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta_grid.html#sisl.io.siesta_grid.SIESTAGridSile.read_grid" title="sisl.io.siesta_grid.SIESTAGridSile.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></td>
+<td>Reads grid from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta.siesta.html#sisl.io.siesta.siesta.SIESTASile.read_grid" title="sisl.io.siesta.siesta.SIESTASile.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.remove" title="sisl.grid.Grid.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>(idx,&nbsp;axis)</td>
 <td>Removes certain indices from a specified axis.</td>
@@ -338,7 +338,7 @@
 <td>Removes parts of the grid via above/below designations.</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code>(*args,&nbsp;**kwargs)</td>
-<td>Call local <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.sc_index" title="sisl.supercell.SuperCell.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</td>
+<td>Call local <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.sc_index" title="sisl.supercell.SuperCellChild.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.set_bc" title="sisl.grid.Grid.set_bc"><code class="xref py py-obj docutils literal"><span class="pre">set_bc</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
 <td>Set the boundary conditions on the grid</td>
@@ -488,7 +488,7 @@ The interpolation routine is <code class="xref any docutils literal"><span class
 <dl class="staticmethod">
 <dt id="sisl.grid.Grid.read">
 <em class="property">static </em><code class="descname">read</code><span class="sig-paren">(</span><em>sile</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.grid.Grid.read" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads grid from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta_grid.html#sisl.io.siesta_grid.SIESTAGridSile.read_grid" title="sisl.io.siesta_grid.SIESTAGridSile.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></p>
+<dd><p>Reads grid from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta.siesta.html#sisl.io.siesta.siesta.SIESTASile.read_grid" title="sisl.io.siesta.siesta.SIESTASile.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -763,7 +763,7 @@ if it is a string it will create a new sile using <a class="reference internal" 
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.6.1
+            VERSION:'0.6.1-1-g515c564
 ',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

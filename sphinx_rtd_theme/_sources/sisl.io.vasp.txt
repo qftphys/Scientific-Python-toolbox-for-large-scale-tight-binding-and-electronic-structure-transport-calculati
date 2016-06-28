@@ -1,5 +1,17 @@
-sisl.io.vasp module
-===================
+sisl.io.vasp package
+====================
+
+Submodules
+----------
+
+.. toctree::
+
+   sisl.io.vasp.car
+   sisl.io.vasp.setup
+   sisl.io.vasp.sile
+
+Module contents
+---------------
 
 .. automodule:: sisl.io.vasp
     :members:

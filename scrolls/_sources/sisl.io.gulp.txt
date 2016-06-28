@@ -1,5 +1,18 @@
-sisl.io.gulp module
-===================
+sisl.io.gulp package
+====================
+
+Submodules
+----------
+
+.. toctree::
+
+   sisl.io.gulp.gout
+   sisl.io.gulp.hessian
+   sisl.io.gulp.setup
+   sisl.io.gulp.sile
+
+Module contents
+---------------
 
 .. automodule:: sisl.io.gulp
     :members:

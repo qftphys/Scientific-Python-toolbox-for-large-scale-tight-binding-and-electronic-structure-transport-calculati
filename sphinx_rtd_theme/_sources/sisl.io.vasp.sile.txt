@@ -1,0 +1,7 @@
+sisl.io.vasp.sile module
+========================
+
+.. automodule:: sisl.io.vasp.sile
+    :members:
+    :undoc-members:
+    :show-inheritance:

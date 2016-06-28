@@ -1,0 +1,7 @@
+sisl.io.bigdft.sile module
+==========================
+
+.. automodule:: sisl.io.bigdft.sile
+    :members:
+    :undoc-members:
+    :show-inheritance:

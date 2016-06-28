@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.6.1
+        VERSION:     '0.6.1-1-g515c564
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -75,6 +75,53 @@
             
   <div class="section" id="module-sisl.io.sile">
 <span id="sisl-io-sile-module"></span><h1>sisl.io.sile module<a class="headerlink" href="#module-sisl.io.sile" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="sisl.io.sile.add_sile">
+<code class="descclassname">sisl.io.sile.</code><code class="descname">add_sile</code><span class="sig-paren">(</span><em>ending</em>, <em>obj</em>, <em>case=True</em>, <em>gzip=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.add_sile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Public for attaching lookup tables for allowing
+users to attach files for the IOSile function call</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ending</strong> : str</p>
+<blockquote>
+<div><p>The file-name ending, it can be several file endings (.TBT.nc)</p>
+</div></blockquote>
+<p><strong>obj</strong> : <a class="reference internal" href="#sisl.io.sile.BaseSile" title="sisl.io.sile.BaseSile"><code class="xref any py py-class docutils literal"><span class="pre">BaseSile</span></code></a> child</p>
+<blockquote>
+<div><p>An object that is associated with the respective file.
+It must be inherited from a <a class="reference internal" href="#sisl.io.sile.BaseSile" title="sisl.io.sile.BaseSile"><code class="xref any py py-class docutils literal"><span class="pre">BaseSile</span></code></a>.</p>
+</div></blockquote>
+<p><strong>case</strong> : bool, (True)</p>
+<blockquote>
+<div><p>Whether case sensitivity is applicable for determining
+file.</p>
+</div></blockquote>
+<p><strong>gzip</strong> : bool, (False)</p>
+<blockquote class="last">
+<div><p>Whether files with <code class="xref any docutils literal"><span class="pre">.gz</span></code> endings can be read.
+This option should only be given to files with ASCII text
+output.
+It will automatically call:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">add_sile</span><span class="p">(</span><span class="n">ending</span><span class="o">+</span><span class="s1">&#39;.gz&#39;</span><span class="p">,</span><span class="o">...</span><span class="p">,</span><span class="n">gzip</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>to add the gzipped file to the list of possible files.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.io.sile.get_sile">
+<code class="descclassname">sisl.io.sile.</code><code class="descname">get_sile</code><span class="sig-paren">(</span><em>file</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.get_sile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Guess the file handle for the input file and return
+and object with the file handle.</p>
+</dd></dl>
+
 <dl class="class">
 <dt id="sisl.io.sile.BaseSile">
 <em class="property">class </em><code class="descclassname">sisl.io.sile.</code><code class="descname">BaseSile</code><a class="headerlink" href="#sisl.io.sile.BaseSile" title="Permalink to this definition">¶</a></dt>
@@ -84,7 +131,7 @@
 
 <dl class="class">
 <dt id="sisl.io.sile.Sile">
-<em class="property">class </em><code class="descclassname">sisl.io.sile.</code><code class="descname">Sile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sisl.io.sile.</code><code class="descname">Sile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#sisl.io.sile.BaseSile" title="sisl.io.sile.BaseSile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.BaseSile</span></code></a></p>
 <p>Class to contain a file with easy access</p>
 <p class="rubric">Methods</p>
@@ -179,7 +226,7 @@
 
 <dl class="class">
 <dt id="sisl.io.sile.NCSile">
-<em class="property">class </em><code class="descclassname">sisl.io.sile.</code><code class="descname">NCSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode=None</em>, <em>lvl=0</em>, <em>access=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.NCSile" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sisl.io.sile.</code><code class="descname">NCSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>lvl=0</em>, <em>access=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.NCSile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#sisl.io.sile.BaseSile" title="sisl.io.sile.BaseSile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.BaseSile</span></code></a></p>
 <p>Class to contain a file with easy access
 The file format for this file is the NetCDF file format</p>
@@ -200,6 +247,13 @@ open and subsequently accessed.</p>
 <em class="property">exception </em><code class="descclassname">sisl.io.sile.</code><code class="descname">SileError</code><span class="sig-paren">(</span><em>value</em>, <em>obj=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.SileError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">exceptions.IOError</span></code></p>
 <p>Define an error object related to the Sile objects</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.io.sile.Sile_fh_open">
+<code class="descclassname">sisl.io.sile.</code><code class="descname">Sile_fh_open</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile_fh_open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method decorator for objects to directly implement opening of the
+file-handle upon entry (if it isn&#8217;t already).</p>
 </dd></dl>
 
 <dl class="function">

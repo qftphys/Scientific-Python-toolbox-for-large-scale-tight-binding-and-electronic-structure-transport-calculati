@@ -1,7 +1,0 @@
-sisl.io.tb module
-=================
-
-.. automodule:: sisl.io.tb
-    :members:
-    :undoc-members:
-    :show-inheritance:

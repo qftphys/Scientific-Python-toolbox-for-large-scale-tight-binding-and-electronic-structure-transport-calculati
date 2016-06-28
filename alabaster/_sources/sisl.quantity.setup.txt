@@ -1,0 +1,7 @@
+sisl.quantity.setup module
+==========================
+
+.. automodule:: sisl.quantity.setup
+    :members:
+    :undoc-members:
+    :show-inheritance:

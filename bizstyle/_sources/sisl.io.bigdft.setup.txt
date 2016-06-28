@@ -1,0 +1,7 @@
+sisl.io.bigdft.setup module
+===========================
+
+.. automodule:: sisl.io.bigdft.setup
+    :members:
+    :undoc-members:
+    :show-inheritance:

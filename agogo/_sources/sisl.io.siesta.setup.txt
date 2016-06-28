@@ -1,0 +1,7 @@
+sisl.io.siesta.setup module
+===========================
+
+.. automodule:: sisl.io.siesta.setup
+    :members:
+    :undoc-members:
+    :show-inheritance:

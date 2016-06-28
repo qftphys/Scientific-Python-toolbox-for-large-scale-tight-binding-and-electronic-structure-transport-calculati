@@ -1,0 +1,19 @@
+sisl.io.bigdft package
+======================
+
+Submodules
+----------
+
+.. toctree::
+
+   sisl.io.bigdft.ascii
+   sisl.io.bigdft.setup
+   sisl.io.bigdft.sile
+
+Module contents
+---------------
+
+.. automodule:: sisl.io.bigdft
+    :members:
+    :undoc-members:
+    :show-inheritance:

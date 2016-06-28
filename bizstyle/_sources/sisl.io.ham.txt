@@ -1,0 +1,7 @@
+sisl.io.ham module
+==================
+
+.. automodule:: sisl.io.ham
+    :members:
+    :undoc-members:
+    :show-inheritance:

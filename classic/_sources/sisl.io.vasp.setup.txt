@@ -1,0 +1,7 @@
+sisl.io.vasp.setup module
+=========================
+
+.. automodule:: sisl.io.vasp.setup
+    :members:
+    :undoc-members:
+    :show-inheritance:

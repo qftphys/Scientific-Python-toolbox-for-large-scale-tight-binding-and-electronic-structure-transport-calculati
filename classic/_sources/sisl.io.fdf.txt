@@ -1,7 +1,0 @@
-sisl.io.fdf module
-==================
-
-.. automodule:: sisl.io.fdf
-    :members:
-    :undoc-members:
-    :show-inheritance:

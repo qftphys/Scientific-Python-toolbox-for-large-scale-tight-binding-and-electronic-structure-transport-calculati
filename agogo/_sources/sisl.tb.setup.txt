@@ -1,7 +1,0 @@
-sisl.tb.setup module
-====================
-
-.. automodule:: sisl.tb.setup
-    :members:
-    :undoc-members:
-    :show-inheritance:

@@ -1,7 +1,0 @@
-sisl.io.bigdft_ascii module
-===========================
-
-.. automodule:: sisl.io.bigdft_ascii
-    :members:
-    :undoc-members:
-    :show-inheritance:
