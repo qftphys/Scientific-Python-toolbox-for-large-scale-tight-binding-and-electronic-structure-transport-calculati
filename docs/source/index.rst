@@ -33,6 +33,8 @@ Script based handling via Python classes and objects that handles
   * Grids, with associated unit cells
   * Tight-binding models using a sparse data structure for easy
     creation and calculation of eigenvalues
+    The electronic structure may comprise of orthogonal or non-orthogonal
+    basis sets.
 
 Installation
 ============
@@ -60,6 +62,7 @@ Requirements
 
 To succesfully use ``sisl`` these Python packages must be installed:
 
+ - `six`_
  - `numpy`_
  - `scipy`_ 
  - `netcdf4-python`_
@@ -114,6 +117,7 @@ If you have any preferences please let me know.
 .. _pypi-releases: http://pypi.python.org/pypi/sisl/
 
 .. These are external links:
+.. _six: https://pypi.python.org/pypi/six
 .. _netcdf4-python: http://github.com/Unidata/netcdf4-python
 .. _numpy: http://github.com/numpy/numpy
 .. _scipy: http://github.com/scipy/scipy
