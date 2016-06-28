@@ -5,8 +5,25 @@ sisl.atom
 Classes:
  * AtomMeta
 
-sisl.io
--------
-Functions:
- * extendall
+sisl.quantity.hamiltonian
+-------------------------
+Classes:
+ * TightBinding -- missing methods:
+
+   - Hk
+   - Sk
+   - construct
+   - cut
+   - eigh
+   - eigsh
+   - empty
+   - finalize
+   - iter_linear
+   - read
+   - repeat
+   - reset
+   - sp2HS
+   - tile
+   - tocsr
+   - write
 
