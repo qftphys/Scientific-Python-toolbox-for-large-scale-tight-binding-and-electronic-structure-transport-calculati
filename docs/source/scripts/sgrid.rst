@@ -33,7 +33,7 @@ CUBE file. The CUBE file writeout is implemented in `Cube`.
 
 Conveniently CUBE files can accomodate geometries and species for inclusion in the 3D
 plot and this can be added to the file via the ``--geometry`` flag, any geometry format
-implemented in `sisl` are also compatible with `sgrid`, see :ref:`sgeom`.
+implemented in `sisl` are also compatible with `sgrid`.
 
 ::
 		

@@ -10,7 +10,7 @@ on *all* `sisl` file formats applicable (all `Sile` 's).
 
 Essentially it performs operations dependent on the file that is being
 processed. If for instance the file contains any kind of `Geometry`
-it allows the same operations as `sgeom` in :ref:`script_sgeom`.
+it allows the same operations as `sgeom`.
 
 For a short help description of the possible uses do:
 
