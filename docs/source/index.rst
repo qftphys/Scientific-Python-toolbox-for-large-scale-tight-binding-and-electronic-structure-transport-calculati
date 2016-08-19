@@ -10,22 +10,23 @@ Welcome to sisl documentation!
 
 This documentation has been created from version: |release|.
 
-sisl is a tool to easily create geometries and handle input/output files
-from various DFT codes. Although this is based on the SIESTA/TranSIESTA
-DFT code it is far from limited to deal with *only* this code. 
+sisl is a tool to easily create geometries and, in general, handle
+data output files from various DFT codes. Although this is primarily
+based on the SIESTA/TranSIESTA DFT code it is far from limited to
+deal with *only* this code. 
 
 A list of key components are
 
-:ref:`scripts_sgeom`
+:ref:`script_sgeom`
    Read and transform generic coordinate files from
    one format into other formats.
 
-:ref:`scripts_sgrid`
+:ref:`script_sgrid`
    Read and transform *grid* data, such as electronic
    densities, electrostatic potentials etc. and save them in various
    formats.
 
-:ref:`scripts_sdata`
+:ref:`script_sdata`
    Read and transform *any* data. It is basically a shorthand for
    the above more convenience scripts.
    This script is capable of handling geometries, grids, specially

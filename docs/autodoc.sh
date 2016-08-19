@@ -23,6 +23,7 @@ doc_tag=$tag
 head_tag=`git describe`
 python -c "from setup import write_version ; write_version()"
 git checkout gh-pages
+git pull
 
 while [[ $# -gt 0 ]]; do
     opt=$1
@@ -86,7 +87,7 @@ git checkout docs/doc.tag
 git checkout master
 git checkout $tag
 
-# There are some problems related to the setupegg.py file
+# There are some problems related with the setupegg.py file
 rm setupegg.py
 
 # Extract the just created tar of the documentation repository
