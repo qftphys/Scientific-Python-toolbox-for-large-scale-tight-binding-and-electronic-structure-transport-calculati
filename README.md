@@ -14,4 +14,7 @@ Here are the needed steps:
 
 	To skip the actual commit of the documentation call it via
 	`docs/autodoc.sh --skip-commit|-sc`
-	
+
+To produce the documentation from a specific tag do:
+
+    docs/autodoc.sh --tag <tag>

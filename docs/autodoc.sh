@@ -15,8 +15,9 @@ pushd $top_dir
 # Ensure that the current repo state is saved...
 git stash
 
-# Get latest tag version on master
+# Get latest tag version on master (first we pull)
 git checkout master
+git pull
 tag=`git describe --abbrev=0`
 doc_tag=$tag
 head_tag=`git describe`
