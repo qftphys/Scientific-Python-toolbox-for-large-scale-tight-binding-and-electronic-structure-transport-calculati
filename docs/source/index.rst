@@ -25,6 +25,13 @@ A list of key components are
    densities, electrostatic potentials etc. and save them in various
    formats.
 
+:ref:`scripts_sdata`
+   Read and transform *any* data. It is basically a shorthand for
+   the above more convenience scripts.
+   This script is capable of handling geometries, grids, specially
+   contained data, etc.  
+   
+
 Script based handling via Python classes and objects that handles 
 
   * Atomic species
@@ -35,6 +42,7 @@ Script based handling via Python classes and objects that handles
     creation and calculation of eigenvalues
     The electronic structure may comprise of orthogonal or non-orthogonal
     basis sets.
+
 
 Installation
 ============
@@ -74,7 +82,8 @@ Contents:
 
    scripts/sgeom
    scripts/sgrid
-	      
+   scripts/sdata
+
 .. autosummary::
    :toctree: _autosummary
 
