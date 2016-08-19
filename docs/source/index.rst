@@ -48,7 +48,7 @@ Script based handling via Python classes and objects that handles
 Installation
 ============
 
-The easiest way to install ``sisl`` is via the :program:`pypi` interface.
+The easiest way to install `sisl` is via the :program:`pypi` interface.
 Install via:
 
 .. code-block:: bash
@@ -63,13 +63,13 @@ interface:
 
    python setup.py install
 
-which will install ``sisl`` in your default location, use :program:`--prefix <path>` for
+which will install `sisl` in your default location, use :program:`--prefix <path>` for
 manual control of the placement.
 
 Requirements
 ------------
 
-To succesfully use ``sisl`` these Python packages must be installed:
+To succesfully use `sisl` these Python packages must be installed:
 
  - `six`_
  - `numpy`_
@@ -102,7 +102,7 @@ Indices and tables
 Documentation in other themes
 =============================
 
-The ``sisl`` documentation has been created with several different themes
+The `sisl` documentation has been created with several different themes
 of documentation.
 This is mainly of convenience until I have figured out which one is the
 best suited theme for this documentation.

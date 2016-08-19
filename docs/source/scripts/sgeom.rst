@@ -5,7 +5,7 @@
 `sgeom`
 =======
 
-The ``sgeom`` executable is a tool for reading and transforming general
+The `sgeom` executable is a tool for reading and transforming general
 coordinate formats to other formats, or alter them.
 
 For a short help description of the possible uses do:
@@ -23,7 +23,7 @@ Conversion
 ----------
 
 The simplest usage is transforming from one format to another format.
-``sgeom`` takes at least two mandatory arguments, the first being the
+`sgeom` takes at least two mandatory arguments, the first being the
 input file format, and the second (and any third + argumets) the output
 file formats
 
@@ -40,7 +40,7 @@ for plotting in a GUI program one can do this:
 
 and the ``RUN.xyz`` file will be created.
 
-Remark that the input file *must* be the first argument of ``sgeom``.
+Remark that the input file *must* be the first argument of `sgeom`.
 
     
 Available formats
@@ -68,7 +68,7 @@ Advanced Features
 
 More advanced features are represented here.
 
-The ``sgeom`` utility enables highly advanced creation of several geometry
+The `sgeom` utility enables highly advanced creation of several geometry
 structures by invocing the arguments *in order*.
 
 I.e. if one performs:
@@ -97,7 +97,7 @@ To repeat a structure do
 which repeats the structure one atom at a time, ``<int>`` times, in the corresponding direction.
 Note that ``x`` and ``a`` correspond to the same cell direction (the first).
 
-To repeat the structure in *chunks* one can use the ``tiling``:
+To repeat the structure in *chunks* one can use the ``--tile`` option:
 
 ::
 		
