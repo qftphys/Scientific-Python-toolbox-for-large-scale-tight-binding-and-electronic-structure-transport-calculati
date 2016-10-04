@@ -37,7 +37,7 @@ implemented in `sisl` are also compatible with `sgrid`.
 
 ::
 		
-   sgrid --geometry RUN.fdf Rho.grid.nc Rho.cube
+   sgrid Rho.grid.nc --geometry RUN.fdf Rho.cube
 
 
 the shorthand is ``-g``.
@@ -50,7 +50,7 @@ takes one additional grid file for the difference. I.e.
 
 ::
 		
-   sgrid -g RUN.fdf --diff Rho.grid.nc[1] Rho.grid.nc[0] diff_up-down.cube
+   sgrid Rho.grid.nc[0] -g RUN.fdf --diff Rho.grid.nc[1] diff_up-down.cube
 
 which takes the difference between the spin up and spin down in the same ``Rho.grid.nc`` file.
 
@@ -64,35 +64,23 @@ consuming. There are two methods for reducing grids:
 
 ::
 		
-   sgrid --grid-part <part=above|+|below|-> <[xa|yb|zc> <pos|<frac>f>
-   sgrid --grid-remove <remove=above|+|below|-> <[xa|yb|zc> <pos|<frac>f>
+   sgrid <file> --sub x <pos|<frac>f>
+   sgrid <file> --remove x [+-]<pos|<frac>f>
 
-the shorthand commands are:
-
-::
-		
-   sgrid -gp <part=above|+|below|-> <[xa|yb|zc> <pos|<frac>f>
-   sgrid -gr <remove=above|+|below|-> <[xa|yb|zc> <pos|<frac>f>
-   
 This needs an example, say the unit cell is a square unit-cell with side lengths 10x10x20 Angstrom.
 To reduce the cell to a middle square of 5x5x5 Angstrom you can do:
 
 ::
 		
-   sgrid -gp + x 2.5 -gp + y 2.5 -gp + z 7.5 -gr + 5 x -gr + 5 y -gr + z 5 Rho.grid.nc 5x5x5.cube
+   sgrid Rho.grid.nc --sub x 2.5:7.5 --sub y 2.5:7.5 --sub z 7.5:12.5 5x5x5.cube
 
-note that ``-gp`` will *always* be performed before ``-gr``, irrespective of the order of commands.
+note that the order of the reductions are made in the order of appearence. So *two* subsequent sub/remove
+commands with the same direction will not yield the same final grid.
 The individual commands can be understood via
 
-  - ``-gp + x 2.5``: keep the grid along the first cell direction above 2.5 Å. (equal to ``-gr - x 2.5``)
-  - ``-gp + y 2.5``: same as above but for the second cell direction.
-  - ``-gp + z 7.5``: keep the grid along the first cell direction above 7.5 Å. (equal to ``-gr - z 7.5``)
-  - ``-gr + x 5``: remove the grid above 5 Å along the first cell direction.
-  - ``-gr + y 5``: same as above but for the second cell direction.
-  - ``-gr + z 5``: same as above but for the third cell direction.
-
-note that ``--gr`` and ``--gp`` essentially performs the same operation, while one is removing and
-the other is retaining.
+  - ``--sub x 2.5:7.5``: keep the grid along the first cell direction above 2.5 Å and below 5 Å.
+  - ``--sub y 2.5:7.5``: keep the grid along the second cell direction above 2.5 Å and below 5 Å.
+  - ``--sub z 7.5:12.5``: keep the grid along the third cell direction above 7.5 Å and below 12.5 Å.
 
 When one is dealing with fractional coordinates is can be convenient to use fractional grid operations.
 The length unit for the position is *always* in Ångstrøm, unless an optional **f** is appended which
@@ -105,8 +93,8 @@ Sometimes it is convenient to average or sum grids along cell directions:
 
 ::
 		
-   sgrid --mean x Rho.grid.nc meanx.cube
-   sgrid --sum x Rho.grid.nc sumx.cube
+   sgrid Rho.grid.nc --average x meanx.cube
+   sgrid Rho.grid.nc --sum x sumx.cube
 
 which takes the average or the sum along the first cell direction, respectively. Note that this results
 in the number of partitions along that direction to be 1 (not all 3D software is capable of reading such a

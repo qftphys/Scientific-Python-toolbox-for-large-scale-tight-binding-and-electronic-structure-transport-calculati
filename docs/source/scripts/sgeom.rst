@@ -61,6 +61,8 @@ The currently available formats are:
   * **XV**, SIESTA coordinate format with velocities
   * **POSCAR**/**CONTCAR**, VASP coordinate format, does *not* contain species, i.e. returns Hydrogen geometry.
   * **ASCII**, BigDFT coordinate format
+  * **win**, Wannier90 input file
+  * **xsf**, XCrySDen coordinate format
 
 
 Advanced Features

@@ -99,7 +99,7 @@ autoclass_content = 'both'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['**/setupegg.py','sisl/**/setup.py','**/tests']
+exclude_patterns = ['**/setupegg.py','**/setup.py','**/tests']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -114,7 +114,7 @@ default_role = 'any'
 
 # If true, sectionauthor and moduleauthor directives will be shown in the
 # output. They are ignored by default.
-#show_authors = False
+show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
