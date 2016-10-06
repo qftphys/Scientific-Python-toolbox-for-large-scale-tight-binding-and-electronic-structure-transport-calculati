@@ -21,6 +21,8 @@ git pull
 tag=`git describe --abbrev=0`
 doc_tag=$tag
 head_tag=`git describe`
+# Define all themes that we want to create
+themes="sphinx_rtd_theme alabaster classic scrolls agogo bizstyle"
 python -c "from setup import write_version ; write_version()"
 git checkout gh-pages
 git pull
@@ -37,6 +39,10 @@ while [[ $# -gt 0 ]]; do
 	    ;;
 	--skip-commit|-sc)
 	    skip_commit=1
+	    ;;
+    --themes)
+        themes="$1"
+        shift
 	    ;;
 	*)
 	    echo "Unrecognized option: $opt"
@@ -97,9 +103,6 @@ tar xfz $tmpdir/gh-pages.tar.gz
 mkdir -p $docdir/docs/build
 mkdir -p $docdir/docs/static
 mkdir -p $docdir/docs/templates
-
-# Define all themes that we want to create
-themes="sphinx_rtd_theme alabaster classic scrolls agogo bizstyle"
 
 # Now move into the documentation folder and create the documentation
 # that we can then copy to the gh-pages branch
