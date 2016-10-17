@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.1
+        VERSION:     '0.7.6
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -44,7 +44,7 @@
 <span id="sisl-quaternion-module"></span><h1>sisl.quaternion module<a class="headerlink" href="#module-sisl.quaternion" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="sisl.quaternion.Quaternion">
-<em class="property">class </em><code class="descclassname">sisl.quaternion.</code><code class="descname">Quaternion</code><span class="sig-paren">(</span><em>angle=0.0</em>, <em>v=array([ 1.</em>, <em>0.</em>, <em>0.])</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quaternion.Quaternion" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sisl.quaternion.</code><code class="descname">Quaternion</code><span class="sig-paren">(</span><em>angle=0.0</em>, <em>v=None</em>, <em>radians=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quaternion.Quaternion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Quaternion object to enable easy rotational quantities.</p>
 <p class="rubric">Attributes</p>
@@ -55,7 +55,13 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.quaternion.Quaternion.angle" title="sisl.quaternion.Quaternion.angle"><code class="xref py py-obj docutils literal"><span class="pre">angle</span></code></a></td>
-<td>Returns the angle associated with this quaternion</td>
+<td>Returns the angle associated with this quaternion (in radians)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quaternion.Quaternion.degree" title="sisl.quaternion.Quaternion.degree"><code class="xref py py-obj docutils literal"><span class="pre">degree</span></code></a></td>
+<td>Returns the angle associated with this quaternion (in degree)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quaternion.Quaternion.radians" title="sisl.quaternion.Quaternion.radians"><code class="xref py py-obj docutils literal"><span class="pre">radians</span></code></a></td>
+<td>Returns the angle associated with this quaternion (in radians)</td>
 </tr>
 </tbody>
 </table>
@@ -89,7 +95,13 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.quaternion.Quaternion.angle" title="sisl.quaternion.Quaternion.angle"><code class="xref py py-obj docutils literal"><span class="pre">angle</span></code></a></td>
-<td>Returns the angle associated with this quaternion</td>
+<td>Returns the angle associated with this quaternion (in radians)</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quaternion.Quaternion.degree" title="sisl.quaternion.Quaternion.degree"><code class="xref py py-obj docutils literal"><span class="pre">degree</span></code></a></td>
+<td>Returns the angle associated with this quaternion (in degree)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quaternion.Quaternion.radians" title="sisl.quaternion.Quaternion.radians"><code class="xref py py-obj docutils literal"><span class="pre">radians</span></code></a></td>
+<td>Returns the angle associated with this quaternion (in radians)</td>
 </tr>
 </tbody>
 </table>
@@ -117,7 +129,7 @@
 <dl class="attribute">
 <dt id="sisl.quaternion.Quaternion.angle">
 <code class="descname">angle</code><a class="headerlink" href="#sisl.quaternion.Quaternion.angle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the angle associated with this quaternion</p>
+<dd><p>Returns the angle associated with this quaternion (in radians)</p>
 </dd></dl>
 
 <dl class="method">
@@ -132,10 +144,22 @@
 <dd><p>Return deepcopy of itself</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="sisl.quaternion.Quaternion.degree">
+<code class="descname">degree</code><a class="headerlink" href="#sisl.quaternion.Quaternion.degree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the angle associated with this quaternion (in degree)</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="sisl.quaternion.Quaternion.norm">
 <code class="descname">norm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quaternion.Quaternion.norm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the norm of this quaternion</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.quaternion.Quaternion.radians">
+<code class="descname">radians</code><a class="headerlink" href="#sisl.quaternion.Quaternion.radians" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the angle associated with this quaternion (in radians)</p>
 </dd></dl>
 
 <dl class="method">

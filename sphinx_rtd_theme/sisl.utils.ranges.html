@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sisl.utils.ranges module &mdash; sisl |release| documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="sisl |release| documentation" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> sisl
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="scripts/sgeom.html"><code class="docutils literal"><span class="pre">sgeom</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="scripts/sgrid.html"><code class="docutils literal"><span class="pre">sgrid</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="scripts/sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a></li>
+</ul>
+<ul class="simple">
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">sisl</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>sisl.utils.ranges module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/sisl.utils.ranges.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-sisl.utils.ranges">
+<span id="sisl-utils-ranges-module"></span><h1>sisl.utils.ranges module<a class="headerlink" href="#module-sisl.utils.ranges" title="Permalink to this headline">¶</a></h1>
+<p>Basic functionality of creating ranges from text-input and/or other types of information</p>
+<dl class="function">
+<dt id="sisl.utils.ranges.strmap">
+<code class="descclassname">sisl.utils.ranges.</code><code class="descname">strmap</code><span class="sig-paren">(</span><em>func</em>, <em>s</em>, <em>recursive=True</em>, <em>sep=':'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.ranges.strmap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a string and map all entries using <code class="xref any docutils literal"><span class="pre">func</span></code>.</p>
+<p>This parses a string and converts all <code class="xref any docutils literal"><span class="pre">,</span></code>-separated to entries
+in the list.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.ranges.strseq">
+<code class="descclassname">sisl.utils.ranges.</code><code class="descname">strseq</code><span class="sig-paren">(</span><em>func</em>, <em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.ranges.strseq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accepts strings and returns tuples of content based on ranges.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>func: function</strong></p>
+<blockquote>
+<div><p>parser of the individual elements</p>
+</div></blockquote>
+<p><strong>s: str</strong></p>
+<blockquote class="last">
+<div><p>string with content</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">strseq</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;3&#39;</span><span class="p">)</span>
+<span class="go">3</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">strseq</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;3-6&#39;</span><span class="p">)</span>
+<span class="go">(3, 6)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">strseq</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;3:2:7&#39;</span><span class="p">)</span>
+<span class="go">(3, 2, 7)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">strseq</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="s1">&#39;3.2:6.3&#39;</span><span class="p">)</span>
+<span class="go">(3.2, 6.3)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.ranges.lstranges">
+<code class="descclassname">sisl.utils.ranges.</code><code class="descname">lstranges</code><span class="sig-paren">(</span><em>lst</em>, <em>func=&lt;function erange&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.ranges.lstranges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a <a class="reference internal" href="#sisl.utils.ranges.strmap" title="sisl.utils.ranges.strmap"><code class="xref any py py-func docutils literal"><span class="pre">strmap</span></code></a> list into expanded ranges</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.ranges.erange">
+<code class="descclassname">sisl.utils.ranges.</code><code class="descname">erange</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.ranges.erange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the range with both ends includede</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.ranges.fileindex">
+<code class="descclassname">sisl.utils.ranges.</code><code class="descname">fileindex</code><span class="sig-paren">(</span><em>f</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.ranges.fileindex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses a filename string into the filename and the indices.</p>
+<dl class="docutils">
+<dt>This range can be formatted like this:</dt>
+<dd>file[1,2,3-6]</dd>
+<dt>in which case it will return:</dt>
+<dd>file, [1,2,3,4,5,6]</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, Nick R. Papior.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.7.6
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

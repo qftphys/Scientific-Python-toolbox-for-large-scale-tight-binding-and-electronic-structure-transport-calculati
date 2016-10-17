@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sisl.io.wannier package &mdash; sisl |release| documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.7.6
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="sisl |release| documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">sisl</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="sisl-io-wannier-package">
+<h1>sisl.io.wannier package<a class="headerlink" href="#sisl-io-wannier-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sisl.io.wannier.seedname.html">sisl.io.wannier.seedname module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sisl.io.wannier.setup.html">sisl.io.wannier.setup module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sisl.io.wannier.sile.html">sisl.io.wannier.sile module</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="module-sisl.io.wannier">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sisl.io.wannier" title="Permalink to this headline">¶</a></h2>
+<p>Wannier90 I/O Siles</p>
+<dl class="class">
+<dt id="sisl.io.wannier.SileW90">
+<em class="property">class </em><code class="descclassname">sisl.io.wannier.</code><code class="descname">SileW90</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.wannier.SileW90" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.Sile</span></code></a></p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td>Returns the arguments that may be available for this Sile</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
+<td>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
+<td>Converts str/list of keywords to proper case</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
+<td>Converts str/list of keywords to proper case</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
+<td>Reads the next line of the file</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Wrapper for the file-handle write statement</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="sisl.io.wannier.winSileW90">
+<em class="property">class </em><code class="descclassname">sisl.io.wannier.</code><code class="descname">winSileW90</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.wannier.winSileW90" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.wannier.sile.html#sisl.io.wannier.sile.SileW90" title="sisl.io.wannier.sile.SileW90"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.wannier.sile.SileW90</span></code></a></p>
+<p>Wannier seedname output file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.wannier.winSileW90.ArgumentParser" title="sisl.io.wannier.winSileW90.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Returns the arguments that is available for this Sile</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
+<td>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
+<td>Converts str/list of keywords to proper case</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
+<td>Converts str/list of keywords to proper case</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.wannier.winSileW90.read_es" title="sisl.io.wannier.winSileW90.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Read the electronic structure of the Wannier90 output</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.wannier.winSileW90.read_geom" title="sisl.io.wannier.winSileW90.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Reads a <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> and creates the Wannier90 cell</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.wannier.winSileW90.read_sc" title="sisl.io.wannier.winSileW90.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<td>Reads a <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> and creates the Wannier90 cell</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
+<td>Reads the next line of the file</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Wrapper for the file-handle write statement</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sisl.io.wannier.winSileW90.ArgumentParser">
+<code class="descname">ArgumentParser</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.wannier.winSileW90.ArgumentParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the arguments that is available for this Sile</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.wannier.winSileW90.read_es">
+<code class="descname">read_es</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.wannier.winSileW90.read_es" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the electronic structure of the Wannier90 output</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>cutoff: (float, 0.00001)</strong></p>
+<blockquote class="last">
+<div><p>the cutoff value for the zero Hamiltonian elements</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.wannier.winSileW90.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.wannier.winSileW90.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> and creates the Wannier90 cell</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.wannier.winSileW90.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.wannier.winSileW90.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> and creates the Wannier90 cell</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">sisl.io.wannier package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-sisl.io.wannier">Module contents</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sisl.io.wannier.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">sisl</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

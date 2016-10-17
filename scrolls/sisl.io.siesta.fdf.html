@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.1
+        VERSION:     '0.7.6
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -44,9 +44,9 @@
 <span id="sisl-io-siesta-fdf-module"></span><h1>sisl.io.siesta.fdf module<a class="headerlink" href="#module-sisl.io.siesta.fdf" title="Permalink to this headline">¶</a></h1>
 <p>Sile object for reading/writing FDF files</p>
 <dl class="class">
-<dt id="sisl.io.siesta.fdf.FDFSile">
-<em class="property">class </em><code class="descclassname">sisl.io.siesta.fdf.</code><code class="descname">FDFSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>base=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.FDFSile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="sisl.io.siesta.sile.html#sisl.io.siesta.sile.SileSIESTA" title="sisl.io.siesta.sile.SileSIESTA"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.sile.SileSIESTA</span></code></a></p>
+<dt id="sisl.io.siesta.fdf.fdfSileSiesta">
+<em class="property">class </em><code class="descclassname">sisl.io.siesta.fdf.</code><code class="descname">fdfSileSiesta</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>base=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.fdfSileSiesta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.siesta.sile.html#sisl.io.siesta.sile.SileSiesta" title="sisl.io.siesta.sile.SileSiesta"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.sile.SileSiesta</span></code></a></p>
 <p>FDF file object</p>
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
@@ -55,11 +55,17 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.FDFSile.get" title="sisl.io.siesta.fdf.FDFSile.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(key[,&nbsp;unit,&nbsp;default])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.ArgumentParser" title="sisl.io.siesta.fdf.fdfSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>([parser])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.get" title="sisl.io.siesta.fdf.fdfSileSiesta.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(key[,&nbsp;unit,&nbsp;default,&nbsp;with_unit])</td>
 <td>Retrieve fdf-keyword from the file</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
 <td>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.key" title="sisl.io.siesta.fdf.fdfSileSiesta.key"><code class="xref py py-obj docutils literal"><span class="pre">key</span></code></a>(key)</td>
+<td>Return the key as written in the fdf-file.</td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
 <td>Converts str/list of keywords to proper case</td>
@@ -73,25 +79,31 @@
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.FDFSile.read_geom" title="sisl.io.siesta.fdf.FDFSile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_geom" title="sisl.io.siesta.fdf.fdfSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.FDFSile.read_sc" title="sisl.io.siesta.fdf.FDFSile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_sc" title="sisl.io.siesta.fdf.fdfSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.FDFSile.readline" title="sisl.io.siesta.fdf.FDFSile.readline"><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code></a>([comment])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.readline" title="sisl.io.siesta.fdf.fdfSileSiesta.readline"><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code></a>([comment])</td>
 <td>Reads the next line of the file</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.set" title="sisl.io.siesta.fdf.fdfSileSiesta.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(key,&nbsp;value)</td>
+<td>Add the key and value to the FDF file</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.type" title="sisl.io.siesta.fdf.fdfSileSiesta.type"><code class="xref py py-obj docutils literal"><span class="pre">type</span></code></a>(key)</td>
+<td>Return the type of the fdf-keyword</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
 <td>Wrapper for the file-handle write statement</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.FDFSile.write_geom" title="sisl.io.siesta.fdf.FDFSile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.write_geom" title="sisl.io.siesta.fdf.fdfSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
 </tbody>
@@ -106,11 +118,17 @@ By default the <code class="docutils literal"><span class="pre">base</span></cod
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.FDFSile.get" title="sisl.io.siesta.fdf.FDFSile.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(key[,&nbsp;unit,&nbsp;default])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.ArgumentParser" title="sisl.io.siesta.fdf.fdfSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>([parser])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.get" title="sisl.io.siesta.fdf.fdfSileSiesta.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(key[,&nbsp;unit,&nbsp;default,&nbsp;with_unit])</td>
 <td>Retrieve fdf-keyword from the file</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
 <td>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.key" title="sisl.io.siesta.fdf.fdfSileSiesta.key"><code class="xref py py-obj docutils literal"><span class="pre">key</span></code></a>(key)</td>
+<td>Return the key as written in the fdf-file.</td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
 <td>Converts str/list of keywords to proper case</td>
@@ -124,54 +142,83 @@ By default the <code class="docutils literal"><span class="pre">base</span></cod
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.FDFSile.read_geom" title="sisl.io.siesta.fdf.FDFSile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_geom" title="sisl.io.siesta.fdf.fdfSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.FDFSile.read_sc" title="sisl.io.siesta.fdf.FDFSile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_sc" title="sisl.io.siesta.fdf.fdfSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.FDFSile.readline" title="sisl.io.siesta.fdf.FDFSile.readline"><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code></a>([comment])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.readline" title="sisl.io.siesta.fdf.fdfSileSiesta.readline"><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code></a>([comment])</td>
 <td>Reads the next line of the file</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.set" title="sisl.io.siesta.fdf.fdfSileSiesta.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(key,&nbsp;value)</td>
+<td>Add the key and value to the FDF file</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.type" title="sisl.io.siesta.fdf.fdfSileSiesta.type"><code class="xref py py-obj docutils literal"><span class="pre">type</span></code></a>(key)</td>
+<td>Return the type of the fdf-keyword</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
 <td>Wrapper for the file-handle write statement</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.FDFSile.write_geom" title="sisl.io.siesta.fdf.FDFSile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.write_geom" title="sisl.io.siesta.fdf.fdfSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
-<dt id="sisl.io.siesta.fdf.FDFSile.get">
-<code class="descname">get</code><span class="sig-paren">(</span><em>key</em>, <em>unit=None</em>, <em>default=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.FDFSile.get" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.fdf.fdfSileSiesta.ArgumentParser">
+<code class="descname">ArgumentParser</code><span class="sig-paren">(</span><em>parser=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.fdfSileSiesta.ArgumentParser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.fdf.fdfSileSiesta.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>key</em>, <em>unit=None</em>, <em>default=None</em>, <em>with_unit=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.fdfSileSiesta.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve fdf-keyword from the file</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.fdf.FDFSile.read_geom">
-<code class="descname">read_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.FDFSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.fdf.fdfSileSiesta.key">
+<code class="descname">key</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.fdfSileSiesta.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the key as written in the fdf-file. If not found, returns <code class="xref any docutils literal"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.fdf.fdfSileSiesta.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_geom" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.fdf.FDFSile.read_sc">
-<code class="descname">read_sc</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.FDFSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.fdf.fdfSileSiesta.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_sc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.fdf.FDFSile.readline">
-<code class="descname">readline</code><span class="sig-paren">(</span><em>comment=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.FDFSile.readline" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.fdf.fdfSileSiesta.readline">
+<code class="descname">readline</code><span class="sig-paren">(</span><em>comment=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.fdfSileSiesta.readline" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads the next line of the file</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.fdf.FDFSile.write_geom">
-<code class="descname">write_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.FDFSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.fdf.fdfSileSiesta.set">
+<code class="descname">set</code><span class="sig-paren">(</span><em>key</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.fdfSileSiesta.set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add the key and value to the FDF file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.fdf.fdfSileSiesta.type">
+<code class="descname">type</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.fdfSileSiesta.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the type of the fdf-keyword</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.fdf.fdfSileSiesta.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.fdf.fdfSileSiesta.write_geom" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

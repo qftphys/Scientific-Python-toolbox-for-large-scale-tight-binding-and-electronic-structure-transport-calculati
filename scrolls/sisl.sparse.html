@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.1
+        VERSION:     '0.7.6
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -45,7 +45,7 @@
 <p>Sparsity pattern used to express matrices in concise manners.</p>
 <dl class="class">
 <dt id="sisl.sparse.SparseCSR">
-<em class="property">class </em><code class="descclassname">sisl.sparse.</code><code class="descname">SparseCSR</code><span class="sig-paren">(</span><em>arg1</em>, <em>dim=1</em>, <em>dtype=None</em>, <em>nnzpr=None</em>, <em>nnz=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.sparse.SparseCSR" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sisl.sparse.</code><code class="descname">SparseCSR</code><span class="sig-paren">(</span><em>arg1</em>, <em>dim=1</em>, <em>dtype=None</em>, <em>nnzpr=20</em>, <em>nnz=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.sparse.SparseCSR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>A compressed sparse row matrix, slightly different than <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code>.</p>
 <p>This class holds all required information regarding the CSR matrix format.</p>
@@ -93,7 +93,7 @@ correct.</p>
 <td>Finalizes the sparse matrix by removing all non-set elements</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.fromcsr" title="sisl.sparse.SparseCSR.fromcsr"><code class="xref py py-obj docutils literal"><span class="pre">fromcsr</span></code></a>(csr[,&nbsp;dim])</td>
-<td>Return a new <code class="docutils literal"><span class="pre">SparseData</span></code> object from a csr matrix</td>
+<td>Return a new <code class="docutils literal"><span class="pre">SparseCSR</span></code> object from a csr matrix</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.tocsr" title="sisl.sparse.SparseCSR.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>([dim])</td>
 <td>Return the data in <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> format</td>
@@ -127,14 +127,12 @@ creation of the sparse matrix</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>nnzpr</strong> : int, 20</p>
 <blockquote>
 <div><p>initial number of non-zero elements per row.
-If <a class="reference internal" href="#sisl.sparse.SparseCSR.nnz" title="sisl.sparse.SparseCSR.nnz"><code class="xref any py py-attr docutils literal"><span class="pre">nnz</span></code></a> is supplied it will set:
-<code class="xref any docutils literal"><span class="pre">nnzpr</span> <span class="pre">=</span> <span class="pre">max(nnzpr,</span> <span class="pre">nnz</span> <span class="pre">//</span> <span class="pre">M)</span></code></p>
+Only used if <a class="reference internal" href="#sisl.sparse.SparseCSR.nnz" title="sisl.sparse.SparseCSR.nnz"><code class="xref any py py-attr docutils literal"><span class="pre">nnz</span></code></a> is not supplied</p>
 </div></blockquote>
 <p><strong>nnz</strong> : int</p>
 <blockquote>
 <div><p>initial total number of non-zero elements
-If <code class="xref any docutils literal"><span class="pre">nnzpr</span></code> is supplied it will set:
-<code class="xref any docutils literal"><span class="pre">nnzpr</span> <span class="pre">=</span> <span class="pre">max(nnzpr,</span> <span class="pre">nnz</span> <span class="pre">//</span> <span class="pre">M)</span></code></p>
+This quantity has precedence over <code class="xref any docutils literal"><span class="pre">nnzpr</span></code></p>
 </div></blockquote>
 <p><strong>dim</strong> : int, 1</p>
 <blockquote>
@@ -195,7 +193,7 @@ If <code class="xref any docutils literal"><span class="pre">nnzpr</span></code>
 <td>Finalizes the sparse matrix by removing all non-set elements</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.fromcsr" title="sisl.sparse.SparseCSR.fromcsr"><code class="xref py py-obj docutils literal"><span class="pre">fromcsr</span></code></a>(csr[,&nbsp;dim])</td>
-<td>Return a new <code class="docutils literal"><span class="pre">SparseData</span></code> object from a csr matrix</td>
+<td>Return a new <code class="docutils literal"><span class="pre">SparseCSR</span></code> object from a csr matrix</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.tocsr" title="sisl.sparse.SparseCSR.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>([dim])</td>
 <td>Return the data in <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> format</td>
@@ -284,7 +282,7 @@ when converting to <code class="docutils literal"><span class="pre">scipy.sparse
 <dl class="staticmethod">
 <dt id="sisl.sparse.SparseCSR.fromcsr">
 <em class="property">static </em><code class="descname">fromcsr</code><span class="sig-paren">(</span><em>csr</em>, <em>dim=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.sparse.SparseCSR.fromcsr" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a new <code class="docutils literal"><span class="pre">SparseData</span></code> object from a csr matrix</p>
+<dd><p>Return a new <code class="docutils literal"><span class="pre">SparseCSR</span></code> object from a csr matrix</p>
 </dd></dl>
 
 <dl class="attribute">

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sisl.io.table module &mdash; sisl |release| documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.7.6
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="sisl |release| documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-sisl.io.table">
+<span id="sisl-io-table-module"></span><h1>sisl.io.table module<a class="headerlink" href="#module-sisl.io.table" title="Permalink to this headline">¶</a></h1>
+<p>Sile object for reading/writing a file with tabular data</p>
+<dl class="class">
+<dt id="sisl.io.table.TableSile">
+<em class="property">class </em><code class="descclassname">sisl.io.table.</code><code class="descname">TableSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.table.TableSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.Sile</span></code></a></p>
+<p>Table file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td>Returns the arguments that may be available for this Sile</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
+<td>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
+<td>Converts str/list of keywords to proper case</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
+<td>Converts str/list of keywords to proper case</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
+<td>Reads the next line of the file</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.table.TableSile.write" title="sisl.io.table.TableSile.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(data[,&nbsp;header,&nbsp;fmt,&nbsp;comment,&nbsp;delimiter])</td>
+<td>Write tabular data to the file with optional header.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sisl.io.table.TableSile.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>data</em>, <em>header=None</em>, <em>fmt='%.5e'</em>, <em>comment=None</em>, <em>delimiter='\t'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.table.TableSile.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write tabular data to the file with optional header.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sisl.io.table.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015, Nick R. Papior.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="_sources/sisl.io.table.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

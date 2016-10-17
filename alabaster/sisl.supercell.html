@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.1
+        VERSION:     '0.7.6
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -46,7 +46,7 @@
 <p>This class is the basis of many different objects.</p>
 <dl class="class">
 <dt id="sisl.supercell.SuperCell">
-<em class="property">class </em><code class="descclassname">sisl.supercell.</code><code class="descname">SuperCell</code><span class="sig-paren">(</span><em>cell, nsc=array([1, 1, 1], dtype=int32)</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sisl.supercell.</code><code class="descname">SuperCell</code><span class="sig-paren">(</span><em>cell</em>, <em>nsc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Object to retain a super-cell and its nested values.</p>
 <p>This supercell object handles cell vectors and its supercell mirrors.</p>
@@ -58,7 +58,7 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rcell" title="sisl.supercell.SuperCell.rcell"><code class="xref py py-obj docutils literal"><span class="pre">rcell</span></code></a></td>
-<td>Returns the reciprocal cell for the <a class="reference internal" href="#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a></td>
+<td>Returns the reciprocal cell for the <a class="reference internal" href="#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> without <code class="xref any docutils literal"><span class="pre">2*np.pi</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -87,19 +87,19 @@
 <tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.offset" title="sisl.supercell.SuperCell.offset"><code class="xref py py-obj docutils literal"><span class="pre">offset</span></code></a>([isc])</td>
 <td>Returns the supercell offset of the supercell index</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.read" title="sisl.supercell.SuperCell.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.read" title="sisl.supercell.SuperCell.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Reads SuperCell from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <code class="xref any docutils literal"><span class="pre">Sile.read_sc</span></code></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotate" title="sisl.supercell.SuperCell.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>(angle,&nbsp;v[,&nbsp;only,&nbsp;degree])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotate" title="sisl.supercell.SuperCell.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>(angle,&nbsp;v[,&nbsp;only,&nbsp;radians])</td>
 <td>Rotates the supercell, in-place by the angle around the vector</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotatea" title="sisl.supercell.SuperCell.rotatea"><code class="xref py py-obj docutils literal"><span class="pre">rotatea</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotatea" title="sisl.supercell.SuperCell.rotatea"><code class="xref py py-obj docutils literal"><span class="pre">rotatea</span></code></a>(angle[,&nbsp;only,&nbsp;radians])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotateb" title="sisl.supercell.SuperCell.rotateb"><code class="xref py py-obj docutils literal"><span class="pre">rotateb</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotateb" title="sisl.supercell.SuperCell.rotateb"><code class="xref py py-obj docutils literal"><span class="pre">rotateb</span></code></a>(angle[,&nbsp;only,&nbsp;radians])</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotatec" title="sisl.supercell.SuperCell.rotatec"><code class="xref py py-obj docutils literal"><span class="pre">rotatec</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotatec" title="sisl.supercell.SuperCell.rotatec"><code class="xref py py-obj docutils literal"><span class="pre">rotatec</span></code></a>(angle[,&nbsp;only,&nbsp;radians])</td>
 <td></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.sc_index" title="sisl.supercell.SuperCell.sc_index"><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code></a>(sc_off)</td>
@@ -133,7 +133,7 @@ and number of supercells in each direction.</p>
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rcell" title="sisl.supercell.SuperCell.rcell"><code class="xref py py-obj docutils literal"><span class="pre">rcell</span></code></a></td>
-<td>Returns the reciprocal cell for the <a class="reference internal" href="#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a></td>
+<td>Returns the reciprocal cell for the <a class="reference internal" href="#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> without <code class="xref any docutils literal"><span class="pre">2*np.pi</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -162,19 +162,19 @@ and number of supercells in each direction.</p>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.offset" title="sisl.supercell.SuperCell.offset"><code class="xref py py-obj docutils literal"><span class="pre">offset</span></code></a>([isc])</td>
 <td>Returns the supercell offset of the supercell index</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.read" title="sisl.supercell.SuperCell.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.read" title="sisl.supercell.SuperCell.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Reads SuperCell from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <code class="xref any docutils literal"><span class="pre">Sile.read_sc</span></code></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotate" title="sisl.supercell.SuperCell.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>(angle,&nbsp;v[,&nbsp;only,&nbsp;degree])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotate" title="sisl.supercell.SuperCell.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>(angle,&nbsp;v[,&nbsp;only,&nbsp;radians])</td>
 <td>Rotates the supercell, in-place by the angle around the vector</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotatea" title="sisl.supercell.SuperCell.rotatea"><code class="xref py py-obj docutils literal"><span class="pre">rotatea</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotatea" title="sisl.supercell.SuperCell.rotatea"><code class="xref py py-obj docutils literal"><span class="pre">rotatea</span></code></a>(angle[,&nbsp;only,&nbsp;radians])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotateb" title="sisl.supercell.SuperCell.rotateb"><code class="xref py py-obj docutils literal"><span class="pre">rotateb</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotateb" title="sisl.supercell.SuperCell.rotateb"><code class="xref py py-obj docutils literal"><span class="pre">rotateb</span></code></a>(angle[,&nbsp;only,&nbsp;radians])</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotatec" title="sisl.supercell.SuperCell.rotatec"><code class="xref py py-obj docutils literal"><span class="pre">rotatec</span></code></a>(angle[,&nbsp;only,&nbsp;degree])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotatec" title="sisl.supercell.SuperCell.rotatec"><code class="xref py py-obj docutils literal"><span class="pre">rotatec</span></code></a>(angle[,&nbsp;only,&nbsp;radians])</td>
 <td></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.sc_index" title="sisl.supercell.SuperCell.sc_index"><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code></a>(sc_off)</td>
@@ -244,21 +244,21 @@ and number of supercells in each direction.</p>
 
 <dl class="method">
 <dt id="sisl.supercell.SuperCell.offset">
-<code class="descname">offset</code><span class="sig-paren">(</span><em>isc=[0, 0, 0]</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell.offset" title="Permalink to this definition">¶</a></dt>
+<code class="descname">offset</code><span class="sig-paren">(</span><em>isc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell.offset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the supercell offset of the supercell index</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="sisl.supercell.SuperCell.rcell">
 <code class="descname">rcell</code><a class="headerlink" href="#sisl.supercell.SuperCell.rcell" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the reciprocal cell for the <a class="reference internal" href="#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a></p>
+<dd><p>Returns the reciprocal cell for the <a class="reference internal" href="#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> without <code class="xref any docutils literal"><span class="pre">2*np.pi</span></code></p>
 <p>Note: The returned vectors are still in [0,:] format
 and not as returned by an inverse LAPACK algorithm.</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="sisl.supercell.SuperCell.read">
-<em class="property">static </em><code class="descname">read</code><span class="sig-paren">(</span><em>sile</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell.read" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">read</code><span class="sig-paren">(</span><em>sile</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell.read" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads SuperCell from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <code class="xref any docutils literal"><span class="pre">Sile.read_sc</span></code></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -277,7 +277,7 @@ if it is a string it will create a new sile using <a class="reference internal" 
 
 <dl class="method">
 <dt id="sisl.supercell.SuperCell.rotate">
-<code class="descname">rotate</code><span class="sig-paren">(</span><em>angle</em>, <em>v</em>, <em>only='abc'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell.rotate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rotate</code><span class="sig-paren">(</span><em>angle</em>, <em>v</em>, <em>only='abc'</em>, <em>radians=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell.rotate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rotates the supercell, in-place by the angle around the vector</p>
 <p>One can control which cell vectors are rotated by designating them
 individually with <code class="docutils literal"><span class="pre">only='[abc]'</span></code>.</p>
@@ -287,16 +287,16 @@ individually with <code class="docutils literal"><span class="pre">only='[abc]'<
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>angle</strong> : float</p>
 <blockquote>
-<div><p>the angle in radians of which the geometry should be rotated</p>
+<div><p>the angle of which the geometry should be rotated</p>
 </div></blockquote>
 <p><strong>v</strong> : array_like [3]</p>
 <blockquote>
 <div><p>the vector around the rotation is going to happen
 v = [1,0,0] will rotate in the <code class="docutils literal"><span class="pre">yz</span></code> plane</p>
 </div></blockquote>
-<p><strong>degree</strong> : bool</p>
+<p><strong>radians</strong> : bool, False</p>
 <blockquote>
-<div><p>Whether the angle is in radians (False) or in degrees (True, default)</p>
+<div><p>Whether the angle is in radians (True) or in degrees (False)</p>
 </div></blockquote>
 <p><strong>only</strong> : (&#8216;abc&#8217;), str, optional</p>
 <blockquote class="last">
@@ -310,17 +310,17 @@ v = [1,0,0] will rotate in the <code class="docutils literal"><span class="pre">
 
 <dl class="method">
 <dt id="sisl.supercell.SuperCell.rotatea">
-<code class="descname">rotatea</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell.rotatea" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rotatea</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc'</em>, <em>radians=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell.rotatea" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sisl.supercell.SuperCell.rotateb">
-<code class="descname">rotateb</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell.rotateb" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rotateb</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc'</em>, <em>radians=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell.rotateb" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="sisl.supercell.SuperCell.rotatec">
-<code class="descname">rotatec</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc'</em>, <em>degree=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell.rotatec" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rotatec</code><span class="sig-paren">(</span><em>angle</em>, <em>only='abc'</em>, <em>radians=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.supercell.SuperCell.rotatec" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">

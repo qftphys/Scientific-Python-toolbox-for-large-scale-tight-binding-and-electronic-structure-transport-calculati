@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.1
+        VERSION:     '0.7.6
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -83,31 +83,34 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td>Returns the arguments that may be available for this Sile</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
 <td>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
 <td>Converts str/list of keywords to proper case</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
 <td>Converts str/list of keywords to proper case</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
 <td>Reads the next line of the file</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
 <td>Wrapper for the file-handle write statement</td>
 </tr>
 </tbody>
@@ -115,11 +118,11 @@
 </dd></dl>
 
 <dl class="class">
-<dt id="sisl.io.vasp.NCSileVASP">
-<em class="property">class </em><code class="descclassname">sisl.io.vasp.</code><code class="descname">NCSileVASP</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>lvl=0</em>, <em>access=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.NCSileVASP" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.NCSile" title="sisl.io.sile.NCSile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.NCSile</span></code></a></p>
-<p>Creates/Opens a NCSile</p>
-<p>Opens a NCSile with <code class="xref any docutils literal"><span class="pre">mode</span></code> and compression level <code class="xref any docutils literal"><span class="pre">lvl</span></code>.
+<dt id="sisl.io.vasp.SileCDFVASP">
+<em class="property">class </em><code class="descclassname">sisl.io.vasp.</code><code class="descname">SileCDFVASP</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>lvl=0</em>, <em>access=1</em>, <em>_open=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.SileCDFVASP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.SileCDF" title="sisl.io.sile.SileCDF"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.SileCDF</span></code></a></p>
+<p>Creates/Opens a SileCDF</p>
+<p>Opens a SileCDF with <code class="xref any docutils literal"><span class="pre">mode</span></code> and compression level <code class="xref any docutils literal"><span class="pre">lvl</span></code>.
 If <code class="xref any docutils literal"><span class="pre">mode</span></code> is in read-mode (r) the compression level
 is ignored.</p>
 <p>The final <code class="xref any docutils literal"><span class="pre">access</span></code> parameter sets how the file should be
@@ -128,11 +131,44 @@ open and subsequently accessed.</p>
 <li>means direct file access for every variable read</li>
 <li>means stores certain variables in the object.</li>
 </ol>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td>Returns the arguments that may be available for this Sile</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="class">
-<dt id="sisl.io.vasp.CARSile">
-<em class="property">class </em><code class="descclassname">sisl.io.vasp.</code><code class="descname">CARSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.CARSile" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.vasp.SileBinVASP">
+<em class="property">class </em><code class="descclassname">sisl.io.vasp.</code><code class="descname">SileBinVASP</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.SileBinVASP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.SileBin" title="sisl.io.sile.SileBin"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.SileBin</span></code></a></p>
+<p>Creates/Opens a SileBin</p>
+<p>Opens a SileBin with <code class="xref any docutils literal"><span class="pre">mode</span></code> (b).
+If <code class="xref any docutils literal"><span class="pre">mode</span></code> is in read-mode (r).</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td>Returns the arguments that may be available for this Sile</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="sisl.io.vasp.CARSileVASP">
+<em class="property">class </em><code class="descclassname">sisl.io.vasp.</code><code class="descname">CARSileVASP</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.CARSileVASP" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="sisl.io.vasp.sile.html#sisl.io.vasp.sile.SileVASP" title="sisl.io.vasp.sile.SileVASP"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.vasp.sile.SileVASP</span></code></a></p>
 <p>CAR file object
 This file-object handles both POSCAR and CONTCAR files</p>
@@ -143,65 +179,74 @@ This file-object handles both POSCAR and CONTCAR files</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.vasp.CARSileVASP.ArgumentParser" title="sisl.io.vasp.CARSileVASP.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Returns the arguments that is available for this Sile</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
 <td>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
 <td>Converts str/list of keywords to proper case</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
 <td>Converts str/list of keywords to proper case</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.vasp.CARSile.read_geom" title="sisl.io.vasp.CARSile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.vasp.CARSileVASP.read_geom" title="sisl.io.vasp.CARSileVASP.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.vasp.CARSile.read_sc" title="sisl.io.vasp.CARSile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.vasp.CARSileVASP.read_sc" title="sisl.io.vasp.CARSileVASP.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
 <td>Reads the next line of the file</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
 <td>Wrapper for the file-handle write statement</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.vasp.CARSile.write_geom" title="sisl.io.vasp.CARSile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.vasp.CARSileVASP.write_geom" title="sisl.io.vasp.CARSileVASP.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
-<dt id="sisl.io.vasp.CARSile.read_geom">
-<code class="descname">read_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.CARSile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.vasp.CARSileVASP.ArgumentParser">
+<code class="descname">ArgumentParser</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.CARSileVASP.ArgumentParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the arguments that is available for this Sile</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.vasp.CARSileVASP.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.CARSileVASP.read_geom" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.vasp.CARSile.read_sc">
-<code class="descname">read_sc</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.CARSile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.vasp.CARSileVASP.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.CARSileVASP.read_sc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.vasp.CARSile.write_geom">
-<code class="descname">write_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.CARSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.vasp.CARSileVASP.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.CARSileVASP.write_geom" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="sisl.io.vasp.POSCARSile">
-<em class="property">class </em><code class="descclassname">sisl.io.vasp.</code><code class="descname">POSCARSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.POSCARSile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="sisl.io.vasp.car.html#sisl.io.vasp.car.CARSile" title="sisl.io.vasp.car.CARSile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.vasp.car.CARSile</span></code></a></p>
+<dt id="sisl.io.vasp.POSCARSileVASP">
+<em class="property">class </em><code class="descclassname">sisl.io.vasp.</code><code class="descname">POSCARSileVASP</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.POSCARSileVASP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.vasp.car.html#sisl.io.vasp.car.CARSileVASP" title="sisl.io.vasp.car.CARSileVASP"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.vasp.car.CARSileVASP</span></code></a></p>
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
 <colgroup>
@@ -209,40 +254,43 @@ This file-object handles both POSCAR and CONTCAR files</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Returns the arguments that is available for this Sile</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
 <td>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
 <td>Converts str/list of keywords to proper case</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
 <td>Converts str/list of keywords to proper case</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
 <td>Reads the next line of the file</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
 <td>Wrapper for the file-handle write statement</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
 </tbody>
@@ -250,9 +298,9 @@ This file-object handles both POSCAR and CONTCAR files</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="sisl.io.vasp.CONTCARSile">
-<em class="property">class </em><code class="descclassname">sisl.io.vasp.</code><code class="descname">CONTCARSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.CONTCARSile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="sisl.io.vasp.car.html#sisl.io.vasp.car.CARSile" title="sisl.io.vasp.car.CARSile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.vasp.car.CARSile</span></code></a></p>
+<dt id="sisl.io.vasp.CONTCARSileVASP">
+<em class="property">class </em><code class="descclassname">sisl.io.vasp.</code><code class="descname">CONTCARSileVASP</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.vasp.CONTCARSileVASP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.vasp.car.html#sisl.io.vasp.car.CARSileVASP" title="sisl.io.vasp.car.CARSileVASP"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.vasp.car.CARSileVASP</span></code></a></p>
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
 <colgroup>
@@ -260,40 +308,43 @@ This file-object handles both POSCAR and CONTCAR files</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Returns the arguments that is available for this Sile</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
 <td>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
 <td>Converts str/list of keywords to proper case</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
 <td>Converts str/list of keywords to proper case</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
 <td>Reads the next line of the file</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
 <td>Wrapper for the file-handle write statement</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
 </tbody>

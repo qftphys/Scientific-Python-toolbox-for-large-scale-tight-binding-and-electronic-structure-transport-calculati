@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>sisl.units module &mdash; sisl |release| documentation</title>
+    <title>sisl.units package &mdash; sisl |release| documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.1
+        VERSION:     '0.7.6
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -40,9 +40,99 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="module-sisl.units">
-<span id="sisl-units-module"></span><h1>sisl.units module<a class="headerlink" href="#module-sisl.units" title="Permalink to this headline">¶</a></h1>
-<p>Class for retaining information about units</p>
+  <div class="section" id="sisl-units-package">
+<h1>sisl.units package<a class="headerlink" href="#sisl-units-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sisl.units.setup.html">sisl.units.setup module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sisl.units.siesta.html">sisl.units.siesta module</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="module-sisl.units">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sisl.units" title="Permalink to this headline">¶</a></h2>
+<p>Units from various programs</p>
+<p>This conversion tool is inspired by the SIESTA fdf-parser in its
+group-construct.</p>
+<dl class="function">
+<dt id="sisl.units.unit_group">
+<code class="descclassname">sisl.units.</code><code class="descname">unit_group</code><span class="sig-paren">(</span><em>unit</em>, <em>tbl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.units.unit_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the unit group that is associated with
+input unit.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>unit</strong> : str</p>
+<blockquote class="last">
+<div><p>unit, e.g. kg, Ang, eV etc. returns the type of unit it is.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">unit_group</span><span class="p">(</span><span class="s1">&#39;kg&#39;</span><span class="p">)</span>
+<span class="go">&#39;mass&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">unit_group</span><span class="p">(</span><span class="s1">&#39;eV&#39;</span><span class="p">)</span>
+<span class="go">&#39;energy&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.units.unit_convert">
+<code class="descclassname">sisl.units.</code><code class="descname">unit_convert</code><span class="sig-paren">(</span><em>fr</em>, <em>to</em>, <em>opts={}</em>, <em>tbl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.units.unit_convert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the factor that takes &#8216;fr&#8217; to the units of &#8216;to&#8217;.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fr :</strong></p>
+<blockquote>
+<div><p>starting unit</p>
+</div></blockquote>
+<p><strong>to :</strong></p>
+<blockquote>
+<div><p>ending unit</p>
+</div></blockquote>
+<p><strong>opts :</strong></p>
+<blockquote>
+<div><p>controls whether the unit conversion is in powers or fractional units</p>
+</div></blockquote>
+<p><strong>Examples</strong></p>
+<p><strong>&#8212;&#8212;-</strong></p>
+<p><strong>&gt;&gt;&gt; unit_convert(&#8216;kg&#8217;,&#8217;g&#8217;)</strong></p>
+<p><strong>1000</strong></p>
+<p><strong>&gt;&gt;&gt; unit_convert(&#8216;eV&#8217;,&#8217;J&#8217;)</strong></p>
+<p class="last"><strong>1.60219e-19</strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.units.unit_default">
+<code class="descclassname">sisl.units.</code><code class="descname">unit_default</code><span class="sig-paren">(</span><em>group</em>, <em>tbl=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.units.unit_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the default unit in the group <code class="xref any docutils literal"><span class="pre">group</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>group, str</strong></p>
+<blockquote class="last">
+<div><p>look-up in the table for the default unit.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 </div>
 
 
@@ -50,7 +140,16 @@
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">sisl.units package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-sisl.units">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>

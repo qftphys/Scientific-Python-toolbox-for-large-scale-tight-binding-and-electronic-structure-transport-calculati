@@ -58,7 +58,7 @@
             
             
               <div class="version">
-                0.6
+                0.7
               </div>
             
           
@@ -82,6 +82,7 @@
                 <ul>
 <li class="toctree-l1"><a class="reference internal" href="scripts/sgeom.html"><code class="docutils literal"><span class="pre">sgeom</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="scripts/sgrid.html"><code class="docutils literal"><span class="pre">sgrid</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="scripts/sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a></li>
 </ul>
 <ul class="simple">
 </ul>
@@ -152,19 +153,22 @@
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">S</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">finalized</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">dtype</span></code></td>
+<td>Return data type of Hamiltonian (and overlap matrix)</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">finalized</span></code></td>
 <td>Whether the contained data is finalized and non-used elements have been removed</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">nnz</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">nnz</span></code></td>
 <td>Returns number of non-zero elements in the tight-binding model</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></td>
 <td>Returns number of orbitals as used when the object was created</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">orthogonal</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">orthogonal</span></code></td>
 <td>Return whether the Hamiltonian is orthogonal</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">spin</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">spin</span></code></td>
 <td>Return number of spin-components in Hamiltonian</td>
 </tr>
 </tbody>
@@ -218,7 +222,7 @@
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code>([nnzpr,&nbsp;ortho,&nbsp;spin,&nbsp;dtype])</td>
 <td>The sparsity pattern is cleaned and every thing is reset.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sp2HS</span></code>(geom,&nbsp;H,&nbsp;S)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sp2HS</span></code>(geom,&nbsp;H[,&nbsp;S])</td>
 <td>Returns a tight-binding model from a preset H, S and Geometry</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code>(reps,&nbsp;axis)</td>
@@ -251,19 +255,22 @@ as the underlying geometry for the tight-binding parameters.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">S</span></code></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">finalized</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">dtype</span></code></td>
+<td>Return data type of Hamiltonian (and overlap matrix)</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">finalized</span></code></td>
 <td>Whether the contained data is finalized and non-used elements have been removed</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">nnz</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">nnz</span></code></td>
 <td>Returns number of non-zero elements in the tight-binding model</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></td>
 <td>Returns number of orbitals as used when the object was created</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">orthogonal</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">orthogonal</span></code></td>
 <td>Return whether the Hamiltonian is orthogonal</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">spin</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">spin</span></code></td>
 <td>Return number of spin-components in Hamiltonian</td>
 </tr>
 </tbody>
@@ -317,7 +324,7 @@ as the underlying geometry for the tight-binding parameters.</p>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code>([nnzpr,&nbsp;ortho,&nbsp;spin,&nbsp;dtype])</td>
 <td>The sparsity pattern is cleaned and every thing is reset.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sp2HS</span></code>(geom,&nbsp;H,&nbsp;S)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sp2HS</span></code>(geom,&nbsp;H[,&nbsp;S])</td>
 <td>Returns a tight-binding model from a preset H, S and Geometry</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code>(reps,&nbsp;axis)</td>
@@ -402,7 +409,7 @@ as the underlying geometry for the tight-binding parameters.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.7.1
+            VERSION:'0.7.6
 ',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

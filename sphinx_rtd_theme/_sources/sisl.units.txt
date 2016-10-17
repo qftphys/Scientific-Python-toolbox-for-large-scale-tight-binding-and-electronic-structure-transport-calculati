@@ -1,5 +1,16 @@
-sisl.units module
-=================
+sisl.units package
+==================
+
+Submodules
+----------
+
+.. toctree::
+
+   sisl.units.setup
+   sisl.units.siesta
+
+Module contents
+---------------
 
 .. automodule:: sisl.units
     :members:

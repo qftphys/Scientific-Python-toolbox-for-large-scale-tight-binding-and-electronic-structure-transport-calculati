@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.1
+        VERSION:     '0.7.6
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -55,80 +55,77 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td>Returns the arguments that may be available for this Sile</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
 <td>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
 <td>Converts str/list of keywords to proper case</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
 <td>Converts str/list of keywords to proper case</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.cube.CUBESile.read_geom" title="sisl.io.cube.CUBESile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
-<td>Returns <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> object from the CUBE file</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.cube.CUBESile.read_geom" title="sisl.io.cube.CUBESile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.cube.CUBESile.read_grid" title="sisl.io.cube.CUBESile.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>()</td>
-<td>Returns <a class="reference internal" href="sisl.grid.html#sisl.grid.Grid" title="sisl.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> object from the CUBE file</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.cube.CUBESile.read_grid" title="sisl.io.cube.CUBESile.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.cube.CUBESile.read_sc" title="sisl.io.cube.CUBESile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>([na])</td>
-<td>Returns <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from the CUBE file</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.cube.CUBESile.read_sc" title="sisl.io.cube.CUBESile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
 <td>Reads the next line of the file</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
 <td>Wrapper for the file-handle write statement</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.cube.CUBESile.write_geom" title="sisl.io.cube.CUBESile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom[,&nbsp;size,&nbsp;fmt,&nbsp;origo])</td>
-<td>Writes the <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> object attached to this grid</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.cube.CUBESile.write_geom" title="sisl.io.cube.CUBESile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.cube.CUBESile.write_grid" title="sisl.io.cube.CUBESile.write_grid"><code class="xref py py-obj docutils literal"><span class="pre">write_grid</span></code></a>(grid[,&nbsp;fmt])</td>
-<td>Writes the geometry to the contained file</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.cube.CUBESile.write_grid" title="sisl.io.cube.CUBESile.write_grid"><code class="xref py py-obj docutils literal"><span class="pre">write_grid</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td></td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
 <dt id="sisl.io.cube.CUBESile.read_geom">
-<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.cube.CUBESile.read_geom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> object from the CUBE file</p>
-</dd></dl>
+<code class="descname">read_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.cube.CUBESile.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="sisl.io.cube.CUBESile.read_grid">
-<code class="descname">read_grid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.cube.CUBESile.read_grid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <a class="reference internal" href="sisl.grid.html#sisl.grid.Grid" title="sisl.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> object from the CUBE file</p>
-</dd></dl>
+<code class="descname">read_grid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.cube.CUBESile.read_grid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="sisl.io.cube.CUBESile.read_sc">
-<code class="descname">read_sc</code><span class="sig-paren">(</span><em>na=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.cube.CUBESile.read_sc" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from the CUBE file</p>
-<p>If <code class="xref any docutils literal"><span class="pre">na=True</span></code> it will return a tuple (na,SuperCell)</p>
-</dd></dl>
+<code class="descname">read_sc</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.cube.CUBESile.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="sisl.io.cube.CUBESile.write_geom">
-<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em>, <em>size=array([ 1.</em>, <em>1.</em>, <em>1.])</em>, <em>fmt='15.10e'</em>, <em>origo=array([ 0.</em>, <em>0.</em>, <em>0.])</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.cube.CUBESile.write_geom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Writes the <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> object attached to this grid</p>
-</dd></dl>
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.cube.CUBESile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 <dl class="method">
 <dt id="sisl.io.cube.CUBESile.write_grid">
-<code class="descname">write_grid</code><span class="sig-paren">(</span><em>grid</em>, <em>fmt='%.5e'</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.cube.CUBESile.write_grid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Writes the geometry to the contained file</p>
-</dd></dl>
+<code class="descname">write_grid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.cube.CUBESile.write_grid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 

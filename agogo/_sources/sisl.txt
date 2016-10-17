@@ -9,6 +9,8 @@ Subpackages
     sisl.geom
     sisl.io
     sisl.quantity
+    sisl.units
+    sisl.utils
 
 Submodules
 ----------
@@ -22,7 +24,6 @@ Submodules
    sisl.setup
    sisl.sparse
    sisl.supercell
-   sisl.units
    sisl.version
 
 Module contents

@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.1
+        VERSION:     '0.7.6
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -54,20 +54,26 @@
             
   <div class="section" id="welcome-to-sisl-documentation">
 <h1>Welcome to sisl documentation!<a class="headerlink" href="#welcome-to-sisl-documentation" title="Permalink to this headline">¶</a></h1>
-<p>This documentation has been created from version: 0.7.1
+<p>This documentation has been created from version: 0.7.6
 .</p>
-<p>sisl is a tool to easily create geometries and handle input/output files
-from various DFT codes. Although this is based on the SIESTA/TranSIESTA
-DFT code it is far from limited to deal with <em>only</em> this code.</p>
+<p>sisl is a tool to easily create geometries and, in general, handle
+data output files from various DFT codes. Although this is primarily
+based on the SIESTA/TranSIESTA DFT code it is far from limited to
+deal with <em>only</em> this code.</p>
 <p>A list of key components are</p>
 <dl class="docutils">
-<dt><span class="xref std std-ref">scripts_sgeom</span></dt>
+<dt><a class="reference internal" href="scripts/sgeom.html#script-sgeom"><span class="std std-ref">sgeom</span></a></dt>
 <dd>Read and transform generic coordinate files from
 one format into other formats.</dd>
-<dt><span class="xref std std-ref">scripts_sgrid</span></dt>
+<dt><a class="reference internal" href="scripts/sgrid.html#script-sgrid"><span class="std std-ref">sgrid</span></a></dt>
 <dd>Read and transform <em>grid</em> data, such as electronic
 densities, electrostatic potentials etc. and save them in various
 formats.</dd>
+<dt><a class="reference internal" href="scripts/sdata.html#script-sdata"><span class="std std-ref">sdata</span></a></dt>
+<dd>Read and transform <em>any</em> data. It is basically a shorthand for
+the above more convenience scripts.
+This script is capable of handling geometries, grids, specially
+contained data, etc.</dd>
 </dl>
 <p>Script based handling via Python classes and objects that handles</p>
 <blockquote>
@@ -85,7 +91,7 @@ basis sets.</li>
 </div>
 <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>The easiest way to install <code class="docutils literal"><span class="pre">sisl</span></code> is via the <strong class="program">pypi</strong> interface.
+<p>The easiest way to install <a class="reference internal" href="sisl.html"><span class="doc">sisl package</span></a> is via the <strong class="program">pypi</strong> interface.
 Install via:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>pip install sisl
 </pre></div>
@@ -96,11 +102,11 @@ interface:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>python setup.py install
 </pre></div>
 </div>
-<p>which will install <code class="docutils literal"><span class="pre">sisl</span></code> in your default location, use <strong class="program">--prefix &lt;path&gt;</strong> for
+<p>which will install <a class="reference internal" href="sisl.html"><span class="doc">sisl package</span></a> in your default location, use <strong class="program">--prefix &lt;path&gt;</strong> for
 manual control of the placement.</p>
 <div class="section" id="requirements">
 <h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
-<p>To succesfully use <code class="docutils literal"><span class="pre">sisl</span></code> these Python packages must be installed:</p>
+<p>To succesfully use <a class="reference internal" href="sisl.html"><span class="doc">sisl package</span></a> these Python packages must be installed:</p>
 <blockquote>
 <div><ul class="simple">
 <li><a class="reference external" href="https://pypi.python.org/pypi/six">six</a></li>
@@ -120,7 +126,7 @@ manual control of the placement.</p>
 <li class="toctree-l2"><a class="reference internal" href="scripts/sgeom.html#advanced-features">Advanced Features</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="scripts/sgeom.html#repeating-tiling-structures">Repeating/Tiling structures</a></li>
 <li class="toctree-l3"><a class="reference internal" href="scripts/sgeom.html#rotating-structure">Rotating structure</a></li>
-<li class="toctree-l3"><a class="reference internal" href="scripts/sgeom.html#scripting">Scripting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scripts/sgeom.html#combining-command-line-arguments">Combining command line arguments</a></li>
 </ul>
 </li>
 </ul>
@@ -131,6 +137,11 @@ manual control of the placement.</p>
 <li class="toctree-l2"><a class="reference internal" href="scripts/sgrid.html#reducing-grid-sizes">Reducing grid sizes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scripts/sgrid.html#averaging-and-summing">Averaging and summing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scripts/sgrid.html#advanced-features">Advanced features</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scripts/sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scripts/sdata.html#siles-with-geometry">Siles with <code class="docutils literal"><span class="pre">Geometry</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripts/sdata.html#siles-with-grid">Siles with <code class="docutils literal"><span class="pre">Grid</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -156,7 +167,7 @@ manual control of the placement.</p>
 </div>
 <div class="section" id="documentation-in-other-themes">
 <h1>Documentation in other themes<a class="headerlink" href="#documentation-in-other-themes" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal"><span class="pre">sisl</span></code> documentation has been created with several different themes
+<p>The <a class="reference internal" href="sisl.html"><span class="doc">sisl package</span></a> documentation has been created with several different themes
 of documentation.
 This is mainly of convenience until I have figured out which one is the
 best suited theme for this documentation.</p>
@@ -181,6 +192,7 @@ best suited theme for this documentation.</p>
           <ul>
 <li class="toctree-l1"><a class="reference internal" href="scripts/sgeom.html"><code class="docutils literal"><span class="pre">sgeom</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="scripts/sgrid.html"><code class="docutils literal"><span class="pre">sgrid</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="scripts/sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a></li>
 </ul>
 <ul class="simple">
 </ul>

@@ -1,0 +1,7 @@
+sisl.io.siesta.bands module
+===========================
+
+.. automodule:: sisl.io.siesta.bands
+    :members:
+    :undoc-members:
+    :show-inheritance:

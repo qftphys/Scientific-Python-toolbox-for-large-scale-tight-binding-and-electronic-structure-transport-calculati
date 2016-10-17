@@ -1,0 +1,7 @@
+sisl.utils.ranges module
+========================
+
+.. automodule:: sisl.utils.ranges
+    :members:
+    :undoc-members:
+    :show-inheritance:

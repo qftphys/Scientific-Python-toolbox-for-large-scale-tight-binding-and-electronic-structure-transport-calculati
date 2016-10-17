@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.1
+        VERSION:     '0.7.6
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -46,7 +46,7 @@
 <p>This grid is the basis of different used models.</p>
 <dl class="class">
 <dt id="sisl.grid.Grid">
-<em class="property">class </em><code class="descclassname">sisl.grid.</code><code class="descname">Grid</code><span class="sig-paren">(</span><em>size=array([0, 0, 0], dtype=int32), bc=1, sc=None, dtype=&lt;type 'numpy.float64'&gt;, geom=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.grid.Grid" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sisl.grid.</code><code class="descname">Grid</code><span class="sig-paren">(</span><em>shape=None</em>, <em>bc=None</em>, <em>sc=None</em>, <em>dtype=None</em>, <em>geom=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.grid.Grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild" title="sisl.supercell.SuperCellChild"><code class="xref py py-class docutils literal"><span class="pre">sisl.supercell.SuperCellChild</span></code></a></p>
 <p>Object to retain grid information</p>
 <p>This grid object handles cell vectors and divisions of said grid.</p>
@@ -59,25 +59,31 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">cell</span></code></td>
-<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.cell" title="sisl.supercell.SuperCellChild.cell"><code class="xref any py py-attr docutils literal"><span class="pre">cell</span></code></a></td>
+<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.tbtncSileSiesta.cell" title="sisl.io.siesta.tbtncSileSiesta.cell"><code class="xref any py py-attr docutils literal"><span class="pre">cell</span></code></a></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.dcell" title="sisl.grid.Grid.dcell"><code class="xref py py-obj docutils literal"><span class="pre">dcell</span></code></a></td>
 <td>Returns the delta-cell</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.dvol" title="sisl.grid.Grid.dvol"><code class="xref py py-obj docutils literal"><span class="pre">dvol</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.dtype" title="sisl.grid.Grid.dtype"><code class="xref py py-obj docutils literal"><span class="pre">dtype</span></code></a></td>
+<td>Returns the data-type of the grid</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.dvol" title="sisl.grid.Grid.dvol"><code class="xref py py-obj docutils literal"><span class="pre">dvol</span></code></a></td>
 <td>Returns the delta-volume</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">n_s</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">n_s</span></code></td>
 <td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.n_s" title="sisl.supercell.SuperCell.n_s"><code class="xref any py py-attr docutils literal"><span class="pre">n_s</span></code></a></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">nsc</span></code></td>
-<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.nsc" title="sisl.supercell.SuperCellChild.nsc"><code class="xref any py py-attr docutils literal"><span class="pre">nsc</span></code></a></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">nsc</span></code></td>
+<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.nsc" title="sisl.supercell.SuperCell.nsc"><code class="xref any py py-attr docutils literal"><span class="pre">nsc</span></code></a></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rcell</span></code></td>
-<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.rcell" title="sisl.supercell.SuperCellChild.rcell"><code class="xref any py py-attr docutils literal"><span class="pre">rcell</span></code></a></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">rcell</span></code></td>
+<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.rcell" title="sisl.supercell.SuperCell.rcell"><code class="xref any py py-attr docutils literal"><span class="pre">rcell</span></code></a></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_off</span></code></td>
-<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.sc_off" title="sisl.supercell.SuperCell.sc_off"><code class="xref any py py-attr docutils literal"><span class="pre">sc_off</span></code></a></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_off</span></code></td>
+<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.sc_off" title="sisl.supercell.SuperCellChild.sc_off"><code class="xref any py py-attr docutils literal"><span class="pre">sc_off</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.shape" title="sisl.grid.Grid.shape"><code class="xref py py-obj docutils literal"><span class="pre">shape</span></code></a></td>
+<td>Returns the shape of the grid</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.size" title="sisl.grid.Grid.size"><code class="xref py py-obj docutils literal"><span class="pre">size</span></code></a></td>
 <td>Returns size of the grid</td>
@@ -94,85 +100,101 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.append" title="sisl.grid.Grid.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(other,&nbsp;axis)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.ArgumentParser" title="sisl.grid.Grid.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>([parser])</td>
+<td>Create and return a group of argument parsers which manipulates it self <a class="reference internal" href="#sisl.grid.Grid" title="sisl.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.append" title="sisl.grid.Grid.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(other,&nbsp;axis)</td>
 <td>Appends other <a class="reference internal" href="#sisl.grid.Grid" title="sisl.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> to this grid along axis</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.average" title="sisl.grid.Grid.average"><code class="xref py py-obj docutils literal"><span class="pre">average</span></code></a>(axis)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.average" title="sisl.grid.Grid.average"><code class="xref py py-obj docutils literal"><span class="pre">average</span></code></a>(axis)</td>
 <td>Returns the average grid along direction <code class="docutils literal"><span class="pre">axis</span></code></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.copy" title="sisl.grid.Grid.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.copy" title="sisl.grid.Grid.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
 <td>Returns a copy of the object.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.cross_section" title="sisl.grid.Grid.cross_section"><code class="xref py py-obj docutils literal"><span class="pre">cross_section</span></code></a>(idx,&nbsp;axis)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.cross_section" title="sisl.grid.Grid.cross_section"><code class="xref py py-obj docutils literal"><span class="pre">cross_section</span></code></a>(idx,&nbsp;axis)</td>
 <td>Takes a cross-section of the grid along axis <code class="docutils literal"><span class="pre">axis</span></code></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.index" title="sisl.grid.Grid.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>(coord[,&nbsp;axis])</td>
-<td>Returns the index along the axis <code class="docutils literal"><span class="pre">axis</span></code> where <code class="docutils literal"><span class="pre">coord</span></code> exists</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.index" title="sisl.grid.Grid.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>(coord[,&nbsp;axis])</td>
+<td>Returns the index along axis <code class="docutils literal"><span class="pre">axis</span></code> where <code class="docutils literal"><span class="pre">coord</span></code> exists</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.interp" title="sisl.grid.Grid.interp"><code class="xref py py-obj docutils literal"><span class="pre">interp</span></code></a>(size,&nbsp;*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.interp" title="sisl.grid.Grid.interp"><code class="xref py py-obj docutils literal"><span class="pre">interp</span></code></a>(shape,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Returns an interpolated version of the grid</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_orthogonal</span></code>()</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_orthogonal</span></code>()</td>
 <td>Return true if all cell vectors are linearly independent</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.mean" title="sisl.grid.Grid.mean"><code class="xref py py-obj docutils literal"><span class="pre">mean</span></code></a>(axis)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.mean" title="sisl.grid.Grid.mean"><code class="xref py py-obj docutils literal"><span class="pre">mean</span></code></a>(axis)</td>
 <td>Returns the average grid along direction <code class="docutils literal"><span class="pre">axis</span></code></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.read" title="sisl.grid.Grid.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
-<td>Reads grid from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta.siesta.html#sisl.io.siesta.siesta.SIESTASile.read_grid" title="sisl.io.siesta.siesta.SIESTASile.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.read" title="sisl.grid.Grid.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Reads grid from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta.siesta_grid.html#sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid" title="sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.remove" title="sisl.grid.Grid.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>(idx,&nbsp;axis)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.remove" title="sisl.grid.Grid.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>(idx,&nbsp;axis)</td>
 <td>Removes certain indices from a specified axis.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.remove_part" title="sisl.grid.Grid.remove_part"><code class="xref py py-obj docutils literal"><span class="pre">remove_part</span></code></a>(idx,&nbsp;axis,&nbsp;above)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.remove_part" title="sisl.grid.Grid.remove_part"><code class="xref py py-obj docutils literal"><span class="pre">remove_part</span></code></a>(idx,&nbsp;axis,&nbsp;above)</td>
 <td>Removes parts of the grid via above/below designations.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code>(*args,&nbsp;**kwargs)</td>
 <td>Call local <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.sc_index" title="sisl.supercell.SuperCellChild.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.set_bc" title="sisl.grid.Grid.set_bc"><code class="xref py py-obj docutils literal"><span class="pre">set_bc</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.set_bc" title="sisl.grid.Grid.set_bc"><code class="xref py py-obj docutils literal"><span class="pre">set_bc</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
 <td>Set the boundary conditions on the grid</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.set_boundary" title="sisl.grid.Grid.set_boundary"><code class="xref py py-obj docutils literal"><span class="pre">set_boundary</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.set_boundary" title="sisl.grid.Grid.set_boundary"><code class="xref py py-obj docutils literal"><span class="pre">set_boundary</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
 <td>Set the boundary conditions on the grid</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.set_boundary_condition" title="sisl.grid.Grid.set_boundary_condition"><code class="xref py py-obj docutils literal"><span class="pre">set_boundary_condition</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.set_boundary_condition" title="sisl.grid.Grid.set_boundary_condition"><code class="xref py py-obj docutils literal"><span class="pre">set_boundary_condition</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
 <td>Set the boundary conditions on the grid</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.set_geom" title="sisl.grid.Grid.set_geom"><code class="xref py py-obj docutils literal"><span class="pre">set_geom</span></code></a>(geom)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.set_geom" title="sisl.grid.Grid.set_geom"><code class="xref py py-obj docutils literal"><span class="pre">set_geom</span></code></a>(geom)</td>
 <td>Sets the <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> for the grid.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.set_grid" title="sisl.grid.Grid.set_grid"><code class="xref py py-obj docutils literal"><span class="pre">set_grid</span></code></a>(size[,&nbsp;dtype])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.set_grid" title="sisl.grid.Grid.set_grid"><code class="xref py py-obj docutils literal"><span class="pre">set_grid</span></code></a>(shape[,&nbsp;dtype])</td>
 <td>Create the internal grid of certain size.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">set_nsc</span></code>(nsc)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">set_nsc</span></code>(nsc)</td>
 <td>Set the number of super-cells in the <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">set_sc</span></code>(sc)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">set_sc</span></code>(sc)</td>
 <td>Overwrites the local supercell</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">set_supercell</span></code>(sc)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">set_supercell</span></code>(sc)</td>
 <td>Overwrites the local supercell</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.sub" title="sisl.grid.Grid.sub"><code class="xref py py-obj docutils literal"><span class="pre">sub</span></code></a>(idx,&nbsp;axis)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.sub" title="sisl.grid.Grid.sub"><code class="xref py py-obj docutils literal"><span class="pre">sub</span></code></a>(idx,&nbsp;axis)</td>
 <td>Retains certain indices from a specified axis.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.sub_part" title="sisl.grid.Grid.sub_part"><code class="xref py py-obj docutils literal"><span class="pre">sub_part</span></code></a>(idx,&nbsp;axis,&nbsp;above)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.sub_part" title="sisl.grid.Grid.sub_part"><code class="xref py py-obj docutils literal"><span class="pre">sub_part</span></code></a>(idx,&nbsp;axis,&nbsp;above)</td>
 <td>Retains parts of the grid via above/below designations.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.sum" title="sisl.grid.Grid.sum"><code class="xref py py-obj docutils literal"><span class="pre">sum</span></code></a>(axis)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.sum" title="sisl.grid.Grid.sum"><code class="xref py py-obj docutils literal"><span class="pre">sum</span></code></a>(axis)</td>
 <td>Returns the grid summed along axis <code class="docutils literal"><span class="pre">axis</span></code>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.swapaxes" title="sisl.grid.Grid.swapaxes"><code class="xref py py-obj docutils literal"><span class="pre">swapaxes</span></code></a>(a,&nbsp;b)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.swapaxes" title="sisl.grid.Grid.swapaxes"><code class="xref py py-obj docutils literal"><span class="pre">swapaxes</span></code></a>(a,&nbsp;b)</td>
 <td>Returns Grid with swapped axis</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.write" title="sisl.grid.Grid.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(sile)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.write" title="sisl.grid.Grid.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(sile)</td>
 <td>Writes grid to the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.cube.html#sisl.io.cube.CUBESile.write_grid" title="sisl.io.cube.CUBESile.write_grid"><code class="xref any py py-meth docutils literal"><span class="pre">write_grid</span></code></a></td>
 </tr>
 </tbody>
 </table>
 <p>Initialize a <a class="reference internal" href="#sisl.grid.Grid" title="sisl.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> object.</p>
 <p>Initialize a <a class="reference internal" href="#sisl.grid.Grid" title="sisl.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>shape</strong> : int*3</p>
+<blockquote>
+<div><p>the size of each grid dimension</p>
+</div></blockquote>
+<p class="last"><strong>bc</strong> : the</p>
+</td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Attributes</p>
 <table border="1" class="longtable docutils">
 <colgroup>
@@ -181,25 +203,31 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">cell</span></code></td>
-<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.cell" title="sisl.supercell.SuperCellChild.cell"><code class="xref any py py-attr docutils literal"><span class="pre">cell</span></code></a></td>
+<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.tbtncSileSiesta.cell" title="sisl.io.siesta.tbtncSileSiesta.cell"><code class="xref any py py-attr docutils literal"><span class="pre">cell</span></code></a></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.dcell" title="sisl.grid.Grid.dcell"><code class="xref py py-obj docutils literal"><span class="pre">dcell</span></code></a></td>
 <td>Returns the delta-cell</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.dvol" title="sisl.grid.Grid.dvol"><code class="xref py py-obj docutils literal"><span class="pre">dvol</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.dtype" title="sisl.grid.Grid.dtype"><code class="xref py py-obj docutils literal"><span class="pre">dtype</span></code></a></td>
+<td>Returns the data-type of the grid</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.dvol" title="sisl.grid.Grid.dvol"><code class="xref py py-obj docutils literal"><span class="pre">dvol</span></code></a></td>
 <td>Returns the delta-volume</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">n_s</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">n_s</span></code></td>
 <td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.n_s" title="sisl.supercell.SuperCell.n_s"><code class="xref any py py-attr docutils literal"><span class="pre">n_s</span></code></a></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">nsc</span></code></td>
-<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.nsc" title="sisl.supercell.SuperCellChild.nsc"><code class="xref any py py-attr docutils literal"><span class="pre">nsc</span></code></a></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">nsc</span></code></td>
+<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.nsc" title="sisl.supercell.SuperCell.nsc"><code class="xref any py py-attr docutils literal"><span class="pre">nsc</span></code></a></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">rcell</span></code></td>
-<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.rcell" title="sisl.supercell.SuperCellChild.rcell"><code class="xref any py py-attr docutils literal"><span class="pre">rcell</span></code></a></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">rcell</span></code></td>
+<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.rcell" title="sisl.supercell.SuperCell.rcell"><code class="xref any py py-attr docutils literal"><span class="pre">rcell</span></code></a></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_off</span></code></td>
-<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell.sc_off" title="sisl.supercell.SuperCell.sc_off"><code class="xref any py py-attr docutils literal"><span class="pre">sc_off</span></code></a></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_off</span></code></td>
+<td>Returns the inherent <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> objects <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.sc_off" title="sisl.supercell.SuperCellChild.sc_off"><code class="xref any py py-attr docutils literal"><span class="pre">sc_off</span></code></a></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.shape" title="sisl.grid.Grid.shape"><code class="xref py py-obj docutils literal"><span class="pre">shape</span></code></a></td>
+<td>Returns the shape of the grid</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.size" title="sisl.grid.Grid.size"><code class="xref py py-obj docutils literal"><span class="pre">size</span></code></a></td>
 <td>Returns size of the grid</td>
@@ -216,83 +244,118 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.append" title="sisl.grid.Grid.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(other,&nbsp;axis)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.ArgumentParser" title="sisl.grid.Grid.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>([parser])</td>
+<td>Create and return a group of argument parsers which manipulates it self <a class="reference internal" href="#sisl.grid.Grid" title="sisl.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a>.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.append" title="sisl.grid.Grid.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(other,&nbsp;axis)</td>
 <td>Appends other <a class="reference internal" href="#sisl.grid.Grid" title="sisl.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> to this grid along axis</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.average" title="sisl.grid.Grid.average"><code class="xref py py-obj docutils literal"><span class="pre">average</span></code></a>(axis)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.average" title="sisl.grid.Grid.average"><code class="xref py py-obj docutils literal"><span class="pre">average</span></code></a>(axis)</td>
 <td>Returns the average grid along direction <code class="docutils literal"><span class="pre">axis</span></code></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.copy" title="sisl.grid.Grid.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.copy" title="sisl.grid.Grid.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
 <td>Returns a copy of the object.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.cross_section" title="sisl.grid.Grid.cross_section"><code class="xref py py-obj docutils literal"><span class="pre">cross_section</span></code></a>(idx,&nbsp;axis)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.cross_section" title="sisl.grid.Grid.cross_section"><code class="xref py py-obj docutils literal"><span class="pre">cross_section</span></code></a>(idx,&nbsp;axis)</td>
 <td>Takes a cross-section of the grid along axis <code class="docutils literal"><span class="pre">axis</span></code></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.index" title="sisl.grid.Grid.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>(coord[,&nbsp;axis])</td>
-<td>Returns the index along the axis <code class="docutils literal"><span class="pre">axis</span></code> where <code class="docutils literal"><span class="pre">coord</span></code> exists</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.index" title="sisl.grid.Grid.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>(coord[,&nbsp;axis])</td>
+<td>Returns the index along axis <code class="docutils literal"><span class="pre">axis</span></code> where <code class="docutils literal"><span class="pre">coord</span></code> exists</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.interp" title="sisl.grid.Grid.interp"><code class="xref py py-obj docutils literal"><span class="pre">interp</span></code></a>(size,&nbsp;*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.interp" title="sisl.grid.Grid.interp"><code class="xref py py-obj docutils literal"><span class="pre">interp</span></code></a>(shape,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Returns an interpolated version of the grid</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_orthogonal</span></code>()</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_orthogonal</span></code>()</td>
 <td>Return true if all cell vectors are linearly independent</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.mean" title="sisl.grid.Grid.mean"><code class="xref py py-obj docutils literal"><span class="pre">mean</span></code></a>(axis)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.mean" title="sisl.grid.Grid.mean"><code class="xref py py-obj docutils literal"><span class="pre">mean</span></code></a>(axis)</td>
 <td>Returns the average grid along direction <code class="docutils literal"><span class="pre">axis</span></code></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.read" title="sisl.grid.Grid.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
-<td>Reads grid from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta.siesta.html#sisl.io.siesta.siesta.SIESTASile.read_grid" title="sisl.io.siesta.siesta.SIESTASile.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.read" title="sisl.grid.Grid.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
+<td>Reads grid from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta.siesta_grid.html#sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid" title="sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.remove" title="sisl.grid.Grid.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>(idx,&nbsp;axis)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.remove" title="sisl.grid.Grid.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>(idx,&nbsp;axis)</td>
 <td>Removes certain indices from a specified axis.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.remove_part" title="sisl.grid.Grid.remove_part"><code class="xref py py-obj docutils literal"><span class="pre">remove_part</span></code></a>(idx,&nbsp;axis,&nbsp;above)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.remove_part" title="sisl.grid.Grid.remove_part"><code class="xref py py-obj docutils literal"><span class="pre">remove_part</span></code></a>(idx,&nbsp;axis,&nbsp;above)</td>
 <td>Removes parts of the grid via above/below designations.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code>(*args,&nbsp;**kwargs)</td>
 <td>Call local <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.sc_index" title="sisl.supercell.SuperCellChild.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.set_bc" title="sisl.grid.Grid.set_bc"><code class="xref py py-obj docutils literal"><span class="pre">set_bc</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.set_bc" title="sisl.grid.Grid.set_bc"><code class="xref py py-obj docutils literal"><span class="pre">set_bc</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
 <td>Set the boundary conditions on the grid</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.set_boundary" title="sisl.grid.Grid.set_boundary"><code class="xref py py-obj docutils literal"><span class="pre">set_boundary</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.set_boundary" title="sisl.grid.Grid.set_boundary"><code class="xref py py-obj docutils literal"><span class="pre">set_boundary</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
 <td>Set the boundary conditions on the grid</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.set_boundary_condition" title="sisl.grid.Grid.set_boundary_condition"><code class="xref py py-obj docutils literal"><span class="pre">set_boundary_condition</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.set_boundary_condition" title="sisl.grid.Grid.set_boundary_condition"><code class="xref py py-obj docutils literal"><span class="pre">set_boundary_condition</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
 <td>Set the boundary conditions on the grid</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.set_geom" title="sisl.grid.Grid.set_geom"><code class="xref py py-obj docutils literal"><span class="pre">set_geom</span></code></a>(geom)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.set_geom" title="sisl.grid.Grid.set_geom"><code class="xref py py-obj docutils literal"><span class="pre">set_geom</span></code></a>(geom)</td>
 <td>Sets the <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a> for the grid.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.set_grid" title="sisl.grid.Grid.set_grid"><code class="xref py py-obj docutils literal"><span class="pre">set_grid</span></code></a>(size[,&nbsp;dtype])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.set_grid" title="sisl.grid.Grid.set_grid"><code class="xref py py-obj docutils literal"><span class="pre">set_grid</span></code></a>(shape[,&nbsp;dtype])</td>
 <td>Create the internal grid of certain size.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">set_nsc</span></code>(nsc)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">set_nsc</span></code>(nsc)</td>
 <td>Set the number of super-cells in the <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">set_sc</span></code>(sc)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">set_sc</span></code>(sc)</td>
 <td>Overwrites the local supercell</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">set_supercell</span></code>(sc)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">set_supercell</span></code>(sc)</td>
 <td>Overwrites the local supercell</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.sub" title="sisl.grid.Grid.sub"><code class="xref py py-obj docutils literal"><span class="pre">sub</span></code></a>(idx,&nbsp;axis)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.sub" title="sisl.grid.Grid.sub"><code class="xref py py-obj docutils literal"><span class="pre">sub</span></code></a>(idx,&nbsp;axis)</td>
 <td>Retains certain indices from a specified axis.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.sub_part" title="sisl.grid.Grid.sub_part"><code class="xref py py-obj docutils literal"><span class="pre">sub_part</span></code></a>(idx,&nbsp;axis,&nbsp;above)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.sub_part" title="sisl.grid.Grid.sub_part"><code class="xref py py-obj docutils literal"><span class="pre">sub_part</span></code></a>(idx,&nbsp;axis,&nbsp;above)</td>
 <td>Retains parts of the grid via above/below designations.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.sum" title="sisl.grid.Grid.sum"><code class="xref py py-obj docutils literal"><span class="pre">sum</span></code></a>(axis)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.sum" title="sisl.grid.Grid.sum"><code class="xref py py-obj docutils literal"><span class="pre">sum</span></code></a>(axis)</td>
 <td>Returns the grid summed along axis <code class="docutils literal"><span class="pre">axis</span></code>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.swapaxes" title="sisl.grid.Grid.swapaxes"><code class="xref py py-obj docutils literal"><span class="pre">swapaxes</span></code></a>(a,&nbsp;b)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.swapaxes" title="sisl.grid.Grid.swapaxes"><code class="xref py py-obj docutils literal"><span class="pre">swapaxes</span></code></a>(a,&nbsp;b)</td>
 <td>Returns Grid with swapped axis</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.write" title="sisl.grid.Grid.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(sile)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.write" title="sisl.grid.Grid.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(sile)</td>
 <td>Writes grid to the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.cube.html#sisl.io.cube.CUBESile.write_grid" title="sisl.io.cube.CUBESile.write_grid"><code class="xref any py py-meth docutils literal"><span class="pre">write_grid</span></code></a></td>
 </tr>
 </tbody>
 </table>
+<dl class="method">
+<dt id="sisl.grid.Grid.ArgumentParser">
+<code class="descname">ArgumentParser</code><span class="sig-paren">(</span><em>parser=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.grid.Grid.ArgumentParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and return a group of argument parsers which manipulates it self <a class="reference internal" href="#sisl.grid.Grid" title="sisl.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>parser: ArgumentParser, None</strong></p>
+<blockquote>
+<div><p>in case the arguments should be added to a specific parser. It defaults
+to create a new.</p>
+</div></blockquote>
+<p><strong>limit_arguments: bool, True</strong></p>
+<blockquote>
+<div><p>If <code class="xref any docutils literal"><span class="pre">False</span></code> additional options will be created which are similar to other options.
+For instance <code class="xref any docutils literal"><span class="pre">--repeat-x</span></code> which is equivalent to <code class="xref any docutils literal"><span class="pre">--repeat</span> <span class="pre">x</span></code>.</p>
+</div></blockquote>
+<p><strong>short: bool, False</strong></p>
+<blockquote>
+<div><p>Create short options for a selected range of options</p>
+</div></blockquote>
+<p><strong>positional_out: bool, False</strong></p>
+<blockquote class="last">
+<div><p>If <code class="xref any docutils literal"><span class="pre">True</span></code>, adds a positional argument which acts as &#8211;out. This may be handy if only the geometry is in the argument list.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="sisl.grid.Grid.Dirichlet">
 <code class="descname">Dirichlet</code><em class="property"> = 3</em><a class="headerlink" href="#sisl.grid.Grid.Dirichlet" title="Permalink to this definition">¶</a></dt>
@@ -341,6 +404,12 @@ cuts via rotation of the axis</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="sisl.grid.Grid.dtype">
+<code class="descname">dtype</code><a class="headerlink" href="#sisl.grid.Grid.dtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the data-type of the grid</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="sisl.grid.Grid.dvol">
 <code class="descname">dvol</code><a class="headerlink" href="#sisl.grid.Grid.dvol" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the delta-volume</p>
@@ -349,7 +418,7 @@ cuts via rotation of the axis</p>
 <dl class="method">
 <dt id="sisl.grid.Grid.index">
 <code class="descname">index</code><span class="sig-paren">(</span><em>coord</em>, <em>axis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.grid.Grid.index" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the index along the axis <code class="docutils literal"><span class="pre">axis</span></code> where <code class="docutils literal"><span class="pre">coord</span></code> exists</p>
+<dd><p>Returns the index along axis <code class="docutils literal"><span class="pre">axis</span></code> where <code class="docutils literal"><span class="pre">coord</span></code> exists</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -370,15 +439,15 @@ cuts via rotation of the axis</p>
 
 <dl class="method">
 <dt id="sisl.grid.Grid.interp">
-<code class="descname">interp</code><span class="sig-paren">(</span><em>size</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.grid.Grid.interp" title="Permalink to this definition">¶</a></dt>
+<code class="descname">interp</code><span class="sig-paren">(</span><em>shape</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.grid.Grid.interp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns an interpolated version of the grid</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>size</strong> : int, array_like</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>shape</strong> : int, array_like</p>
 <blockquote>
-<div><p>the new size of the grid</p>
+<div><p>the new shape of the grid</p>
 </div></blockquote>
 <p><strong>*args, **kwargs :</strong></p>
 <blockquote class="last">
@@ -400,7 +469,7 @@ The interpolation routine is <code class="xref any docutils literal"><span class
 <dl class="staticmethod">
 <dt id="sisl.grid.Grid.read">
 <em class="property">static </em><code class="descname">read</code><span class="sig-paren">(</span><em>sile</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.grid.Grid.read" title="Permalink to this definition">¶</a></dt>
-<dd><p>Reads grid from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta.siesta.html#sisl.io.siesta.siesta.SIESTASile.read_grid" title="sisl.io.siesta.siesta.SIESTASile.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></p>
+<dd><p>Reads grid from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta.siesta_grid.html#sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid" title="sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -538,8 +607,14 @@ to attach atoms to the grid.</p>
 
 <dl class="method">
 <dt id="sisl.grid.Grid.set_grid">
-<code class="descname">set_grid</code><span class="sig-paren">(</span><em>size</em>, <em>dtype=&lt;type 'numpy.float64'&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.grid.Grid.set_grid" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_grid</code><span class="sig-paren">(</span><em>shape</em>, <em>dtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.grid.Grid.set_grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create the internal grid of certain size.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.grid.Grid.shape">
+<code class="descname">shape</code><a class="headerlink" href="#sisl.grid.Grid.shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the shape of the grid</p>
 </dd></dl>
 
 <dl class="attribute">

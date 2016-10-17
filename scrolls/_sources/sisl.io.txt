@@ -10,6 +10,7 @@ Subpackages
     sisl.io.gulp
     sisl.io.siesta
     sisl.io.vasp
+    sisl.io.wannier
 
 Submodules
 ----------
@@ -20,6 +21,8 @@ Submodules
    sisl.io.ham
    sisl.io.setup
    sisl.io.sile
+   sisl.io.table
+   sisl.io.xsf
    sisl.io.xyz
 
 Module contents

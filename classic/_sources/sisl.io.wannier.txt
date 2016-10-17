@@ -1,0 +1,19 @@
+sisl.io.wannier package
+=======================
+
+Submodules
+----------
+
+.. toctree::
+
+   sisl.io.wannier.seedname
+   sisl.io.wannier.setup
+   sisl.io.wannier.sile
+
+Module contents
+---------------
+
+.. automodule:: sisl.io.wannier
+    :members:
+    :undoc-members:
+    :show-inheritance:

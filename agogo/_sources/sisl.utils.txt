@@ -1,0 +1,21 @@
+sisl.utils package
+==================
+
+Submodules
+----------
+
+.. toctree::
+
+   sisl.utils.c2f
+   sisl.utils.cmd
+   sisl.utils.misc
+   sisl.utils.ranges
+   sisl.utils.setup
+
+Module contents
+---------------
+
+.. automodule:: sisl.utils
+    :members:
+    :undoc-members:
+    :show-inheritance:

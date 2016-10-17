@@ -31,6 +31,7 @@
 
   
     <link rel="top" title="sisl |release| documentation" href="../index.html"/>
+        <link rel="next" title="sdata" href="sdata.html"/>
         <link rel="prev" title="sgeom" href="sgeom.html"/> 
 
   
@@ -59,7 +60,7 @@
             
             
               <div class="version">
-                0.6
+                0.7
               </div>
             
           
@@ -90,6 +91,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#advanced-features">Advanced features</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a></li>
 </ul>
 <ul class="simple">
 </ul>
@@ -138,7 +140,7 @@
             
   <div class="section" id="sgrid">
 <span id="script-sgrid"></span><h1><a class="reference internal" href="#"><span class="doc">sgrid</span></a><a class="headerlink" href="#sgrid" title="Permalink to this headline">¶</a></h1>
-<p>The <code class="docutils literal"><span class="pre">sgrid</span></code> executable is a tool for manipulating a simulation grid and transforming
+<p>The <a class="reference internal" href="#"><span class="doc">sgrid</span></a> executable is a tool for manipulating a simulation grid and transforming
 it into CUBE format for plotting 3D data in, <em>e.g.</em> VMD or XCrySDen.</p>
 <p>Currently this is primarily intended for usage with SIESTA.</p>
 <p>For a short help description of the possible uses do:</p>
@@ -157,8 +159,8 @@ Note that all commands are available via Python scripts and the <a class="refere
 CUBE file. The CUBE file writeout is implemented in <code class="xref any docutils literal"><span class="pre">Cube</span></code>.</p>
 <p>Conveniently CUBE files can accomodate geometries and species for inclusion in the 3D
 plot and this can be added to the file via the <code class="docutils literal"><span class="pre">--geometry</span></code> flag, any geometry format
-implemented in <a class="reference internal" href="../sisl.html#module-sisl" title="sisl"><code class="xref any py py-mod docutils literal"><span class="pre">sisl</span></code></a> are also compatible with <code class="docutils literal"><span class="pre">sgrid</span></code>, see <span class="xref std std-ref">sgeom</span>.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid --geometry RUN.fdf Rho.grid.nc Rho.cube
+implemented in <a class="reference internal" href="../sisl.html#module-sisl" title="sisl"><code class="xref any py py-mod docutils literal"><span class="pre">sisl</span></code></a> are also compatible with <a class="reference internal" href="#"><span class="doc">sgrid</span></a>.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc --geometry RUN.fdf Rho.cube
 </pre></div>
 </div>
 <p>the shorthand is <code class="docutils literal"><span class="pre">-g</span></code>.</p>
@@ -167,7 +169,7 @@ implemented in <a class="reference internal" href="../sisl.html#module-sisl" tit
 <h2>Grid differences<a class="headerlink" href="#grid-differences" title="Permalink to this headline">¶</a></h2>
 <p>Often differences between two grids are needed. For this one can use the <code class="docutils literal"><span class="pre">--diff</span></code> flag which
 takes one additional grid file for the difference. I.e.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid -g RUN.fdf --diff Rho.grid.nc<span class="o">[</span>1<span class="o">]</span> Rho.grid.nc<span class="o">[</span>0<span class="o">]</span> diff_up-down.cube
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc<span class="o">[</span>0<span class="o">]</span> -g RUN.fdf --diff Rho.grid.nc<span class="o">[</span>1<span class="o">]</span> diff_up-down.cube
 </pre></div>
 </div>
 <p>which takes the difference between the spin up and spin down in the same <code class="docutils literal"><span class="pre">Rho.grid.nc</span></code> file.</p>
@@ -178,34 +180,25 @@ takes one additional grid file for the difference. I.e.</p>
 One can remove certain parts of the grid after reading, before writing. This will greatly decrease
 the output file <em>and</em> greatly speed-up the process as writing huge ASCII files is <em>extremely</em> time
 consuming. There are two methods for reducing grids:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid --grid-part &lt;<span class="nv">part</span><span class="o">=</span>above<span class="p">|</span>+<span class="p">|</span>below<span class="p">|</span>-&gt; &lt;<span class="o">[</span>xa<span class="p">|</span>yb<span class="p">|</span>zc&gt; &lt;pos<span class="p">|</span>&lt;frac&gt;f&gt;
-sgrid --grid-remove &lt;<span class="nv">remove</span><span class="o">=</span>above<span class="p">|</span>+<span class="p">|</span>below<span class="p">|</span>-&gt; &lt;<span class="o">[</span>xa<span class="p">|</span>yb<span class="p">|</span>zc&gt; &lt;pos<span class="p">|</span>&lt;frac&gt;f&gt;
-</pre></div>
-</div>
-<p>the shorthand commands are:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid -gp &lt;<span class="nv">part</span><span class="o">=</span>above<span class="p">|</span>+<span class="p">|</span>below<span class="p">|</span>-&gt; &lt;<span class="o">[</span>xa<span class="p">|</span>yb<span class="p">|</span>zc&gt; &lt;pos<span class="p">|</span>&lt;frac&gt;f&gt;
-sgrid -gr &lt;<span class="nv">remove</span><span class="o">=</span>above<span class="p">|</span>+<span class="p">|</span>below<span class="p">|</span>-&gt; &lt;<span class="o">[</span>xa<span class="p">|</span>yb<span class="p">|</span>zc&gt; &lt;pos<span class="p">|</span>&lt;frac&gt;f&gt;
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid &lt;file&gt; --sub x &lt;pos<span class="p">|</span>&lt;frac&gt;f&gt;
+sgrid &lt;file&gt; --remove x <span class="o">[</span>+-<span class="o">]</span>&lt;pos<span class="p">|</span>&lt;frac&gt;f&gt;
 </pre></div>
 </div>
 <p>This needs an example, say the unit cell is a square unit-cell with side lengths 10x10x20 Angstrom.
 To reduce the cell to a middle square of 5x5x5 Angstrom you can do:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid -gp + x 2.5 -gp + y 2.5 -gp + z 7.5 -gr + <span class="m">5</span> x -gr + <span class="m">5</span> y -gr + z <span class="m">5</span> Rho.grid.nc 5x5x5.cube
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc --sub x 2.5:7.5 --sub y 2.5:7.5 --sub z 7.5:12.5 5x5x5.cube
 </pre></div>
 </div>
-<p>note that <code class="docutils literal"><span class="pre">-gp</span></code> will <em>always</em> be performed before <code class="docutils literal"><span class="pre">-gr</span></code>, irrespective of the order of commands.
+<p>note that the order of the reductions are made in the order of appearence. So <em>two</em> subsequent sub/remove
+commands with the same direction will not yield the same final grid.
 The individual commands can be understood via</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">-gp</span> <span class="pre">+</span> <span class="pre">x</span> <span class="pre">2.5</span></code>: keep the grid along the first cell direction above 2.5 Å. (equal to <code class="docutils literal"><span class="pre">-gr</span> <span class="pre">-</span> <span class="pre">x</span> <span class="pre">2.5</span></code>)</li>
-<li><code class="docutils literal"><span class="pre">-gp</span> <span class="pre">+</span> <span class="pre">y</span> <span class="pre">2.5</span></code>: same as above but for the second cell direction.</li>
-<li><code class="docutils literal"><span class="pre">-gp</span> <span class="pre">+</span> <span class="pre">z</span> <span class="pre">7.5</span></code>: keep the grid along the first cell direction above 7.5 Å. (equal to <code class="docutils literal"><span class="pre">-gr</span> <span class="pre">-</span> <span class="pre">z</span> <span class="pre">7.5</span></code>)</li>
-<li><code class="docutils literal"><span class="pre">-gr</span> <span class="pre">+</span> <span class="pre">x</span> <span class="pre">5</span></code>: remove the grid above 5 Å along the first cell direction.</li>
-<li><code class="docutils literal"><span class="pre">-gr</span> <span class="pre">+</span> <span class="pre">y</span> <span class="pre">5</span></code>: same as above but for the second cell direction.</li>
-<li><code class="docutils literal"><span class="pre">-gr</span> <span class="pre">+</span> <span class="pre">z</span> <span class="pre">5</span></code>: same as above but for the third cell direction.</li>
+<li><code class="docutils literal"><span class="pre">--sub</span> <span class="pre">x</span> <span class="pre">2.5:7.5</span></code>: keep the grid along the first cell direction above 2.5 Å and below 5 Å.</li>
+<li><code class="docutils literal"><span class="pre">--sub</span> <span class="pre">y</span> <span class="pre">2.5:7.5</span></code>: keep the grid along the second cell direction above 2.5 Å and below 5 Å.</li>
+<li><code class="docutils literal"><span class="pre">--sub</span> <span class="pre">z</span> <span class="pre">7.5:12.5</span></code>: keep the grid along the third cell direction above 7.5 Å and below 12.5 Å.</li>
 </ul>
 </div></blockquote>
-<p>note that <code class="docutils literal"><span class="pre">--gr</span></code> and <code class="docutils literal"><span class="pre">--gp</span></code> essentially performs the same operation, while one is removing and
-the other is retaining.</p>
 <p>When one is dealing with fractional coordinates is can be convenient to use fractional grid operations.
 The length unit for the position is <em>always</em> in Ångstrøm, unless an optional <strong>f</strong> is appended which
 forces the unit to be in fractional position (must be between 0 and 1).</p>
@@ -213,8 +206,8 @@ forces the unit to be in fractional position (must be between 0 and 1).</p>
 <div class="section" id="averaging-and-summing">
 <h2>Averaging and summing<a class="headerlink" href="#averaging-and-summing" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes it is convenient to average or sum grids along cell directions:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid --mean x Rho.grid.nc meanx.cube
-sgrid --sum x Rho.grid.nc sumx.cube
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc --average x meanx.cube
+sgrid Rho.grid.nc --sum x sumx.cube
 </pre></div>
 </div>
 <p>which takes the average or the sum along the first cell direction, respectively. Note that this results
@@ -225,7 +218,7 @@ CUBE file).</p>
 <h2>Advanced features<a class="headerlink" href="#advanced-features" title="Permalink to this headline">¶</a></h2>
 <p>The above operations are not the limited use of the <a class="reference internal" href="../sisl.html#module-sisl" title="sisl"><code class="xref any py py-mod docutils literal"><span class="pre">sisl</span></code></a> library. However, to accomblish more complex
 things you need to manually script the actions using the <a class="reference internal" href="../sisl.grid.html#sisl.grid.Grid" title="sisl.grid.Grid"><code class="xref any py py-class docutils literal"><span class="pre">Grid</span></code></a> class and the methods available for that method.
-For inspiration you can check the <code class="docutils literal"><span class="pre">sgrid</span></code> executable to see how the commands are used in the script.</p>
+For inspiration you can check the <a class="reference internal" href="#"><span class="doc">sgrid</span></a> executable to see how the commands are used in the script.</p>
 </div>
 </div>
 
@@ -235,6 +228,8 @@ For inspiration you can check the <code class="docutils literal"><span class="pr
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="sdata.html" class="btn btn-neutral float-right" title="sdata" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="sgeom.html" class="btn btn-neutral" title="sgeom" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -268,7 +263,7 @@ For inspiration you can check the <code class="docutils literal"><span class="pr
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.7.1
+            VERSION:'0.7.6
 ',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sisl.utils.cmd module &mdash; sisl |release| documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.7.6
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="sisl |release| documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">sisl</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-sisl.utils.cmd">
+<span id="sisl-utils-cmd-module"></span><h1>sisl.utils.cmd module<a class="headerlink" href="#module-sisl.utils.cmd" title="Permalink to this headline">¶</a></h1>
+<p>Generic utility to create commonly used ArgumentParser
+options etc.</p>
+<dl class="function">
+<dt id="sisl.utils.cmd.dec_collect_actions">
+<code class="descclassname">sisl.utils.cmd.</code><code class="descname">dec_collect_actions</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.cmd.dec_collect_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator for collecting actions until the namespace <code class="xref any docutils literal"><span class="pre">_actions_run</span></code> is <code class="xref any docutils literal"><span class="pre">True</span></code>.</p>
+<p>Note that the <code class="xref any docutils literal"><span class="pre">Namespace</span></code> object is the 2nd argument.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.cmd.dec_default_AP">
+<code class="descclassname">sisl.utils.cmd.</code><code class="descname">dec_default_AP</code><span class="sig-paren">(</span><em>*A_args</em>, <em>**A_kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.cmd.dec_default_AP" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator for routines which takes a parser as argument
+and ensures that it is _not_ <code class="xref any docutils literal"><span class="pre">None</span></code>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.cmd.dec_run_actions">
+<code class="descclassname">sisl.utils.cmd.</code><code class="descname">dec_run_actions</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.cmd.dec_run_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decorator for running collected actions.</p>
+<p>Note that the <code class="xref any docutils literal"><span class="pre">Namespace</span></code> object is the 2nd argument.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.cmd.default_namespace">
+<code class="descclassname">sisl.utils.cmd.</code><code class="descname">default_namespace</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.cmd.default_namespace" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.cmd.ensure_namespace">
+<code class="descclassname">sisl.utils.cmd.</code><code class="descname">ensure_namespace</code><span class="sig-paren">(</span><em>p</em>, <em>ns</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.cmd.ensure_namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensure a namespace passed in case it is not.</p>
+<dl class="docutils">
+<dt>This is currently a hack for:</dt>
+<dd><a class="reference external" href="https://bugs.python.org/issue27859">https://bugs.python.org/issue27859</a></dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/sisl.utils.cmd.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">sisl</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

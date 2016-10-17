@@ -1,0 +1,7 @@
+sisl.utils.setup module
+=======================
+
+.. automodule:: sisl.utils.setup
+    :members:
+    :undoc-members:
+    :show-inheritance:

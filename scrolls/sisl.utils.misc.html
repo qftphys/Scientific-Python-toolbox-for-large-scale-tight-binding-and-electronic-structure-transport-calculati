@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sisl.utils.misc module &mdash; sisl |release| documentation</title>
+    
+    <link rel="stylesheet" href="_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.7.6
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="top" title="sisl |release| documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>sisl.utils.misc module</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="#">sisl.utils.misc module</a>
+      </div>
+      <div id="contentwrapper">
+        
+  <div class="section" id="module-sisl.utils.misc">
+<span id="sisl-utils-misc-module"></span><h1>sisl.utils.misc module<a class="headerlink" href="#module-sisl.utils.misc" title="Permalink to this headline">¶</a></h1>
+<p>Miscellaneous routines</p>
+<dl class="function">
+<dt id="sisl.utils.misc.merge_instances">
+<code class="descclassname">sisl.utils.misc.</code><code class="descname">merge_instances</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.misc.merge_instances" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merges an arbitrary number of instances together.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>name: str, &#8220;MergedClass&#8221;</strong></p>
+<blockquote class="last">
+<div><p>name of class</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.misc.name_spec">
+<code class="descclassname">sisl.utils.misc.</code><code class="descname">name_spec</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.misc.name_spec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether <code class="xref any docutils literal"><span class="pre">s</span></code> ends with <code class="xref any docutils literal"><span class="pre">{..}</span></code>. Returns the split instances.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>name: str</strong></p>
+<blockquote class="last">
+<div><p>string to split into proper <code class="xref any docutils literal"><span class="pre">name</span></code> and specification</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">name_spec</span><span class="p">(</span><span class="s1">&#39;hello&#39;</span><span class="p">)</span>
+<span class="go">&#39;hello&#39;, None</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">name_spec</span><span class="p">(</span><span class="s1">&#39;hello</span><span class="si">{TEST}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="go">&#39;hello&#39;, &#39;TEST&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.misc.direction">
+<code class="descclassname">sisl.utils.misc.</code><code class="descname">direction</code><span class="sig-paren">(</span><em>d</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.misc.direction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the index of the direction that the input represents</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.misc.angle">
+<code class="descclassname">sisl.utils.misc.</code><code class="descname">angle</code><span class="sig-paren">(</span><em>s</em>, <em>radians=True</em>, <em>in_radians=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.misc.angle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert the input string to an angle.</p>
+</dd></dl>
+
+</div>
+
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+    </div>
+  </body>
+</html>

@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.1
+        VERSION:     '0.7.6
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -53,9 +53,9 @@
 <span id="sisl-io-siesta-tbtrans-module"></span><h1>sisl.io.siesta.tbtrans module<a class="headerlink" href="#module-sisl.io.siesta.tbtrans" title="Permalink to this headline">¶</a></h1>
 <p>Sile object for reading TBtrans binary files</p>
 <dl class="class">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile">
-<em class="property">class </em><code class="descclassname">sisl.io.siesta.tbtrans.</code><code class="descname">TBtransSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>lvl=0</em>, <em>access=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="sisl.io.siesta.sile.html#sisl.io.siesta.sile.NCSileSIESTA" title="sisl.io.siesta.sile.NCSileSIESTA"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.sile.NCSileSIESTA</span></code></a></p>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta">
+<em class="property">class </em><code class="descclassname">sisl.io.siesta.tbtrans.</code><code class="descname">tbtncSileSiesta</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>lvl=0</em>, <em>access=1</em>, <em>_open=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.siesta.sile.html#sisl.io.siesta.sile.SileCDFSIESTA" title="sisl.io.siesta.sile.SileCDFSIESTA"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.sile.SileCDFSIESTA</span></code></a></p>
 <p>TBtrans file object</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="longtable docutils">
@@ -64,82 +64,82 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.E" title="sisl.io.siesta.tbtrans.TBtransSile.E"><code class="xref py py-obj docutils literal"><span class="pre">E</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.E" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.E"><code class="xref py py-obj docutils literal"><span class="pre">E</span></code></a></td>
 <td>Sampled energy-points in file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.Elecs" title="sisl.io.siesta.tbtrans.TBtransSile.Elecs"><code class="xref py py-obj docutils literal"><span class="pre">Elecs</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Elecs" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.Elecs"><code class="xref py py-obj docutils literal"><span class="pre">Elecs</span></code></a></td>
 <td>List of electrodes</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.Electrodes" title="sisl.io.siesta.tbtrans.TBtransSile.Electrodes"><code class="xref py py-obj docutils literal"><span class="pre">Electrodes</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Electrodes" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.Electrodes"><code class="xref py py-obj docutils literal"><span class="pre">Electrodes</span></code></a></td>
 <td>List of electrodes</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.a_d" title="sisl.io.siesta.tbtrans.TBtransSile.a_d"><code class="xref py py-obj docutils literal"><span class="pre">a_d</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.a_d" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.a_d"><code class="xref py py-obj docutils literal"><span class="pre">a_d</span></code></a></td>
 <td>Atomic indices (1-based) of device atoms</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.a_dev" title="sisl.io.siesta.tbtrans.TBtransSile.a_dev"><code class="xref py py-obj docutils literal"><span class="pre">a_dev</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.a_dev" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.a_dev"><code class="xref py py-obj docutils literal"><span class="pre">a_dev</span></code></a></td>
 <td>Atomic indices (1-based) of device atoms</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.cell" title="sisl.io.siesta.tbtrans.TBtransSile.cell"><code class="xref py py-obj docutils literal"><span class="pre">cell</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.cell" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.cell"><code class="xref py py-obj docutils literal"><span class="pre">cell</span></code></a></td>
 <td>Unit cell in file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.elecs" title="sisl.io.siesta.tbtrans.TBtransSile.elecs"><code class="xref py py-obj docutils literal"><span class="pre">elecs</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.elecs" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.elecs"><code class="xref py py-obj docutils literal"><span class="pre">elecs</span></code></a></td>
 <td>List of electrodes</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.electrodes" title="sisl.io.siesta.tbtrans.TBtransSile.electrodes"><code class="xref py py-obj docutils literal"><span class="pre">electrodes</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.electrodes" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.electrodes"><code class="xref py py-obj docutils literal"><span class="pre">electrodes</span></code></a></td>
 <td>List of electrodes</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.geom" title="sisl.io.siesta.tbtrans.TBtransSile.geom"><code class="xref py py-obj docutils literal"><span class="pre">geom</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.geom" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.geom"><code class="xref py py-obj docutils literal"><span class="pre">geom</span></code></a></td>
 <td>Returns the associated geometry from the TBT file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.kpt" title="sisl.io.siesta.tbtrans.TBtransSile.kpt"><code class="xref py py-obj docutils literal"><span class="pre">kpt</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.kpt" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.kpt"><code class="xref py py-obj docutils literal"><span class="pre">kpt</span></code></a></td>
 <td>Sampled k-points in file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.lasto" title="sisl.io.siesta.tbtrans.TBtransSile.lasto"><code class="xref py py-obj docutils literal"><span class="pre">lasto</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.lasto" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.lasto"><code class="xref py py-obj docutils literal"><span class="pre">lasto</span></code></a></td>
 <td>Last orbital of corresponding atom</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.nE" title="sisl.io.siesta.tbtrans.TBtransSile.nE"><code class="xref py py-obj docutils literal"><span class="pre">nE</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.nE" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.nE"><code class="xref py py-obj docutils literal"><span class="pre">nE</span></code></a></td>
 <td>Number of energy-points in file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.na" title="sisl.io.siesta.tbtrans.TBtransSile.na"><code class="xref py py-obj docutils literal"><span class="pre">na</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.na" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.na"><code class="xref py py-obj docutils literal"><span class="pre">na</span></code></a></td>
 <td>Returns number of atoms in the cell</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.na_d" title="sisl.io.siesta.tbtrans.TBtransSile.na_d"><code class="xref py py-obj docutils literal"><span class="pre">na_d</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.na_d" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.na_d"><code class="xref py py-obj docutils literal"><span class="pre">na_d</span></code></a></td>
 <td>Number of atoms in the device region</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.na_dev" title="sisl.io.siesta.tbtrans.TBtransSile.na_dev"><code class="xref py py-obj docutils literal"><span class="pre">na_dev</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.na_dev" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.na_dev"><code class="xref py py-obj docutils literal"><span class="pre">na_dev</span></code></a></td>
 <td>Number of atoms in the device region</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.na_u" title="sisl.io.siesta.tbtrans.TBtransSile.na_u"><code class="xref py py-obj docutils literal"><span class="pre">na_u</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.na_u" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.na_u"><code class="xref py py-obj docutils literal"><span class="pre">na_u</span></code></a></td>
 <td>Returns number of atoms in the cell</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.ne" title="sisl.io.siesta.tbtrans.TBtransSile.ne"><code class="xref py py-obj docutils literal"><span class="pre">ne</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.ne" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.ne"><code class="xref py py-obj docutils literal"><span class="pre">ne</span></code></a></td>
 <td>Number of energy-points in file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.nkpt" title="sisl.io.siesta.tbtrans.TBtransSile.nkpt"><code class="xref py py-obj docutils literal"><span class="pre">nkpt</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.nkpt" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.nkpt"><code class="xref py py-obj docutils literal"><span class="pre">nkpt</span></code></a></td>
 <td>Number of k-points in file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.no" title="sisl.io.siesta.tbtrans.TBtransSile.no"><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.no" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.no"><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></a></td>
 <td>Returns number of orbitals in the cell</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.no_d" title="sisl.io.siesta.tbtrans.TBtransSile.no_d"><code class="xref py py-obj docutils literal"><span class="pre">no_d</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.no_d" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.no_d"><code class="xref py py-obj docutils literal"><span class="pre">no_d</span></code></a></td>
 <td>Number of orbitals in the device region</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.no_u" title="sisl.io.siesta.tbtrans.TBtransSile.no_u"><code class="xref py py-obj docutils literal"><span class="pre">no_u</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.no_u" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.no_u"><code class="xref py py-obj docutils literal"><span class="pre">no_u</span></code></a></td>
 <td>Returns number of orbitals in the cell</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.pivot" title="sisl.io.siesta.tbtrans.TBtransSile.pivot"><code class="xref py py-obj docutils literal"><span class="pre">pivot</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.pivot" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.pivot"><code class="xref py py-obj docutils literal"><span class="pre">pivot</span></code></a></td>
 <td>Pivot table of device orbitals to obtain input sorting</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.pvt" title="sisl.io.siesta.tbtrans.TBtransSile.pvt"><code class="xref py py-obj docutils literal"><span class="pre">pvt</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.pvt" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.pvt"><code class="xref py py-obj docutils literal"><span class="pre">pvt</span></code></a></td>
 <td>Pivot table of device orbitals to obtain input sorting</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.wkpt" title="sisl.io.siesta.tbtrans.TBtransSile.wkpt"><code class="xref py py-obj docutils literal"><span class="pre">wkpt</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.wkpt" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.wkpt"><code class="xref py py-obj docutils literal"><span class="pre">wkpt</span></code></a></td>
 <td>Weights of k-points in file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.xa" title="sisl.io.siesta.tbtrans.TBtransSile.xa"><code class="xref py py-obj docutils literal"><span class="pre">xa</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.xa" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.xa"><code class="xref py py-obj docutils literal"><span class="pre">xa</span></code></a></td>
 <td>Atomic coordinates in file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.xyz" title="sisl.io.siesta.tbtrans.TBtransSile.xyz"><code class="xref py py-obj docutils literal"><span class="pre">xyz</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.xyz" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.xyz"><code class="xref py py-obj docutils literal"><span class="pre">xyz</span></code></a></td>
 <td>Atomic coordinates in file</td>
 </tr>
 </tbody>
@@ -151,79 +151,100 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.ADOS" title="sisl.io.siesta.tbtrans.TBtransSile.ADOS"><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code></a>(elec[,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.ADOS" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.ADOS"><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.BulkDOS" title="sisl.io.siesta.tbtrans.TBtransSile.BulkDOS"><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code></a>(elec[,&nbsp;avg])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.ArgumentParser" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>([parser])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.BulkDOS" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.BulkDOS"><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.DOS" title="sisl.io.siesta.tbtrans.TBtransSile.DOS"><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code></a>([avg])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS"><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code></a>([avg])</td>
 <td>Return the Green function DOS.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.DOS_A" title="sisl.io.siesta.tbtrans.TBtransSile.DOS_A"><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code></a>(elec[,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_A" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_A"><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.DOS_Gf" title="sisl.io.siesta.tbtrans.TBtransSile.DOS_Gf"><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code></a>([avg])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_Gf" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_Gf"><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code></a>([avg])</td>
 <td>Return the Green function DOS.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.DOS_bulk" title="sisl.io.siesta.tbtrans.TBtransSile.DOS_bulk"><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code></a>(elec[,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_bulk" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_bulk"><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.E2idx" title="sisl.io.siesta.tbtrans.TBtransSile.E2idx"><code class="xref py py-obj docutils literal"><span class="pre">E2idx</span></code></a>(E)</td>
-<td>Return the closest energy index corresponding to the energy <a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.E" title="sisl.io.siesta.tbtrans.TBtransSile.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Eindex" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.Eindex"><code class="xref py py-obj docutils literal"><span class="pre">Eindex</span></code></a>(E)</td>
+<td>Return the closest energy index corresponding to the energy <a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.E" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.T" title="sisl.io.siesta.tbtrans.TBtransSile.T"><code class="xref py py-obj docutils literal"><span class="pre">T</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.T" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.T"><code class="xref py py-obj docutils literal"><span class="pre">T</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.Tbulk" title="sisl.io.siesta.tbtrans.TBtransSile.Tbulk"><code class="xref py py-obj docutils literal"><span class="pre">Tbulk</span></code></a>(elec[,&nbsp;avg])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Tbulk" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.Tbulk"><code class="xref py py-obj docutils literal"><span class="pre">Tbulk</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the bulk transmission in the <code class="xref any docutils literal"><span class="pre">elec</span></code> electrode</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.Teig" title="sisl.io.siesta.tbtrans.TBtransSile.Teig"><code class="xref py py-obj docutils literal"><span class="pre">Teig</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Teig" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.Teig"><code class="xref py py-obj docutils literal"><span class="pre">Teig</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission eigenvalues from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.atom_current" title="sisl.io.siesta.tbtrans.TBtransSile.atom_current"><code class="xref py py-obj docutils literal"><span class="pre">atom_current</span></code></a>(Jij[,&nbsp;activity])</td>
-<td>Return the atom-current of atoms</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.atom_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.atom_current"><code class="xref py py-obj docutils literal"><span class="pre">atom_current</span></code></a>(elec[,&nbsp;E,&nbsp;avg,&nbsp;activity])</td>
+<td>Return the atom-current of atoms.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.bond_current" title="sisl.io.siesta.tbtrans.TBtransSile.bond_current"><code class="xref py py-obj docutils literal"><span class="pre">bond_current</span></code></a>(Jij[,&nbsp;sum])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.atom_current_from_orbital" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.atom_current_from_orbital"><code class="xref py py-obj docutils literal"><span class="pre">atom_current_from_orbital</span></code></a>(Jij[,&nbsp;activity])</td>
+<td>Return the atom-current of atoms.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.bond_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.bond_current"><code class="xref py py-obj docutils literal"><span class="pre">bond_current</span></code></a>(elec[,&nbsp;E,&nbsp;avg,&nbsp;isc,&nbsp;sum,&nbsp;uc])</td>
 <td>Return the bond-current between atoms (sum of orbital currents)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.chemical_potential" title="sisl.io.siesta.tbtrans.TBtransSile.chemical_potential"><code class="xref py py-obj docutils literal"><span class="pre">chemical_potential</span></code></a>(elec)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.bond_current_from_orbital" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.bond_current_from_orbital"><code class="xref py py-obj docutils literal"><span class="pre">bond_current_from_orbital</span></code></a>(Jij[,&nbsp;sum,&nbsp;uc])</td>
+<td>Return the bond-current between atoms (sum of orbital currents) by passing the orbital currents.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.chemical_potential" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.chemical_potential"><code class="xref py py-obj docutils literal"><span class="pre">chemical_potential</span></code></a>(elec)</td>
 <td>Return the chemical potential associated with the electrode <code class="xref any docutils literal"><span class="pre">elec</span></code></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.electronic_temperature" title="sisl.io.siesta.tbtrans.TBtransSile.electronic_temperature"><code class="xref py py-obj docutils literal"><span class="pre">electronic_temperature</span></code></a>(elec)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.current"><code class="xref py py-obj docutils literal"><span class="pre">current</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<td>Return the current from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code> using the weights in the file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.electronic_temperature" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.electronic_temperature"><code class="xref py py-obj docutils literal"><span class="pre">electronic_temperature</span></code></a>(elec)</td>
 <td>Return temperature of the electrode electronic distribution</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.kT" title="sisl.io.siesta.tbtrans.TBtransSile.kT"><code class="xref py py-obj docutils literal"><span class="pre">kT</span></code></a>(elec)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.kT" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.kT"><code class="xref py py-obj docutils literal"><span class="pre">kT</span></code></a>(elec)</td>
 <td>Return temperature of the electrode electronic distribution</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.mu" title="sisl.io.siesta.tbtrans.TBtransSile.mu"><code class="xref py py-obj docutils literal"><span class="pre">mu</span></code></a>(elec)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.mu" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.mu"><code class="xref py py-obj docutils literal"><span class="pre">mu</span></code></a>(elec)</td>
 <td>Return the chemical potential associated with the electrode <code class="xref any docutils literal"><span class="pre">elec</span></code></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.orbital_current" title="sisl.io.siesta.tbtrans.TBtransSile.orbital_current"><code class="xref py py-obj docutils literal"><span class="pre">orbital_current</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current"><code class="xref py py-obj docutils literal"><span class="pre">orbital_current</span></code></a>(elec[,&nbsp;E,&nbsp;avg,&nbsp;isc])</td>
 <td>Return the orbital current originating from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.read_geom" title="sisl.io.siesta.tbtrans.TBtransSile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data"><code class="xref py py-obj docutils literal"><span class="pre">read_data</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Read specific type of data.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.read_sc" title="sisl.io.siesta.tbtrans.TBtransSile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Returns Geometry object from a .TBT.nc file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.transmission" title="sisl.io.siesta.tbtrans.TBtransSile.transmission"><code class="xref py py-obj docutils literal"><span class="pre">transmission</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_sc" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<td>Returns <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from a .TBT.nc file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission"><code class="xref py py-obj docutils literal"><span class="pre">transmission</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.transmission_bulk" title="sisl.io.siesta.tbtrans.TBtransSile.transmission_bulk"><code class="xref py py-obj docutils literal"><span class="pre">transmission_bulk</span></code></a>(elec[,&nbsp;avg])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission_bulk" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission_bulk"><code class="xref py py-obj docutils literal"><span class="pre">transmission_bulk</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the bulk transmission in the <code class="xref any docutils literal"><span class="pre">elec</span></code> electrode</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.transmission_eig" title="sisl.io.siesta.tbtrans.TBtransSile.transmission_eig"><code class="xref py py-obj docutils literal"><span class="pre">transmission_eig</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission_eig" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission_eig"><code class="xref py py-obj docutils literal"><span class="pre">transmission_eig</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission eigenvalues from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.write_geom" title="sisl.io.siesta.tbtrans.TBtransSile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.vector_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.vector_current"><code class="xref py py-obj docutils literal"><span class="pre">vector_current</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the atom-current with vector components of atoms.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.vector_current_from_orbital" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.vector_current_from_orbital"><code class="xref py py-obj docutils literal"><span class="pre">vector_current_from_orbital</span></code></a>(Jij)</td>
+<td>Return the atom-current with vector components of atoms.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.write_geom" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>()</td>
 <td>This does not work</td>
 </tr>
 </tbody>
 </table>
-<p>Creates/Opens a NCSile</p>
-<p>Opens a NCSile with <code class="xref any docutils literal"><span class="pre">mode</span></code> and compression level <code class="xref any docutils literal"><span class="pre">lvl</span></code>.
+<p>Creates/Opens a SileCDF</p>
+<p>Opens a SileCDF with <code class="xref any docutils literal"><span class="pre">mode</span></code> and compression level <code class="xref any docutils literal"><span class="pre">lvl</span></code>.
 If <code class="xref any docutils literal"><span class="pre">mode</span></code> is in read-mode (r) the compression level
 is ignored.</p>
 <p>The final <code class="xref any docutils literal"><span class="pre">access</span></code> parameter sets how the file should be
@@ -239,82 +260,82 @@ open and subsequently accessed.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.E" title="sisl.io.siesta.tbtrans.TBtransSile.E"><code class="xref py py-obj docutils literal"><span class="pre">E</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.E" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.E"><code class="xref py py-obj docutils literal"><span class="pre">E</span></code></a></td>
 <td>Sampled energy-points in file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.Elecs" title="sisl.io.siesta.tbtrans.TBtransSile.Elecs"><code class="xref py py-obj docutils literal"><span class="pre">Elecs</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Elecs" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.Elecs"><code class="xref py py-obj docutils literal"><span class="pre">Elecs</span></code></a></td>
 <td>List of electrodes</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.Electrodes" title="sisl.io.siesta.tbtrans.TBtransSile.Electrodes"><code class="xref py py-obj docutils literal"><span class="pre">Electrodes</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Electrodes" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.Electrodes"><code class="xref py py-obj docutils literal"><span class="pre">Electrodes</span></code></a></td>
 <td>List of electrodes</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.a_d" title="sisl.io.siesta.tbtrans.TBtransSile.a_d"><code class="xref py py-obj docutils literal"><span class="pre">a_d</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.a_d" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.a_d"><code class="xref py py-obj docutils literal"><span class="pre">a_d</span></code></a></td>
 <td>Atomic indices (1-based) of device atoms</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.a_dev" title="sisl.io.siesta.tbtrans.TBtransSile.a_dev"><code class="xref py py-obj docutils literal"><span class="pre">a_dev</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.a_dev" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.a_dev"><code class="xref py py-obj docutils literal"><span class="pre">a_dev</span></code></a></td>
 <td>Atomic indices (1-based) of device atoms</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.cell" title="sisl.io.siesta.tbtrans.TBtransSile.cell"><code class="xref py py-obj docutils literal"><span class="pre">cell</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.cell" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.cell"><code class="xref py py-obj docutils literal"><span class="pre">cell</span></code></a></td>
 <td>Unit cell in file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.elecs" title="sisl.io.siesta.tbtrans.TBtransSile.elecs"><code class="xref py py-obj docutils literal"><span class="pre">elecs</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.elecs" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.elecs"><code class="xref py py-obj docutils literal"><span class="pre">elecs</span></code></a></td>
 <td>List of electrodes</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.electrodes" title="sisl.io.siesta.tbtrans.TBtransSile.electrodes"><code class="xref py py-obj docutils literal"><span class="pre">electrodes</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.electrodes" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.electrodes"><code class="xref py py-obj docutils literal"><span class="pre">electrodes</span></code></a></td>
 <td>List of electrodes</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.geom" title="sisl.io.siesta.tbtrans.TBtransSile.geom"><code class="xref py py-obj docutils literal"><span class="pre">geom</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.geom" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.geom"><code class="xref py py-obj docutils literal"><span class="pre">geom</span></code></a></td>
 <td>Returns the associated geometry from the TBT file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.kpt" title="sisl.io.siesta.tbtrans.TBtransSile.kpt"><code class="xref py py-obj docutils literal"><span class="pre">kpt</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.kpt" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.kpt"><code class="xref py py-obj docutils literal"><span class="pre">kpt</span></code></a></td>
 <td>Sampled k-points in file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.lasto" title="sisl.io.siesta.tbtrans.TBtransSile.lasto"><code class="xref py py-obj docutils literal"><span class="pre">lasto</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.lasto" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.lasto"><code class="xref py py-obj docutils literal"><span class="pre">lasto</span></code></a></td>
 <td>Last orbital of corresponding atom</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.nE" title="sisl.io.siesta.tbtrans.TBtransSile.nE"><code class="xref py py-obj docutils literal"><span class="pre">nE</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.nE" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.nE"><code class="xref py py-obj docutils literal"><span class="pre">nE</span></code></a></td>
 <td>Number of energy-points in file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.na" title="sisl.io.siesta.tbtrans.TBtransSile.na"><code class="xref py py-obj docutils literal"><span class="pre">na</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.na" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.na"><code class="xref py py-obj docutils literal"><span class="pre">na</span></code></a></td>
 <td>Returns number of atoms in the cell</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.na_d" title="sisl.io.siesta.tbtrans.TBtransSile.na_d"><code class="xref py py-obj docutils literal"><span class="pre">na_d</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.na_d" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.na_d"><code class="xref py py-obj docutils literal"><span class="pre">na_d</span></code></a></td>
 <td>Number of atoms in the device region</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.na_dev" title="sisl.io.siesta.tbtrans.TBtransSile.na_dev"><code class="xref py py-obj docutils literal"><span class="pre">na_dev</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.na_dev" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.na_dev"><code class="xref py py-obj docutils literal"><span class="pre">na_dev</span></code></a></td>
 <td>Number of atoms in the device region</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.na_u" title="sisl.io.siesta.tbtrans.TBtransSile.na_u"><code class="xref py py-obj docutils literal"><span class="pre">na_u</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.na_u" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.na_u"><code class="xref py py-obj docutils literal"><span class="pre">na_u</span></code></a></td>
 <td>Returns number of atoms in the cell</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.ne" title="sisl.io.siesta.tbtrans.TBtransSile.ne"><code class="xref py py-obj docutils literal"><span class="pre">ne</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.ne" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.ne"><code class="xref py py-obj docutils literal"><span class="pre">ne</span></code></a></td>
 <td>Number of energy-points in file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.nkpt" title="sisl.io.siesta.tbtrans.TBtransSile.nkpt"><code class="xref py py-obj docutils literal"><span class="pre">nkpt</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.nkpt" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.nkpt"><code class="xref py py-obj docutils literal"><span class="pre">nkpt</span></code></a></td>
 <td>Number of k-points in file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.no" title="sisl.io.siesta.tbtrans.TBtransSile.no"><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.no" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.no"><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></a></td>
 <td>Returns number of orbitals in the cell</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.no_d" title="sisl.io.siesta.tbtrans.TBtransSile.no_d"><code class="xref py py-obj docutils literal"><span class="pre">no_d</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.no_d" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.no_d"><code class="xref py py-obj docutils literal"><span class="pre">no_d</span></code></a></td>
 <td>Number of orbitals in the device region</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.no_u" title="sisl.io.siesta.tbtrans.TBtransSile.no_u"><code class="xref py py-obj docutils literal"><span class="pre">no_u</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.no_u" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.no_u"><code class="xref py py-obj docutils literal"><span class="pre">no_u</span></code></a></td>
 <td>Returns number of orbitals in the cell</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.pivot" title="sisl.io.siesta.tbtrans.TBtransSile.pivot"><code class="xref py py-obj docutils literal"><span class="pre">pivot</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.pivot" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.pivot"><code class="xref py py-obj docutils literal"><span class="pre">pivot</span></code></a></td>
 <td>Pivot table of device orbitals to obtain input sorting</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.pvt" title="sisl.io.siesta.tbtrans.TBtransSile.pvt"><code class="xref py py-obj docutils literal"><span class="pre">pvt</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.pvt" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.pvt"><code class="xref py py-obj docutils literal"><span class="pre">pvt</span></code></a></td>
 <td>Pivot table of device orbitals to obtain input sorting</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.wkpt" title="sisl.io.siesta.tbtrans.TBtransSile.wkpt"><code class="xref py py-obj docutils literal"><span class="pre">wkpt</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.wkpt" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.wkpt"><code class="xref py py-obj docutils literal"><span class="pre">wkpt</span></code></a></td>
 <td>Weights of k-points in file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.xa" title="sisl.io.siesta.tbtrans.TBtransSile.xa"><code class="xref py py-obj docutils literal"><span class="pre">xa</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.xa" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.xa"><code class="xref py py-obj docutils literal"><span class="pre">xa</span></code></a></td>
 <td>Atomic coordinates in file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.xyz" title="sisl.io.siesta.tbtrans.TBtransSile.xyz"><code class="xref py py-obj docutils literal"><span class="pre">xyz</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.xyz" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.xyz"><code class="xref py py-obj docutils literal"><span class="pre">xyz</span></code></a></td>
 <td>Atomic coordinates in file</td>
 </tr>
 </tbody>
@@ -326,80 +347,101 @@ open and subsequently accessed.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.ADOS" title="sisl.io.siesta.tbtrans.TBtransSile.ADOS"><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code></a>(elec[,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.ADOS" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.ADOS"><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.BulkDOS" title="sisl.io.siesta.tbtrans.TBtransSile.BulkDOS"><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code></a>(elec[,&nbsp;avg])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.ArgumentParser" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>([parser])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.BulkDOS" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.BulkDOS"><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.DOS" title="sisl.io.siesta.tbtrans.TBtransSile.DOS"><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code></a>([avg])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS"><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code></a>([avg])</td>
 <td>Return the Green function DOS.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.DOS_A" title="sisl.io.siesta.tbtrans.TBtransSile.DOS_A"><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code></a>(elec[,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_A" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_A"><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.DOS_Gf" title="sisl.io.siesta.tbtrans.TBtransSile.DOS_Gf"><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code></a>([avg])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_Gf" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_Gf"><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code></a>([avg])</td>
 <td>Return the Green function DOS.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.DOS_bulk" title="sisl.io.siesta.tbtrans.TBtransSile.DOS_bulk"><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code></a>(elec[,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_bulk" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_bulk"><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.E2idx" title="sisl.io.siesta.tbtrans.TBtransSile.E2idx"><code class="xref py py-obj docutils literal"><span class="pre">E2idx</span></code></a>(E)</td>
-<td>Return the closest energy index corresponding to the energy <a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.E" title="sisl.io.siesta.tbtrans.TBtransSile.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Eindex" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.Eindex"><code class="xref py py-obj docutils literal"><span class="pre">Eindex</span></code></a>(E)</td>
+<td>Return the closest energy index corresponding to the energy <a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.E" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.T" title="sisl.io.siesta.tbtrans.TBtransSile.T"><code class="xref py py-obj docutils literal"><span class="pre">T</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.T" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.T"><code class="xref py py-obj docutils literal"><span class="pre">T</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.Tbulk" title="sisl.io.siesta.tbtrans.TBtransSile.Tbulk"><code class="xref py py-obj docutils literal"><span class="pre">Tbulk</span></code></a>(elec[,&nbsp;avg])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Tbulk" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.Tbulk"><code class="xref py py-obj docutils literal"><span class="pre">Tbulk</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the bulk transmission in the <code class="xref any docutils literal"><span class="pre">elec</span></code> electrode</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.Teig" title="sisl.io.siesta.tbtrans.TBtransSile.Teig"><code class="xref py py-obj docutils literal"><span class="pre">Teig</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Teig" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.Teig"><code class="xref py py-obj docutils literal"><span class="pre">Teig</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission eigenvalues from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.atom_current" title="sisl.io.siesta.tbtrans.TBtransSile.atom_current"><code class="xref py py-obj docutils literal"><span class="pre">atom_current</span></code></a>(Jij[,&nbsp;activity])</td>
-<td>Return the atom-current of atoms</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.atom_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.atom_current"><code class="xref py py-obj docutils literal"><span class="pre">atom_current</span></code></a>(elec[,&nbsp;E,&nbsp;avg,&nbsp;activity])</td>
+<td>Return the atom-current of atoms.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.bond_current" title="sisl.io.siesta.tbtrans.TBtransSile.bond_current"><code class="xref py py-obj docutils literal"><span class="pre">bond_current</span></code></a>(Jij[,&nbsp;sum])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.atom_current_from_orbital" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.atom_current_from_orbital"><code class="xref py py-obj docutils literal"><span class="pre">atom_current_from_orbital</span></code></a>(Jij[,&nbsp;activity])</td>
+<td>Return the atom-current of atoms.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.bond_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.bond_current"><code class="xref py py-obj docutils literal"><span class="pre">bond_current</span></code></a>(elec[,&nbsp;E,&nbsp;avg,&nbsp;isc,&nbsp;sum,&nbsp;uc])</td>
 <td>Return the bond-current between atoms (sum of orbital currents)</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.chemical_potential" title="sisl.io.siesta.tbtrans.TBtransSile.chemical_potential"><code class="xref py py-obj docutils literal"><span class="pre">chemical_potential</span></code></a>(elec)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.bond_current_from_orbital" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.bond_current_from_orbital"><code class="xref py py-obj docutils literal"><span class="pre">bond_current_from_orbital</span></code></a>(Jij[,&nbsp;sum,&nbsp;uc])</td>
+<td>Return the bond-current between atoms (sum of orbital currents) by passing the orbital currents.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.chemical_potential" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.chemical_potential"><code class="xref py py-obj docutils literal"><span class="pre">chemical_potential</span></code></a>(elec)</td>
 <td>Return the chemical potential associated with the electrode <code class="xref any docutils literal"><span class="pre">elec</span></code></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.electronic_temperature" title="sisl.io.siesta.tbtrans.TBtransSile.electronic_temperature"><code class="xref py py-obj docutils literal"><span class="pre">electronic_temperature</span></code></a>(elec)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.current"><code class="xref py py-obj docutils literal"><span class="pre">current</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<td>Return the current from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code> using the weights in the file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.electronic_temperature" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.electronic_temperature"><code class="xref py py-obj docutils literal"><span class="pre">electronic_temperature</span></code></a>(elec)</td>
 <td>Return temperature of the electrode electronic distribution</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.kT" title="sisl.io.siesta.tbtrans.TBtransSile.kT"><code class="xref py py-obj docutils literal"><span class="pre">kT</span></code></a>(elec)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.kT" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.kT"><code class="xref py py-obj docutils literal"><span class="pre">kT</span></code></a>(elec)</td>
 <td>Return temperature of the electrode electronic distribution</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.mu" title="sisl.io.siesta.tbtrans.TBtransSile.mu"><code class="xref py py-obj docutils literal"><span class="pre">mu</span></code></a>(elec)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.mu" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.mu"><code class="xref py py-obj docutils literal"><span class="pre">mu</span></code></a>(elec)</td>
 <td>Return the chemical potential associated with the electrode <code class="xref any docutils literal"><span class="pre">elec</span></code></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.orbital_current" title="sisl.io.siesta.tbtrans.TBtransSile.orbital_current"><code class="xref py py-obj docutils literal"><span class="pre">orbital_current</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current"><code class="xref py py-obj docutils literal"><span class="pre">orbital_current</span></code></a>(elec[,&nbsp;E,&nbsp;avg,&nbsp;isc])</td>
 <td>Return the orbital current originating from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.read_geom" title="sisl.io.siesta.tbtrans.TBtransSile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data"><code class="xref py py-obj docutils literal"><span class="pre">read_data</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Read specific type of data.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.read_sc" title="sisl.io.siesta.tbtrans.TBtransSile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Returns Geometry object from a .TBT.nc file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.transmission" title="sisl.io.siesta.tbtrans.TBtransSile.transmission"><code class="xref py py-obj docutils literal"><span class="pre">transmission</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_sc" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<td>Returns <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from a .TBT.nc file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission"><code class="xref py py-obj docutils literal"><span class="pre">transmission</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.transmission_bulk" title="sisl.io.siesta.tbtrans.TBtransSile.transmission_bulk"><code class="xref py py-obj docutils literal"><span class="pre">transmission_bulk</span></code></a>(elec[,&nbsp;avg])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission_bulk" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission_bulk"><code class="xref py py-obj docutils literal"><span class="pre">transmission_bulk</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the bulk transmission in the <code class="xref any docutils literal"><span class="pre">elec</span></code> electrode</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.transmission_eig" title="sisl.io.siesta.tbtrans.TBtransSile.transmission_eig"><code class="xref py py-obj docutils literal"><span class="pre">transmission_eig</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission_eig" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission_eig"><code class="xref py py-obj docutils literal"><span class="pre">transmission_eig</span></code></a>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission eigenvalues from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.write_geom" title="sisl.io.siesta.tbtrans.TBtransSile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.vector_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.vector_current"><code class="xref py py-obj docutils literal"><span class="pre">vector_current</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the atom-current with vector components of atoms.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.vector_current_from_orbital" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.vector_current_from_orbital"><code class="xref py py-obj docutils literal"><span class="pre">vector_current_from_orbital</span></code></a>(Jij)</td>
+<td>Return the atom-current with vector components of atoms.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.write_geom" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>()</td>
 <td>This does not work</td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.ADOS">
-<code class="descname">ADOS</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.ADOS" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.ADOS">
+<code class="descname">ADOS</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.ADOS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -420,8 +462,13 @@ open and subsequently accessed.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.BulkDOS">
-<code class="descname">BulkDOS</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.BulkDOS" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.ArgumentParser">
+<code class="descname">ArgumentParser</code><span class="sig-paren">(</span><em>parser=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.ArgumentParser" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.BulkDOS">
+<code class="descname">BulkDOS</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.BulkDOS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -442,8 +489,8 @@ open and subsequently accessed.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.DOS">
-<code class="descname">DOS</code><span class="sig-paren">(</span><em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.DOS" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS">
+<code class="descname">DOS</code><span class="sig-paren">(</span><em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the Green function DOS.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -460,8 +507,8 @@ open and subsequently accessed.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.DOS_A">
-<code class="descname">DOS_A</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.DOS_A" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_A">
+<code class="descname">DOS_A</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_A" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -482,8 +529,8 @@ open and subsequently accessed.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.DOS_Gf">
-<code class="descname">DOS_Gf</code><span class="sig-paren">(</span><em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.DOS_Gf" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_Gf">
+<code class="descname">DOS_Gf</code><span class="sig-paren">(</span><em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_Gf" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the Green function DOS.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -500,8 +547,8 @@ open and subsequently accessed.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.DOS_bulk">
-<code class="descname">DOS_bulk</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.DOS_bulk" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_bulk">
+<code class="descname">DOS_bulk</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.DOS_bulk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -522,32 +569,32 @@ open and subsequently accessed.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.E">
-<code class="descname">E</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.E" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.E">
+<code class="descname">E</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.E" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sampled energy-points in file</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.E2idx">
-<code class="descname">E2idx</code><span class="sig-paren">(</span><em>E</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.E2idx" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the closest energy index corresponding to the energy <a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.E" title="sisl.io.siesta.tbtrans.TBtransSile.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></p>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.Eindex">
+<code class="descname">Eindex</code><span class="sig-paren">(</span><em>E</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Eindex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the closest energy index corresponding to the energy <a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.E" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.Elecs">
-<code class="descname">Elecs</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.Elecs" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.Elecs">
+<code class="descname">Elecs</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Elecs" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of electrodes</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.Electrodes">
-<code class="descname">Electrodes</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.Electrodes" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.Electrodes">
+<code class="descname">Electrodes</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Electrodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of electrodes</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.T">
-<code class="descname">T</code><span class="sig-paren">(</span><em>elec_from</em>, <em>elec_to</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.T" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.T">
+<code class="descname">T</code><span class="sig-paren">(</span><em>elec_from</em>, <em>elec_to</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.T" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the transmission from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</p>
 <p>The transmission between two electrodes may be retrieved
 from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a>.</p>
@@ -574,8 +621,8 @@ from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="s
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.Tbulk">
-<code class="descname">Tbulk</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.Tbulk" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.Tbulk">
+<code class="descname">Tbulk</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Tbulk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the bulk transmission in the <code class="xref any docutils literal"><span class="pre">elec</span></code> electrode</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -596,8 +643,8 @@ from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="s
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.Teig">
-<code class="descname">Teig</code><span class="sig-paren">(</span><em>elec_from</em>, <em>elec_to</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.Teig" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.Teig">
+<code class="descname">Teig</code><span class="sig-paren">(</span><em>elec_from</em>, <em>elec_to</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.Teig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the transmission eigenvalues from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</p>
 <p>The transmission eigenvalues between two electrodes may be retrieved
 from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a>.</p>
@@ -624,28 +671,39 @@ from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="s
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.a_d">
-<code class="descname">a_d</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.a_d" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.a_d">
+<code class="descname">a_d</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.a_d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Atomic indices (1-based) of device atoms</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.a_dev">
-<code class="descname">a_dev</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.a_dev" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.a_dev">
+<code class="descname">a_dev</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.a_dev" title="Permalink to this definition">¶</a></dt>
 <dd><p>Atomic indices (1-based) of device atoms</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.atom_current">
-<code class="descname">atom_current</code><span class="sig-paren">(</span><em>Jij</em>, <em>activity=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.atom_current" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the atom-current of atoms</p>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.atom_current">
+<code class="descname">atom_current</code><span class="sig-paren">(</span><em>elec</em>, <em>E=0.0</em>, <em>avg=True</em>, <em>activity=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.atom_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the atom-current of atoms.</p>
+<p>This should <em>not</em> be confused with the bond-currents.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>Jij: ``scipy.sparse.csr_matrix``</strong></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>elec: str</strong></p>
 <blockquote>
-<div><p>the orbital currents as retrieved from <a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.orbital_current" title="sisl.io.siesta.tbtrans.TBtransSile.orbital_current"><code class="xref any py py-meth docutils literal"><span class="pre">orbital_current</span></code></a></p>
+<div><p>the electrode of originating electrons</p>
+</div></blockquote>
+<p><strong>E: float/int (`0.`)</strong></p>
+<blockquote>
+<div><p>the energy index of the atom current.
+Unlike <a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current"><code class="xref any py py-meth docutils literal"><span class="pre">orbital_current</span></code></a> this may not be <code class="xref any docutils literal"><span class="pre">None</span></code> as the down-scaling of the
+orbital currents may not be equivalent for all energy points.</p>
+</div></blockquote>
+<p><strong>avg: bool (`True`)</strong></p>
+<blockquote>
+<div><p>whether the atom current returned is k-averaged</p>
 </div></blockquote>
 <p><strong>activity: bool (True)</strong></p>
 <blockquote class="last">
@@ -668,23 +726,115 @@ J_I^{|o|} &amp;=\frac{1}{2} \sum_J \sum_{\nu\in I}\sum_{\mu\in J} \big| J_{\nu\m
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.bond_current">
-<code class="descname">bond_current</code><span class="sig-paren">(</span><em>Jij</em>, <em>sum='+'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.bond_current" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the bond-current between atoms (sum of orbital currents)</p>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.atom_current_from_orbital">
+<code class="descname">atom_current_from_orbital</code><span class="sig-paren">(</span><em>Jij</em>, <em>activity=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.atom_current_from_orbital" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the atom-current of atoms.</p>
+<p>This takes a sparse matrix with size <code class="xref any docutils literal"><span class="pre">self.geom.no,</span> <span class="pre">self.geom.no_s</span></code> as argument
+with the associated orbital currents.</p>
+<p>Please note that this returns the atomic current by folding all 
+orbital currents into the unit-cell.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>Jij: ``scipy.sparse.csr_matrix``</strong></p>
 <blockquote>
-<div><p>the orbital currents as retrieved from <a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.orbital_current" title="sisl.io.siesta.tbtrans.TBtransSile.orbital_current"><code class="xref any py py-meth docutils literal"><span class="pre">orbital_current</span></code></a></p>
+<div><p>the orbital currents as retrieved from <a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current"><code class="xref any py py-meth docutils literal"><span class="pre">orbital_current</span></code></a></p>
 </div></blockquote>
-<p><strong>sum: str (&#8220;+&#8221;)</strong></p>
+<p><strong>activity: bool (True)</strong></p>
 <blockquote class="last">
+<div><p>whether the activity current is returned.
+This is defined using these two equations:</p>
+<div class="math">
+\[J_I^{|a|} &amp;=\frac{1}{2} \sum_J \big| \sum_{\nu\in I}\sum_{\mu\in J} J_{\nu\mu} \big|
+J_I^{|o|} &amp;=\frac{1}{2} \sum_J \sum_{\nu\in I}\sum_{\mu\in J} \big| J_{\nu\mu} \big|\]</div>
+<p>If <code class="xref any docutils literal"><span class="pre">activity</span> <span class="pre">=</span> <span class="pre">False</span></code> it returns</p>
+<div class="math">
+\[J_I^{|a|}\]</div>
+<p>and if <code class="xref any docutils literal"><span class="pre">activity</span> <span class="pre">=</span> <span class="pre">True</span></code> it returns</p>
+<div class="math">
+\[J_I^{\mathcal A} = \sqrt{ J_I^{|a|} J_I^{|o|} }\]</div>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.bond_current">
+<code class="descname">bond_current</code><span class="sig-paren">(</span><em>elec</em>, <em>E=0.0</em>, <em>avg=True</em>, <em>isc=None</em>, <em>sum='+'</em>, <em>uc=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.bond_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the bond-current between atoms (sum of orbital currents)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>elec</strong> : <code class="xref any docutils literal"><span class="pre">str</span></code></p>
+<blockquote>
+<div><p>the electrode of originating electrons</p>
+</div></blockquote>
+<p><strong>E</strong> : <code class="xref any docutils literal"><span class="pre">float</span> <span class="pre">=</span> <span class="pre">0.</span></code> for energy, <code class="xref any docutils literal"><span class="pre">int</span></code> for energy index</p>
+<blockquote>
+<div><p>the energy index of the bond current.
+Unlike <a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current"><code class="xref any py py-meth docutils literal"><span class="pre">orbital_current</span></code></a> this may not be <code class="xref any docutils literal"><span class="pre">None</span></code> as the down-scaling of the
+orbital currents may not be equivalent for all energy points.</p>
+</div></blockquote>
+<p><strong>avg</strong> : <code class="xref any docutils literal"><span class="pre">bool</span> <span class="pre">=</span> <span class="pre">True</span></code></p>
+<blockquote>
+<div><p>whether the bond current returned is k-averaged</p>
+</div></blockquote>
+<p><strong>isc</strong> : array_like, <code class="xref any docutils literal"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">0]</span></code></p>
+<blockquote>
+<div><p>the returned bond currents from the unit-cell (<code class="xref any docutils literal"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">0]</span></code>) to
+the given supercell. If <code class="xref any docutils literal"><span class="pre">[None,</span> <span class="pre">None,</span> <span class="pre">None]</span></code> is passed all
+bond currents are returned.</p>
+</div></blockquote>
+<p><strong>sum</strong> : <code class="xref any docutils literal"><span class="pre">str</span> <span class="pre">=</span> <span class="pre">+</span></code></p>
+<blockquote>
 <div><p>this value may be &#8220;+&#8221;/&#8221;-&#8220;/&#8221;all&#8221;
 If &#8220;+&#8221; is supplied only the positive orbital currents are used,
-for &#8220;-&#8221;, only the negatev orbital currents are used,
+for &#8220;-&#8221;, only the negative orbital currents are used,
+else return the sum of both.</p>
+</div></blockquote>
+<p><strong>uc</strong> : <code class="xref any docutils literal"><span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></code></p>
+<blockquote class="last">
+<div><p>whether the returned bond-currents are only in the unit-cell.
+If <code class="xref any docutils literal"><span class="pre">True</span></code> this will return a sparse matrix of <code class="xref any docutils literal"><span class="pre">.shape</span> <span class="pre">=</span> <span class="pre">(self.na,</span> <span class="pre">self.na)</span></code>,
+else, it will return a sparse matrix of <code class="xref any docutils literal"><span class="pre">.shape</span> <span class="pre">=</span> <span class="pre">(self.na,</span> <span class="pre">self.na</span> <span class="pre">*</span> <span class="pre">self.n_s)</span></code>.
+One may figure out the connections via <code class="xref any docutils literal"><span class="pre">Geometry.sc_index</span></code>.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.bond_current_from_orbital">
+<code class="descname">bond_current_from_orbital</code><span class="sig-paren">(</span><em>Jij</em>, <em>sum='+'</em>, <em>uc=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.bond_current_from_orbital" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the bond-current between atoms (sum of orbital currents) by passing the orbital
+currents.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>Jij</strong> : <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code></p>
+<blockquote>
+<div><p>the orbital currents as retrieved from <a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current"><code class="xref any py py-meth docutils literal"><span class="pre">orbital_current</span></code></a></p>
+</div></blockquote>
+<p><strong>sum</strong> : <code class="docutils literal"><span class="pre">str</span>&nbsp; <span class="pre">=</span> <span class="pre">'+'</span></code></p>
+<blockquote>
+<div><p>this value may be &#8220;+&#8221;/&#8221;-&#8220;/&#8221;all&#8221;
+If &#8220;+&#8221; is supplied only the positive orbital currents are used,
+for &#8220;-&#8221;, only the negative orbital currents are used,
 else return both.</p>
+</div></blockquote>
+<p><strong>uc</strong> : <code class="xref any docutils literal"><span class="pre">bool</span> <span class="pre">=</span> <span class="pre">False</span></code></p>
+<blockquote class="last">
+<div><p>whether the returned bond-currents are only in the unit-cell.
+If <code class="xref any docutils literal"><span class="pre">True</span></code> this will return a sparse matrix of <code class="xref any docutils literal"><span class="pre">.shape</span> <span class="pre">=</span> <span class="pre">(self.na,</span> <span class="pre">self.na)</span></code>,
+else, it will return a sparse matrix of <code class="xref any docutils literal"><span class="pre">.shape</span> <span class="pre">=</span> <span class="pre">(self.na,</span> <span class="pre">self.na</span> <span class="pre">*</span> <span class="pre">self.n_s)</span></code>.
+One may figure out the connections via <code class="xref any docutils literal"><span class="pre">Geometry.sc_index</span></code>.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -693,128 +843,134 @@ else return both.</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.cell">
-<code class="descname">cell</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.cell" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.cell">
+<code class="descname">cell</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.cell" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unit cell in file</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.chemical_potential">
-<code class="descname">chemical_potential</code><span class="sig-paren">(</span><em>elec</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.chemical_potential" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.chemical_potential">
+<code class="descname">chemical_potential</code><span class="sig-paren">(</span><em>elec</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.chemical_potential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the chemical potential associated with the electrode <code class="xref any docutils literal"><span class="pre">elec</span></code></p>
 </dd></dl>
 
+<dl class="method">
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.current">
+<code class="descname">current</code><span class="sig-paren">(</span><em>elec_from</em>, <em>elec_to</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the current from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code> using the weights in the file.</p>
+</dd></dl>
+
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.elecs">
-<code class="descname">elecs</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.elecs" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.elecs">
+<code class="descname">elecs</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.elecs" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of electrodes</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.electrodes">
-<code class="descname">electrodes</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.electrodes" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.electrodes">
+<code class="descname">electrodes</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.electrodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of electrodes</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.electronic_temperature">
-<code class="descname">electronic_temperature</code><span class="sig-paren">(</span><em>elec</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.electronic_temperature" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.electronic_temperature">
+<code class="descname">electronic_temperature</code><span class="sig-paren">(</span><em>elec</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.electronic_temperature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return temperature of the electrode electronic distribution</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.geom">
-<code class="descname">geom</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.geom" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.geom">
+<code class="descname">geom</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.geom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the associated geometry from the TBT file</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.kT">
-<code class="descname">kT</code><span class="sig-paren">(</span><em>elec</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.kT" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.kT">
+<code class="descname">kT</code><span class="sig-paren">(</span><em>elec</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.kT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return temperature of the electrode electronic distribution</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.kpt">
-<code class="descname">kpt</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.kpt" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.kpt">
+<code class="descname">kpt</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.kpt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sampled k-points in file</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.lasto">
-<code class="descname">lasto</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.lasto" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.lasto">
+<code class="descname">lasto</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.lasto" title="Permalink to this definition">¶</a></dt>
 <dd><p>Last orbital of corresponding atom</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.mu">
-<code class="descname">mu</code><span class="sig-paren">(</span><em>elec</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.mu" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.mu">
+<code class="descname">mu</code><span class="sig-paren">(</span><em>elec</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.mu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the chemical potential associated with the electrode <code class="xref any docutils literal"><span class="pre">elec</span></code></p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.nE">
-<code class="descname">nE</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.nE" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.nE">
+<code class="descname">nE</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.nE" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of energy-points in file</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.na">
-<code class="descname">na</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.na" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.na">
+<code class="descname">na</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.na" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns number of atoms in the cell</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.na_d">
-<code class="descname">na_d</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.na_d" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.na_d">
+<code class="descname">na_d</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.na_d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of atoms in the device region</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.na_dev">
-<code class="descname">na_dev</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.na_dev" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.na_dev">
+<code class="descname">na_dev</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.na_dev" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of atoms in the device region</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.na_u">
-<code class="descname">na_u</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.na_u" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.na_u">
+<code class="descname">na_u</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.na_u" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns number of atoms in the cell</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.ne">
-<code class="descname">ne</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.ne" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.ne">
+<code class="descname">ne</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.ne" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of energy-points in file</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.nkpt">
-<code class="descname">nkpt</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.nkpt" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.nkpt">
+<code class="descname">nkpt</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.nkpt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of k-points in file</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.no">
-<code class="descname">no</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.no" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.no">
+<code class="descname">no</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.no" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns number of orbitals in the cell</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.no_d">
-<code class="descname">no_d</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.no_d" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.no_d">
+<code class="descname">no_d</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.no_d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of orbitals in the device region</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.no_u">
-<code class="descname">no_u</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.no_u" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.no_u">
+<code class="descname">no_u</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.no_u" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns number of orbitals in the cell</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.orbital_current">
-<code class="descname">orbital_current</code><span class="sig-paren">(</span><em>elec</em>, <em>E=None</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.orbital_current" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current">
+<code class="descname">orbital_current</code><span class="sig-paren">(</span><em>elec</em>, <em>E=None</em>, <em>avg=True</em>, <em>isc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the orbital current originating from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</p>
 <p>This will return a sparse matrix (<code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code>).
 The sparse matrix may be interacted with like a normal
@@ -845,8 +1001,13 @@ If <code class="xref any docutils literal"><span class="pre">None</span></code> 
 <p>which is (far) less memory consuming.</p>
 </div></blockquote>
 <p><strong>avg: bool (True)</strong></p>
-<blockquote class="last">
+<blockquote>
 <div><p>whether the orbital current returned is k-averaged</p>
+</div></blockquote>
+<p><strong>isc: array_like, `[0, 0, 0]`</strong></p>
+<blockquote class="last">
+<div><p>the returned bond currents from the unit-cell (<code class="xref any docutils literal"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">0]</span></code>) to
+the given supercell, the default is only orbital currents <em>in</em> the unitcell.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -855,30 +1016,59 @@ If <code class="xref any docutils literal"><span class="pre">None</span></code> 
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.pivot">
-<code class="descname">pivot</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.pivot" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.pivot">
+<code class="descname">pivot</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.pivot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pivot table of device orbitals to obtain input sorting</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.pvt">
-<code class="descname">pvt</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.pvt" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.pvt">
+<code class="descname">pvt</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.pvt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pivot table of device orbitals to obtain input sorting</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.read_geom">
-<code class="descname">read_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.read_geom" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data">
+<code class="descname">read_data</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read specific type of data.</p>
+<p>This is a generic routine for reading different parts of the data-file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>geom: bool</strong></p>
+<blockquote>
+<div><p>return the last geometry in the <a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.outSileSiesta" title="sisl.io.siesta.outSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">outSileSiesta</span></code></a></p>
+</div></blockquote>
+<p><strong>force: bool</strong></p>
+<blockquote>
+<div><p>return the last force in the <a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.outSileSiesta" title="sisl.io.siesta.outSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">outSileSiesta</span></code></a></p>
+</div></blockquote>
+<p><strong>moment: bool</strong></p>
+<blockquote class="last">
+<div><p>return the last moments in the <a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.outSileSiesta" title="sisl.io.siesta.outSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">outSileSiesta</span></code></a> (only for spin-orbit coupling calculations)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.read_sc">
-<code class="descname">read_sc</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.read_sc" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Geometry object from a .TBT.nc file</p>
+</dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.transmission">
-<code class="descname">transmission</code><span class="sig-paren">(</span><em>elec_from</em>, <em>elec_to</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.transmission" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from a .TBT.nc file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission">
+<code class="descname">transmission</code><span class="sig-paren">(</span><em>elec_from</em>, <em>elec_to</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the transmission from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</p>
 <p>The transmission between two electrodes may be retrieved
 from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a>.</p>
@@ -905,8 +1095,8 @@ from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="s
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.transmission_bulk">
-<code class="descname">transmission_bulk</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.transmission_bulk" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission_bulk">
+<code class="descname">transmission_bulk</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission_bulk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the bulk transmission in the <code class="xref any docutils literal"><span class="pre">elec</span></code> electrode</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -927,8 +1117,8 @@ from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="s
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.transmission_eig">
-<code class="descname">transmission_eig</code><span class="sig-paren">(</span><em>elec_from</em>, <em>elec_to</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.transmission_eig" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission_eig">
+<code class="descname">transmission_eig</code><span class="sig-paren">(</span><em>elec_from</em>, <em>elec_to</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.transmission_eig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the transmission eigenvalues from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</p>
 <p>The transmission eigenvalues between two electrodes may be retrieved
 from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a>.</p>
@@ -954,36 +1144,84 @@ from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="s
 </table>
 </dd></dl>
 
+<dl class="method">
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.vector_current">
+<code class="descname">vector_current</code><span class="sig-paren">(</span><em>elec</em>, <em>E=0.0</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.vector_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the atom-current with vector components of atoms.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>elec: str</strong></p>
+<blockquote>
+<div><p>the electrode of originating electrons</p>
+</div></blockquote>
+<p><strong>E: float/int (`0.`)</strong></p>
+<blockquote>
+<div><p>the energy index of the atom current.
+Unlike <a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current"><code class="xref any py py-meth docutils literal"><span class="pre">orbital_current</span></code></a> this may not be <code class="xref any docutils literal"><span class="pre">None</span></code> as the down-scaling of the
+orbital currents may not be equivalent for all energy points.</p>
+</div></blockquote>
+<p><strong>avg: bool (`True`)</strong></p>
+<blockquote class="last">
+<div><p>whether the atom current returned is k-averaged</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.vector_current_from_orbital">
+<code class="descname">vector_current_from_orbital</code><span class="sig-paren">(</span><em>Jij</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.vector_current_from_orbital" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the atom-current with vector components of atoms.</p>
+<p>This takes a sparse matrix with size <code class="xref any docutils literal"><span class="pre">self.geom.no,</span> <span class="pre">self.geom.no_s</span></code> as argument
+with the associated orbital currents.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>Jij: ``scipy.sparse.csr_matrix``</strong></p>
+<blockquote class="last">
+<div><p>the orbital currents as retrieved from <a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current"><code class="xref any py py-meth docutils literal"><span class="pre">orbital_current</span></code></a></p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.wkpt">
-<code class="descname">wkpt</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.wkpt" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.wkpt">
+<code class="descname">wkpt</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.wkpt" title="Permalink to this definition">¶</a></dt>
 <dd><p>Weights of k-points in file</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.write_geom">
-<code class="descname">write_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.write_geom" title="Permalink to this definition">¶</a></dt>
 <dd><p>This does not work</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.xa">
-<code class="descname">xa</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.xa" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.xa">
+<code class="descname">xa</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.xa" title="Permalink to this definition">¶</a></dt>
 <dd><p>Atomic coordinates in file</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="sisl.io.siesta.tbtrans.TBtransSile.xyz">
-<code class="descname">xyz</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransSile.xyz" title="Permalink to this definition">¶</a></dt>
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.xyz">
+<code class="descname">xyz</code><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.xyz" title="Permalink to this definition">¶</a></dt>
 <dd><p>Atomic coordinates in file</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="sisl.io.siesta.tbtrans.PHtransSile">
-<em class="property">class </em><code class="descclassname">sisl.io.siesta.tbtrans.</code><code class="descname">PHtransSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>lvl=0</em>, <em>access=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.PHtransSile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile" title="sisl.io.siesta.tbtrans.TBtransSile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.tbtrans.TBtransSile</span></code></a></p>
+<dt id="sisl.io.siesta.tbtrans.phtncSileSiesta">
+<em class="property">class </em><code class="descclassname">sisl.io.siesta.tbtrans.</code><code class="descname">phtncSileSiesta</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>lvl=0</em>, <em>access=1</em>, <em>_open=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.phtncSileSiesta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta" title="sisl.io.siesta.tbtrans.tbtncSileSiesta"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.tbtrans.tbtncSileSiesta</span></code></a></p>
 <p>PHtrans file object</p>
 <p class="rubric">Attributes</p>
 <table border="1" class="longtable docutils">
@@ -1082,41 +1320,53 @@ from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="s
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code>(elec[,&nbsp;avg])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code>([avg])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code>([avg])</td>
 <td>Return the Green function DOS.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code>(elec[,&nbsp;avg])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code>([avg])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code>([avg])</td>
 <td>Return the Green function DOS.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code>(elec[,&nbsp;avg])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">E2idx</span></code>(E)</td>
-<td>Return the closest energy index corresponding to the energy <a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.E" title="sisl.io.siesta.tbtrans.TBtransSile.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Eindex</span></code>(E)</td>
+<td>Return the closest energy index corresponding to the energy <a class="reference internal" href="sisl.io.html#sisl.io.tbtncSileSiesta.E" title="sisl.io.tbtncSileSiesta.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">T</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">T</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Tbulk</span></code>(elec[,&nbsp;avg])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Tbulk</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the bulk transmission in the <code class="xref any docutils literal"><span class="pre">elec</span></code> electrode</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Teig</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Teig</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission eigenvalues from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">atom_current</span></code>(Jij[,&nbsp;activity])</td>
-<td>Return the atom-current of atoms</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">atom_current</span></code>(elec[,&nbsp;E,&nbsp;avg,&nbsp;activity])</td>
+<td>Return the atom-current of atoms.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">bond_current</span></code>(Jij[,&nbsp;sum])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">atom_current_from_orbital</span></code>(Jij[,&nbsp;activity])</td>
+<td>Return the atom-current of atoms.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">bond_current</span></code>(elec[,&nbsp;E,&nbsp;avg,&nbsp;isc,&nbsp;sum,&nbsp;uc])</td>
 <td>Return the bond-current between atoms (sum of orbital currents)</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">chemical_potential</span></code>(elec)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">bond_current_from_orbital</span></code>(Jij[,&nbsp;sum,&nbsp;uc])</td>
+<td>Return the bond-current between atoms (sum of orbital currents) by passing the orbital currents.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">chemical_potential</span></code>(elec)</td>
 <td>Return the chemical potential associated with the electrode <code class="xref any docutils literal"><span class="pre">elec</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">current</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<td>Return the current from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code> using the weights in the file.</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">electronic_temperature</span></code>(elec)</td>
 <td>Return temperature of the electrode electronic distribution</td>
@@ -1127,31 +1377,40 @@ from the <a class="reference internal" href="sisl.io.html#sisl.io.Sile" title="s
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">mu</span></code>(elec)</td>
 <td>Return the chemical potential associated with the electrode <code class="xref any docutils literal"><span class="pre">elec</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">orbital_current</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">orbital_current</span></code>(elec[,&nbsp;E,&nbsp;avg,&nbsp;isc])</td>
 <td>Return the orbital current originating from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_data</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Read specific type of data.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Returns Geometry object from a .TBT.nc file</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">transmission</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code>()</td>
+<td>Returns <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from a .TBT.nc file</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">transmission</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">transmission_bulk</span></code>(elec[,&nbsp;avg])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">transmission_bulk</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the bulk transmission in the <code class="xref any docutils literal"><span class="pre">elec</span></code> electrode</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">transmission_eig</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">transmission_eig</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission eigenvalues from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code>()</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">vector_current</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the atom-current with vector components of atoms.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">vector_current_from_orbital</span></code>(Jij)</td>
+<td>Return the atom-current with vector components of atoms.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code>()</td>
 <td>This does not work</td>
 </tr>
 </tbody>
 </table>
-<p>Creates/Opens a NCSile</p>
-<p>Opens a NCSile with <code class="xref any docutils literal"><span class="pre">mode</span></code> and compression level <code class="xref any docutils literal"><span class="pre">lvl</span></code>.
+<p>Creates/Opens a SileCDF</p>
+<p>Opens a SileCDF with <code class="xref any docutils literal"><span class="pre">mode</span></code> and compression level <code class="xref any docutils literal"><span class="pre">lvl</span></code>.
 If <code class="xref any docutils literal"><span class="pre">mode</span></code> is in read-mode (r) the compression level
 is ignored.</p>
 <p>The final <code class="xref any docutils literal"><span class="pre">access</span></code> parameter sets how the file should be
@@ -1257,41 +1516,53 @@ open and subsequently accessed.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code>(elec[,&nbsp;avg])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code>([avg])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code>([avg])</td>
 <td>Return the Green function DOS.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code>(elec[,&nbsp;avg])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code>([avg])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code>([avg])</td>
 <td>Return the Green function DOS.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code>(elec[,&nbsp;avg])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">E2idx</span></code>(E)</td>
-<td>Return the closest energy index corresponding to the energy <a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransSile.E" title="sisl.io.siesta.tbtrans.TBtransSile.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Eindex</span></code>(E)</td>
+<td>Return the closest energy index corresponding to the energy <a class="reference internal" href="sisl.io.html#sisl.io.tbtncSileSiesta.E" title="sisl.io.tbtncSileSiesta.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">T</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">T</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Tbulk</span></code>(elec[,&nbsp;avg])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Tbulk</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the bulk transmission in the <code class="xref any docutils literal"><span class="pre">elec</span></code> electrode</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Teig</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Teig</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission eigenvalues from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">atom_current</span></code>(Jij[,&nbsp;activity])</td>
-<td>Return the atom-current of atoms</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">atom_current</span></code>(elec[,&nbsp;E,&nbsp;avg,&nbsp;activity])</td>
+<td>Return the atom-current of atoms.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">bond_current</span></code>(Jij[,&nbsp;sum])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">atom_current_from_orbital</span></code>(Jij[,&nbsp;activity])</td>
+<td>Return the atom-current of atoms.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">bond_current</span></code>(elec[,&nbsp;E,&nbsp;avg,&nbsp;isc,&nbsp;sum,&nbsp;uc])</td>
 <td>Return the bond-current between atoms (sum of orbital currents)</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">chemical_potential</span></code>(elec)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">bond_current_from_orbital</span></code>(Jij[,&nbsp;sum,&nbsp;uc])</td>
+<td>Return the bond-current between atoms (sum of orbital currents) by passing the orbital currents.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">chemical_potential</span></code>(elec)</td>
 <td>Return the chemical potential associated with the electrode <code class="xref any docutils literal"><span class="pre">elec</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">current</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<td>Return the current from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code> using the weights in the file.</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">electronic_temperature</span></code>(elec)</td>
 <td>Return temperature of the electrode electronic distribution</td>
@@ -1302,25 +1573,34 @@ open and subsequently accessed.</p>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">mu</span></code>(elec)</td>
 <td>Return the chemical potential associated with the electrode <code class="xref any docutils literal"><span class="pre">elec</span></code></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">orbital_current</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">orbital_current</span></code>(elec[,&nbsp;E,&nbsp;avg,&nbsp;isc])</td>
 <td>Return the orbital current originating from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_data</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Read specific type of data.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Returns Geometry object from a .TBT.nc file</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">transmission</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code>()</td>
+<td>Returns <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from a .TBT.nc file</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">transmission</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">transmission_bulk</span></code>(elec[,&nbsp;avg])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">transmission_bulk</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the bulk transmission in the <code class="xref any docutils literal"><span class="pre">elec</span></code> electrode</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">transmission_eig</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">transmission_eig</span></code>(elec_from,&nbsp;elec_to[,&nbsp;avg])</td>
 <td>Return the transmission eigenvalues from <code class="xref any docutils literal"><span class="pre">from</span></code> to <code class="xref any docutils literal"><span class="pre">to</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code>()</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">vector_current</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the atom-current with vector components of atoms.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">vector_current_from_orbital</span></code>(Jij)</td>
+<td>Return the atom-current with vector components of atoms.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code>()</td>
 <td>This does not work</td>
 </tr>
 </tbody>
@@ -1328,9 +1608,9 @@ open and subsequently accessed.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="sisl.io.siesta.tbtrans.TBtransdHSile">
-<em class="property">class </em><code class="descclassname">sisl.io.siesta.tbtrans.</code><code class="descname">TBtransdHSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>lvl=0</em>, <em>access=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransdHSile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="sisl.io.siesta.sile.html#sisl.io.siesta.sile.NCSileSIESTA" title="sisl.io.siesta.sile.NCSileSIESTA"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.sile.NCSileSIESTA</span></code></a></p>
+<dt id="sisl.io.siesta.tbtrans.dHncSileSiesta">
+<em class="property">class </em><code class="descclassname">sisl.io.siesta.tbtrans.</code><code class="descname">dHncSileSiesta</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>lvl=0</em>, <em>access=1</em>, <em>_open=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.dHncSileSiesta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.siesta.sile.html#sisl.io.siesta.sile.SileCDFSIESTA" title="sisl.io.siesta.sile.SileCDFSIESTA"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.sile.SileCDFSIESTA</span></code></a></p>
 <p>TBtrans delta-H file object</p>
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
@@ -1339,16 +1619,19 @@ open and subsequently accessed.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransdHSile.write_es" title="sisl.io.siesta.tbtrans.TBtransdHSile.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td>Returns the arguments that may be available for this Sile</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransdHSile.write_geom" title="sisl.io.siesta.tbtrans.TBtransdHSile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_es" title="sisl.io.siesta.tbtrans.dHncSileSiesta.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(ham,&nbsp;**kwargs)</td>
+<td>Writes Hamiltonian model to file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom" title="sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom)</td>
+<td>Creates the NetCDF file and writes the geometry information</td>
 </tr>
 </tbody>
 </table>
-<p>Creates/Opens a NCSile</p>
-<p>Opens a NCSile with <code class="xref any docutils literal"><span class="pre">mode</span></code> and compression level <code class="xref any docutils literal"><span class="pre">lvl</span></code>.
+<p>Creates/Opens a SileCDF</p>
+<p>Opens a SileCDF with <code class="xref any docutils literal"><span class="pre">mode</span></code> and compression level <code class="xref any docutils literal"><span class="pre">lvl</span></code>.
 If <code class="xref any docutils literal"><span class="pre">mode</span></code> is in read-mode (r) the compression level
 is ignored.</p>
 <p>The final <code class="xref any docutils literal"><span class="pre">access</span></code> parameter sets how the file should be
@@ -1364,23 +1647,44 @@ open and subsequently accessed.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransdHSile.write_es" title="sisl.io.siesta.tbtrans.TBtransdHSile.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td>Returns the arguments that may be available for this Sile</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.TBtransdHSile.write_geom" title="sisl.io.siesta.tbtrans.TBtransdHSile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_es" title="sisl.io.siesta.tbtrans.dHncSileSiesta.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(ham,&nbsp;**kwargs)</td>
+<td>Writes Hamiltonian model to file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom" title="sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom)</td>
+<td>Creates the NetCDF file and writes the geometry information</td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransdHSile.write_es">
-<code class="descname">write_es</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransdHSile.write_es" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="sisl.io.siesta.tbtrans.dHncSileSiesta.write_es">
+<code class="descname">write_es</code><span class="sig-paren">(</span><em>ham</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_es" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes Hamiltonian model to file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ham</strong> : <a class="reference internal" href="sisl.quantity.hamiltonian.html#sisl.quantity.hamiltonian.Hamiltonian" title="sisl.quantity.hamiltonian.Hamiltonian"><code class="xref any py py-class docutils literal"><span class="pre">Hamiltonian</span></code></a> model</p>
+<blockquote>
+<div><p>the model to be saved in the NC file</p>
+</div></blockquote>
+<p><strong>spin</strong> : int, 0</p>
+<blockquote class="last">
+<div><p>the spin-index of the Hamiltonian object that is stored.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.tbtrans.TBtransdHSile.write_geom">
-<code class="descname">write_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.TBtransdHSile.write_geom" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the NetCDF file and writes the geometry information</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -1396,6 +1700,7 @@ open and subsequently accessed.</p>
           <ul>
 <li class="toctree-l1"><a class="reference internal" href="scripts/sgeom.html"><code class="docutils literal"><span class="pre">sgeom</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="scripts/sgrid.html"><code class="docutils literal"><span class="pre">sgrid</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="scripts/sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a></li>
 </ul>
 <ul class="simple">
 </ul>

@@ -1,0 +1,7 @@
+sisl.io.xsf module
+==================
+
+.. automodule:: sisl.io.xsf
+    :members:
+    :undoc-members:
+    :show-inheritance:

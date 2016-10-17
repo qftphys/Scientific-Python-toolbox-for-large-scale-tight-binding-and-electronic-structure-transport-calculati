@@ -6,7 +6,7 @@ Submodules
 
 .. toctree::
 
-   sisl.io.gulp.gout
+   sisl.io.gulp.got
    sisl.io.gulp.hessian
    sisl.io.gulp.setup
    sisl.io.gulp.sile

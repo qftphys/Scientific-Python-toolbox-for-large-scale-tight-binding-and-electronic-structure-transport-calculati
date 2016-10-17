@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.1
+        VERSION:     '0.7.6
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -50,9 +50,9 @@
 <span id="sisl-io-siesta-siesta-module"></span><h1>sisl.io.siesta.siesta module<a class="headerlink" href="#module-sisl.io.siesta.siesta" title="Permalink to this headline">¶</a></h1>
 <p>Sile object for reading/writing SIESTA binary files</p>
 <dl class="class">
-<dt id="sisl.io.siesta.siesta.SIESTASile">
-<em class="property">class </em><code class="descclassname">sisl.io.siesta.siesta.</code><code class="descname">SIESTASile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>lvl=0</em>, <em>access=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.SIESTASile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="sisl.io.siesta.sile.html#sisl.io.siesta.sile.NCSileSIESTA" title="sisl.io.siesta.sile.NCSileSIESTA"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.sile.NCSileSIESTA</span></code></a></p>
+<dt id="sisl.io.siesta.siesta.ncSileSiesta">
+<em class="property">class </em><code class="descclassname">sisl.io.siesta.siesta.</code><code class="descname">ncSileSiesta</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>lvl=0</em>, <em>access=1</em>, <em>_open=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.ncSileSiesta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.siesta.sile.html#sisl.io.siesta.sile.SileCDFSIESTA" title="sisl.io.siesta.sile.SileCDFSIESTA"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.sile.SileCDFSIESTA</span></code></a></p>
 <p>SIESTA file object</p>
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
@@ -61,31 +61,34 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.grids" title="sisl.io.siesta.siesta.SIESTASile.grids"><code class="xref py py-obj docutils literal"><span class="pre">grids</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser" title="sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Returns the arguments that is available for this Sile</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.read_es" title="sisl.io.siesta.siesta.SIESTASile.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.grids" title="sisl.io.siesta.siesta.ncSileSiesta.grids"><code class="xref py py-obj docutils literal"><span class="pre">grids</span></code></a>()</td>
+<td>Return a list of available grids in this file.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.read_geom" title="sisl.io.siesta.siesta.SIESTASile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_es" title="sisl.io.siesta.siesta.ncSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(**kwargs)</td>
+<td>Returns a tight-binding model from the underlying NetCDF file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.read_grid" title="sisl.io.siesta.siesta.SIESTASile.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_geom" title="sisl.io.siesta.siesta.ncSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
+<td>Returns Geometry object from a SIESTA.nc file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.read_sc" title="sisl.io.siesta.siesta.SIESTASile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_grid" title="sisl.io.siesta.siesta.ncSileSiesta.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>(name[,&nbsp;idx])</td>
+<td>Reads a grid in the current SIESTA.nc file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.write_es" title="sisl.io.siesta.siesta.SIESTASile.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_sc" title="sisl.io.siesta.siesta.ncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<td>Returns a SuperCell object from a SIESTA.nc file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.write_geom" title="sisl.io.siesta.siesta.SIESTASile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.write_es" title="sisl.io.siesta.siesta.ncSileSiesta.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(ham,&nbsp;**kwargs)</td>
+<td>Writes Hamiltonian model to file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.write_geom" title="sisl.io.siesta.siesta.ncSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom)</td>
+<td>Creates the NetCDF file and writes the geometry information</td>
 </tr>
 </tbody>
 </table>
-<p>Creates/Opens a NCSile</p>
-<p>Opens a NCSile with <code class="xref any docutils literal"><span class="pre">mode</span></code> and compression level <code class="xref any docutils literal"><span class="pre">lvl</span></code>.
+<p>Creates/Opens a SileCDF</p>
+<p>Opens a SileCDF with <code class="xref any docutils literal"><span class="pre">mode</span></code> and compression level <code class="xref any docutils literal"><span class="pre">lvl</span></code>.
 If <code class="xref any docutils literal"><span class="pre">mode</span></code> is in read-mode (r) the compression level
 is ignored.</p>
 <p>The final <code class="xref any docutils literal"><span class="pre">access</span></code> parameter sets how the file should be
@@ -101,63 +104,97 @@ open and subsequently accessed.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.grids" title="sisl.io.siesta.siesta.SIESTASile.grids"><code class="xref py py-obj docutils literal"><span class="pre">grids</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser" title="sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>(*args,&nbsp;**kwargs)</td>
+<td>Returns the arguments that is available for this Sile</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.read_es" title="sisl.io.siesta.siesta.SIESTASile.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.grids" title="sisl.io.siesta.siesta.ncSileSiesta.grids"><code class="xref py py-obj docutils literal"><span class="pre">grids</span></code></a>()</td>
+<td>Return a list of available grids in this file.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.read_geom" title="sisl.io.siesta.siesta.SIESTASile.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_es" title="sisl.io.siesta.siesta.ncSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(**kwargs)</td>
+<td>Returns a tight-binding model from the underlying NetCDF file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.read_grid" title="sisl.io.siesta.siesta.SIESTASile.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_geom" title="sisl.io.siesta.siesta.ncSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
+<td>Returns Geometry object from a SIESTA.nc file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.read_sc" title="sisl.io.siesta.siesta.SIESTASile.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_grid" title="sisl.io.siesta.siesta.ncSileSiesta.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>(name[,&nbsp;idx])</td>
+<td>Reads a grid in the current SIESTA.nc file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.write_es" title="sisl.io.siesta.siesta.SIESTASile.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_sc" title="sisl.io.siesta.siesta.ncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<td>Returns a SuperCell object from a SIESTA.nc file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.SIESTASile.write_geom" title="sisl.io.siesta.siesta.SIESTASile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
-<td></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.write_es" title="sisl.io.siesta.siesta.ncSileSiesta.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(ham,&nbsp;**kwargs)</td>
+<td>Writes Hamiltonian model to file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.write_geom" title="sisl.io.siesta.siesta.ncSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom)</td>
+<td>Creates the NetCDF file and writes the geometry information</td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
-<dt id="sisl.io.siesta.siesta.SIESTASile.grids">
-<code class="descname">grids</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.SIESTASile.grids" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser">
+<code class="descname">ArgumentParser</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the arguments that is available for this Sile</p>
+</dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.siesta.SIESTASile.read_es">
-<code class="descname">read_es</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.SIESTASile.read_es" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="sisl.io.siesta.siesta.ncSileSiesta.grids">
+<code class="descname">grids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.ncSileSiesta.grids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of available grids in this file.</p>
+</dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.siesta.SIESTASile.read_geom">
-<code class="descname">read_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.SIESTASile.read_geom" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="sisl.io.siesta.siesta.ncSileSiesta.read_es">
+<code class="descname">read_es</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.ncSileSiesta.read_es" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a tight-binding model from the underlying NetCDF file</p>
+</dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.siesta.SIESTASile.read_grid">
-<code class="descname">read_grid</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.SIESTASile.read_grid" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="sisl.io.siesta.siesta.ncSileSiesta.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.ncSileSiesta.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Geometry object from a SIESTA.nc file</p>
+<p>NOTE: Interaction range of the Atoms are currently not read.</p>
+</dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.siesta.SIESTASile.read_sc">
-<code class="descname">read_sc</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.SIESTASile.read_sc" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="sisl.io.siesta.siesta.ncSileSiesta.read_grid">
+<code class="descname">read_grid</code><span class="sig-paren">(</span><em>name</em>, <em>idx=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.ncSileSiesta.read_grid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads a grid in the current SIESTA.nc file</p>
+<p>Enables the reading and processing of the grids created by SIESTA</p>
+</dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.siesta.SIESTASile.write_es">
-<code class="descname">write_es</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.SIESTASile.write_es" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="sisl.io.siesta.siesta.ncSileSiesta.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.ncSileSiesta.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a SuperCell object from a SIESTA.nc file</p>
+</dd></dl>
 
 <dl class="method">
-<dt id="sisl.io.siesta.siesta.SIESTASile.write_geom">
-<code class="descname">write_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.SIESTASile.write_geom" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="sisl.io.siesta.siesta.ncSileSiesta.write_es">
+<code class="descname">write_es</code><span class="sig-paren">(</span><em>ham</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.ncSileSiesta.write_es" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes Hamiltonian model to file</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>ham</strong> : <a class="reference internal" href="sisl.quantity.hamiltonian.html#sisl.quantity.hamiltonian.Hamiltonian" title="sisl.quantity.hamiltonian.Hamiltonian"><code class="xref any py py-class docutils literal"><span class="pre">Hamiltonian</span></code></a> model</p>
+<blockquote>
+<div><p>the model to be saved in the NC file</p>
+</div></blockquote>
+<p><strong>Ef</strong> : double=0</p>
+<blockquote class="last">
+<div><p>the Fermi level of the electronic structure (in eV)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.siesta.ncSileSiesta.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>geom</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.siesta.ncSileSiesta.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates the NetCDF file and writes the geometry information</p>
+</dd></dl>
 
 </dd></dl>
 

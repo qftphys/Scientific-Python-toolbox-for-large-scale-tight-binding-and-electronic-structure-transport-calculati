@@ -6,7 +6,9 @@ Submodules
 
 .. toctree::
 
+   sisl.io.siesta.bands
    sisl.io.siesta.fdf
+   sisl.io.siesta.out
    sisl.io.siesta.setup
    sisl.io.siesta.siesta
    sisl.io.siesta.siesta_grid

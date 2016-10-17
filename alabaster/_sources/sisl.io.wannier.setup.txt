@@ -1,0 +1,7 @@
+sisl.io.wannier.setup module
+============================
+
+.. automodule:: sisl.io.wannier.setup
+    :members:
+    :undoc-members:
+    :show-inheritance:
