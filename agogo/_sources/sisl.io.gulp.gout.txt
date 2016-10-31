@@ -1,7 +1,0 @@
-sisl.io.gulp.gout module
-========================
-
-.. automodule:: sisl.io.gulp.gout
-    :members:
-    :undoc-members:
-    :show-inheritance:

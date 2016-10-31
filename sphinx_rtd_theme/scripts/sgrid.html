@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="sisl |release| documentation" href="../index.html"/>
         <link rel="next" title="sdata" href="sdata.html"/>
         <link rel="prev" title="sgeom" href="sgeom.html"/> 
@@ -92,8 +95,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a></li>
-</ul>
-<ul class="simple">
 </ul>
 
             
@@ -184,7 +185,7 @@ consuming. There are two methods for reducing grids:</p>
 sgrid &lt;file&gt; --remove x <span class="o">[</span>+-<span class="o">]</span>&lt;pos<span class="p">|</span>&lt;frac&gt;f&gt;
 </pre></div>
 </div>
-<p>This needs an example, say the unit cell is a square unit-cell with side lengths 10x10x20 Angstrom.
+<p>This needs an example, say the unit cell is an orthogonal unit-cell with side lengths 10x10x20 Angstrom.
 To reduce the cell to a middle square of 5x5x5 Angstrom you can do:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc --sub x 2.5:7.5 --sub y 2.5:7.5 --sub z 7.5:12.5 5x5x5.cube
 </pre></div>
@@ -263,7 +264,7 @@ For inspiration you can check the <a class="reference internal" href="#"><span c
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'0.7.6
+            VERSION:'0.7.9
 ',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

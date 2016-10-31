@@ -30,6 +30,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="sisl |release| documentation" href="index.html"/> 
 
   
@@ -84,8 +87,6 @@
 <li class="toctree-l1"><a class="reference internal" href="scripts/sgrid.html"><code class="docutils literal"><span class="pre">sgrid</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="scripts/sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a></li>
 </ul>
-<ul class="simple">
-</ul>
 
             
           
@@ -133,6 +134,49 @@
 <span id="sisl-utils-cmd-module"></span><h1>sisl.utils.cmd module<a class="headerlink" href="#module-sisl.utils.cmd" title="Permalink to this headline">¶</a></h1>
 <p>Generic utility to create commonly used ArgumentParser
 options etc.</p>
+<dl class="function">
+<dt id="sisl.utils.cmd.collect_arguments">
+<code class="descclassname">sisl.utils.cmd.</code><code class="descname">collect_arguments</code><span class="sig-paren">(</span><em>argv</em>, <em>input=False</em>, <em>argumentparser=None</em>, <em>namespace=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.cmd.collect_arguments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for returning the actual arguments depending on the input options.</p>
+<p>This function will create a fake <a class="reference internal" href="sisl.io.html#sisl.io.CARSileVASP.ArgumentParser" title="sisl.io.CARSileVASP.ArgumentParser"><code class="xref any py py-meth docutils literal"><span class="pre">ArgumentParser</span></code></a> which then
+will pass through the input figuring out which options
+that should be given to the final <a class="reference internal" href="sisl.io.html#sisl.io.CARSileVASP.ArgumentParser" title="sisl.io.CARSileVASP.ArgumentParser"><code class="xref any py py-meth docutils literal"><span class="pre">ArgumentParser</span></code></a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>argv</strong> : <code class="docutils literal"><span class="pre">list</span></code> of <code class="docutils literal"><span class="pre">str</span></code></p>
+<blockquote>
+<div><p>the argument list that comprise the arguments</p>
+</div></blockquote>
+<p><strong>input</strong> : <code class="docutils literal"><span class="pre">bool</span></code>, <code class="docutils literal"><span class="pre">False</span></code></p>
+<blockquote>
+<div><p>whether or not the arguments should also gather
+from the input file.</p>
+</div></blockquote>
+<p><strong>argumentparser</strong> : <code class="docutils literal"><span class="pre">argparse.ArgumentParser</span></code></p>
+<blockquote>
+<div><p>the argument parser that should add the options that we find from
+the output and input files.</p>
+</div></blockquote>
+<p><strong>namespace</strong> : <code class="docutils literal"><span class="pre">Namespace</span></code></p>
+<blockquote class="last">
+<div><p>the namespace for the argument parser.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.cmd.collect_input">
+<code class="descclassname">sisl.utils.cmd.</code><code class="descname">collect_input</code><span class="sig-paren">(</span><em>argv</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.cmd.collect_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for returning the input file</p>
+<p>This simply creates a shortcut input file and returns
+it.</p>
+</dd></dl>
+
 <dl class="function">
 <dt id="sisl.utils.cmd.dec_collect_actions">
 <code class="descclassname">sisl.utils.cmd.</code><code class="descname">dec_collect_actions</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.cmd.dec_collect_actions" title="Permalink to this definition">¶</a></dt>
@@ -203,7 +247,7 @@ and ensures that it is _not_ <code class="xref any docutils literal"><span class
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.7.6
+            VERSION:'0.7.9
 ',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

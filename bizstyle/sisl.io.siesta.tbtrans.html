@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>sisl.io.siesta.tbtrans module &mdash; sisl |release| documentation</title>
+    <title>sisl.io.siesta.tbtrans module &#8212; sisl |release| documentation</title>
     
     <link rel="stylesheet" href="_static/bizstyle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.6
+        VERSION:     '0.7.9
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -27,6 +27,8 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="sisl |release| documentation" href="index.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
@@ -43,7 +45,7 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">sisl</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">sisl</a> &#187;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -58,8 +60,8 @@
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
@@ -181,6 +183,12 @@
 <tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.ArgumentParser" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>([parser])</td>
 <td></td>
 </tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
+<td>Appends additional arguments based on the output of the file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.BDOS" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.BDOS"><code class="xref py py-obj docutils literal"><span class="pre">BDOS</span></code></a>(elec[,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+</tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.BulkDOS" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.BulkDOS"><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
@@ -238,10 +246,10 @@
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current"><code class="xref py py-obj docutils literal"><span class="pre">orbital_current</span></code></a>(elec[,&nbsp;E,&nbsp;avg,&nbsp;isc])</td>
 <td>Return the orbital current originating from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data"><code class="xref py py-obj docutils literal"><span class="pre">read_data</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data"><code class="xref py py-obj docutils literal"><span class="pre">read_data</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
 <td>Read specific type of data.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
 <td>Returns Geometry object from a .TBT.nc file</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_sc" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
@@ -377,6 +385,12 @@ open and subsequently accessed.</p>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.ArgumentParser" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>([parser])</td>
 <td></td>
 </tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
+<td>Appends additional arguments based on the output of the file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.BDOS" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.BDOS"><code class="xref py py-obj docutils literal"><span class="pre">BDOS</span></code></a>(elec[,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+</tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.BulkDOS" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.BulkDOS"><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code></a>(elec[,&nbsp;avg])</td>
 <td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
@@ -434,10 +448,10 @@ open and subsequently accessed.</p>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current"><code class="xref py py-obj docutils literal"><span class="pre">orbital_current</span></code></a>(elec[,&nbsp;E,&nbsp;avg,&nbsp;isc])</td>
 <td>Return the orbital current originating from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data"><code class="xref py py-obj docutils literal"><span class="pre">read_data</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_data"><code class="xref py py-obj docutils literal"><span class="pre">read_data</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
 <td>Read specific type of data.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
 <td>Returns Geometry object from a .TBT.nc file</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.read_sc" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
@@ -489,6 +503,28 @@ open and subsequently accessed.</p>
 <dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.ArgumentParser">
 <code class="descname">ArgumentParser</code><span class="sig-paren">(</span><em>parser=None</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.ArgumentParser" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.BDOS">
+<code class="descname">BDOS</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.BDOS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>elec: str</strong></p>
+<blockquote>
+<div><p>electrode where the bulk DOS is returned</p>
+</div></blockquote>
+<p><strong>avg: bool (True)</strong></p>
+<blockquote class="last">
+<div><p>whether the returned DOS is k-averaged</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="method">
 <dt id="sisl.io.siesta.tbtrans.tbtncSileSiesta.BulkDOS">
@@ -846,7 +882,7 @@ currents.</p>
 <blockquote>
 <div><p>the orbital currents as retrieved from <a class="reference internal" href="#sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current" title="sisl.io.siesta.tbtrans.tbtncSileSiesta.orbital_current"><code class="xref any py py-meth docutils literal"><span class="pre">orbital_current</span></code></a></p>
 </div></blockquote>
-<p><strong>sum</strong> : <code class="docutils literal"><span class="pre">str</span>&nbsp; <span class="pre">=</span> <span class="pre">'+'</span></code></p>
+<p><strong>sum</strong> : <code class="docutils literal"><span class="pre">str</span>&#160; <span class="pre">=</span> <span class="pre">'+'</span></code></p>
 <blockquote>
 <div><p>this value may be &#8220;+&#8221;/&#8221;-&#8220;/&#8221;all&#8221;
 If &#8220;+&#8221; is supplied only the positive orbital currents are used,
@@ -1062,15 +1098,15 @@ the given supercell, the default is only orbital currents <em>in</em> the unitce
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>geom: bool</strong></p>
 <blockquote>
-<div><p>return the last geometry in the <a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.outSileSiesta" title="sisl.io.siesta.outSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">outSileSiesta</span></code></a></p>
+<div><p>return the geometry</p>
 </div></blockquote>
-<p><strong>force: bool</strong></p>
+<p><strong>atom_current: bool</strong></p>
 <blockquote>
-<div><p>return the last force in the <a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.outSileSiesta" title="sisl.io.siesta.outSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">outSileSiesta</span></code></a></p>
+<div><p>return the atomic current flowing through an atom (the <em>activity</em> current)</p>
 </div></blockquote>
-<p><strong>moment: bool</strong></p>
+<p><strong>vector_current: bool</strong></p>
 <blockquote class="last">
-<div><p>return the last moments in the <a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.outSileSiesta" title="sisl.io.siesta.outSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">outSileSiesta</span></code></a> (only for spin-orbit coupling calculations)</p>
+<div><p>return the orbital currents as vectors</p>
 </div></blockquote>
 </td>
 </tr>
@@ -1347,6 +1383,12 @@ with the associated orbital currents.</p>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
 <td></td>
 </tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
+<td>Appends additional arguments based on the output of the file</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">BDOS</span></code>(elec[,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+</tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
@@ -1404,10 +1446,10 @@ with the associated orbital currents.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">orbital_current</span></code>(elec[,&nbsp;E,&nbsp;avg,&nbsp;isc])</td>
 <td>Return the orbital current originating from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_data</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_data</span></code>(\*args,&nbsp;\*\*kwargs)</td>
 <td>Read specific type of data.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code>(\*args,&nbsp;\*\*kwargs)</td>
 <td>Returns Geometry object from a .TBT.nc file</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code>()</td>
@@ -1543,6 +1585,12 @@ open and subsequently accessed.</p>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
 <td></td>
 </tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
+<td>Appends additional arguments based on the output of the file</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">BDOS</span></code>(elec[,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+</tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code>(elec[,&nbsp;avg])</td>
 <td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
@@ -1600,10 +1648,10 @@ open and subsequently accessed.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">orbital_current</span></code>(elec[,&nbsp;E,&nbsp;avg,&nbsp;isc])</td>
 <td>Return the orbital current originating from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_data</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_data</span></code>(\*args,&nbsp;\*\*kwargs)</td>
 <td>Read specific type of data.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code>(*args,&nbsp;**kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code>(\*args,&nbsp;\*\*kwargs)</td>
 <td>Returns Geometry object from a .TBT.nc file</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code>()</td>
@@ -1646,10 +1694,13 @@ open and subsequently accessed.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
 <td>Returns the arguments that may be available for this Sile</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_es" title="sisl.io.siesta.tbtrans.dHncSileSiesta.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(ham,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
+<td>Appends additional arguments based on the output of the file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_es" title="sisl.io.siesta.tbtrans.dHncSileSiesta.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(ham,&nbsp;\*\*kwargs)</td>
 <td>Writes Hamiltonian model to file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom" title="sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom" title="sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom)</td>
 <td>Creates the NetCDF file and writes the geometry information</td>
 </tr>
 </tbody>
@@ -1674,10 +1725,13 @@ open and subsequently accessed.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
 <td>Returns the arguments that may be available for this Sile</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_es" title="sisl.io.siesta.tbtrans.dHncSileSiesta.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(ham,&nbsp;**kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
+<td>Appends additional arguments based on the output of the file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_es" title="sisl.io.siesta.tbtrans.dHncSileSiesta.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(ham,&nbsp;\*\*kwargs)</td>
 <td>Writes Hamiltonian model to file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom" title="sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom" title="sisl.io.siesta.tbtrans.dHncSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom)</td>
 <td>Creates the NetCDF file and writes the geometry information</td>
 </tr>
 </tbody>
@@ -1729,12 +1783,12 @@ open and subsequently accessed.</p>
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">sisl</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">sisl</a> &#187;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2015, Nick R. Papior.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.1.
+        &#169; Copyright 2015, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
     </div>
   </body>
 </html>

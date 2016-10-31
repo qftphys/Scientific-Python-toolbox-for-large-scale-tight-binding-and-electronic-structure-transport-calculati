@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>sisl.io.siesta.siesta_grid module &mdash; sisl |release| documentation</title>
+    <title>sisl.io.siesta.siesta_grid module &#8212; sisl |release| documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.6
+        VERSION:     '0.7.9
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -25,9 +25,12 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="sisl |release| documentation" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
@@ -58,10 +61,13 @@
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
 <td>Returns the arguments that may be available for this Sile</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid" title="sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>([name,&nbsp;idx])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
+<td>Appends additional arguments based on the output of the file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid" title="sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>([name,&nbsp;idx])</td>
 <td>Reads a grid in the current SIESTA.grid.nc file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta_grid.gridncSileSiesta.read_sc" title="sisl.io.siesta.siesta_grid.gridncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta_grid.gridncSileSiesta.read_sc" title="sisl.io.siesta.siesta_grid.gridncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
 <td>Returns a SuperCell object from a SIESTA.grid.nc file</td>
 </tr>
 </tbody>
@@ -86,10 +92,13 @@ open and subsequently accessed.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
 <td>Returns the arguments that may be available for this Sile</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid" title="sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>([name,&nbsp;idx])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
+<td>Appends additional arguments based on the output of the file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid" title="sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>([name,&nbsp;idx])</td>
 <td>Reads a grid in the current SIESTA.grid.nc file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta_grid.gridncSileSiesta.read_sc" title="sisl.io.siesta.siesta_grid.gridncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta_grid.gridncSileSiesta.read_sc" title="sisl.io.siesta.siesta_grid.gridncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
 <td>Returns a SuperCell object from a SIESTA.grid.nc file</td>
 </tr>
 </tbody>
@@ -133,8 +142,8 @@ open and subsequently accessed.</p>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
@@ -148,8 +157,8 @@ open and subsequently accessed.</p>
       &copy;2015, Nick R. Papior.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
       |
       <a href="_sources/sisl.io.siesta.siesta_grid.txt"

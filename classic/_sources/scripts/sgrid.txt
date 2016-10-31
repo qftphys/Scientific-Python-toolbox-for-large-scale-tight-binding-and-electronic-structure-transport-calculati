@@ -67,7 +67,7 @@ consuming. There are two methods for reducing grids:
    sgrid <file> --sub x <pos|<frac>f>
    sgrid <file> --remove x [+-]<pos|<frac>f>
 
-This needs an example, say the unit cell is a square unit-cell with side lengths 10x10x20 Angstrom.
+This needs an example, say the unit cell is an orthogonal unit-cell with side lengths 10x10x20 Angstrom.
 To reduce the cell to a middle square of 5x5x5 Angstrom you can do:
 
 ::
