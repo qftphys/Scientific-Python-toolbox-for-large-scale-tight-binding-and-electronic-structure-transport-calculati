@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.9
+        VERSION:     '0.7.10
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -169,6 +169,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sisl.io.ham.html">sisl.io.ham module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sisl.io.molden.html">sisl.io.molden module</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="sisl.io.setup.html">sisl.io.setup module</a></li>
@@ -1164,6 +1167,77 @@ open and subsequently accessed.</p>
 <dl class="method">
 <dt id="sisl.io.HamiltonianSile.write_geom">
 <code class="descname">write_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.HamiltonianSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sisl.io.MoldenSile">
+<em class="property">class </em><code class="descclassname">sisl.io.</code><code class="descname">MoldenSile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.MoldenSile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.Sile</span></code></a></p>
+<p>Molden file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.MoldenSile.ArgumentParser" title="sisl.io.MoldenSile.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<td>Returns the arguments that is available for this Sile</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
+<td>Appends additional arguments based on the output of the file</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
+<td>Returns true if <code class="docutils literal"><span class="pre">isinstance(keys,(list,np.ndarray))</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">key2case</span></code>(key,&nbsp;case)</td>
+<td>Converts str/list of keywords to proper case</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">keys2case</span></code>(keys,&nbsp;case)</td>
+<td>Converts str/list of keywords to proper case</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_key</span></code>(line,&nbsp;key[,&nbsp;case])</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
+<td>Reads the next line of the file</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<td>Steps the file-handle until the keyword is found in the input</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(\*args,&nbsp;\*\*kwargs)</td>
+<td>Wrapper for the file-handle write statement</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.MoldenSile.write_geom" title="sisl.io.MoldenSile.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.MoldenSile.write_sc" title="sisl.io.MoldenSile.write_sc"><code class="xref py py-obj docutils literal"><span class="pre">write_sc</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sisl.io.MoldenSile.ArgumentParser">
+<code class="descname">ArgumentParser</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.MoldenSile.ArgumentParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the arguments that is available for this Sile</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.MoldenSile.write_geom">
+<code class="descname">write_geom</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.MoldenSile.write_geom" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.MoldenSile.write_sc">
+<code class="descname">write_sc</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.MoldenSile.write_sc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -3671,14 +3745,14 @@ open and subsequently accessed.</p>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.TableSile.write" title="sisl.io.TableSile.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(data[,&nbsp;header,&nbsp;fmt,&nbsp;comment,&nbsp;delimiter])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.TableSile.write" title="sisl.io.TableSile.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(data[,&nbsp;header,&nbsp;footer,&nbsp;newline,&nbsp;fmt,&nbsp;...])</td>
 <td>Write tabular data to the file with optional header.</td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
 <dt id="sisl.io.TableSile.write">
-<code class="descname">write</code><span class="sig-paren">(</span><em>data</em>, <em>header=None</em>, <em>fmt='%.5e'</em>, <em>comment=None</em>, <em>delimiter='\t'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.TableSile.write" title="Permalink to this definition">¶</a></dt>
+<code class="descname">write</code><span class="sig-paren">(</span><em>data</em>, <em>header=None</em>, <em>footer=None</em>, <em>newline='\n'</em>, <em>fmt='%.5e'</em>, <em>comment=None</em>, <em>delimiter='\t'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.TableSile.write" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write tabular data to the file with optional header.</p>
 </dd></dl>
 

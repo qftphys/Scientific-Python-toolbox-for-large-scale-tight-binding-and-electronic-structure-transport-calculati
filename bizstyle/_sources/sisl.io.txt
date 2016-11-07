@@ -19,6 +19,7 @@ Submodules
 
    sisl.io.cube
    sisl.io.ham
+   sisl.io.molden
    sisl.io.setup
    sisl.io.sile
    sisl.io.table

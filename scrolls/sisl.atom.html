@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.9
+        VERSION:     '0.7.10
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -121,7 +121,10 @@ and a negative number is returned.</p>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.PeriodicTable.atomic_mass" title="sisl.atom.PeriodicTable.atomic_mass"><code class="xref py py-obj docutils literal"><span class="pre">atomic_mass</span></code></a>(key)</td>
 <td>Return the atomic mass of the corresponding atom</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.PeriodicTable.radii" title="sisl.atom.PeriodicTable.radii"><code class="xref py py-obj docutils literal"><span class="pre">radii</span></code></a>(key[,&nbsp;radii])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.PeriodicTable.radii" title="sisl.atom.PeriodicTable.radii"><code class="xref py py-obj docutils literal"><span class="pre">radii</span></code></a>(key[,&nbsp;method])</td>
+<td>Return the atomic radii</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.PeriodicTable.radius" title="sisl.atom.PeriodicTable.radius"><code class="xref py py-obj docutils literal"><span class="pre">radius</span></code></a>(key[,&nbsp;method])</td>
 <td>Return the atomic radii</td>
 </tr>
 </tbody>
@@ -276,7 +279,7 @@ is array_like, so will the returned value be.</p>
 
 <dl class="method">
 <dt id="sisl.atom.PeriodicTable.radii">
-<code class="descname">radii</code><span class="sig-paren">(</span><em>key</em>, <em>radii='calc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.PeriodicTable.radii" title="Permalink to this definition">¶</a></dt>
+<code class="descname">radii</code><span class="sig-paren">(</span><em>key</em>, <em>method='calc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.PeriodicTable.radii" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the atomic radii</p>
 <p>Return the atomic radii.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -288,22 +291,59 @@ is array_like, so will the returned value be.</p>
 <div><p>Uses value to lookup the atomic mass in the
 <a class="reference internal" href="#sisl.atom.PeriodicTable" title="sisl.atom.PeriodicTable"><code class="xref any py py-class docutils literal"><span class="pre">PeriodicTable</span></code></a> object.</p>
 </div></blockquote>
-<p><strong>radii</strong> : str</p>
+<p><strong>method</strong> : str</p>
 <blockquote>
 <div><p>There are 3 different radii stored:</p>
 <blockquote>
 <div><ol class="arabic simple">
 <li><code class="docutils literal"><span class="pre">calc</span></code>, the calculated</li>
 <li><code class="docutils literal"><span class="pre">empirical</span></code>, the empirically found values</li>
-<li><code class="docutils literal"><span class="pre">vdw</span></code>, the van der Waals found values</li>
+<li><code class="docutils literal"><span class="pre">vdw</span></code>, the van-der-Waals found values</li>
 </ol>
 </div></blockquote>
 </div></blockquote>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>radii</strong> : ndarray, float</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>radius</strong> : ndarray, float</p>
 <blockquote class="last">
-<div><p>The atomic radii in <code class="xref any docutils literal"><span class="pre">Ang</span></code></p>
+<div><p>The atomic radius in <code class="xref any docutils literal"><span class="pre">Ang</span></code></p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.atom.PeriodicTable.radius">
+<code class="descname">radius</code><span class="sig-paren">(</span><em>key</em>, <em>method='calc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.PeriodicTable.radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the atomic radii</p>
+<p>Return the atomic radii.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>key</strong> : array_like, str, int</p>
+<blockquote>
+<div><p>Uses value to lookup the atomic mass in the
+<a class="reference internal" href="#sisl.atom.PeriodicTable" title="sisl.atom.PeriodicTable"><code class="xref any py py-class docutils literal"><span class="pre">PeriodicTable</span></code></a> object.</p>
+</div></blockquote>
+<p><strong>method</strong> : str</p>
+<blockquote>
+<div><p>There are 3 different radii stored:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">calc</span></code>, the calculated</li>
+<li><code class="docutils literal"><span class="pre">empirical</span></code>, the empirically found values</li>
+<li><code class="docutils literal"><span class="pre">vdw</span></code>, the van-der-Waals found values</li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>radius</strong> : ndarray, float</p>
+<blockquote class="last">
+<div><p>The atomic radius in <code class="xref any docutils literal"><span class="pre">Ang</span></code></p>
 </div></blockquote>
 </td>
 </tr>
@@ -392,7 +432,10 @@ different settings</p>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atom.copy" title="sisl.atom.Atom.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
 <td>Return copy of this object</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atom.radii" title="sisl.atom.Atom.radii"><code class="xref py py-obj docutils literal"><span class="pre">radii</span></code></a>([radii])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atom.radii" title="sisl.atom.Atom.radii"><code class="xref py py-obj docutils literal"><span class="pre">radii</span></code></a>([method])</td>
+<td>Return the atomic radii of the atom (in Ang)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atom.radius" title="sisl.atom.Atom.radius"><code class="xref py py-obj docutils literal"><span class="pre">radius</span></code></a>([method])</td>
 <td>Return the atomic radii of the atom (in Ang)</td>
 </tr>
 </tbody>
@@ -411,8 +454,16 @@ different settings</p>
 
 <dl class="method">
 <dt id="sisl.atom.Atom.radii">
-<code class="descname">radii</code><span class="sig-paren">(</span><em>radii='calc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atom.radii" title="Permalink to this definition">¶</a></dt>
+<code class="descname">radii</code><span class="sig-paren">(</span><em>method='calc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atom.radii" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the atomic radii of the atom (in Ang)</p>
+<p>See <code class="docutils literal"><span class="pre">PeriodicTable.radius</span></code> for details on the argument.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.atom.Atom.radius">
+<code class="descname">radius</code><span class="sig-paren">(</span><em>method='calc'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atom.radius" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the atomic radii of the atom (in Ang)</p>
+<p>See <code class="docutils literal"><span class="pre">PeriodicTable.radius</span></code> for details on the argument.</p>
 </dd></dl>
 
 <dl class="attribute">
