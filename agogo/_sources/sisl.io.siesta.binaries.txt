@@ -1,0 +1,7 @@
+sisl.io.siesta.binaries module
+==============================
+
+.. automodule:: sisl.io.siesta.binaries
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.10
+        VERSION:     '0.8.0-5-g30d54e6
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -100,6 +100,9 @@
 <li class="toctree-l1"><a class="reference internal" href="sisl.io.siesta.html">sisl.io.siesta package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="sisl.io.siesta.html#submodules">Submodules</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="sisl.io.siesta.bands.html">sisl.io.siesta.bands module</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sisl.io.siesta.binaries.html">sisl.io.siesta.binaries module</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="sisl.io.siesta.fdf.html">sisl.io.siesta.fdf module</a><ul class="simple">
@@ -1413,6 +1416,82 @@ If <code class="xref any docutils literal"><span class="pre">mode</span></code> 
 </dd></dl>
 
 <dl class="class">
+<dt id="sisl.io.TSHSSileSiesta">
+<em class="property">class </em><code class="descclassname">sisl.io.</code><code class="descname">TSHSSileSiesta</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.TSHSSileSiesta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.siesta.sile.html#sisl.io.siesta.sile.SileBinSIESTA" title="sisl.io.siesta.sile.SileBinSIESTA"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.sile.SileBinSIESTA</span></code></a></p>
+<p>TranSIESTA file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td>Returns the arguments that may be available for this Sile</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
+<td>Appends additional arguments based on the output of the file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.TSHSSileSiesta.read_es" title="sisl.io.TSHSSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(\*\*kwargs)</td>
+<td>Returns the electronic structure from the siesta.TSHS file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.TSHSSileSiesta.read_geom" title="sisl.io.TSHSSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
+<td>Returns Geometry object from a siesta.TSHS file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.TSHSSileSiesta.read_sc" title="sisl.io.TSHSSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<td>Returns a SuperCell object from a siesta.TSHS file</td>
+</tr>
+</tbody>
+</table>
+<p>Creates/Opens a SileBin</p>
+<p>Opens a SileBin with <code class="xref any docutils literal"><span class="pre">mode</span></code> (b).
+If <code class="xref any docutils literal"><span class="pre">mode</span></code> is in read-mode (r).</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td>Returns the arguments that may be available for this Sile</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
+<td>Appends additional arguments based on the output of the file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.TSHSSileSiesta.read_es" title="sisl.io.TSHSSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(\*\*kwargs)</td>
+<td>Returns the electronic structure from the siesta.TSHS file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.TSHSSileSiesta.read_geom" title="sisl.io.TSHSSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
+<td>Returns Geometry object from a siesta.TSHS file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.TSHSSileSiesta.read_sc" title="sisl.io.TSHSSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<td>Returns a SuperCell object from a siesta.TSHS file</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sisl.io.TSHSSileSiesta.read_es">
+<code class="descname">read_es</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.TSHSSileSiesta.read_es" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the electronic structure from the siesta.TSHS file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.TSHSSileSiesta.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.TSHSSileSiesta.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Geometry object from a siesta.TSHS file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.TSHSSileSiesta.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.TSHSSileSiesta.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a SuperCell object from a siesta.TSHS file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="sisl.io.fdfSileSiesta">
 <em class="property">class </em><code class="descclassname">sisl.io.</code><code class="descname">fdfSileSiesta</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>base=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.fdfSileSiesta" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="sisl.io.siesta.sile.html#sisl.io.siesta.sile.SileSiesta" title="sisl.io.siesta.sile.SileSiesta"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.sile.SileSiesta</span></code></a></p>
@@ -1647,16 +1726,19 @@ By default the <code class="docutils literal"><span class="pre">base</span></cod
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.outSileSiesta.read_moment" title="sisl.io.outSileSiesta.read_moment"><code class="xref py py-obj docutils literal"><span class="pre">read_moment</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.outSileSiesta.read_species" title="sisl.io.outSileSiesta.read_species"><code class="xref py py-obj docutils literal"><span class="pre">read_species</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
 <td>Reads the next line of the file</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(\*args,&nbsp;\*\*kwargs)</td>
 <td>Wrapper for the file-handle write statement</td>
 </tr>
 </tbody>
@@ -1710,6 +1792,11 @@ of keywords, so:</p>
 <dl class="method">
 <dt id="sisl.io.outSileSiesta.read_moment">
 <code class="descname">read_moment</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.outSileSiesta.read_moment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.outSileSiesta.read_species">
+<code class="descname">read_species</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.outSileSiesta.read_species" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2040,8 +2127,8 @@ open and subsequently accessed.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.ADOS" title="sisl.io.tbtncSileSiesta.ADOS"><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code></a>(elec[,&nbsp;avg])</td>
-<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.ADOS" title="sisl.io.tbtncSileSiesta.ADOS"><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.ArgumentParser" title="sisl.io.tbtncSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>([parser])</td>
 <td></td>
@@ -2049,23 +2136,23 @@ open and subsequently accessed.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
 <td>Appends additional arguments based on the output of the file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.BDOS" title="sisl.io.tbtncSileSiesta.BDOS"><code class="xref py py-obj docutils literal"><span class="pre">BDOS</span></code></a>(elec[,&nbsp;avg])</td>
-<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.BDOS" title="sisl.io.tbtncSileSiesta.BDOS"><code class="xref py py-obj docutils literal"><span class="pre">BDOS</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.BulkDOS" title="sisl.io.tbtncSileSiesta.BulkDOS"><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code></a>(elec[,&nbsp;avg])</td>
-<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.BulkDOS" title="sisl.io.tbtncSileSiesta.BulkDOS"><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS" title="sisl.io.tbtncSileSiesta.DOS"><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code></a>([avg])</td>
-<td>Return the Green function DOS.</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS" title="sisl.io.tbtncSileSiesta.DOS"><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code></a>([E,&nbsp;avg])</td>
+<td>Return the Green function DOS (1/eV).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS_A" title="sisl.io.tbtncSileSiesta.DOS_A"><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code></a>(elec[,&nbsp;avg])</td>
-<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS_A" title="sisl.io.tbtncSileSiesta.DOS_A"><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS_Gf" title="sisl.io.tbtncSileSiesta.DOS_Gf"><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code></a>([avg])</td>
-<td>Return the Green function DOS.</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS_Gf" title="sisl.io.tbtncSileSiesta.DOS_Gf"><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code></a>([E,&nbsp;avg])</td>
+<td>Return the Green function DOS (1/eV).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS_bulk" title="sisl.io.tbtncSileSiesta.DOS_bulk"><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code></a>(elec[,&nbsp;avg])</td>
-<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS_bulk" title="sisl.io.tbtncSileSiesta.DOS_bulk"><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.Eindex" title="sisl.io.tbtncSileSiesta.Eindex"><code class="xref py py-obj docutils literal"><span class="pre">Eindex</span></code></a>(E)</td>
 <td>Return the closest energy index corresponding to the energy <a class="reference internal" href="#sisl.io.tbtncSileSiesta.E" title="sisl.io.tbtncSileSiesta.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></td>
@@ -2242,8 +2329,8 @@ open and subsequently accessed.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.ADOS" title="sisl.io.tbtncSileSiesta.ADOS"><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code></a>(elec[,&nbsp;avg])</td>
-<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.ADOS" title="sisl.io.tbtncSileSiesta.ADOS"><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.ArgumentParser" title="sisl.io.tbtncSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>([parser])</td>
 <td></td>
@@ -2251,23 +2338,23 @@ open and subsequently accessed.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
 <td>Appends additional arguments based on the output of the file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.BDOS" title="sisl.io.tbtncSileSiesta.BDOS"><code class="xref py py-obj docutils literal"><span class="pre">BDOS</span></code></a>(elec[,&nbsp;avg])</td>
-<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.BDOS" title="sisl.io.tbtncSileSiesta.BDOS"><code class="xref py py-obj docutils literal"><span class="pre">BDOS</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.BulkDOS" title="sisl.io.tbtncSileSiesta.BulkDOS"><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code></a>(elec[,&nbsp;avg])</td>
-<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.BulkDOS" title="sisl.io.tbtncSileSiesta.BulkDOS"><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS" title="sisl.io.tbtncSileSiesta.DOS"><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code></a>([avg])</td>
-<td>Return the Green function DOS.</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS" title="sisl.io.tbtncSileSiesta.DOS"><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code></a>([E,&nbsp;avg])</td>
+<td>Return the Green function DOS (1/eV).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS_A" title="sisl.io.tbtncSileSiesta.DOS_A"><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code></a>(elec[,&nbsp;avg])</td>
-<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS_A" title="sisl.io.tbtncSileSiesta.DOS_A"><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS_Gf" title="sisl.io.tbtncSileSiesta.DOS_Gf"><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code></a>([avg])</td>
-<td>Return the Green function DOS.</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS_Gf" title="sisl.io.tbtncSileSiesta.DOS_Gf"><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code></a>([E,&nbsp;avg])</td>
+<td>Return the Green function DOS (1/eV).</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS_bulk" title="sisl.io.tbtncSileSiesta.DOS_bulk"><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code></a>(elec[,&nbsp;avg])</td>
-<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.DOS_bulk" title="sisl.io.tbtncSileSiesta.DOS_bulk"><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code></a>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.io.tbtncSileSiesta.Eindex" title="sisl.io.tbtncSileSiesta.Eindex"><code class="xref py py-obj docutils literal"><span class="pre">Eindex</span></code></a>(E)</td>
 <td>Return the closest energy index corresponding to the energy <a class="reference internal" href="#sisl.io.tbtncSileSiesta.E" title="sisl.io.tbtncSileSiesta.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></td>
@@ -2342,8 +2429,8 @@ open and subsequently accessed.</p>
 </table>
 <dl class="method">
 <dt id="sisl.io.tbtncSileSiesta.ADOS">
-<code class="descname">ADOS</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.ADOS" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</p>
+<code class="descname">ADOS</code><span class="sig-paren">(</span><em>elec</em>, <em>E=None</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.ADOS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2351,6 +2438,10 @@ open and subsequently accessed.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>elec: str</strong></p>
 <blockquote>
 <div><p>electrode originating spectral function</p>
+</div></blockquote>
+<p><strong>E</strong> : int (None)</p>
+<blockquote>
+<div><p>optionally only return the DOS of atoms at a given energy point</p>
 </div></blockquote>
 <p><strong>avg: bool (True)</strong></p>
 <blockquote class="last">
@@ -2369,8 +2460,8 @@ open and subsequently accessed.</p>
 
 <dl class="method">
 <dt id="sisl.io.tbtncSileSiesta.BDOS">
-<code class="descname">BDOS</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.BDOS" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</p>
+<code class="descname">BDOS</code><span class="sig-paren">(</span><em>elec</em>, <em>E=None</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.BDOS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2378,6 +2469,10 @@ open and subsequently accessed.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>elec: str</strong></p>
 <blockquote>
 <div><p>electrode where the bulk DOS is returned</p>
+</div></blockquote>
+<p><strong>E</strong> : int (None)</p>
+<blockquote>
+<div><p>optionally only return the DOS of atoms at a given energy point</p>
 </div></blockquote>
 <p><strong>avg: bool (True)</strong></p>
 <blockquote class="last">
@@ -2391,8 +2486,8 @@ open and subsequently accessed.</p>
 
 <dl class="method">
 <dt id="sisl.io.tbtncSileSiesta.BulkDOS">
-<code class="descname">BulkDOS</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.BulkDOS" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</p>
+<code class="descname">BulkDOS</code><span class="sig-paren">(</span><em>elec</em>, <em>E=None</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.BulkDOS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2400,6 +2495,10 @@ open and subsequently accessed.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>elec: str</strong></p>
 <blockquote>
 <div><p>electrode where the bulk DOS is returned</p>
+</div></blockquote>
+<p><strong>E</strong> : int (None)</p>
+<blockquote>
+<div><p>optionally only return the DOS of atoms at a given energy point</p>
 </div></blockquote>
 <p><strong>avg: bool (True)</strong></p>
 <blockquote class="last">
@@ -2413,13 +2512,17 @@ open and subsequently accessed.</p>
 
 <dl class="method">
 <dt id="sisl.io.tbtncSileSiesta.DOS">
-<code class="descname">DOS</code><span class="sig-paren">(</span><em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.DOS" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the Green function DOS.</p>
+<code class="descname">DOS</code><span class="sig-paren">(</span><em>E=None</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.DOS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Green function DOS (1/eV).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>avg: bool (True)</strong></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>E</strong> : int (None)</p>
+<blockquote>
+<div><p>optionally only return the DOS of atoms at a given energy point</p>
+</div></blockquote>
+<p><strong>avg: bool (True)</strong></p>
 <blockquote class="last">
 <div><p>whether the returned DOS is k-averaged</p>
 </div></blockquote>
@@ -2431,8 +2534,8 @@ open and subsequently accessed.</p>
 
 <dl class="method">
 <dt id="sisl.io.tbtncSileSiesta.DOS_A">
-<code class="descname">DOS_A</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.DOS_A" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</p>
+<code class="descname">DOS_A</code><span class="sig-paren">(</span><em>elec</em>, <em>E=None</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.DOS_A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2440,6 +2543,10 @@ open and subsequently accessed.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>elec: str</strong></p>
 <blockquote>
 <div><p>electrode originating spectral function</p>
+</div></blockquote>
+<p><strong>E</strong> : int (None)</p>
+<blockquote>
+<div><p>optionally only return the DOS of atoms at a given energy point</p>
 </div></blockquote>
 <p><strong>avg: bool (True)</strong></p>
 <blockquote class="last">
@@ -2453,13 +2560,17 @@ open and subsequently accessed.</p>
 
 <dl class="method">
 <dt id="sisl.io.tbtncSileSiesta.DOS_Gf">
-<code class="descname">DOS_Gf</code><span class="sig-paren">(</span><em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.DOS_Gf" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the Green function DOS.</p>
+<code class="descname">DOS_Gf</code><span class="sig-paren">(</span><em>E=None</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.DOS_Gf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the Green function DOS (1/eV).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>avg: bool (True)</strong></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>E</strong> : int (None)</p>
+<blockquote>
+<div><p>optionally only return the DOS of atoms at a given energy point</p>
+</div></blockquote>
+<p><strong>avg: bool (True)</strong></p>
 <blockquote class="last">
 <div><p>whether the returned DOS is k-averaged</p>
 </div></blockquote>
@@ -2471,8 +2582,8 @@ open and subsequently accessed.</p>
 
 <dl class="method">
 <dt id="sisl.io.tbtncSileSiesta.DOS_bulk">
-<code class="descname">DOS_bulk</code><span class="sig-paren">(</span><em>elec</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.DOS_bulk" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</p>
+<code class="descname">DOS_bulk</code><span class="sig-paren">(</span><em>elec</em>, <em>E=None</em>, <em>avg=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta.DOS_bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2480,6 +2591,10 @@ open and subsequently accessed.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>elec: str</strong></p>
 <blockquote>
 <div><p>electrode where the bulk DOS is returned</p>
+</div></blockquote>
+<p><strong>E</strong> : int (None)</p>
+<blockquote>
+<div><p>optionally only return the DOS of atoms at a given energy point</p>
 </div></blockquote>
 <p><strong>avg: bool (True)</strong></p>
 <blockquote class="last">
@@ -3240,8 +3355,8 @@ with the associated orbital currents.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code>(elec[,&nbsp;avg])</td>
-<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
 <td></td>
@@ -3249,23 +3364,23 @@ with the associated orbital currents.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
 <td>Appends additional arguments based on the output of the file</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">BDOS</span></code>(elec[,&nbsp;avg])</td>
-<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">BDOS</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code>(elec[,&nbsp;avg])</td>
-<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code>([avg])</td>
-<td>Return the Green function DOS.</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code>([E,&nbsp;avg])</td>
+<td>Return the Green function DOS (1/eV).</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code>(elec[,&nbsp;avg])</td>
-<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code>([avg])</td>
-<td>Return the Green function DOS.</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code>([E,&nbsp;avg])</td>
+<td>Return the Green function DOS (1/eV).</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code>(elec[,&nbsp;avg])</td>
-<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Eindex</span></code>(E)</td>
 <td>Return the closest energy index corresponding to the energy <a class="reference internal" href="#sisl.io.tbtncSileSiesta.E" title="sisl.io.tbtncSileSiesta.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></td>
@@ -3442,8 +3557,8 @@ open and subsequently accessed.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code>(elec[,&nbsp;avg])</td>
-<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ADOS</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
 <td></td>
@@ -3451,23 +3566,23 @@ open and subsequently accessed.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
 <td>Appends additional arguments based on the output of the file</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">BDOS</span></code>(elec[,&nbsp;avg])</td>
-<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">BDOS</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code>(elec[,&nbsp;avg])</td>
-<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">BulkDOS</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code>([avg])</td>
-<td>Return the Green function DOS.</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS</span></code>([E,&nbsp;avg])</td>
+<td>Return the Green function DOS (1/eV).</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code>(elec[,&nbsp;avg])</td>
-<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_A</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the DOS of the spectral function from <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code>([avg])</td>
-<td>Return the Green function DOS.</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_Gf</span></code>([E,&nbsp;avg])</td>
+<td>Return the Green function DOS (1/eV).</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code>(elec[,&nbsp;avg])</td>
-<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code>.</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">DOS_bulk</span></code>(elec[,&nbsp;E,&nbsp;avg])</td>
+<td>Return the bulk DOS of <code class="xref any docutils literal"><span class="pre">elec</span></code> (1/eV).</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Eindex</span></code>(E)</td>
 <td>Return the closest energy index corresponding to the energy <a class="reference internal" href="#sisl.io.tbtncSileSiesta.E" title="sisl.io.tbtncSileSiesta.E"><code class="xref any py py-attr docutils literal"><span class="pre">E</span></code></a></td>

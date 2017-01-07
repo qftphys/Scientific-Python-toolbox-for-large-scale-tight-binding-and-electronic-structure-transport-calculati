@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.7
+                0.8
               </div>
             
           
@@ -443,7 +443,7 @@ is array_like, so will the returned value be.</p>
 
 <dl class="class">
 <dt id="sisl.atom.Atom">
-<em class="property">class </em><code class="descclassname">sisl.atom.</code><code class="descname">Atom</code><span class="sig-paren">(</span><em>Z</em>, <em>R=-1.0</em>, <em>orbs=1</em>, <em>mass=None</em>, <em>tag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atom" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">sisl.atom.</code><code class="descname">Atom</code><span class="sig-paren">(</span><em>Z</em>, <em>R=None</em>, <em>orbs=None</em>, <em>mass=None</em>, <em>tag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Atomic information, mass, name number of orbitals and ranges</p>
 <p>Object to handle atomic mass, name, number of orbitals and
@@ -562,6 +562,108 @@ different settings</p>
 
 </dd></dl>
 
+<dl class="class">
+<dt id="sisl.atom.Atoms">
+<em class="property">class </em><code class="descclassname">sisl.atom.</code><code class="descname">Atoms</code><span class="sig-paren">(</span><em>atom=None</em>, <em>na=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A list-like object to contain a list of different atoms with minimum
+data duplication.</p>
+<p>This holds multiple <code class="docutils literal"><span class="pre">Atom</span></code> objects which are indexed via a species
+index.
+This is convenient when having geometries with millions of atoms
+because it will not duplicate the <code class="docutils literal"><span class="pre">Atom</span></code> object, only a list index.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atoms.atom" title="sisl.atom.Atoms.atom"><code class="xref py py-obj docutils literal"><span class="pre">atom</span></code></a></td>
+<td>Return the unique atoms list</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atoms.specie" title="sisl.atom.Atoms.specie"><code class="xref py py-obj docutils literal"><span class="pre">specie</span></code></a></td>
+<td>Return the specie list</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atoms.append" title="sisl.atom.Atoms.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(other)</td>
+<td>Append <code class="docutils literal"><span class="pre">other</span></code> to this list of atoms</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atoms.copy" title="sisl.atom.Atoms.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
+<td>Return a copy of this atom</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atoms.index" title="sisl.atom.Atoms.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>(atom)</td>
+<td>Return the species index of the atom object</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atoms.insert" title="sisl.atom.Atoms.insert"><code class="xref py py-obj docutils literal"><span class="pre">insert</span></code></a>(index,&nbsp;other)</td>
+<td>Insert other atoms into the list of atoms at index</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atoms.repeat" title="sisl.atom.Atoms.repeat"><code class="xref py py-obj docutils literal"><span class="pre">repeat</span></code></a>(reps)</td>
+<td>Repeat this atom object</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atoms.tile" title="sisl.atom.Atoms.tile"><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code></a>(reps)</td>
+<td>Tile this atom object</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sisl.atom.Atoms.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.append" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append <code class="docutils literal"><span class="pre">other</span></code> to this list of atoms</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.atom.Atoms.atom">
+<code class="descname">atom</code><a class="headerlink" href="#sisl.atom.Atoms.atom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the unique atoms list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.atom.Atoms.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a copy of this atom</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.atom.Atoms.index">
+<code class="descname">index</code><span class="sig-paren">(</span><em>atom</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the species index of the atom object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.atom.Atoms.insert">
+<code class="descname">insert</code><span class="sig-paren">(</span><em>index</em>, <em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert other atoms into the list of atoms at index</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.atom.Atoms.repeat">
+<code class="descname">repeat</code><span class="sig-paren">(</span><em>reps</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.repeat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Repeat this atom object</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.atom.Atoms.specie">
+<code class="descname">specie</code><a class="headerlink" href="#sisl.atom.Atoms.specie" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the specie list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.atom.Atoms.tile">
+<code class="descname">tile</code><span class="sig-paren">(</span><em>reps</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.tile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Tile this atom object</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 
 
@@ -596,7 +698,7 @@ different settings</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.7.10
+            VERSION:'0.8.0-5-g30d54e6
 ',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

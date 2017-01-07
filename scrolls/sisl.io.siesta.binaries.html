@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sisl.io.siesta.binaries module &#8212; sisl |release| documentation</title>
+    
+    <link rel="stylesheet" href="_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.8.0-5-g30d54e6
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="sisl |release| documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>sisl.io.siesta.binaries module</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="#">sisl.io.siesta.binaries module</a>
+      </div>
+      <div id="contentwrapper">
+        
+  <div class="section" id="module-sisl.io.siesta.binaries">
+<span id="sisl-io-siesta-binaries-module"></span><h1>sisl.io.siesta.binaries module<a class="headerlink" href="#module-sisl.io.siesta.binaries" title="Permalink to this headline">¶</a></h1>
+<p>Sile object for reading/writing SIESTA binary files</p>
+<dl class="class">
+<dt id="sisl.io.siesta.binaries.TSHSSileSiesta">
+<em class="property">class </em><code class="descclassname">sisl.io.siesta.binaries.</code><code class="descname">TSHSSileSiesta</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.binaries.TSHSSileSiesta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.io.siesta.sile.html#sisl.io.siesta.sile.SileBinSIESTA" title="sisl.io.siesta.sile.SileBinSIESTA"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.sile.SileBinSIESTA</span></code></a></p>
+<p>TranSIESTA file object</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td>Returns the arguments that may be available for this Sile</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
+<td>Appends additional arguments based on the output of the file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_es" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(\*\*kwargs)</td>
+<td>Returns the electronic structure from the siesta.TSHS file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_geom" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
+<td>Returns Geometry object from a siesta.TSHS file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_sc" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<td>Returns a SuperCell object from a siesta.TSHS file</td>
+</tr>
+</tbody>
+</table>
+<p>Creates/Opens a SileBin</p>
+<p>Opens a SileBin with <code class="xref any docutils literal"><span class="pre">mode</span></code> (b).
+If <code class="xref any docutils literal"><span class="pre">mode</span></code> is in read-mode (r).</p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code>([parser])</td>
+<td>Returns the arguments that may be available for this Sile</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
+<td>Appends additional arguments based on the output of the file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_es" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(\*\*kwargs)</td>
+<td>Returns the electronic structure from the siesta.TSHS file</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_geom" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
+<td>Returns Geometry object from a siesta.TSHS file</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_sc" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<td>Returns a SuperCell object from a siesta.TSHS file</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="sisl.io.siesta.binaries.TSHSSileSiesta.read_es">
+<code class="descname">read_es</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_es" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the electronic structure from the siesta.TSHS file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.binaries.TSHSSileSiesta.read_geom">
+<code class="descname">read_geom</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_geom" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Geometry object from a siesta.TSHS file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.siesta.binaries.TSHSSileSiesta.read_sc">
+<code class="descname">read_sc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a SuperCell object from a siesta.TSHS file</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>

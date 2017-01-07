@@ -20,6 +20,7 @@ Submodules
    sisl.atom
    sisl.geometry
    sisl.grid
+   sisl.info
    sisl.quaternion
    sisl.setup
    sisl.sparse

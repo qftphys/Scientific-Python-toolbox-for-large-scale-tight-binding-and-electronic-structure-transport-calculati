@@ -1,0 +1,7 @@
+sisl.info module
+================
+
+.. automodule:: sisl.info
+    :members:
+    :undoc-members:
+    :show-inheritance:

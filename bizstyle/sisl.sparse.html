@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.7.10
+        VERSION:     '0.8.0-5-g30d54e6
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -130,13 +130,10 @@ correct.</p>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.finalize" title="sisl.sparse.SparseCSR.finalize"><code class="xref py py-obj docutils literal"><span class="pre">finalize</span></code></a>([sort])</td>
 <td>Finalizes the sparse matrix by removing all non-set elements</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.fromcsr" title="sisl.sparse.SparseCSR.fromcsr"><code class="xref py py-obj docutils literal"><span class="pre">fromcsr</span></code></a>(csr[,&nbsp;dim])</td>
-<td>Return a new <code class="docutils literal"><span class="pre">SparseCSR</span></code> object from a csr matrix</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.register_math" title="sisl.sparse.SparseCSR.register_math"><code class="xref py py-obj docutils literal"><span class="pre">register_math</span></code></a>(var[,&nbsp;routines])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.register_math" title="sisl.sparse.SparseCSR.register_math"><code class="xref py py-obj docutils literal"><span class="pre">register_math</span></code></a>(var[,&nbsp;routines])</td>
 <td>Register math operators on the <code class="xref any docutils literal"><span class="pre">cls</span></code> class using <code class="xref any docutils literal"><span class="pre">var</span></code> as attribute <code class="xref any docutils literal"><span class="pre">getattr(cls,</span> <span class="pre">var)</span></code></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.tocsr" title="sisl.sparse.SparseCSR.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>([dim])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.tocsr" title="sisl.sparse.SparseCSR.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>([dim])</td>
 <td>Return the data in <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> format</td>
 </tr>
 </tbody>
@@ -236,13 +233,10 @@ This quantity has precedence over <code class="xref any docutils literal"><span 
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.finalize" title="sisl.sparse.SparseCSR.finalize"><code class="xref py py-obj docutils literal"><span class="pre">finalize</span></code></a>([sort])</td>
 <td>Finalizes the sparse matrix by removing all non-set elements</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.fromcsr" title="sisl.sparse.SparseCSR.fromcsr"><code class="xref py py-obj docutils literal"><span class="pre">fromcsr</span></code></a>(csr[,&nbsp;dim])</td>
-<td>Return a new <code class="docutils literal"><span class="pre">SparseCSR</span></code> object from a csr matrix</td>
-</tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.register_math" title="sisl.sparse.SparseCSR.register_math"><code class="xref py py-obj docutils literal"><span class="pre">register_math</span></code></a>(var[,&nbsp;routines])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.register_math" title="sisl.sparse.SparseCSR.register_math"><code class="xref py py-obj docutils literal"><span class="pre">register_math</span></code></a>(var[,&nbsp;routines])</td>
 <td>Register math operators on the <code class="xref any docutils literal"><span class="pre">cls</span></code> class using <code class="xref any docutils literal"><span class="pre">var</span></code> as attribute <code class="xref any docutils literal"><span class="pre">getattr(cls,</span> <span class="pre">var)</span></code></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.tocsr" title="sisl.sparse.SparseCSR.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>([dim])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.tocsr" title="sisl.sparse.SparseCSR.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>([dim])</td>
 <td>Return the data in <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> format</td>
 </tr>
 </tbody>
@@ -335,12 +329,6 @@ when converting to <code class="docutils literal"><span class="pre">scipy.sparse
 <dt id="sisl.sparse.SparseCSR.finalized">
 <code class="descname">finalized</code><a class="headerlink" href="#sisl.sparse.SparseCSR.finalized" title="Permalink to this definition">¶</a></dt>
 <dd><p>Whether the contained data is finalized and non-used elements have been removed</p>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="sisl.sparse.SparseCSR.fromcsr">
-<em class="property">static </em><code class="descname">fromcsr</code><span class="sig-paren">(</span><em>csr</em>, <em>dim=1</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.sparse.SparseCSR.fromcsr" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a new <code class="docutils literal"><span class="pre">SparseCSR</span></code> object from a csr matrix</p>
 </dd></dl>
 
 <dl class="attribute">
