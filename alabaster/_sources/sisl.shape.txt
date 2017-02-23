@@ -1,0 +1,20 @@
+sisl.shape package
+==================
+
+Submodules
+----------
+
+.. toctree::
+
+   sisl.shape.ellipsoid
+   sisl.shape.prism4
+   sisl.shape.setup
+   sisl.shape.shape
+
+Module contents
+---------------
+
+.. automodule:: sisl.shape
+    :members:
+    :undoc-members:
+    :show-inheritance:

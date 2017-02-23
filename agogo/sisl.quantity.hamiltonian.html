@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.8.0-5-g30d54e6
+        VERSION:     'v0.8.1
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -125,7 +125,7 @@ standard <code class="docutils literal"><span class="pre">numpy</span></code> as
 <tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.Sk" title="sisl.quantity.hamiltonian.Hamiltonian.Sk"><code class="xref py py-obj docutils literal"><span class="pre">Sk</span></code></a>([k,&nbsp;spin])</td>
 <td>Return the overlap matrix in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.construct" title="sisl.quantity.hamiltonian.Hamiltonian.construct"><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code></a>(func[,&nbsp;na_iR,&nbsp;eta])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.construct" title="sisl.quantity.hamiltonian.Hamiltonian.construct"><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code></a>(func[,&nbsp;na_iR,&nbsp;method,&nbsp;eta])</td>
 <td>Automatically construct the Hamiltonian model based on a function that does the setting up of the Hamiltonian</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.copy" title="sisl.quantity.hamiltonian.Hamiltonian.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>([dtype])</td>
@@ -227,7 +227,7 @@ as the underlying geometry for the tight-binding parameters.</p>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.Sk" title="sisl.quantity.hamiltonian.Hamiltonian.Sk"><code class="xref py py-obj docutils literal"><span class="pre">Sk</span></code></a>([k,&nbsp;spin])</td>
 <td>Return the overlap matrix in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.construct" title="sisl.quantity.hamiltonian.Hamiltonian.construct"><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code></a>(func[,&nbsp;na_iR,&nbsp;eta])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.construct" title="sisl.quantity.hamiltonian.Hamiltonian.construct"><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code></a>(func[,&nbsp;na_iR,&nbsp;method,&nbsp;eta])</td>
 <td>Automatically construct the Hamiltonian model based on a function that does the setting up of the Hamiltonian</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.copy" title="sisl.quantity.hamiltonian.Hamiltonian.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>([dtype])</td>
@@ -329,7 +329,7 @@ as the underlying geometry for the tight-binding parameters.</p>
 
 <dl class="method">
 <dt id="sisl.quantity.hamiltonian.Hamiltonian.construct">
-<code class="descname">construct</code><span class="sig-paren">(</span><em>func</em>, <em>na_iR=1000</em>, <em>eta=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.construct" title="Permalink to this definition">¶</a></dt>
+<code class="descname">construct</code><span class="sig-paren">(</span><em>func</em>, <em>na_iR=1000</em>, <em>method='rand'</em>, <em>eta=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.construct" title="Permalink to this definition">¶</a></dt>
 <dd><p>Automatically construct the Hamiltonian model based on a function that does the setting up of the Hamiltonian</p>
 <p>This may be called in two variants.</p>
 <ol class="arabic simple">

@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.8.0-5-g30d54e6
+        VERSION:     'v0.8.1
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -48,7 +48,7 @@
 <p>Basic functionality of creating ranges from text-input and/or other types of information</p>
 <dl class="function">
 <dt id="sisl.utils.ranges.strmap">
-<code class="descclassname">sisl.utils.ranges.</code><code class="descname">strmap</code><span class="sig-paren">(</span><em>func</em>, <em>s</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.ranges.strmap" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">sisl.utils.ranges.</code><code class="descname">strmap</code><span class="sig-paren">(</span><em>func</em>, <em>s</em>, <em>sep='b'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.ranges.strmap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse a string as though it was a slice and map all entries using <code class="xref any docutils literal"><span class="pre">cast</span></code>.</p>
 <p>This parses the string but allows relatively simple slices:
 &gt;&gt;&gt; strmap(&#8216;1&#8217;)
@@ -66,8 +66,12 @@
 <div><p>function to parse every match with</p>
 </div></blockquote>
 <p><strong>s</strong> : str</p>
-<blockquote class="last">
+<blockquote>
 <div><p>the string that should be parsed</p>
+</div></blockquote>
+<p><strong>sep</strong> : str (&#8216;b&#8217;, &#8216;c&#8217;, &#8216;*&#8217;/&#8217;s&#8217;)</p>
+<blockquote class="last">
+<div><p>optional separator used, &#8216;b&#8217; is square brackets, &#8216;c&#8217;, curly braces, and &#8216;*&#8217;/&#8217;s&#8216; is the star</p>
 </div></blockquote>
 </td>
 </tr>
@@ -118,6 +122,19 @@
 <dt id="sisl.utils.ranges.erange">
 <code class="descclassname">sisl.utils.ranges.</code><code class="descname">erange</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.ranges.erange" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the range with both ends includede</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.ranges.list2range">
+<code class="descclassname">sisl.utils.ranges.</code><code class="descname">list2range</code><span class="sig-paren">(</span><em>lst</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.ranges.list2range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a list of elements into a string of ranges</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">list2range</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="go">2, 4-6</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">list2range</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
+<span class="go">2, 4-6, 8-9</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="function">

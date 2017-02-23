@@ -1,0 +1,7 @@
+sisl.shape.ellipsoid module
+===========================
+
+.. automodule:: sisl.shape.ellipsoid
+    :members:
+    :undoc-members:
+    :show-inheritance:

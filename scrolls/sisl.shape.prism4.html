@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sisl.shape.prism4 module &#8212; sisl |release| documentation</title>
+    
+    <link rel="stylesheet" href="_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v0.8.1
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="sisl |release| documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>sisl.shape.prism4 module</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="#">sisl.shape.prism4 module</a>
+      </div>
+      <div id="contentwrapper">
+        
+  <div class="section" id="module-sisl.shape.prism4">
+<span id="sisl-shape-prism4-module"></span><h1>sisl.shape.prism4 module<a class="headerlink" href="#module-sisl.shape.prism4" title="Permalink to this headline">¶</a></h1>
+<p>Implement a set of simple shapes that</p>
+<dl class="class">
+<dt id="sisl.shape.prism4.Cuboid">
+<em class="property">class </em><code class="descclassname">sisl.shape.prism4.</code><code class="descname">Cuboid</code><span class="sig-paren">(</span><em>edge_length</em>, <em>center=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.shape.prism4.Cuboid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="sisl.shape.shape.html#sisl.shape.shape.Shape" title="sisl.shape.shape.Shape"><code class="xref py py-class docutils literal"><span class="pre">sisl.shape.shape.Shape</span></code></a></p>
+<p>A cuboid/rectangular prism (P4) with equi-opposite faces</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></td>
+<td>Return the geometric center of the shape</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.shape.prism4.Cuboid.displacement" title="sisl.shape.prism4.Cuboid.displacement"><code class="xref py py-obj docutils literal"><span class="pre">displacement</span></code></a></td>
+<td>Return the displacement vector of the Cuboid</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.shape.prism4.Cuboid.edge_length" title="sisl.shape.prism4.Cuboid.edge_length"><code class="xref py py-obj docutils literal"><span class="pre">edge_length</span></code></a></td>
+<td>Return the edge-length of the Cuboid</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.shape.prism4.Cuboid.origo" title="sisl.shape.prism4.Cuboid.origo"><code class="xref py py-obj docutils literal"><span class="pre">origo</span></code></a></td>
+<td>Return the origin of the Cuboid (lower-left corner)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.shape.prism4.Cuboid.volume" title="sisl.shape.prism4.Cuboid.volume"><code class="xref py py-obj docutils literal"><span class="pre">volume</span></code></a></td>
+<td>Return the edge-length of the Cuboid</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(\*args,&nbsp;\*\*kwargs)</td>
+<td>Re-initialize the Shape</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">enlarge</span></code>(length)</td>
+<td>Return a new Shape with an increased size length</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.shape.prism4.Cuboid.expand" title="sisl.shape.prism4.Cuboid.expand"><code class="xref py py-obj docutils literal"><span class="pre">expand</span></code></a>(length)</td>
+<td>Return a new shape with a larger corresponding to <code class="xref any docutils literal"><span class="pre">length</span></code></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.shape.prism4.Cuboid.iwithin" title="sisl.shape.prism4.Cuboid.iwithin"><code class="xref py py-obj docutils literal"><span class="pre">iwithin</span></code></a>(other[,&nbsp;return_sub])</td>
+<td>Return indices of the <code class="xref any docutils literal"><span class="pre">other</span></code> object which are contained in the shape</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.shape.prism4.Cuboid.set_center" title="sisl.shape.prism4.Cuboid.set_center"><code class="xref py py-obj docutils literal"><span class="pre">set_center</span></code></a>(center)</td>
+<td>Re-setting the center can sometimes be necessary</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.shape.prism4.Cuboid.within" title="sisl.shape.prism4.Cuboid.within"><code class="xref py py-obj docutils literal"><span class="pre">within</span></code></a>(other[,&nbsp;return_sub])</td>
+<td>Return a <code class="xref any docutils literal"><span class="pre">True/False</span></code> value of whether the <code class="xref any docutils literal"><span class="pre">other</span></code> object is contained in this shape</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="sisl.shape.prism4.Cuboid.displacement">
+<code class="descname">displacement</code><a class="headerlink" href="#sisl.shape.prism4.Cuboid.displacement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the displacement vector of the Cuboid</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.shape.prism4.Cuboid.edge_length">
+<code class="descname">edge_length</code><a class="headerlink" href="#sisl.shape.prism4.Cuboid.edge_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the edge-length of the Cuboid</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.shape.prism4.Cuboid.expand">
+<code class="descname">expand</code><span class="sig-paren">(</span><em>length</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.shape.prism4.Cuboid.expand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a new shape with a larger corresponding to <code class="xref any docutils literal"><span class="pre">length</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.shape.prism4.Cuboid.iwithin">
+<code class="descname">iwithin</code><span class="sig-paren">(</span><em>other</em>, <em>return_sub=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.shape.prism4.Cuboid.iwithin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return indices of the <code class="xref any docutils literal"><span class="pre">other</span></code> object which are contained in the shape</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>other</strong> : (<code class="xref any docutils literal"><span class="pre">numpy.ndarray</span></code>, list, tuple)</p>
+<blockquote class="last">
+<div><p>the object that is checked for containment</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.shape.prism4.Cuboid.origo">
+<code class="descname">origo</code><a class="headerlink" href="#sisl.shape.prism4.Cuboid.origo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the origin of the Cuboid (lower-left corner)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.shape.prism4.Cuboid.set_center">
+<code class="descname">set_center</code><span class="sig-paren">(</span><em>center</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.shape.prism4.Cuboid.set_center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Re-setting the center can sometimes be necessary</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.shape.prism4.Cuboid.volume">
+<code class="descname">volume</code><a class="headerlink" href="#sisl.shape.prism4.Cuboid.volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the edge-length of the Cuboid</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.shape.prism4.Cuboid.within">
+<code class="descname">within</code><span class="sig-paren">(</span><em>other</em>, <em>return_sub=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.shape.prism4.Cuboid.within" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a <code class="xref any docutils literal"><span class="pre">True/False</span></code> value of whether the <code class="xref any docutils literal"><span class="pre">other</span></code> object is contained in this shape</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>other</strong> : (<code class="xref any docutils literal"><span class="pre">numpy.ndarray</span></code>, list, tuple)</p>
+<blockquote class="last">
+<div><p>the object that is checked for containment</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sisl.shape.prism4.Cube">
+<em class="property">class </em><code class="descclassname">sisl.shape.prism4.</code><code class="descname">Cube</code><span class="sig-paren">(</span><em>edge_length</em>, <em>origo=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.shape.prism4.Cube" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#sisl.shape.prism4.Cuboid" title="sisl.shape.prism4.Cuboid"><code class="xref py py-class docutils literal"><span class="pre">sisl.shape.prism4.Cuboid</span></code></a></p>
+<p>A cuboid/rectangular prism (P4) with all-equi faces</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></td>
+<td>Return the geometric center of the shape</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">displacement</span></code></td>
+<td>Return the displacement vector of the Cuboid</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">edge_length</span></code></td>
+<td>Return the edge-length of the Cuboid</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">origo</span></code></td>
+<td>Return the origin of the Cuboid (lower-left corner)</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">volume</span></code></td>
+<td>Return the edge-length of the Cuboid</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(\*args,&nbsp;\*\*kwargs)</td>
+<td>Re-initialize the Shape</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">enlarge</span></code>(length)</td>
+<td>Return a new Shape with an increased size length</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">expand</span></code>(length)</td>
+<td>Return a new shape with a larger corresponding to <code class="xref any docutils literal"><span class="pre">length</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">iwithin</span></code>(other[,&nbsp;return_sub])</td>
+<td>Return indices of the <code class="xref any docutils literal"><span class="pre">other</span></code> object which are contained in the shape</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">set_center</span></code>(center)</td>
+<td>Re-setting the center can sometimes be necessary</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">within</span></code>(other[,&nbsp;return_sub])</td>
+<td>Return a <code class="xref any docutils literal"><span class="pre">True/False</span></code> value of whether the <code class="xref any docutils literal"><span class="pre">other</span></code> object is contained in this shape</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>

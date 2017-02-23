@@ -1,0 +1,7 @@
+sisl.shape.setup module
+=======================
+
+.. automodule:: sisl.shape.setup
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.8
+                v0.8
               </div>
             
           
@@ -132,9 +132,10 @@
             
   <div class="section" id="module-sisl.atom">
 <span id="sisl-atom-module"></span><h1>sisl.atom module<a class="headerlink" href="#module-sisl.atom" title="Permalink to this headline">¶</a></h1>
-<p>Atomic information</p>
-<p>Atomic information can be created and handled using either the
-<a class="reference internal" href="#sisl.atom.PeriodicTable" title="sisl.atom.PeriodicTable"><code class="xref any py py-class docutils literal"><span class="pre">PeriodicTable</span></code></a> object or the <a class="reference internal" href="#sisl.atom.Atom" title="sisl.atom.Atom"><code class="xref any py py-class docutils literal"><span class="pre">Atom</span></code></a> object.</p>
+<p>Atomic information in different object containers.</p>
+<p>Atomic information can be created and handled using the
+<a class="reference internal" href="#sisl.atom.PeriodicTable" title="sisl.atom.PeriodicTable"><code class="xref any py py-class docutils literal"><span class="pre">PeriodicTable</span></code></a> object or the <a class="reference internal" href="#sisl.atom.Atom" title="sisl.atom.Atom"><code class="xref any py py-class docutils literal"><span class="pre">Atom</span></code></a> object, or lastly the combined
+object <a class="reference internal" href="#sisl.atom.Atoms" title="sisl.atom.Atoms"><code class="xref any py py-class docutils literal"><span class="pre">Atoms</span></code></a>.</p>
 <ul class="simple">
 <li>The <a class="reference internal" href="#sisl.atom.PeriodicTable" title="sisl.atom.PeriodicTable"><code class="xref any py py-class docutils literal"><span class="pre">PeriodicTable</span></code></a> enables a <em>lookup</em> table for generic information</li>
 </ul>
@@ -149,6 +150,14 @@
 <li>Custom tag (useful for denoting pseudo potentials)</li>
 </ul>
 </div></blockquote>
+<ul class="simple">
+<li>The <a class="reference internal" href="#sisl.atom.Atoms" title="sisl.atom.Atoms"><code class="xref any py py-class docutils literal"><span class="pre">Atoms</span></code></a> object is a sorted, unique list of <a class="reference internal" href="#sisl.atom.Atom" title="sisl.atom.Atom"><code class="xref any py py-class docutils literal"><span class="pre">Atom</span></code></a> such that one
+can contain a list of atoms. Instead of storing all <a class="reference internal" href="#sisl.atom.Atom" title="sisl.atom.Atom"><code class="xref any py py-class docutils literal"><span class="pre">Atom</span></code></a> objects
+which may have <em>many</em> dublicates, the <a class="reference internal" href="#sisl.atom.Atoms" title="sisl.atom.Atoms"><code class="xref any py py-class docutils literal"><span class="pre">Atoms</span></code></a> object has a unique
+list of <a class="reference internal" href="#sisl.atom.Atom" title="sisl.atom.Atom"><code class="xref any py py-class docutils literal"><span class="pre">Atom</span></code></a> objects and an index list (<a class="reference internal" href="#sisl.atom.Atoms.specie" title="sisl.atom.Atoms.specie"><code class="xref any py py-attr docutils literal"><span class="pre">Atoms.specie</span></code></a>).
+This object enables a fast lookup of atoms without having
+to duplicate too much memory.</li>
+</ul>
 <dl class="class">
 <dt id="sisl.atom.PeriodicTable">
 <em class="property">class </em><code class="descclassname">sisl.atom.</code><code class="descname">PeriodicTable</code><a class="headerlink" href="#sisl.atom.PeriodicTable" title="Permalink to this definition">¶</a></dt>
@@ -594,11 +603,17 @@ because it will not duplicate the <code class="docutils literal"><span class="pr
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atoms.append" title="sisl.atom.Atoms.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(other)</td>
-<td>Append <code class="docutils literal"><span class="pre">other</span></code> to this list of atoms</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atoms.add" title="sisl.atom.Atoms.add"><code class="xref py py-obj docutils literal"><span class="pre">add</span></code></a>(other)</td>
+<td>Append <code class="docutils literal"><span class="pre">other</span></code> to this list of atoms and return the appended version</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atoms.copy" title="sisl.atom.Atoms.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atoms.append" title="sisl.atom.Atoms.append"><code class="xref py py-obj docutils literal"><span class="pre">append</span></code></a>(other)</td>
+<td>Append <code class="docutils literal"><span class="pre">other</span></code> to this list of atoms and return the appended version</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atoms.copy" title="sisl.atom.Atoms.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>()</td>
 <td>Return a copy of this atom</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atoms.cut" title="sisl.atom.Atoms.cut"><code class="xref py py-obj docutils literal"><span class="pre">cut</span></code></a>(seps,&nbsp;axis)</td>
+<td>Return a subset of the list</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atoms.index" title="sisl.atom.Atoms.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>(atom)</td>
 <td>Return the species index of the atom object</td>
@@ -606,18 +621,45 @@ because it will not duplicate the <code class="docutils literal"><span class="pr
 <tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atoms.insert" title="sisl.atom.Atoms.insert"><code class="xref py py-obj docutils literal"><span class="pre">insert</span></code></a>(index,&nbsp;other)</td>
 <td>Insert other atoms into the list of atoms at index</td>
 </tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atoms.prepend" title="sisl.atom.Atoms.prepend"><code class="xref py py-obj docutils literal"><span class="pre">prepend</span></code></a>(other)</td>
+<td></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atoms.reduce" title="sisl.atom.Atoms.reduce"><code class="xref py py-obj docutils literal"><span class="pre">reduce</span></code></a>()</td>
+<td>Returns a new <a class="reference internal" href="#sisl.atom.Atoms" title="sisl.atom.Atoms"><code class="xref any py py-class docutils literal"><span class="pre">Atoms</span></code></a> object by removing non-used atoms</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atoms.remove" title="sisl.atom.Atoms.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>(atom)</td>
+<td>Remove a set of atoms</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atoms.reorder" title="sisl.atom.Atoms.reorder"><code class="xref py py-obj docutils literal"><span class="pre">reorder</span></code></a>()</td>
+<td>Reorders the atoms and species index so that they are ascending</td>
+</tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atoms.repeat" title="sisl.atom.Atoms.repeat"><code class="xref py py-obj docutils literal"><span class="pre">repeat</span></code></a>(reps)</td>
 <td>Repeat this atom object</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atoms.tile" title="sisl.atom.Atoms.tile"><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code></a>(reps)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atoms.reverse" title="sisl.atom.Atoms.reverse"><code class="xref py py-obj docutils literal"><span class="pre">reverse</span></code></a>([atom])</td>
+<td>Returns a reversed geometry</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atoms.sub" title="sisl.atom.Atoms.sub"><code class="xref py py-obj docutils literal"><span class="pre">sub</span></code></a>(atom)</td>
+<td>Return a subset of the list</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.atom.Atoms.swap" title="sisl.atom.Atoms.swap"><code class="xref py py-obj docutils literal"><span class="pre">swap</span></code></a>(a,&nbsp;b)</td>
+<td>Swaps atoms</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.atom.Atoms.tile" title="sisl.atom.Atoms.tile"><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code></a>(reps)</td>
 <td>Tile this atom object</td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
+<dt id="sisl.atom.Atoms.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Append <code class="docutils literal"><span class="pre">other</span></code> to this list of atoms and return the appended version</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="sisl.atom.Atoms.append">
 <code class="descname">append</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.append" title="Permalink to this definition">¶</a></dt>
-<dd><p>Append <code class="docutils literal"><span class="pre">other</span></code> to this list of atoms</p>
+<dd><p>Append <code class="docutils literal"><span class="pre">other</span></code> to this list of atoms and return the appended version</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -633,6 +675,18 @@ because it will not duplicate the <code class="docutils literal"><span class="pr
 </dd></dl>
 
 <dl class="method">
+<dt id="sisl.atom.Atoms.cut">
+<code class="descname">cut</code><span class="sig-paren">(</span><em>seps</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.cut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a subset of the list</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.atom.Atoms.dR">
+<code class="descname">dR</code><a class="headerlink" href="#sisl.atom.Atoms.dR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an array of masses of the contained objects</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="sisl.atom.Atoms.index">
 <code class="descname">index</code><span class="sig-paren">(</span><em>atom</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.index" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the species index of the atom object</p>
@@ -644,16 +698,70 @@ because it will not duplicate the <code class="docutils literal"><span class="pr
 <dd><p>Insert other atoms into the list of atoms at index</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="sisl.atom.Atoms.mass">
+<code class="descname">mass</code><a class="headerlink" href="#sisl.atom.Atoms.mass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an array of masses of the contained objects</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.atom.Atoms.orbitals">
+<code class="descname">orbitals</code><a class="headerlink" href="#sisl.atom.Atoms.orbitals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an array of orbitals of the contained objects</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.atom.Atoms.prepend">
+<code class="descname">prepend</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.prepend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.atom.Atoms.reduce">
+<code class="descname">reduce</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.reduce" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a new <a class="reference internal" href="#sisl.atom.Atoms" title="sisl.atom.Atoms"><code class="xref any py py-class docutils literal"><span class="pre">Atoms</span></code></a> object by removing non-used atoms</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.atom.Atoms.remove">
+<code class="descname">remove</code><span class="sig-paren">(</span><em>atom</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove a set of atoms</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.atom.Atoms.reorder">
+<code class="descname">reorder</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.reorder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reorders the atoms and species index so that they are ascending</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="sisl.atom.Atoms.repeat">
 <code class="descname">repeat</code><span class="sig-paren">(</span><em>reps</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.repeat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Repeat this atom object</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="sisl.atom.Atoms.reverse">
+<code class="descname">reverse</code><span class="sig-paren">(</span><em>atom=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.reverse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a reversed geometry</p>
+<p>Also enables reversing a subset of the atoms.</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="sisl.atom.Atoms.specie">
 <code class="descname">specie</code><a class="headerlink" href="#sisl.atom.Atoms.specie" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the specie list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.atom.Atoms.sub">
+<code class="descname">sub</code><span class="sig-paren">(</span><em>atom</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.sub" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a subset of the list</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.atom.Atoms.swap">
+<code class="descname">swap</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.atom.Atoms.swap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Swaps atoms</p>
 </dd></dl>
 
 <dl class="method">
@@ -698,7 +806,7 @@ because it will not duplicate the <code class="docutils literal"><span class="pr
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.8.0-5-g30d54e6
+            VERSION:'v0.8.1
 ',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',

@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.8.0-5-g30d54e6
+        VERSION:     'v0.8.1
 ',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
@@ -208,6 +208,18 @@ the given attributes <code class="xref any docutils literal"><span class="pre">h
 <em class="property">class </em><code class="descclassname">sisl.io.sile.</code><code class="descname">Sile</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>comment='#'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#sisl.io.sile.BaseSile" title="sisl.io.sile.BaseSile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.BaseSile</span></code></a></p>
 <p>Class to contain a file with easy access</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.sile.Sile.file" title="sisl.io.sile.Sile.file"><code class="xref py py-obj docutils literal"><span class="pre">file</span></code></a></td>
+<td>File of the current <a class="reference internal" href="#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
 <colgroup>
@@ -250,6 +262,12 @@ the given attributes <code class="xref any docutils literal"><span class="pre">h
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="sisl.io.sile.Sile.file">
+<code class="descname">file</code><a class="headerlink" href="#sisl.io.sile.Sile.file" title="Permalink to this definition">¶</a></dt>
+<dd><p>File of the current <a class="reference internal" href="#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a></p>
+</dd></dl>
+
 <dl class="staticmethod">
 <dt id="sisl.io.sile.Sile.is_keys">
 <em class="property">static </em><code class="descname">is_keys</code><span class="sig-paren">(</span><em>keys</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.sile.Sile.is_keys" title="Permalink to this definition">¶</a></dt>
@@ -310,6 +328,18 @@ the given attributes <code class="xref any docutils literal"><span class="pre">h
 <dd><p>Bases: <a class="reference internal" href="#sisl.io.sile.BaseSile" title="sisl.io.sile.BaseSile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.BaseSile</span></code></a></p>
 <p>Class to contain a file with easy access
 The file format for this file is the NetCDF file format</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.sile.SileCDF.file" title="sisl.io.sile.SileCDF.file"><code class="xref py py-obj docutils literal"><span class="pre">file</span></code></a></td>
+<td>File of the current <a class="reference internal" href="#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
 <colgroup>
@@ -335,6 +365,18 @@ open and subsequently accessed.</p>
 <li>means direct file access for every variable read</li>
 <li>means stores certain variables in the object.</li>
 </ol>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.sile.SileCDF.file" title="sisl.io.sile.SileCDF.file"><code class="xref py py-obj docutils literal"><span class="pre">file</span></code></a></td>
+<td>File of the current <a class="reference internal" href="#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
 <colgroup>
@@ -350,6 +392,12 @@ open and subsequently accessed.</p>
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="sisl.io.sile.SileCDF.file">
+<code class="descname">file</code><a class="headerlink" href="#sisl.io.sile.SileCDF.file" title="Permalink to this definition">¶</a></dt>
+<dd><p>File of the current <a class="reference internal" href="#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a></p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -358,6 +406,18 @@ open and subsequently accessed.</p>
 <dd><p>Bases: <a class="reference internal" href="#sisl.io.sile.BaseSile" title="sisl.io.sile.BaseSile"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.sile.BaseSile</span></code></a></p>
 <p>Class to contain a file with easy access
 The file format for this file is a binary format.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.sile.SileBin.file" title="sisl.io.sile.SileBin.file"><code class="xref py py-obj docutils literal"><span class="pre">file</span></code></a></td>
+<td>File of the current <a class="reference internal" href="#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
 <colgroup>
@@ -376,6 +436,18 @@ The file format for this file is a binary format.</p>
 <p>Creates/Opens a SileBin</p>
 <p>Opens a SileBin with <code class="xref any docutils literal"><span class="pre">mode</span></code> (b).
 If <code class="xref any docutils literal"><span class="pre">mode</span></code> is in read-mode (r).</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.sile.SileBin.file" title="sisl.io.sile.SileBin.file"><code class="xref py py-obj docutils literal"><span class="pre">file</span></code></a></td>
+<td>File of the current <a class="reference internal" href="#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a></td>
+</tr>
+</tbody>
+</table>
 <p class="rubric">Methods</p>
 <table border="1" class="longtable docutils">
 <colgroup>
@@ -391,6 +463,12 @@ If <code class="xref any docutils literal"><span class="pre">mode</span></code> 
 </tr>
 </tbody>
 </table>
+<dl class="attribute">
+<dt id="sisl.io.sile.SileBin.file">
+<code class="descname">file</code><a class="headerlink" href="#sisl.io.sile.SileBin.file" title="Permalink to this definition">¶</a></dt>
+<dd><p>File of the current <a class="reference internal" href="#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a></p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="exception">

@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sisl.shape.shape module &#8212; sisl |release| documentation</title>
+    
+    <link rel="stylesheet" href="_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v0.8.1
+',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="sisl |release| documentation" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>sisl.shape.shape module</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="#">sisl.shape.shape module</a>
+      </div>
+      <div id="contentwrapper">
+        
+  <div class="section" id="module-sisl.shape.shape">
+<span id="sisl-shape-shape-module"></span><h1>sisl.shape.shape module<a class="headerlink" href="#module-sisl.shape.shape" title="Permalink to this headline">¶</a></h1>
+<p>Implementation of different shapes</p>
+<p>This module implements a generic shape which may be sub-classed
+for other more distinct shapes such as, Spheres, Boxes, Polygons
+etc.</p>
+<dl class="class">
+<dt id="sisl.shape.shape.Shape">
+<em class="property">class </em><code class="descclassname">sisl.shape.shape.</code><code class="descname">Shape</code><span class="sig-paren">(</span><em>center</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.shape.shape.Shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Baseclass for shapes.</p>
+<p>This class should always be sub-classed.</p>
+<p>There are a few routines that are <em>always</em> necessary
+to implement in a inherited class:
+- center</p>
+<blockquote>
+<div>return the geometric center of the shape</div></blockquote>
+<ul class="simple">
+<li>volume
+return the volume of the shape.</li>
+<li>displacement
+return a vector that is the largest displacement vector such that
+a grid of the Shape will fully contian all space</li>
+<li>within
+Enables to check if coordinates, or other things
+are contained in this shape</li>
+<li>iwithin
+Returns only the indices of elements that are within</li>
+<li>enlarge
+Creates a new shape with a only the indices of elements that are within</li>
+</ul>
+<p>A <a class="reference internal" href="#sisl.shape.shape.Shape" title="sisl.shape.shape.Shape"><code class="xref any py py-class docutils literal"><span class="pre">Shape</span></code></a> allows interaction with outside elements to check if geometric
+points are within the shapes.
+For instance to assert that a given point <code class="xref any docutils literal"><span class="pre">x</span></code>, <code class="xref any docutils literal"><span class="pre">y</span></code>, <code class="xref any docutils literal"><span class="pre">z</span></code> is within a sphere
+of radius <code class="xref any docutils literal"><span class="pre">r</span></code> with center <code class="xref any docutils literal"><span class="pre">cx</span></code>, <code class="xref any docutils literal"><span class="pre">cy</span></code>, <code class="xref any docutils literal"><span class="pre">cz</span></code> on may do:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">xyz</span> <span class="o">=</span> <span class="p">[</span><span class="o">...</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">shape</span> <span class="o">=</span> <span class="n">Sphere</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">[</span><span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">,</span> <span class="n">cz</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">if</span> <span class="n">shape</span><span class="o">.</span><span class="n">within</span><span class="p">(</span><span class="n">xyz</span><span class="p">):</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="c1"># do something</span>
+</pre></div>
+</div>
+<p>This makes it very efficient to enable arbitrary shapes to be passed
+and used as determinations of regions of space.</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.shape.shape.Shape.center" title="sisl.shape.shape.Shape.center"><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></a></td>
+<td>Return the geometric center of the shape</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.shape.shape.Shape.displacement" title="sisl.shape.shape.Shape.displacement"><code class="xref py py-obj docutils literal"><span class="pre">displacement</span></code></a></td>
+<td>Return a displacement vector for full containment</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.shape.shape.Shape.volume" title="sisl.shape.shape.Shape.volume"><code class="xref py py-obj docutils literal"><span class="pre">volume</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(\*args,&nbsp;\*\*kwargs)</td>
+<td>Re-initialize the Shape</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.shape.shape.Shape.enlarge" title="sisl.shape.shape.Shape.enlarge"><code class="xref py py-obj docutils literal"><span class="pre">enlarge</span></code></a>(length)</td>
+<td>Return a new Shape with an increased size length</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.shape.shape.Shape.iwithin" title="sisl.shape.shape.Shape.iwithin"><code class="xref py py-obj docutils literal"><span class="pre">iwithin</span></code></a>(other)</td>
+<td>Returns indices of the elements of <code class="xref any docutils literal"><span class="pre">other</span></code> that are within the shape</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.shape.shape.Shape.within" title="sisl.shape.shape.Shape.within"><code class="xref py py-obj docutils literal"><span class="pre">within</span></code></a>(other)</td>
+<td>Returns <code class="xref any docutils literal"><span class="pre">True</span></code> if <code class="xref any docutils literal"><span class="pre">other</span></code> is fully within <code class="xref any docutils literal"><span class="pre">self</span></code></td>
+</tr>
+</tbody>
+</table>
+<p>Initialize the Shape with a center</p>
+<p class="rubric">Attributes</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.shape.shape.Shape.center" title="sisl.shape.shape.Shape.center"><code class="xref py py-obj docutils literal"><span class="pre">center</span></code></a></td>
+<td>Return the geometric center of the shape</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.shape.shape.Shape.displacement" title="sisl.shape.shape.Shape.displacement"><code class="xref py py-obj docutils literal"><span class="pre">displacement</span></code></a></td>
+<td>Return a displacement vector for full containment</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.shape.shape.Shape.volume" title="sisl.shape.shape.Shape.volume"><code class="xref py py-obj docutils literal"><span class="pre">volume</span></code></a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">__call__</span></code>(\*args,&nbsp;\*\*kwargs)</td>
+<td>Re-initialize the Shape</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.shape.shape.Shape.enlarge" title="sisl.shape.shape.Shape.enlarge"><code class="xref py py-obj docutils literal"><span class="pre">enlarge</span></code></a>(length)</td>
+<td>Return a new Shape with an increased size length</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.shape.shape.Shape.iwithin" title="sisl.shape.shape.Shape.iwithin"><code class="xref py py-obj docutils literal"><span class="pre">iwithin</span></code></a>(other)</td>
+<td>Returns indices of the elements of <code class="xref any docutils literal"><span class="pre">other</span></code> that are within the shape</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.shape.shape.Shape.within" title="sisl.shape.shape.Shape.within"><code class="xref py py-obj docutils literal"><span class="pre">within</span></code></a>(other)</td>
+<td>Returns <code class="xref any docutils literal"><span class="pre">True</span></code> if <code class="xref any docutils literal"><span class="pre">other</span></code> is fully within <code class="xref any docutils literal"><span class="pre">self</span></code></td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="sisl.shape.shape.Shape.center">
+<code class="descname">center</code><a class="headerlink" href="#sisl.shape.shape.Shape.center" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the geometric center of the shape</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.shape.shape.Shape.displacement">
+<code class="descname">displacement</code><a class="headerlink" href="#sisl.shape.shape.Shape.displacement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a displacement vector for full containment</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.shape.shape.Shape.enlarge">
+<code class="descname">enlarge</code><span class="sig-paren">(</span><em>length</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.shape.shape.Shape.enlarge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a new Shape with an increased size length</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.shape.shape.Shape.iwithin">
+<code class="descname">iwithin</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.shape.shape.Shape.iwithin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns indices of the elements of <code class="xref any docutils literal"><span class="pre">other</span></code> that are within the shape</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="sisl.shape.shape.Shape.volume">
+<code class="descname">volume</code><a class="headerlink" href="#sisl.shape.shape.Shape.volume" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="sisl.shape.shape.Shape.within">
+<code class="descname">within</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.shape.shape.Shape.within" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns <code class="xref any docutils literal"><span class="pre">True</span></code> if <code class="xref any docutils literal"><span class="pre">other</span></code> is fully within <code class="xref any docutils literal"><span class="pre">self</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
+  </body>
+</html>
