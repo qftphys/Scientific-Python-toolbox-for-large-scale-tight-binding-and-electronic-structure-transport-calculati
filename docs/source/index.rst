@@ -5,48 +5,57 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to sisl documentation!
+
+|buildstatus|_
+|pypi|_
+|conda|_
+|codecov|_
+|donate|_
+
+
+Welcome to sisl's documentation!
 ==============================
 
 This documentation has been created from version: |release|.
 
-sisl is a tool to easily create geometries and, in general, handle
-data output files from various DFT codes. Although this is primarily
-based on the SIESTA/TranSIESTA DFT code it is far from limited to
-deal with *only* this code. 
+`sisl` is a tool to easily create geometries and, in general, handle
+data output files from various DFT codes.
+It is particularly developed with SIESTA_ /TranSIESTA_ /TBtrans_ in mind
+due to my own development of TranSIESTA_ and TBtrans_.
 
-A list of key components are
+Secondly it provides an *easy* interface for creating and examining
+tight-binding Hamiltonians (dynamical matrices, self-energies, etc.)
+using a fast an intuitive Python class.
+Any Hamiltonian, from tight-binding or DFT, may be written in to a NetCDF4
+file and passed to TBtrans_ for *N*-terminal transport calculations.
 
-:ref:`script_sgeom`
-   Read and transform generic coordinate files from
-   one format into other formats.
 
-:ref:`script_sgrid`
-   Read and transform *grid* data, such as electronic
-   densities, electrostatic potentials etc. and save them in various
-   formats.
+Features
+--------
 
-:ref:`script_sdata`
-   Read and transform *any* data. It is basically a shorthand for
-   the above more convenience scripts.
-   This script is capable of handling geometries, grids, specially
-   contained data, etc.  
-   
+* Command line utilities for processing of data files for a wide
+  variety of file formats:
 
-Script based handling via Python classes and objects that handles 
+  * :ref:`script_sdata`
+    Read and transform *any* `sisl` data file. 
+    This script is capable of handling geometries, grids, special
+    data files such as binary files etc.
 
-  * Atomic species
-  * Unit cells (using a super cell approach)
-  * Geometries, with associated atomic species and unit cells
-  * Grids, with associated unit cells
-  * Tight-binding models using a sparse data structure for easy
-    creation and calculation of eigenvalues
-    The electronic structure may comprise of orthogonal or non-orthogonal
-    basis sets.
+  * :ref:`script_sgeom` a geometry conversion tool which reads and writes
+    many commonly encounted files for geometries, such as XYZ files etc.
+    as well as DFT related input and output files.
+
+  * :ref:`script_sgrid` a real-space grid conversion tool which reads and writes
+    many commonly encounted files for real-space grids. *Mainly targetted SIESTA_*.
+
+* Python script which does all the above things *and more*.
+  `sisl` implements many classes for manipulating geometries and nano-structure
+  related physical quantities, e.g. atomic species, unit-cells (with user-defined periodicity), Hamiltonians (orthogonal and non-orthogonal), real-space grids.
+
 
 
 Installation
-============
+------------
 
 The easiest way to install `sisl` is via the :program:`pypi` interface.
 Install via:
@@ -54,6 +63,12 @@ Install via:
 .. code-block:: bash
 
    pip install sisl
+
+In case you are using `conda` simply do:
+   
+.. code-block:: bash
+
+   conda install -c zerothi sisl
 
 Alternatively you can download the releases on the
 `release page <gh-releases_>`_. And install via the regular :program:`setup.py`
@@ -66,34 +81,29 @@ interface:
 which will install `sisl` in your default location, use :program:`--prefix <path>` for
 manual control of the placement.
 
+
 Requirements
 ------------
 
 To succesfully use `sisl` these Python packages must be installed:
 
  - `six`_
- - `numpy`_
+ - `setuptools`_
+ - `numpy`_ (`>=1.9`)
  - `scipy`_ 
  - `netcdf4-python`_
 
-Contents:
+Indices and Tables
+==================
 
 .. toctree::
    :maxdepth: 3
-
+   :titlesonly:
+   :hidden:
+   
    scripts/sgeom
    scripts/sgrid
    scripts/sdata
-
-.. autosummary::
-   :toctree: _autosummary
-
-
-The API documentation of the ``sisl`` package can be found `here <sisl>`.
-
-      
-Indices and tables
-==================
 
 * :ref:`genindex`
 * :ref:`modindex`
@@ -131,4 +141,22 @@ If you have any preferences please let me know.
 .. _netcdf4-python: http://github.com/Unidata/netcdf4-python
 .. _numpy: http://github.com/numpy/numpy
 .. _scipy: http://github.com/scipy/scipy
+.. _SIESTA: https://departments.icmab.es/leem/siesta/
+.. _TranSIESTA: https://launchpad.net/siesta
+.. _TBtrans: https://launchpad.net/siesta
 
+
+.. |buildstatus| image:: https://travis-ci.org/zerothi/sisl.svg
+.. _buildstatus: https://travis-ci.org/zerothi/sisl
+
+.. |pypi| image:: https://badge.fury.io/py/sisl.svg
+.. _pypi: https://badge.fury.io/py/sisl
+
+.. |conda| image:: https://anaconda.org/zerothi/sisl/badges/installer/conda.svg
+.. _conda: https://anaconda.org/zerothi/sisl
+
+.. |codecov| image:: https://codecov.io/gh/zerothi/sisl/branch/master/graph/badge.svg
+.. _codecov: https://codecov.io/gh/zerothi/sisl
+
+.. |donate| image:: https://img.shields.io/badge/Donate-PayPal-green.svg
+.. _donate: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=NGNU2AA3JXX94&lc=DK&item_name=Papior%2dCodes&item_number=codes&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted
