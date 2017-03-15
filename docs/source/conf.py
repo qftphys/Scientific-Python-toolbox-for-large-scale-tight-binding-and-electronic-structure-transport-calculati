@@ -32,6 +32,8 @@ sys.path.insert(0, os.path.abspath('../../..'))
 extensions = [
     'sphinx.ext.doctest',
     'numpydoc',
+    'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
     'sphinx.ext.todo',
     'sphinx.ext.extlinks',
     'sphinx.ext.coverage',
