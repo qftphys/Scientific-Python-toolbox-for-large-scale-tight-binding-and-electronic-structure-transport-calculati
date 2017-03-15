@@ -97,13 +97,11 @@ Indices and Tables
 ==================
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :titlesonly:
-   :hidden:
    
-   scripts/sgeom
-   scripts/sgrid
-   scripts/sdata
+   files
+   scripts
 
 * :ref:`genindex`
 * :ref:`modindex`
