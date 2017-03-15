@@ -2,6 +2,7 @@
 
 # Default options
 skip_commit=0
+force=0
 
 # Create documentation...
 # Parse options
@@ -40,9 +41,12 @@ while [[ $# -gt 0 ]]; do
 	--skip-commit|-sc)
 	    skip_commit=1
 	    ;;
-    --themes)
-        themes="$1"
-        shift
+	--force)
+	    force=1
+	    ;;
+	--themes)
+            themes="$1"
+            shift
 	    ;;
 	*)
 	    echo "Unrecognized option: $opt"
@@ -57,7 +61,7 @@ done
 # If so, quit immediately
 cur_tag=`head -1 docs/doc.tag`
 
-if [[ $doc_tag == $cur_tag ]]; then
+if [[ $doc_tag == $cur_tag ]] && [[ $force -eq 0 ]]; then
     echo "The current documented tag is the same as the latest available tag."
     echo "Will not update documentation..."
     exit 1
