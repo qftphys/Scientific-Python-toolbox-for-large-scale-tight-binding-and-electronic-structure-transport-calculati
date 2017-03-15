@@ -103,6 +103,9 @@ Indices and Tables
    files
    scripts
 
+Indices
+-------
+
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
