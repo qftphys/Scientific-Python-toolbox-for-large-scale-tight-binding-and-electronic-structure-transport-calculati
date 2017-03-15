@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>File formats &#8212; sisl |release| documentation</title>
+    
+    <link rel="stylesheet" href="_static/scrolls.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/print.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     'v0.8.1-47-geded579',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/theme_extras.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Scripts" href="scripts.html" />
+    <link rel="prev" title="Welcome to sisl’s documentation!" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div id="content">
+      <div class="header">
+        <h1 class="heading"><a href="index.html"
+          title="back to the documentation overview"><span>File formats</span></a></h1>
+      </div>
+      <div class="relnav" role="navigation" aria-label="related navigation">
+        <a href="index.html">&laquo; Welcome to sisl&#8217;s documentation!</a> |
+        <a href="#">File formats</a>
+        | <a href="scripts.html">Scripts &raquo;</a>
+      </div>
+      <div id="contentwrapper">
+        
+  <div class="section" id="file-formats">
+<h1>File formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="sisl.html"><span class="doc">sisl package</span></a> implements a generic interface for interacting with many different file
+formats. When using the <a class="reference internal" href="scripts.html"><span class="doc">command line utilities</span></a> all these files
+are accepted as input for, especially <a class="reference internal" href="scripts/sdata.html#script-sdata"><span class="std std-ref">sdata</span></a> while only those which
+contains geometries (<code class="xref py py-class docutils literal"><span class="pre">Geometry</span></code>) may be used with <a class="reference internal" href="scripts/sgeom.html#script-sgeom"><span class="std std-ref">sgeom</span></a>.</p>
+<p>In <a class="reference internal" href="sisl.html"><span class="doc">sisl package</span></a> any file is named a <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> to destinguish it from <code class="xref any docutils literal"><span class="pre">File</span></code>.</p>
+<p>Here is a list of the currently supported file-formats with the file-endings
+defining the file format:</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.tbtncSileSiesta.xyz" title="sisl.io.siesta.tbtncSileSiesta.xyz"><code class="xref any py py-attr docutils literal"><span class="pre">xyz</span></code></a></dt>
+<dd><a class="reference internal" href="sisl.io.xyz.html#sisl.io.xyz.XYZSile" title="sisl.io.xyz.XYZSile"><code class="xref any py py-class docutils literal"><span class="pre">XYZSile</span></code></a> file format, generic file format for many geometry viewers.</dd>
+<dt><a class="reference internal" href="sisl.io.cube.html#module-sisl.io.cube" title="sisl.io.cube"><code class="xref any py py-mod docutils literal"><span class="pre">cube</span></code></a></dt>
+<dd><a class="reference internal" href="sisl.io.html#sisl.io.CUBESile" title="sisl.io.CUBESile"><code class="xref any py py-class docutils literal"><span class="pre">CUBESile</span></code></a> file format, real-space grid file format (also contains geometry)</dd>
+<dt><a class="reference internal" href="sisl.io.xsf.html#module-sisl.io.xsf" title="sisl.io.xsf"><code class="xref any py py-mod docutils literal"><span class="pre">xsf</span></code></a></dt>
+<dd><a class="reference internal" href="sisl.io.xsf.html#sisl.io.xsf.XSFSile" title="sisl.io.xsf.XSFSile"><code class="xref any py py-class docutils literal"><span class="pre">XSFSile</span></code></a> file format, <a class="reference external" href="http://www.xcrysden.org">XCrySDen</a> file format</dd>
+<dt><a class="reference internal" href="sisl.io.ham.html#module-sisl.io.ham" title="sisl.io.ham"><code class="xref any py py-mod docutils literal"><span class="pre">ham</span></code></a></dt>
+<dd><a class="reference internal" href="sisl.io.ham.html#sisl.io.ham.HamiltonianSile" title="sisl.io.ham.HamiltonianSile"><code class="xref any py py-class docutils literal"><span class="pre">HamiltonianSile</span></code></a> file format, native file format for <a class="reference internal" href="sisl.html"><span class="doc">sisl package</span></a></dd>
+<dt><code class="xref any docutils literal"><span class="pre">dat</span></code></dt>
+<dd><a class="reference internal" href="sisl.io.table.html#sisl.io.table.TableSile" title="sisl.io.table.TableSile"><code class="xref any py py-class docutils literal"><span class="pre">TableSile</span></code></a> for tabular data</dd>
+</dl>
+<p>Below there is a list of file formats especially targetting a variety of DFT codes.</p>
+<ul>
+<li><p class="first"><a class="reference external" href="http://www.bigdft.org">BigDFT</a>
+File formats inherent to <a class="reference external" href="http://www.bigdft.org">BigDFT</a>:</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="sisl.io.bigdft.ascii.html#module-sisl.io.bigdft.ascii" title="sisl.io.bigdft.ascii"><code class="xref any py py-mod docutils literal"><span class="pre">ascii</span></code></a></dt>
+<dd><p class="first last"><a class="reference internal" href="sisl.io.bigdft.ascii.html#sisl.io.bigdft.ascii.ASCIISileBigDFT" title="sisl.io.bigdft.ascii.ASCIISileBigDFT"><code class="xref any py py-class docutils literal"><span class="pre">ASCIISileBigDFT</span></code></a> input file for <a class="reference external" href="http://www.bigdft.org">BigDFT</a>, currently only implements geometry</p>
+</dd>
+</dl>
+</li>
+<li><p class="first"><a class="reference external" href="https://departments.icmab.es/leem/siesta/">SIESTA</a>
+File formats inherent to <a class="reference external" href="https://departments.icmab.es/leem/siesta/">SIESTA</a>:</p>
+<dl class="docutils">
+<dt><a class="reference internal" href="sisl.io.siesta.fdf.html#module-sisl.io.siesta.fdf" title="sisl.io.siesta.fdf"><code class="xref any py py-mod docutils literal"><span class="pre">fdf</span></code></a></dt>
+<dd><p class="first last"><a class="reference internal" href="sisl.io.html#sisl.io.fdfSileSiesta" title="sisl.io.fdfSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">fdfSileSiesta</span></code></a> input file for <a class="reference external" href="https://departments.icmab.es/leem/siesta/">SIESTA</a></p>
+</dd>
+<dt><a class="reference internal" href="sisl.io.siesta.bands.html#module-sisl.io.siesta.bands" title="sisl.io.siesta.bands"><code class="xref any py py-mod docutils literal"><span class="pre">bands</span></code></a></dt>
+<dd><p class="first last"><a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.bandsSileSiesta" title="sisl.io.siesta.bandsSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">bandsSileSiesta</span></code></a> contains the band-structure output of <a class="reference external" href="https://departments.icmab.es/leem/siesta/">SIESTA</a>, with <a class="reference internal" href="scripts/sdata.html#script-sdata"><span class="std std-ref">sdata</span></a> one may plot this file using the command-line.</p>
+</dd>
+<dt><a class="reference internal" href="sisl.io.siesta.out.html#module-sisl.io.siesta.out" title="sisl.io.siesta.out"><code class="xref any py py-mod docutils literal"><span class="pre">out</span></code></a></dt>
+<dd><p class="first last"><a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.outSileSiesta" title="sisl.io.siesta.outSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">outSileSiesta</span></code></a> output file of <a class="reference external" href="https://departments.icmab.es/leem/siesta/">SIESTA</a>, currently this may be used to
+query certain elements from the output, such as the final geometry, etc.</p>
+</dd>
+<dt><code class="xref any docutils literal"><span class="pre">grid.nc</span></code></dt>
+<dd><p class="first last"><a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.gridncSileSiesta" title="sisl.io.siesta.gridncSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">gridncSileSiesta</span></code></a> real-space grid files of <a class="reference external" href="https://departments.icmab.es/leem/siesta/">SIESTA</a>. This <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> allows
+reading the <a class="reference external" href="https://www.unidata.ucar.edu/netcdf">NetCDF</a> output of <a class="reference external" href="https://departments.icmab.es/leem/siesta/">SIESTA</a> for the real-space quantities, such
+as, electrostatic potential, charge density, etc.</p>
+</dd>
+<dt><code class="xref any docutils literal"><span class="pre">nc</span></code></dt>
+<dd><p class="first last"><a class="reference internal" href="sisl.io.siesta.siesta.html#sisl.io.siesta.siesta.ncSileSiesta" title="sisl.io.siesta.siesta.ncSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">ncSileSiesta</span></code></a> generic output file of <a class="reference external" href="https://departments.icmab.es/leem/siesta/">SIESTA</a> (only <code class="xref any docutils literal"><span class="pre">&gt;=4.1</span></code>).
+This <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> may contain <em>all</em> real-space grids, Hamiltonians, density matrices, etc.</p>
+</dd>
+<dt><code class="xref any docutils literal"><span class="pre">TSHS</span></code></dt>
+<dd><p class="first last"><a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.TSHSSileSiesta" title="sisl.io.siesta.TSHSSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">TSHSSileSiesta</span></code></a> contains the Hamiltonian and overlap matrix from a <a class="reference external" href="https://launchpad.net/siesta">TranSIESTA</a> run.</p>
+</dd>
+<dt><code class="xref any docutils literal"><span class="pre">TBT.nc</span></code></dt>
+<dd><p class="first last"><a class="reference internal" href="sisl.io.html#sisl.io.tbtncSileSiesta" title="sisl.io.tbtncSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">tbtncSileSiesta</span></code></a> is the output file of <a class="reference external" href="https://launchpad.net/siesta">TBtrans</a> which contains all transport
+related quantities.</p>
+</dd>
+<dt><code class="xref any docutils literal"><span class="pre">TBT.AV.nc</span></code></dt>
+<dd><p class="first last"><a class="reference internal" href="sisl.io.html#sisl.io.tbtavncSileSiesta" title="sisl.io.tbtavncSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">tbtavncSileSiesta</span></code></a> is the <strong>k</strong>-averaged equivalent of <a class="reference internal" href="sisl.io.html#sisl.io.tbtncSileSiesta" title="sisl.io.tbtncSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">tbtncSileSiesta</span></code></a>,
+this may be generated using <a class="reference internal" href="scripts/sdata.html#script-sdata"><span class="std std-ref">sdata siesta.TBT.nc &#8211;tbt-av</span></a>.</p>
+</dd>
+<dt><code class="xref any docutils literal"><span class="pre">XV</span></code></dt>
+<dd><p class="first last"><a class="reference internal" href="sisl.io.siesta.html#sisl.io.siesta.XVSileSiesta" title="sisl.io.siesta.XVSileSiesta"><code class="xref any py py-class docutils literal"><span class="pre">XVSileSiesta</span></code></a> is the currently runned geometry in <a class="reference external" href="https://departments.icmab.es/leem/siesta/">SIESTA</a>.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+
+      </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2015-2017, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.
+    </div>
+  </body>
+</html>

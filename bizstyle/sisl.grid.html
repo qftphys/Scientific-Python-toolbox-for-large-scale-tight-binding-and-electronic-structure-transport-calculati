@@ -15,11 +15,11 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v0.8.1
-',
+        VERSION:     'v0.8.1-47-geded579',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -29,7 +29,6 @@
     <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="sisl |release| documentation" href="index.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
@@ -53,7 +52,7 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/sisl.grid.txt"
+      <li><a href="_sources/sisl.grid.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -153,7 +152,7 @@
 <tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.index" title="sisl.grid.Grid.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>(coord[,&nbsp;axis])</td>
 <td>Returns the index along axis <code class="docutils literal"><span class="pre">axis</span></code> where <code class="docutils literal"><span class="pre">coord</span></code> exists</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.interp" title="sisl.grid.Grid.interp"><code class="xref py py-obj docutils literal"><span class="pre">interp</span></code></a>(shape,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.interp" title="sisl.grid.Grid.interp"><code class="xref py py-obj docutils literal"><span class="pre">interp</span></code></a>(shape,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Returns an interpolated version of the grid</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_orthogonal</span></code>()</td>
@@ -162,7 +161,7 @@
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.mean" title="sisl.grid.Grid.mean"><code class="xref py py-obj docutils literal"><span class="pre">mean</span></code></a>(axis)</td>
 <td>Returns the average grid along direction <code class="docutils literal"><span class="pre">axis</span></code></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.read" title="sisl.grid.Grid.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.read" title="sisl.grid.Grid.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Reads grid from the <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta.siesta_grid.html#sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid" title="sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.remove" title="sisl.grid.Grid.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>(idx,&nbsp;axis)</td>
@@ -171,7 +170,7 @@
 <tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.remove_part" title="sisl.grid.Grid.remove_part"><code class="xref py py-obj docutils literal"><span class="pre">remove_part</span></code></a>(idx,&nbsp;axis,&nbsp;above)</td>
 <td>Removes parts of the grid via above/below designations.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code>(*args,&nbsp;**kwargs)</td>
 <td>Call local <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.sc_index" title="sisl.supercell.SuperCellChild.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.set_bc" title="sisl.grid.Grid.set_bc"><code class="xref py py-obj docutils literal"><span class="pre">set_bc</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
@@ -304,7 +303,7 @@
 <tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.index" title="sisl.grid.Grid.index"><code class="xref py py-obj docutils literal"><span class="pre">index</span></code></a>(coord[,&nbsp;axis])</td>
 <td>Returns the index along axis <code class="docutils literal"><span class="pre">axis</span></code> where <code class="docutils literal"><span class="pre">coord</span></code> exists</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.interp" title="sisl.grid.Grid.interp"><code class="xref py py-obj docutils literal"><span class="pre">interp</span></code></a>(shape,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.interp" title="sisl.grid.Grid.interp"><code class="xref py py-obj docutils literal"><span class="pre">interp</span></code></a>(shape,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Returns an interpolated version of the grid</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">is_orthogonal</span></code>()</td>
@@ -313,7 +312,7 @@
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.mean" title="sisl.grid.Grid.mean"><code class="xref py py-obj docutils literal"><span class="pre">mean</span></code></a>(axis)</td>
 <td>Returns the average grid along direction <code class="docutils literal"><span class="pre">axis</span></code></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.read" title="sisl.grid.Grid.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.read" title="sisl.grid.Grid.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Reads grid from the <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <a class="reference internal" href="sisl.io.siesta.siesta_grid.html#sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid" title="sisl.io.siesta.siesta_grid.gridncSileSiesta.read_grid"><code class="xref any py py-meth docutils literal"><span class="pre">read_grid</span></code></a></td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.grid.Grid.remove" title="sisl.grid.Grid.remove"><code class="xref py py-obj docutils literal"><span class="pre">remove</span></code></a>(idx,&nbsp;axis)</td>
@@ -322,7 +321,7 @@
 <tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.remove_part" title="sisl.grid.Grid.remove_part"><code class="xref py py-obj docutils literal"><span class="pre">remove_part</span></code></a>(idx,&nbsp;axis,&nbsp;above)</td>
 <td>Removes parts of the grid via above/below designations.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code>(*args,&nbsp;**kwargs)</td>
 <td>Call local <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCellChild.sc_index" title="sisl.supercell.SuperCellChild.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.grid.Grid.set_bc" title="sisl.grid.Grid.set_bc"><code class="xref py py-obj docutils literal"><span class="pre">set_bc</span></code></a>([boundary,&nbsp;a,&nbsp;b,&nbsp;c])</td>
@@ -807,8 +806,8 @@ the grid.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015, Nick R. Papior.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+        &#169; Copyright 2015-2017, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.
     </div>
   </body>
 </html>

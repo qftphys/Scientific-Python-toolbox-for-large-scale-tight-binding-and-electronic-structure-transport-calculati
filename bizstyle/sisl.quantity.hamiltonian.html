@@ -15,11 +15,11 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v0.8.1
-',
+        VERSION:     'v0.8.1-47-geded579',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -29,7 +29,6 @@
     <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="sisl |release| documentation" href="index.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
@@ -53,7 +52,7 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/sisl.quantity.hamiltonian.txt"
+      <li><a href="_sources/sisl.quantity.hamiltonian.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -122,16 +121,19 @@ standard <code class="docutils literal"><span class="pre">numpy</span></code> as
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.geom" title="sisl.quantity.hamiltonian.Hamiltonian.geom"><code class="xref py py-obj docutils literal"><span class="pre">geom</span></code></a></td>
 <td>Return the attached geometry</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.nnz" title="sisl.quantity.hamiltonian.Hamiltonian.nnz"><code class="xref py py-obj docutils literal"><span class="pre">nnz</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.geometry" title="sisl.quantity.hamiltonian.Hamiltonian.geometry"><code class="xref py py-obj docutils literal"><span class="pre">geometry</span></code></a></td>
+<td>Return the attached geometry</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.nnz" title="sisl.quantity.hamiltonian.Hamiltonian.nnz"><code class="xref py py-obj docutils literal"><span class="pre">nnz</span></code></a></td>
 <td>Returns number of non-zero elements in the tight-binding model</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.no" title="sisl.quantity.hamiltonian.Hamiltonian.no"><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.no" title="sisl.quantity.hamiltonian.Hamiltonian.no"><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></a></td>
 <td>Returns number of orbitals as used when the object was created</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.orthogonal" title="sisl.quantity.hamiltonian.Hamiltonian.orthogonal"><code class="xref py py-obj docutils literal"><span class="pre">orthogonal</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.orthogonal" title="sisl.quantity.hamiltonian.Hamiltonian.orthogonal"><code class="xref py py-obj docutils literal"><span class="pre">orthogonal</span></code></a></td>
 <td>Return whether the Hamiltonian is orthogonal</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.spin" title="sisl.quantity.hamiltonian.Hamiltonian.spin"><code class="xref py py-obj docutils literal"><span class="pre">spin</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.spin" title="sisl.quantity.hamiltonian.Hamiltonian.spin"><code class="xref py py-obj docutils literal"><span class="pre">spin</span></code></a></td>
 <td>Return number of spin-components in Hamiltonian</td>
 </tr>
 </tbody>
@@ -143,58 +145,55 @@ standard <code class="docutils literal"><span class="pre">numpy</span></code> as
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.Hk" title="sisl.quantity.hamiltonian.Hamiltonian.Hk"><code class="xref py py-obj docutils literal"><span class="pre">Hk</span></code></a>([k,&nbsp;spin])</td>
-<td>Return the Hamiltonian in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.Sk" title="sisl.quantity.hamiltonian.Hamiltonian.Sk"><code class="xref py py-obj docutils literal"><span class="pre">Sk</span></code></a>([k,&nbsp;spin])</td>
-<td>Return the overlap matrix in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</td>
-</tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.construct" title="sisl.quantity.hamiltonian.Hamiltonian.construct"><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code></a>(func[,&nbsp;na_iR,&nbsp;method,&nbsp;eta])</td>
 <td>Automatically construct the Hamiltonian model based on a function that does the setting up of the Hamiltonian</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.copy" title="sisl.quantity.hamiltonian.Hamiltonian.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>([dtype])</td>
-<td>Return a copy of the <a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian" title="sisl.quantity.hamiltonian.Hamiltonian"><code class="xref any py py-class docutils literal"><span class="pre">Hamiltonian</span></code></a> object</td>
+<td>Return a copy of the <code class="docutils literal"><span class="pre">Hamiltonian</span></code> object</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.create_construct" title="sisl.quantity.hamiltonian.Hamiltonian.create_construct"><code class="xref py py-obj docutils literal"><span class="pre">create_construct</span></code></a>(dR,&nbsp;param)</td>
 <td>Returns a simple function for passing to the <a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.construct" title="sisl.quantity.hamiltonian.Hamiltonian.construct"><code class="xref any py py-meth docutils literal"><span class="pre">construct</span></code></a> function.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.cut" title="sisl.quantity.hamiltonian.Hamiltonian.cut"><code class="xref py py-obj docutils literal"><span class="pre">cut</span></code></a>(seps,&nbsp;axis,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.cut" title="sisl.quantity.hamiltonian.Hamiltonian.cut"><code class="xref py py-obj docutils literal"><span class="pre">cut</span></code></a>(seps,&nbsp;axis,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Cuts the tight-binding model into different parts.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.eigh" title="sisl.quantity.hamiltonian.Hamiltonian.eigh"><code class="xref py py-obj docutils literal"><span class="pre">eigh</span></code></a>([k,&nbsp;atoms,&nbsp;eigvals_only,&nbsp;overwrite_a,&nbsp;...])</td>
-<td>Returns the eigenvalues of the tight-binding model</td>
+<td>Returns the eigenvalues of the Hamiltonian</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.eigsh" title="sisl.quantity.hamiltonian.Hamiltonian.eigsh"><code class="xref py py-obj docutils literal"><span class="pre">eigsh</span></code></a>([k,&nbsp;n,&nbsp;atoms,&nbsp;eigvals_only])</td>
-<td>Returns the eigenvalues of the tight-binding model</td>
+<td>Returns the eigenvalues of the Hamiltonian</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.empty" title="sisl.quantity.hamiltonian.Hamiltonian.empty"><code class="xref py py-obj docutils literal"><span class="pre">empty</span></code></a>([keep])</td>
-<td>See <a class="reference internal" href="sisl.sparse.html#sisl.sparse.SparseCSR.empty" title="sisl.sparse.SparseCSR.empty"><code class="xref any py py-meth docutils literal"><span class="pre">SparseCSR.empty</span></code></a> for specifics</td>
+<td>See <a class="reference internal" href="sisl.sparse.html#sisl.sparse.SparseCSR.empty" title="sisl.sparse.SparseCSR.empty"><code class="xref any py py-meth docutils literal"><span class="pre">SparseCSR.empty</span></code></a> for details</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.finalize" title="sisl.quantity.hamiltonian.Hamiltonian.finalize"><code class="xref py py-obj docutils literal"><span class="pre">finalize</span></code></a>()</td>
 <td>Finalizes the tight-binding model</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.iter_linear" title="sisl.quantity.hamiltonian.Hamiltonian.iter_linear"><code class="xref py py-obj docutils literal"><span class="pre">iter_linear</span></code></a>()</td>
-<td>Iterations of the orbital space, two indices from loop</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.iter" title="sisl.quantity.hamiltonian.Hamiltonian.iter"><code class="xref py py-obj docutils literal"><span class="pre">iter</span></code></a>([local])</td>
+<td>Iterations of the orbital space in the geometry, two indices from loop</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.read" title="sisl.quantity.hamiltonian.Hamiltonian.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.iter_nnz" title="sisl.quantity.hamiltonian.Hamiltonian.iter_nnz"><code class="xref py py-obj docutils literal"><span class="pre">iter_nnz</span></code></a>([atom,&nbsp;orbital])</td>
+<td>Iterations of the non-zero elements, returns a tuple of orbital and coupling orbital</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.read" title="sisl.quantity.hamiltonian.Hamiltonian.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Reads Hamiltonian from <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <code class="xref any docutils literal"><span class="pre">read_H</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.repeat" title="sisl.quantity.hamiltonian.Hamiltonian.repeat"><code class="xref py py-obj docutils literal"><span class="pre">repeat</span></code></a>(reps,&nbsp;axis)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.repeat" title="sisl.quantity.hamiltonian.Hamiltonian.repeat"><code class="xref py py-obj docutils literal"><span class="pre">repeat</span></code></a>(reps,&nbsp;axis)</td>
 <td>Refer to <a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.tile" title="sisl.quantity.hamiltonian.Hamiltonian.tile"><code class="xref any py py-meth docutils literal"><span class="pre">tile</span></code></a> instead</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.reset" title="sisl.quantity.hamiltonian.Hamiltonian.reset"><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code></a>([nnzpr,&nbsp;orthogonal,&nbsp;spin,&nbsp;dtype])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.reset" title="sisl.quantity.hamiltonian.Hamiltonian.reset"><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code></a>([nnzpr,&nbsp;orthogonal,&nbsp;spin,&nbsp;dtype])</td>
 <td>The sparsity pattern is cleaned and every thing is reset.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.sp2HS" title="sisl.quantity.hamiltonian.Hamiltonian.sp2HS"><code class="xref py py-obj docutils literal"><span class="pre">sp2HS</span></code></a>(geom,&nbsp;H[,&nbsp;S])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.sp2HS" title="sisl.quantity.hamiltonian.Hamiltonian.sp2HS"><code class="xref py py-obj docutils literal"><span class="pre">sp2HS</span></code></a>(geom,&nbsp;H[,&nbsp;S])</td>
 <td>Returns a tight-binding model from a preset H, S and Geometry</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.tile" title="sisl.quantity.hamiltonian.Hamiltonian.tile"><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code></a>(reps,&nbsp;axis)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.tile" title="sisl.quantity.hamiltonian.Hamiltonian.tile"><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code></a>(reps,&nbsp;axis)</td>
 <td>Returns a repeated tight-binding model for this, much like the <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.tocsr" title="sisl.quantity.hamiltonian.Hamiltonian.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>(index)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.tocsr" title="sisl.quantity.hamiltonian.Hamiltonian.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>(index[,&nbsp;isc])</td>
 <td>Return a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> from the specified index</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.write" title="sisl.quantity.hamiltonian.Hamiltonian.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(sile,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.write" title="sisl.quantity.hamiltonian.Hamiltonian.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Writes a tight-binding model to the <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> as implemented in the <code class="code docutils literal"><span class="pre">Sile.write_es</span></code> method</td>
 </tr>
 </tbody>
@@ -224,16 +223,19 @@ as the underlying geometry for the tight-binding parameters.</p>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.geom" title="sisl.quantity.hamiltonian.Hamiltonian.geom"><code class="xref py py-obj docutils literal"><span class="pre">geom</span></code></a></td>
 <td>Return the attached geometry</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.nnz" title="sisl.quantity.hamiltonian.Hamiltonian.nnz"><code class="xref py py-obj docutils literal"><span class="pre">nnz</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.geometry" title="sisl.quantity.hamiltonian.Hamiltonian.geometry"><code class="xref py py-obj docutils literal"><span class="pre">geometry</span></code></a></td>
+<td>Return the attached geometry</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.nnz" title="sisl.quantity.hamiltonian.Hamiltonian.nnz"><code class="xref py py-obj docutils literal"><span class="pre">nnz</span></code></a></td>
 <td>Returns number of non-zero elements in the tight-binding model</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.no" title="sisl.quantity.hamiltonian.Hamiltonian.no"><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.no" title="sisl.quantity.hamiltonian.Hamiltonian.no"><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></a></td>
 <td>Returns number of orbitals as used when the object was created</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.orthogonal" title="sisl.quantity.hamiltonian.Hamiltonian.orthogonal"><code class="xref py py-obj docutils literal"><span class="pre">orthogonal</span></code></a></td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.orthogonal" title="sisl.quantity.hamiltonian.Hamiltonian.orthogonal"><code class="xref py py-obj docutils literal"><span class="pre">orthogonal</span></code></a></td>
 <td>Return whether the Hamiltonian is orthogonal</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.spin" title="sisl.quantity.hamiltonian.Hamiltonian.spin"><code class="xref py py-obj docutils literal"><span class="pre">spin</span></code></a></td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.spin" title="sisl.quantity.hamiltonian.Hamiltonian.spin"><code class="xref py py-obj docutils literal"><span class="pre">spin</span></code></a></td>
 <td>Return number of spin-components in Hamiltonian</td>
 </tr>
 </tbody>
@@ -245,58 +247,55 @@ as the underlying geometry for the tight-binding parameters.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.Hk" title="sisl.quantity.hamiltonian.Hamiltonian.Hk"><code class="xref py py-obj docutils literal"><span class="pre">Hk</span></code></a>([k,&nbsp;spin])</td>
-<td>Return the Hamiltonian in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</td>
-</tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.Sk" title="sisl.quantity.hamiltonian.Hamiltonian.Sk"><code class="xref py py-obj docutils literal"><span class="pre">Sk</span></code></a>([k,&nbsp;spin])</td>
-<td>Return the overlap matrix in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</td>
-</tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.construct" title="sisl.quantity.hamiltonian.Hamiltonian.construct"><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code></a>(func[,&nbsp;na_iR,&nbsp;method,&nbsp;eta])</td>
 <td>Automatically construct the Hamiltonian model based on a function that does the setting up of the Hamiltonian</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.copy" title="sisl.quantity.hamiltonian.Hamiltonian.copy"><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code></a>([dtype])</td>
-<td>Return a copy of the <a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian" title="sisl.quantity.hamiltonian.Hamiltonian"><code class="xref any py py-class docutils literal"><span class="pre">Hamiltonian</span></code></a> object</td>
+<td>Return a copy of the <code class="docutils literal"><span class="pre">Hamiltonian</span></code> object</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.create_construct" title="sisl.quantity.hamiltonian.Hamiltonian.create_construct"><code class="xref py py-obj docutils literal"><span class="pre">create_construct</span></code></a>(dR,&nbsp;param)</td>
 <td>Returns a simple function for passing to the <a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.construct" title="sisl.quantity.hamiltonian.Hamiltonian.construct"><code class="xref any py py-meth docutils literal"><span class="pre">construct</span></code></a> function.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.cut" title="sisl.quantity.hamiltonian.Hamiltonian.cut"><code class="xref py py-obj docutils literal"><span class="pre">cut</span></code></a>(seps,&nbsp;axis,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.cut" title="sisl.quantity.hamiltonian.Hamiltonian.cut"><code class="xref py py-obj docutils literal"><span class="pre">cut</span></code></a>(seps,&nbsp;axis,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Cuts the tight-binding model into different parts.</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.eigh" title="sisl.quantity.hamiltonian.Hamiltonian.eigh"><code class="xref py py-obj docutils literal"><span class="pre">eigh</span></code></a>([k,&nbsp;atoms,&nbsp;eigvals_only,&nbsp;overwrite_a,&nbsp;...])</td>
-<td>Returns the eigenvalues of the tight-binding model</td>
+<td>Returns the eigenvalues of the Hamiltonian</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.eigsh" title="sisl.quantity.hamiltonian.Hamiltonian.eigsh"><code class="xref py py-obj docutils literal"><span class="pre">eigsh</span></code></a>([k,&nbsp;n,&nbsp;atoms,&nbsp;eigvals_only])</td>
-<td>Returns the eigenvalues of the tight-binding model</td>
+<td>Returns the eigenvalues of the Hamiltonian</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.empty" title="sisl.quantity.hamiltonian.Hamiltonian.empty"><code class="xref py py-obj docutils literal"><span class="pre">empty</span></code></a>([keep])</td>
-<td>See <a class="reference internal" href="sisl.sparse.html#sisl.sparse.SparseCSR.empty" title="sisl.sparse.SparseCSR.empty"><code class="xref any py py-meth docutils literal"><span class="pre">SparseCSR.empty</span></code></a> for specifics</td>
+<td>See <a class="reference internal" href="sisl.sparse.html#sisl.sparse.SparseCSR.empty" title="sisl.sparse.SparseCSR.empty"><code class="xref any py py-meth docutils literal"><span class="pre">SparseCSR.empty</span></code></a> for details</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.finalize" title="sisl.quantity.hamiltonian.Hamiltonian.finalize"><code class="xref py py-obj docutils literal"><span class="pre">finalize</span></code></a>()</td>
 <td>Finalizes the tight-binding model</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.iter_linear" title="sisl.quantity.hamiltonian.Hamiltonian.iter_linear"><code class="xref py py-obj docutils literal"><span class="pre">iter_linear</span></code></a>()</td>
-<td>Iterations of the orbital space, two indices from loop</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.iter" title="sisl.quantity.hamiltonian.Hamiltonian.iter"><code class="xref py py-obj docutils literal"><span class="pre">iter</span></code></a>([local])</td>
+<td>Iterations of the orbital space in the geometry, two indices from loop</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.read" title="sisl.quantity.hamiltonian.Hamiltonian.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.iter_nnz" title="sisl.quantity.hamiltonian.Hamiltonian.iter_nnz"><code class="xref py py-obj docutils literal"><span class="pre">iter_nnz</span></code></a>([atom,&nbsp;orbital])</td>
+<td>Iterations of the non-zero elements, returns a tuple of orbital and coupling orbital</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.read" title="sisl.quantity.hamiltonian.Hamiltonian.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Reads Hamiltonian from <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <code class="xref any docutils literal"><span class="pre">read_H</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.repeat" title="sisl.quantity.hamiltonian.Hamiltonian.repeat"><code class="xref py py-obj docutils literal"><span class="pre">repeat</span></code></a>(reps,&nbsp;axis)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.repeat" title="sisl.quantity.hamiltonian.Hamiltonian.repeat"><code class="xref py py-obj docutils literal"><span class="pre">repeat</span></code></a>(reps,&nbsp;axis)</td>
 <td>Refer to <a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.tile" title="sisl.quantity.hamiltonian.Hamiltonian.tile"><code class="xref any py py-meth docutils literal"><span class="pre">tile</span></code></a> instead</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.reset" title="sisl.quantity.hamiltonian.Hamiltonian.reset"><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code></a>([nnzpr,&nbsp;orthogonal,&nbsp;spin,&nbsp;dtype])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.reset" title="sisl.quantity.hamiltonian.Hamiltonian.reset"><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code></a>([nnzpr,&nbsp;orthogonal,&nbsp;spin,&nbsp;dtype])</td>
 <td>The sparsity pattern is cleaned and every thing is reset.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.sp2HS" title="sisl.quantity.hamiltonian.Hamiltonian.sp2HS"><code class="xref py py-obj docutils literal"><span class="pre">sp2HS</span></code></a>(geom,&nbsp;H[,&nbsp;S])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.sp2HS" title="sisl.quantity.hamiltonian.Hamiltonian.sp2HS"><code class="xref py py-obj docutils literal"><span class="pre">sp2HS</span></code></a>(geom,&nbsp;H[,&nbsp;S])</td>
 <td>Returns a tight-binding model from a preset H, S and Geometry</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.tile" title="sisl.quantity.hamiltonian.Hamiltonian.tile"><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code></a>(reps,&nbsp;axis)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.tile" title="sisl.quantity.hamiltonian.Hamiltonian.tile"><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code></a>(reps,&nbsp;axis)</td>
 <td>Returns a repeated tight-binding model for this, much like the <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.tocsr" title="sisl.quantity.hamiltonian.Hamiltonian.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>(index)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.tocsr" title="sisl.quantity.hamiltonian.Hamiltonian.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>(index[,&nbsp;isc])</td>
 <td>Return a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> from the specified index</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.write" title="sisl.quantity.hamiltonian.Hamiltonian.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(sile,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian.write" title="sisl.quantity.hamiltonian.Hamiltonian.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Writes a tight-binding model to the <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> as implemented in the <code class="code docutils literal"><span class="pre">Sile.write_es</span></code> method</td>
 </tr>
 </tbody>
@@ -306,50 +305,10 @@ as the underlying geometry for the tight-binding parameters.</p>
 <code class="descname">H</code><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.H" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="sisl.quantity.hamiltonian.Hamiltonian.Hk">
-<code class="descname">Hk</code><span class="sig-paren">(</span><em>k=(0</em>, <em>0</em>, <em>0)</em>, <em>spin=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.Hk" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the Hamiltonian in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>k: float*3</strong></p>
-<blockquote>
-<div><p>k-point</p>
-</div></blockquote>
-<p><strong>spin: int, 0</strong></p>
-<blockquote class="last">
-<div><p>the spin-index of the Hamiltonian</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 <dl class="attribute">
 <dt id="sisl.quantity.hamiltonian.Hamiltonian.S">
 <code class="descname">S</code><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.S" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
-
-<dl class="method">
-<dt id="sisl.quantity.hamiltonian.Hamiltonian.Sk">
-<code class="descname">Sk</code><span class="sig-paren">(</span><em>k=(0</em>, <em>0</em>, <em>0)</em>, <em>spin=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.Sk" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the overlap matrix in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>k: float*3</strong></p>
-<blockquote class="last">
-<div><p>k-point</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
 
 <dl class="method">
 <dt id="sisl.quantity.hamiltonian.Hamiltonian.construct">
@@ -404,7 +363,7 @@ up the <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geom
 <dl class="method">
 <dt id="sisl.quantity.hamiltonian.Hamiltonian.copy">
 <code class="descname">copy</code><span class="sig-paren">(</span><em>dtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.copy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a copy of the <a class="reference internal" href="#sisl.quantity.hamiltonian.Hamiltonian" title="sisl.quantity.hamiltonian.Hamiltonian"><code class="xref any py py-class docutils literal"><span class="pre">Hamiltonian</span></code></a> object</p>
+<dd><p>Return a copy of the <code class="docutils literal"><span class="pre">Hamiltonian</span></code> object</p>
 </dd></dl>
 
 <dl class="method">
@@ -473,7 +432,7 @@ for the cut-out region, possibly creating a super-cell.</p>
 <dl class="method">
 <dt id="sisl.quantity.hamiltonian.Hamiltonian.eigh">
 <code class="descname">eigh</code><span class="sig-paren">(</span><em>k=(0</em>, <em>0</em>, <em>0)</em>, <em>atoms=None</em>, <em>eigvals_only=True</em>, <em>overwrite_a=True</em>, <em>overwrite_b=True</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.eigh" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the eigenvalues of the tight-binding model</p>
+<dd><p>Returns the eigenvalues of the Hamiltonian</p>
 <p>Setup the Hamiltonian and overlap matrix with respect to
 the given k-point, then reduce the space to the specified atoms
 and calculate the eigenvalues.</p>
@@ -483,7 +442,7 @@ and calculate the eigenvalues.</p>
 <dl class="method">
 <dt id="sisl.quantity.hamiltonian.Hamiltonian.eigsh">
 <code class="descname">eigsh</code><span class="sig-paren">(</span><em>k=(0</em>, <em>0</em>, <em>0)</em>, <em>n=10</em>, <em>atoms=None</em>, <em>eigvals_only=True</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.eigsh" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the eigenvalues of the tight-binding model</p>
+<dd><p>Returns the eigenvalues of the Hamiltonian</p>
 <p>Setup the Hamiltonian and overlap matrix with respect to
 the given k-point, then reduce the space to the specified atoms
 and calculate the eigenvalues.</p>
@@ -493,7 +452,7 @@ and calculate the eigenvalues.</p>
 <dl class="method">
 <dt id="sisl.quantity.hamiltonian.Hamiltonian.empty">
 <code class="descname">empty</code><span class="sig-paren">(</span><em>keep=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.empty" title="Permalink to this definition">¶</a></dt>
-<dd><p>See <a class="reference internal" href="sisl.sparse.html#sisl.sparse.SparseCSR.empty" title="sisl.sparse.SparseCSR.empty"><code class="xref any py py-meth docutils literal"><span class="pre">SparseCSR.empty</span></code></a> for specifics</p>
+<dd><p>See <a class="reference internal" href="sisl.sparse.html#sisl.sparse.SparseCSR.empty" title="sisl.sparse.SparseCSR.empty"><code class="xref any py py-meth docutils literal"><span class="pre">SparseCSR.empty</span></code></a> for details</p>
 </dd></dl>
 
 <dl class="method">
@@ -517,10 +476,16 @@ elements can be added.</p>
 <dd><p>Return the attached geometry</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="sisl.quantity.hamiltonian.Hamiltonian.geometry">
+<code class="descname">geometry</code><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the attached geometry</p>
+</dd></dl>
+
 <dl class="method">
-<dt id="sisl.quantity.hamiltonian.Hamiltonian.iter_linear">
-<code class="descname">iter_linear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.iter_linear" title="Permalink to this definition">¶</a></dt>
-<dd><p>Iterations of the orbital space, two indices from loop</p>
+<dt id="sisl.quantity.hamiltonian.Hamiltonian.iter">
+<code class="descname">iter</code><span class="sig-paren">(</span><em>local=False</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.iter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterations of the orbital space in the geometry, two indices from loop</p>
 <p>An iterator returning the current atomic index and the corresponding
 orbital index.</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">ia</span><span class="p">,</span> <span class="n">io</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
@@ -529,6 +494,63 @@ orbital index.</p>
 <p>In the above case <a class="reference internal" href="sisl.io.html#module-sisl.io" title="sisl.io"><code class="xref any py py-mod docutils literal"><span class="pre">io</span></code></a> always belongs to atom <code class="xref any docutils literal"><span class="pre">ia</span></code> and <code class="xref any docutils literal"><span class="pre">ia</span></code> may be
 repeated according to the number of orbitals associated with
 the atom <code class="xref any docutils literal"><span class="pre">ia</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>local</strong> : <code class="xref any docutils literal"><span class="pre">bool=False</span></code></p>
+<blockquote class="last">
+<div><p>whether the orbital index is the global index, or the local index relative to 
+the atom it resides on.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.quantity.hamiltonian.Hamiltonian.iter_nnz">
+<code class="descname">iter_nnz</code><span class="sig-paren">(</span><em>atom=None</em>, <em>orbital=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.iter_nnz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterations of the non-zero elements, returns a tuple of orbital and coupling orbital</p>
+<p>An iterator returning the current orbital index and the corresponding
+connected orbital where a non-zero is defined</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">io</span><span class="p">,</span> <span class="n">jo</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">iter_nnz</span><span class="p">():</span>
+</pre></div>
+</div>
+<p>In the above case <a class="reference internal" href="sisl.io.html#module-sisl.io" title="sisl.io"><code class="xref any py py-mod docutils literal"><span class="pre">io</span></code></a> and <code class="xref any docutils literal"><span class="pre">jo</span></code> are orbitals such that:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="bp">self</span><span class="o">.</span><span class="n">H</span><span class="p">[</span><span class="n">io</span><span class="p">,</span><span class="n">jo</span><span class="p">]</span> 
+</pre></div>
+</div>
+<p>returns the non-zero element of the Hamiltonian.</p>
+<p>One may reduce the iterated space by either requesting a specific set of atoms,
+or orbitals, _not_ both simultaneously.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>atom</strong> : <code class="docutils literal"><span class="pre">int</span></code>/<code class="docutils literal"><span class="pre">array_like</span></code></p>
+<blockquote>
+<div><p>iterate on couplings to the set of atoms (not compatible with <code class="xref any docutils literal"><span class="pre">orbital</span></code>)</p>
+</div></blockquote>
+<p><strong>orbital</strong> : <code class="docutils literal"><span class="pre">int</span></code>/<code class="docutils literal"><span class="pre">array_like</span></code></p>
+<blockquote class="last">
+<div><p>iterate on couplings to the set of orbitals (not compatible with <a class="reference internal" href="sisl.atom.html#module-sisl.atom" title="sisl.atom"><code class="xref any py py-mod docutils literal"><span class="pre">atom</span></code></a>)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<p>Looping only on one or more atoms:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">io</span><span class="p">,</span> <span class="n">jo</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">iter_nnz</span><span class="p">(</span><span class="n">atom</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]):</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="c1"># loop on all orbitals on atom 3 and 4 (0 indexing)</span>
+</pre></div>
+</div>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">io</span><span class="p">,</span> <span class="n">jo</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">iter_nnz</span><span class="p">(</span><span class="n">orbital</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]):</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="c1"># loop on orbitals 3 and 4 (0 indexing)</span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="attribute">
@@ -646,8 +668,25 @@ to the new supercell by repeating them in blocks like the coordinates.</p>
 
 <dl class="method">
 <dt id="sisl.quantity.hamiltonian.Hamiltonian.tocsr">
-<code class="descname">tocsr</code><span class="sig-paren">(</span><em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.tocsr" title="Permalink to this definition">¶</a></dt>
+<code class="descname">tocsr</code><span class="sig-paren">(</span><em>index</em>, <em>isc=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.hamiltonian.Hamiltonian.tocsr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> from the specified index</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>index</strong> : <code class="docutils literal"><span class="pre">int</span></code></p>
+<blockquote>
+<div><p>the index in the sparse matrix (for non-orthogonal cases the last
+dimension is the overlap matrix)</p>
+</div></blockquote>
+<p><strong>isc</strong> : <code class="docutils literal"><span class="pre">int</span></code>, <code class="xref any docutils literal"><span class="pre">None</span></code></p>
+<blockquote class="last">
+<div><p>the supercell index (or all)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="method">
@@ -685,8 +724,8 @@ to the new supercell by repeating them in blocks like the coordinates.</p>
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015, Nick R. Papior.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+        &#169; Copyright 2015-2017, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.
     </div>
   </body>
 </html>

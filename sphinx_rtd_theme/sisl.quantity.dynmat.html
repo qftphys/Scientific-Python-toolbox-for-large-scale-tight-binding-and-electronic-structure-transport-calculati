@@ -42,6 +42,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,9 +84,8 @@
             
             
                 <ul>
-<li class="toctree-l1"><a class="reference internal" href="scripts/sgeom.html"><code class="docutils literal"><span class="pre">sgeom</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="scripts/sgrid.html"><code class="docutils literal"><span class="pre">sgrid</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="scripts/sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">File formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scripts.html">Scripts</a></li>
 </ul>
 
             
@@ -98,8 +98,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">sisl</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sisl</a>
+        
       </nav>
 
 
@@ -108,23 +110,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>sisl.quantity.dynmat module</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>sisl.quantity.dynmat module</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/sisl.quantity.dynmat.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/sisl.quantity.dynmat.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -163,16 +182,19 @@
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">geom</span></code></td>
 <td>Return the attached geometry</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">nnz</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">geometry</span></code></td>
+<td>Return the attached geometry</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">nnz</span></code></td>
 <td>Returns number of non-zero elements in the tight-binding model</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></td>
 <td>Returns number of orbitals as used when the object was created</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">orthogonal</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">orthogonal</span></code></td>
 <td>Return whether the Hamiltonian is orthogonal</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">spin</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">spin</span></code></td>
 <td>Return number of spin-components in Hamiltonian</td>
 </tr>
 </tbody>
@@ -184,20 +206,14 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.dynmat.DynamicalMatrix.Dk" title="sisl.quantity.dynmat.DynamicalMatrix.Dk"><code class="xref py py-obj docutils literal"><span class="pre">Dk</span></code></a>([k,&nbsp;spin])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.dynmat.DynamicalMatrix.Dk" title="sisl.quantity.dynmat.DynamicalMatrix.Dk"><code class="xref py py-obj docutils literal"><span class="pre">Dk</span></code></a>([k,&nbsp;dtype])</td>
 <td>Return the Hamiltonian in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Hk</span></code>([k,&nbsp;spin])</td>
-<td>Return the Hamiltonian in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Sk</span></code>([k,&nbsp;spin])</td>
-<td>Return the overlap matrix in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code>(func[,&nbsp;na_iR,&nbsp;method,&nbsp;eta])</td>
 <td>Automatically construct the Hamiltonian model based on a function that does the setting up of the Hamiltonian</td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>([dtype])</td>
-<td>Return a copy of the <a class="reference internal" href="sisl.quantity.hamiltonian.html#sisl.quantity.hamiltonian.Hamiltonian" title="sisl.quantity.hamiltonian.Hamiltonian"><code class="xref any py py-class docutils literal"><span class="pre">Hamiltonian</span></code></a> object</td>
+<td>Return a copy of the <code class="docutils literal"><span class="pre">Hamiltonian</span></code> object</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.dynmat.DynamicalMatrix.correct_Newton" title="sisl.quantity.dynmat.DynamicalMatrix.correct_Newton"><code class="xref py py-obj docutils literal"><span class="pre">correct_Newton</span></code></a>()</td>
 <td>Sometimes the dynamical matrix does not obey Newtons laws.</td>
@@ -205,43 +221,46 @@
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">create_construct</span></code>(dR,&nbsp;param)</td>
 <td>Returns a simple function for passing to the <a class="reference internal" href="sisl.quantity.hamiltonian.html#sisl.quantity.hamiltonian.Hamiltonian.construct" title="sisl.quantity.hamiltonian.Hamiltonian.construct"><code class="xref any py py-meth docutils literal"><span class="pre">construct</span></code></a> function.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">cut</span></code>(seps,&nbsp;axis,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">cut</span></code>(seps,&nbsp;axis,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Cuts the tight-binding model into different parts.</td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">eigh</span></code>([k,&nbsp;atoms,&nbsp;eigvals_only,&nbsp;overwrite_a,&nbsp;...])</td>
-<td>Returns the eigenvalues of the tight-binding model</td>
+<td>Returns the eigenvalues of the Hamiltonian</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">eigsh</span></code>([k,&nbsp;n,&nbsp;atoms,&nbsp;eigvals_only])</td>
-<td>Returns the eigenvalues of the tight-binding model</td>
+<td>Returns the eigenvalues of the Hamiltonian</td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">empty</span></code>([keep])</td>
-<td>See <a class="reference internal" href="sisl.sparse.html#sisl.sparse.SparseCSR.empty" title="sisl.sparse.SparseCSR.empty"><code class="xref any py py-meth docutils literal"><span class="pre">SparseCSR.empty</span></code></a> for specifics</td>
+<td>See <a class="reference internal" href="sisl.sparse.html#sisl.sparse.SparseCSR.empty" title="sisl.sparse.SparseCSR.empty"><code class="xref any py py-meth docutils literal"><span class="pre">SparseCSR.empty</span></code></a> for details</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">finalize</span></code>()</td>
 <td>Finalizes the tight-binding model</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">iter_linear</span></code>()</td>
-<td>Iterations of the orbital space, two indices from loop</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">iter</span></code>([local])</td>
+<td>Iterations of the orbital space in the geometry, two indices from loop</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read</span></code>(sile,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">iter_nnz</span></code>([atom,&nbsp;orbital])</td>
+<td>Iterations of the non-zero elements, returns a tuple of orbital and coupling orbital</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read</span></code>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Reads Hamiltonian from <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <code class="xref any docutils literal"><span class="pre">read_H</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">repeat</span></code>(reps,&nbsp;axis)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">repeat</span></code>(reps,&nbsp;axis)</td>
 <td>Refer to <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry.tile" title="sisl.geometry.Geometry.tile"><code class="xref any py py-meth docutils literal"><span class="pre">tile</span></code></a> instead</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code>([nnzpr,&nbsp;orthogonal,&nbsp;spin,&nbsp;dtype])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code>([nnzpr,&nbsp;orthogonal,&nbsp;spin,&nbsp;dtype])</td>
 <td>The sparsity pattern is cleaned and every thing is reset.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sp2HS</span></code>(geom,&nbsp;H[,&nbsp;S])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sp2HS</span></code>(geom,&nbsp;H[,&nbsp;S])</td>
 <td>Returns a tight-binding model from a preset H, S and Geometry</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code>(reps,&nbsp;axis)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code>(reps,&nbsp;axis)</td>
 <td>Returns a repeated tight-binding model for this, much like the <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code>(index)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code>(index[,&nbsp;isc])</td>
 <td>Return a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> from the specified index</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(sile,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Writes a tight-binding model to the <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> as implemented in the <code class="code docutils literal"><span class="pre">Sile.write_es</span></code> method</td>
 </tr>
 </tbody>
@@ -274,16 +293,19 @@ as the underlying geometry for the tight-binding parameters.</p>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">geom</span></code></td>
 <td>Return the attached geometry</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">nnz</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">geometry</span></code></td>
+<td>Return the attached geometry</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">nnz</span></code></td>
 <td>Returns number of non-zero elements in the tight-binding model</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">no</span></code></td>
 <td>Returns number of orbitals as used when the object was created</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">orthogonal</span></code></td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">orthogonal</span></code></td>
 <td>Return whether the Hamiltonian is orthogonal</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">spin</span></code></td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">spin</span></code></td>
 <td>Return number of spin-components in Hamiltonian</td>
 </tr>
 </tbody>
@@ -295,20 +317,14 @@ as the underlying geometry for the tight-binding parameters.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.dynmat.DynamicalMatrix.Dk" title="sisl.quantity.dynmat.DynamicalMatrix.Dk"><code class="xref py py-obj docutils literal"><span class="pre">Dk</span></code></a>([k,&nbsp;spin])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.quantity.dynmat.DynamicalMatrix.Dk" title="sisl.quantity.dynmat.DynamicalMatrix.Dk"><code class="xref py py-obj docutils literal"><span class="pre">Dk</span></code></a>([k,&nbsp;dtype])</td>
 <td>Return the Hamiltonian in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</td>
-</tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">Hk</span></code>([k,&nbsp;spin])</td>
-<td>Return the Hamiltonian in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</td>
-</tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">Sk</span></code>([k,&nbsp;spin])</td>
-<td>Return the overlap matrix in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">construct</span></code>(func[,&nbsp;na_iR,&nbsp;method,&nbsp;eta])</td>
 <td>Automatically construct the Hamiltonian model based on a function that does the setting up of the Hamiltonian</td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">copy</span></code>([dtype])</td>
-<td>Return a copy of the <a class="reference internal" href="sisl.quantity.hamiltonian.html#sisl.quantity.hamiltonian.Hamiltonian" title="sisl.quantity.hamiltonian.Hamiltonian"><code class="xref any py py-class docutils literal"><span class="pre">Hamiltonian</span></code></a> object</td>
+<td>Return a copy of the <code class="docutils literal"><span class="pre">Hamiltonian</span></code> object</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.quantity.dynmat.DynamicalMatrix.correct_Newton" title="sisl.quantity.dynmat.DynamicalMatrix.correct_Newton"><code class="xref py py-obj docutils literal"><span class="pre">correct_Newton</span></code></a>()</td>
 <td>Sometimes the dynamical matrix does not obey Newtons laws.</td>
@@ -316,43 +332,46 @@ as the underlying geometry for the tight-binding parameters.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">create_construct</span></code>(dR,&nbsp;param)</td>
 <td>Returns a simple function for passing to the <a class="reference internal" href="sisl.quantity.hamiltonian.html#sisl.quantity.hamiltonian.Hamiltonian.construct" title="sisl.quantity.hamiltonian.Hamiltonian.construct"><code class="xref any py py-meth docutils literal"><span class="pre">construct</span></code></a> function.</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">cut</span></code>(seps,&nbsp;axis,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">cut</span></code>(seps,&nbsp;axis,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Cuts the tight-binding model into different parts.</td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">eigh</span></code>([k,&nbsp;atoms,&nbsp;eigvals_only,&nbsp;overwrite_a,&nbsp;...])</td>
-<td>Returns the eigenvalues of the tight-binding model</td>
+<td>Returns the eigenvalues of the Hamiltonian</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">eigsh</span></code>([k,&nbsp;n,&nbsp;atoms,&nbsp;eigvals_only])</td>
-<td>Returns the eigenvalues of the tight-binding model</td>
+<td>Returns the eigenvalues of the Hamiltonian</td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">empty</span></code>([keep])</td>
-<td>See <a class="reference internal" href="sisl.sparse.html#sisl.sparse.SparseCSR.empty" title="sisl.sparse.SparseCSR.empty"><code class="xref any py py-meth docutils literal"><span class="pre">SparseCSR.empty</span></code></a> for specifics</td>
+<td>See <a class="reference internal" href="sisl.sparse.html#sisl.sparse.SparseCSR.empty" title="sisl.sparse.SparseCSR.empty"><code class="xref any py py-meth docutils literal"><span class="pre">SparseCSR.empty</span></code></a> for details</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">finalize</span></code>()</td>
 <td>Finalizes the tight-binding model</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">iter_linear</span></code>()</td>
-<td>Iterations of the orbital space, two indices from loop</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">iter</span></code>([local])</td>
+<td>Iterations of the orbital space in the geometry, two indices from loop</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read</span></code>(sile,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">iter_nnz</span></code>([atom,&nbsp;orbital])</td>
+<td>Iterations of the non-zero elements, returns a tuple of orbital and coupling orbital</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read</span></code>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Reads Hamiltonian from <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <code class="xref any docutils literal"><span class="pre">read_H</span></code>.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">repeat</span></code>(reps,&nbsp;axis)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">repeat</span></code>(reps,&nbsp;axis)</td>
 <td>Refer to <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry.tile" title="sisl.geometry.Geometry.tile"><code class="xref any py py-meth docutils literal"><span class="pre">tile</span></code></a> instead</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code>([nnzpr,&nbsp;orthogonal,&nbsp;spin,&nbsp;dtype])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">reset</span></code>([nnzpr,&nbsp;orthogonal,&nbsp;spin,&nbsp;dtype])</td>
 <td>The sparsity pattern is cleaned and every thing is reset.</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">sp2HS</span></code>(geom,&nbsp;H[,&nbsp;S])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">sp2HS</span></code>(geom,&nbsp;H[,&nbsp;S])</td>
 <td>Returns a tight-binding model from a preset H, S and Geometry</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code>(reps,&nbsp;axis)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">tile</span></code>(reps,&nbsp;axis)</td>
 <td>Returns a repeated tight-binding model for this, much like the <a class="reference internal" href="sisl.geometry.html#sisl.geometry.Geometry" title="sisl.geometry.Geometry"><code class="xref any py py-class docutils literal"><span class="pre">Geometry</span></code></a></td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code>(index)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code>(index[,&nbsp;isc])</td>
 <td>Return a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> from the specified index</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(sile,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Writes a tight-binding model to the <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> as implemented in the <code class="code docutils literal"><span class="pre">Sile.write_es</span></code> method</td>
 </tr>
 </tbody>
@@ -364,19 +383,19 @@ as the underlying geometry for the tight-binding parameters.</p>
 
 <dl class="method">
 <dt id="sisl.quantity.dynmat.DynamicalMatrix.Dk">
-<code class="descname">Dk</code><span class="sig-paren">(</span><em>k=(0</em>, <em>0</em>, <em>0)</em>, <em>spin=0</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.dynmat.DynamicalMatrix.Dk" title="Permalink to this definition">¶</a></dt>
+<code class="descname">Dk</code><span class="sig-paren">(</span><em>k=(0</em>, <em>0</em>, <em>0)</em>, <em>dtype=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.quantity.dynmat.DynamicalMatrix.Dk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the Hamiltonian in a <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> at <code class="xref any docutils literal"><span class="pre">k</span></code>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>k: float*3</strong></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>k: ``array_like``, `[0,0,0]`</strong></p>
 <blockquote>
 <div><p>k-point</p>
 </div></blockquote>
-<p><strong>spin: int, 0</strong></p>
+<p><strong>dtype</strong> : <code class="docutils literal"><span class="pre">numpy.dtype</span></code></p>
 <blockquote class="last">
-<div><p>the spin-index of the Hamiltonian</p>
+<div><p>default to <code class="xref any docutils literal"><span class="pre">numpy.complex128</span></code></p>
 </div></blockquote>
 </td>
 </tr>
@@ -398,6 +417,9 @@ as the underlying geometry for the tight-binding parameters.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -406,7 +428,7 @@ as the underlying geometry for the tight-binding parameters.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Nick R. Papior.
+        &copy; Copyright 2015-2017, Nick R. Papior.
 
     </p>
   </div>
@@ -428,11 +450,11 @@ as the underlying geometry for the tight-binding parameters.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.8.1
-',
+            VERSION:'v0.8.1-47-geded579',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

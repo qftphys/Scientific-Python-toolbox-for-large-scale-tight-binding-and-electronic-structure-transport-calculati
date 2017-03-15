@@ -34,7 +34,7 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="sisl |release| documentation" href="../index.html"/>
-        <link rel="next" title="sdata" href="sdata.html"/>
+        <link rel="up" title="Scripts" href="../scripts.html"/>
         <link rel="prev" title="sgeom" href="sgeom.html"/> 
 
   
@@ -44,6 +44,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -85,16 +86,13 @@
             
             
                 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="sgeom.html"><code class="docutils literal"><span class="pre">sgeom</span></code></a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal"><span class="pre">sgrid</span></code></a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#creating-cube-files">Creating CUBE files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#grid-differences">Grid differences</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#reducing-grid-sizes">Reducing grid sizes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#averaging-and-summing">Averaging and summing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#advanced-features">Advanced features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files.html">File formats</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../scripts.html">Scripts</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="sgeom.html"><code class="docutils literal"><span class="pre">sgeom</span></code></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal"><span class="pre">sgrid</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a></li>
 </ul>
 
             
@@ -107,8 +105,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">sisl</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">sisl</a>
+        
       </nav>
 
 
@@ -117,23 +117,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li><code class="docutils literal"><span class="pre">sgrid</span></code></li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../scripts.html">Scripts</a> &raquo;</li>
+        
+      <li><code class="docutils literal"><span class="pre">sgrid</span></code></li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/scripts/sgrid.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/scripts/sgrid.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -170,7 +189,7 @@ implemented in <a class="reference internal" href="../sisl.html#module-sisl" tit
 <h2>Grid differences<a class="headerlink" href="#grid-differences" title="Permalink to this headline">¶</a></h2>
 <p>Often differences between two grids are needed. For this one can use the <code class="docutils literal"><span class="pre">--diff</span></code> flag which
 takes one additional grid file for the difference. I.e.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc<span class="o">[</span>0<span class="o">]</span> -g RUN.fdf --diff Rho.grid.nc<span class="o">[</span>1<span class="o">]</span> diff_up-down.cube
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc<span class="o">[</span><span class="m">0</span><span class="o">]</span> -g RUN.fdf --diff Rho.grid.nc<span class="o">[</span><span class="m">1</span><span class="o">]</span> diff_up-down.cube
 </pre></div>
 </div>
 <p>which takes the difference between the spin up and spin down in the same <code class="docutils literal"><span class="pre">Rho.grid.nc</span></code> file.</p>
@@ -187,7 +206,7 @@ sgrid &lt;file&gt; --remove x <span class="o">[</span>+-<span class="o">]</span>
 </div>
 <p>This needs an example, say the unit cell is an orthogonal unit-cell with side lengths 10x10x20 Angstrom.
 To reduce the cell to a middle square of 5x5x5 Angstrom you can do:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc --sub x 2.5:7.5 --sub y 2.5:7.5 --sub z 7.5:12.5 5x5x5.cube
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc --sub x <span class="m">2</span>.5:7.5 --sub y <span class="m">2</span>.5:7.5 --sub z <span class="m">7</span>.5:12.5 5x5x5.cube
 </pre></div>
 </div>
 <p>note that the order of the reductions are made in the order of appearence. So <em>two</em> subsequent sub/remove
@@ -225,12 +244,13 @@ For inspiration you can check the <a class="reference internal" href="#"><span c
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="sdata.html" class="btn btn-neutral float-right" title="sdata" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="sgeom.html" class="btn btn-neutral" title="sgeom" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -242,7 +262,7 @@ For inspiration you can check the <a class="reference internal" href="#"><span c
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Nick R. Papior.
+        &copy; Copyright 2015-2017, Nick R. Papior.
 
     </p>
   </div>
@@ -264,11 +284,11 @@ For inspiration you can check the <a class="reference internal" href="#"><span c
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'v0.8.1
-',
+            VERSION:'v0.8.1-47-geded579',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

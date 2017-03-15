@@ -15,11 +15,11 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v0.8.1
-',
+        VERSION:     'v0.8.1-47-geded579',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -29,7 +29,6 @@
     <script type="text/javascript" src="_static/bizstyle.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="sisl |release| documentation" href="index.html" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!--[if lt IE 9]>
     <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
@@ -53,7 +52,7 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/sisl.io.table.txt"
+      <li><a href="_sources/sisl.io.table.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -123,16 +122,22 @@
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic read method which should be overloaded in child-classes</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
 <td>Reads the next line of the file</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.table.TableSile.write" title="sisl.io.table.TableSile.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(data[,&nbsp;header,&nbsp;footer,&nbsp;newline,&nbsp;fmt,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.table.TableSile.write" title="sisl.io.table.TableSile.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(data[,&nbsp;header,&nbsp;footer,&nbsp;newline,&nbsp;fmt,&nbsp;...])</td>
+<td>Write tabular data to the file with optional header.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.table.TableSile.write_data" title="sisl.io.table.TableSile.write_data"><code class="xref py py-obj docutils literal"><span class="pre">write_data</span></code></a>(data[,&nbsp;header,&nbsp;footer,&nbsp;newline,&nbsp;...])</td>
 <td>Write tabular data to the file with optional header.</td>
 </tr>
 </tbody>
@@ -140,6 +145,12 @@
 <dl class="method">
 <dt id="sisl.io.table.TableSile.write">
 <code class="descname">write</code><span class="sig-paren">(</span><em>data</em>, <em>header=None</em>, <em>footer=None</em>, <em>newline='\n'</em>, <em>fmt='%.5e'</em>, <em>comment=None</em>, <em>delimiter='\t'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.table.TableSile.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write tabular data to the file with optional header.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="sisl.io.table.TableSile.write_data">
+<code class="descname">write_data</code><span class="sig-paren">(</span><em>data</em>, <em>header=None</em>, <em>footer=None</em>, <em>newline='\n'</em>, <em>fmt='%.5e'</em>, <em>comment=None</em>, <em>delimiter='\t'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.table.TableSile.write_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write tabular data to the file with optional header.</p>
 </dd></dl>
 
@@ -166,8 +177,8 @@
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015, Nick R. Papior.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+        &#169; Copyright 2015-2017, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.
     </div>
   </body>
 </html>

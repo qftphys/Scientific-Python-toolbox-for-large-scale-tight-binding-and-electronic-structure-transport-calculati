@@ -14,11 +14,11 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v0.8.1
-',
+        VERSION:     'v0.8.1-47-geded579',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -26,8 +26,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="sisl |release| documentation" href="index.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -103,10 +102,13 @@ correct.</p>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.finalize" title="sisl.sparse.SparseCSR.finalize"><code class="xref py py-obj docutils literal"><span class="pre">finalize</span></code></a>([sort])</td>
 <td>Finalizes the sparse matrix by removing all non-set elements</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.register_math" title="sisl.sparse.SparseCSR.register_math"><code class="xref py py-obj docutils literal"><span class="pre">register_math</span></code></a>(var[,&nbsp;routines])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.iter_nnz" title="sisl.sparse.SparseCSR.iter_nnz"><code class="xref py py-obj docutils literal"><span class="pre">iter_nnz</span></code></a>([i])</td>
+<td>Iterations of the non-zero elements, returns a tuple of row and column with non-zero elements</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.register_math" title="sisl.sparse.SparseCSR.register_math"><code class="xref py py-obj docutils literal"><span class="pre">register_math</span></code></a>(var[,&nbsp;routines])</td>
 <td>Register math operators on the <code class="xref any docutils literal"><span class="pre">cls</span></code> class using <code class="xref any docutils literal"><span class="pre">var</span></code> as attribute <code class="xref any docutils literal"><span class="pre">getattr(cls,</span> <span class="pre">var)</span></code></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.tocsr" title="sisl.sparse.SparseCSR.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>([dim])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.tocsr" title="sisl.sparse.SparseCSR.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>([dim])</td>
 <td>Return the data in <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> format</td>
 </tr>
 </tbody>
@@ -206,10 +208,13 @@ This quantity has precedence over <code class="xref any docutils literal"><span 
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.finalize" title="sisl.sparse.SparseCSR.finalize"><code class="xref py py-obj docutils literal"><span class="pre">finalize</span></code></a>([sort])</td>
 <td>Finalizes the sparse matrix by removing all non-set elements</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.register_math" title="sisl.sparse.SparseCSR.register_math"><code class="xref py py-obj docutils literal"><span class="pre">register_math</span></code></a>(var[,&nbsp;routines])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.iter_nnz" title="sisl.sparse.SparseCSR.iter_nnz"><code class="xref py py-obj docutils literal"><span class="pre">iter_nnz</span></code></a>([i])</td>
+<td>Iterations of the non-zero elements, returns a tuple of row and column with non-zero elements</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.register_math" title="sisl.sparse.SparseCSR.register_math"><code class="xref py py-obj docutils literal"><span class="pre">register_math</span></code></a>(var[,&nbsp;routines])</td>
 <td>Register math operators on the <code class="xref any docutils literal"><span class="pre">cls</span></code> class using <code class="xref any docutils literal"><span class="pre">var</span></code> as attribute <code class="xref any docutils literal"><span class="pre">getattr(cls,</span> <span class="pre">var)</span></code></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.tocsr" title="sisl.sparse.SparseCSR.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>([dim])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.sparse.SparseCSR.tocsr" title="sisl.sparse.SparseCSR.tocsr"><code class="xref py py-obj docutils literal"><span class="pre">tocsr</span></code></a>([dim])</td>
 <td>Return the data in <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> format</td>
 </tr>
 </tbody>
@@ -304,6 +309,33 @@ when converting to <code class="docutils literal"><span class="pre">scipy.sparse
 <dd><p>Whether the contained data is finalized and non-used elements have been removed</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="sisl.sparse.SparseCSR.iter_nnz">
+<code class="descname">iter_nnz</code><span class="sig-paren">(</span><em>i=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.sparse.SparseCSR.iter_nnz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterations of the non-zero elements, returns a tuple of row and column with non-zero elements</p>
+<p>An iterator returning the current row index and the corresponding column index.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>In the above case <code class="xref any docutils literal"><span class="pre">i</span></code> and <code class="xref any docutils literal"><span class="pre">j</span></code> are elements such that</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="bp">self</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span> 
+</pre></div>
+</div>
+<p>returns the non-zero element of the sparse matrix.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>i</strong> : <code class="xref any docutils literal"><span class="pre">int=</span></code>, <code class="xref any docutils literal"><span class="pre">array_like</span></code></p>
+<blockquote class="last">
+<div><p>only loop on the given row(s) default to all rows</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="sisl.sparse.SparseCSR.nnz">
 <code class="descname">nnz</code><a class="headerlink" href="#sisl.sparse.SparseCSR.nnz" title="Permalink to this definition">¶</a></dt>
@@ -359,8 +391,12 @@ when converting to <code class="docutils literal"><span class="pre">scipy.sparse
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>dim: int</strong></p>
-<blockquote class="last">
+<blockquote>
 <div><p>the dimension of the data to create the sparse matrix</p>
+</div></blockquote>
+<p><strong>**kwargs:</strong></p>
+<blockquote class="last">
+<div><p>arguments passed to the <code class="docutils literal"><span class="pre">scipy.sparse.csr_matrix</span></code> routine</p>
 </div></blockquote>
 </td>
 </tr>
@@ -368,6 +404,34 @@ when converting to <code class="docutils literal"><span class="pre">scipy.sparse
 </table>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.sparse.iter_spmatrix">
+<code class="descclassname">sisl.sparse.</code><code class="descname">iter_spmatrix</code><span class="sig-paren">(</span><em>matrix</em>, <em>map_row=None</em>, <em>map_col=None</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.sparse.iter_spmatrix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Iterator for iterating the elements in a <code class="docutils literal"><span class="pre">scipy.sparse.*_matrix</span></code></p>
+<p>This will always return:
+&gt;&gt;&gt; (row, column, matrix-element)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>matrix</strong> : <code class="docutils literal"><span class="pre">scipy.sparse.sp_matrix</span></code></p>
+<blockquote>
+<div><p>the sparse matrix to iterate non-zero elements</p>
+</div></blockquote>
+<p><strong>map_row</strong> : <code class="docutils literal"><span class="pre">func</span></code> (<code class="xref any docutils literal"><span class="pre">None</span></code>)</p>
+<blockquote>
+<div><p>map each row entry through the function <code class="xref any docutils literal"><span class="pre">map_row</span></code></p>
+</div></blockquote>
+<p><strong>map_col</strong> : <code class="docutils literal"><span class="pre">func</span></code> (<code class="xref any docutils literal"><span class="pre">None</span></code>)</p>
+<blockquote class="last">
+<div><p>map each column entry through the function <code class="xref any docutils literal"><span class="pre">map_col</span></code></p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>
@@ -381,7 +445,7 @@ when converting to <code class="docutils literal"><span class="pre">scipy.sparse
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/sisl.sparse.txt"
+      <li><a href="_sources/sisl.sparse.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -412,8 +476,8 @@ when converting to <code class="docutils literal"><span class="pre">scipy.sparse
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015, Nick R. Papior.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+        &#169; Copyright 2015-2017, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.
     </div>
   </body>
 </html>

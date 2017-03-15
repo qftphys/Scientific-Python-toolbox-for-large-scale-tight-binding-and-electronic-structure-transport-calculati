@@ -15,11 +15,11 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../',
-        VERSION:     'v0.8.1
-',
+        VERSION:     'v0.8.1-47-geded579',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../_static/jquery.js"></script>
@@ -29,8 +29,6 @@
     <script type="text/javascript" src="../_static/theme_extras.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="top" title="sisl |release| documentation" href="../index.html" />
-    <link rel="next" title="sdata" href="sdata.html" />
     <link rel="prev" title="sgeom" href="sgeom.html" /> 
   </head>
   <body role="document">
@@ -42,7 +40,6 @@
       <div class="relnav" role="navigation" aria-label="related navigation">
         <a href="sgeom.html">&laquo; <code class="docutils literal"><span class="pre">sgeom</span></code></a> |
         <a href="#"><code class="docutils literal"><span class="pre">sgrid</span></code></a>
-        | <a href="sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code> &raquo;</a>
       </div>
       <div id="contentwrapper">
         <div id="toc" role="navigation" aria-label="table of contents navigation">
@@ -91,7 +88,7 @@ implemented in <a class="reference internal" href="../sisl.html#module-sisl" tit
 <h2>Grid differences<a class="headerlink" href="#grid-differences" title="Permalink to this headline">¶</a></h2>
 <p>Often differences between two grids are needed. For this one can use the <code class="docutils literal"><span class="pre">--diff</span></code> flag which
 takes one additional grid file for the difference. I.e.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc<span class="o">[</span>0<span class="o">]</span> -g RUN.fdf --diff Rho.grid.nc<span class="o">[</span>1<span class="o">]</span> diff_up-down.cube
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc<span class="o">[</span><span class="m">0</span><span class="o">]</span> -g RUN.fdf --diff Rho.grid.nc<span class="o">[</span><span class="m">1</span><span class="o">]</span> diff_up-down.cube
 </pre></div>
 </div>
 <p>which takes the difference between the spin up and spin down in the same <code class="docutils literal"><span class="pre">Rho.grid.nc</span></code> file.</p>
@@ -108,7 +105,7 @@ sgrid &lt;file&gt; --remove x <span class="o">[</span>+-<span class="o">]</span>
 </div>
 <p>This needs an example, say the unit cell is an orthogonal unit-cell with side lengths 10x10x20 Angstrom.
 To reduce the cell to a middle square of 5x5x5 Angstrom you can do:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc --sub x 2.5:7.5 --sub y 2.5:7.5 --sub z 7.5:12.5 5x5x5.cube
+<div class="highlight-bash"><div class="highlight"><pre><span></span>sgrid Rho.grid.nc --sub x <span class="m">2</span>.5:7.5 --sub y <span class="m">2</span>.5:7.5 --sub z <span class="m">7</span>.5:12.5 5x5x5.cube
 </pre></div>
 </div>
 <p>note that the order of the reductions are made in the order of appearence. So <em>two</em> subsequent sub/remove
@@ -149,8 +146,8 @@ For inspiration you can check the <a class="reference internal" href="#"><span c
     </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015, Nick R. Papior.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+        &#169; Copyright 2015-2017, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.
     </div>
   </body>
 </html>

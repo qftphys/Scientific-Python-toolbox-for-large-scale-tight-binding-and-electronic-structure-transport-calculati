@@ -14,11 +14,11 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v0.8.1
-',
+        VERSION:     'v0.8.1-47-geded579',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -26,8 +26,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="sisl |release| documentation" href="index.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
   </head>
   <body role="document">
     <div class="header-wrapper" role="banner">
@@ -101,12 +100,80 @@
 <dt id="sisl.utils.misc.direction">
 <code class="descclassname">sisl.utils.misc.</code><code class="descname">direction</code><span class="sig-paren">(</span><em>d</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.misc.direction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the index of the direction that the input represents</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>d: str, int</strong></p>
+<blockquote class="last">
+<div><p>If one of &#8216;XYZ&#8217; or &#8216;xyz&#8217; or &#8216;ABC&#8217; or &#8216;abc&#8217; it will return 012. If it is an integer, it is returned &#8220;as is&#8221;</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 <dl class="function">
 <dt id="sisl.utils.misc.angle">
 <code class="descclassname">sisl.utils.misc.</code><code class="descname">angle</code><span class="sig-paren">(</span><em>s</em>, <em>radians=True</em>, <em>in_radians=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.misc.angle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert the input string to an angle.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>s: str</strong></p>
+<blockquote>
+<div><p>If <code class="xref any docutils literal"><span class="pre">s</span></code> starts with &#8216;r&#8217; it is interpreted as radians [0:2pi].
+If <code class="xref any docutils literal"><span class="pre">s</span></code> starts with &#8216;a&#8217; it is interpreted as a regular angle [0:360].
+If <code class="xref any docutils literal"><span class="pre">s</span></code> ends with &#8216;r&#8217; it returns in radians.
+If <code class="xref any docutils literal"><span class="pre">s</span></code> ends with &#8216;a&#8217; it returns in regular angle.</p>
+<p><code class="xref any docutils literal"><span class="pre">s</span></code> may be any mathematical equation which can be 
+intercepted through <code class="xref any docutils literal"><span class="pre">eval</span></code>.</p>
+</div></blockquote>
+<p><strong>radians: bool, True</strong></p>
+<blockquote>
+<div><p>Whether the returned angle is in radians. 
+Note than an &#8216;r&#8217; at the end of <code class="xref any docutils literal"><span class="pre">s</span></code> has precedence.</p>
+</div></blockquote>
+<p><strong>in_radians: bool, True</strong></p>
+<blockquote class="last">
+<div><p>Whether the calculated angle is in radians. 
+Note than an &#8216;r&#8217; at the beginning of <code class="xref any docutils literal"><span class="pre">s</span></code> has precedence.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="sisl.utils.misc.iter_shape">
+<code class="descclassname">sisl.utils.misc.</code><code class="descname">iter_shape</code><span class="sig-paren">(</span><em>shape</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.utils.misc.iter_shape" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generator for iterating a shp by returning consecutive slices</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>shape</strong> : <code class="docutils literal"><span class="pre">array_like</span></code></p>
+<blockquote class="last">
+<div><p>the shape of the iterator</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">slc</span> <span class="ow">in</span> <span class="n">iter_shape</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]):</span>
+<span class="gp">&gt;&gt;&gt; </span>   <span class="nb">print</span><span class="p">(</span><span class="n">slc</span><span class="p">)</span>
+<span class="go">[0, 0, 0]</span>
+<span class="go">[0, 0, 1]</span>
+<span class="go">[0, 0, 2]</span>
+<span class="go">[1, 0, 0]</span>
+<span class="go">[1, 0, 1]</span>
+<span class="go">[1, 0, 2]</span>
+</pre></div>
+</div>
 </dd></dl>
 
 </div>
@@ -119,9 +186,8 @@
         <div class="sidebar">
           <h3>Table Of Contents</h3>
           <ul>
-<li class="toctree-l1"><a class="reference internal" href="scripts/sgeom.html"><code class="docutils literal"><span class="pre">sgeom</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="scripts/sgrid.html"><code class="docutils literal"><span class="pre">sgrid</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="scripts/sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">File formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scripts.html">Scripts</a></li>
 </ul>
 
           <div role="search">
@@ -149,7 +215,7 @@
           </div>
           <div role="note" aria-label="source link">
               <br/>
-              <a href="_sources/sisl.utils.misc.txt"
+              <a href="_sources/sisl.utils.misc.rst.txt"
                 rel="nofollow">Show Source</a>
           </div>
         </div>
@@ -157,8 +223,8 @@
         <div class="right">
           
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015, Nick R. Papior.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+        &#169; Copyright 2015-2017, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.
     </div>
         </div>
         <div class="clearer"></div>

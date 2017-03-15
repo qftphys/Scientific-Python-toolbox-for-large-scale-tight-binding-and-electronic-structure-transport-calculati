@@ -42,6 +42,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,9 +84,8 @@
             
             
                 <ul>
-<li class="toctree-l1"><a class="reference internal" href="scripts/sgeom.html"><code class="docutils literal"><span class="pre">sgeom</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="scripts/sgrid.html"><code class="docutils literal"><span class="pre">sgrid</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="scripts/sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">File formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scripts.html">Scripts</a></li>
 </ul>
 
             
@@ -98,8 +98,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">sisl</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sisl</a>
+        
       </nav>
 
 
@@ -108,23 +110,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>sisl.io.table module</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>sisl.io.table module</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/sisl.io.table.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/sisl.io.table.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -178,16 +197,22 @@
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">line_has_keys</span></code>(line,&nbsp;keys[,&nbsp;case])</td>
 <td></td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic read method which should be overloaded in child-classes</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code>([comment])</td>
 <td>Reads the next line of the file</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.table.TableSile.write" title="sisl.io.table.TableSile.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(data[,&nbsp;header,&nbsp;footer,&nbsp;newline,&nbsp;fmt,&nbsp;...])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.table.TableSile.write" title="sisl.io.table.TableSile.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(data[,&nbsp;header,&nbsp;footer,&nbsp;newline,&nbsp;fmt,&nbsp;...])</td>
+<td>Write tabular data to the file with optional header.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.table.TableSile.write_data" title="sisl.io.table.TableSile.write_data"><code class="xref py py-obj docutils literal"><span class="pre">write_data</span></code></a>(data[,&nbsp;header,&nbsp;footer,&nbsp;newline,&nbsp;...])</td>
 <td>Write tabular data to the file with optional header.</td>
 </tr>
 </tbody>
@@ -198,11 +223,20 @@
 <dd><p>Write tabular data to the file with optional header.</p>
 </dd></dl>
 
+<dl class="method">
+<dt id="sisl.io.table.TableSile.write_data">
+<code class="descname">write_data</code><span class="sig-paren">(</span><em>data</em>, <em>header=None</em>, <em>footer=None</em>, <em>newline='\n'</em>, <em>fmt='%.5e'</em>, <em>comment=None</em>, <em>delimiter='\t'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.table.TableSile.write_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write tabular data to the file with optional header.</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
@@ -212,7 +246,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Nick R. Papior.
+        &copy; Copyright 2015-2017, Nick R. Papior.
 
     </p>
   </div>
@@ -234,11 +268,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.8.1
-',
+            VERSION:'v0.8.1-47-geded579',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

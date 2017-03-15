@@ -15,11 +15,11 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v0.8.1
-',
+        VERSION:     'v0.8.1-47-geded579',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -28,8 +28,7 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript" src="_static/theme_extras.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="sisl |release| documentation" href="index.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
   </head>
   <body role="document">
     <div id="content">
@@ -75,14 +74,20 @@
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
 <td>Appends additional arguments based on the output of the file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_es" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(\*\*kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic read method which should be overloaded in child-classes</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_es" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(**kwargs)</td>
 <td>Returns the electronic structure from the siesta.TSHS file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_geom" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_geom" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
 <td>Returns Geometry object from a siesta.TSHS file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_sc" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_sc" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
 <td>Returns a SuperCell object from a siesta.TSHS file</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic write method which should be overloaded in child-classes</td>
 </tr>
 </tbody>
 </table>
@@ -114,14 +119,20 @@ If <code class="xref any docutils literal"><span class="pre">mode</span></code> 
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
 <td>Appends additional arguments based on the output of the file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_es" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(\*\*kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">read</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic read method which should be overloaded in child-classes</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_es" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(**kwargs)</td>
 <td>Returns the electronic structure from the siesta.TSHS file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_geom" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_geom" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
 <td>Returns Geometry object from a siesta.TSHS file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_sc" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.binaries.TSHSSileSiesta.read_sc" title="sisl.io.siesta.binaries.TSHSSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
 <td>Returns a SuperCell object from a siesta.TSHS file</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic write method which should be overloaded in child-classes</td>
 </tr>
 </tbody>
 </table>
@@ -152,8 +163,8 @@ If <code class="xref any docutils literal"><span class="pre">mode</span></code> 
     </div>
 
     <div class="footer" role="contentinfo">
-        &#169; Copyright 2015, Nick R. Papior.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+        &#169; Copyright 2015-2017, Nick R. Papior.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.3.
     </div>
   </body>
 </html>

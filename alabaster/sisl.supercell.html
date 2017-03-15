@@ -14,11 +14,11 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v0.8.1
-',
+        VERSION:     'v0.8.1-47-geded579',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -27,7 +27,6 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="sisl |release| documentation" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -96,7 +95,7 @@
 <tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.prepend" title="sisl.supercell.SuperCell.prepend"><code class="xref py py-obj docutils literal"><span class="pre">prepend</span></code></a>(other,&nbsp;axis)</td>
 <td>Prepends other <a class="reference internal" href="#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> to this grid along axis</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.read" title="sisl.supercell.SuperCell.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.read" title="sisl.supercell.SuperCell.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Reads SuperCell from the <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <code class="xref any docutils literal"><span class="pre">Sile.read_sc</span></code></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotate" title="sisl.supercell.SuperCell.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>(angle,&nbsp;v[,&nbsp;only,&nbsp;radians])</td>
@@ -123,7 +122,7 @@
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.swapaxes" title="sisl.supercell.SuperCell.swapaxes"><code class="xref py py-obj docutils literal"><span class="pre">swapaxes</span></code></a>(a,&nbsp;b)</td>
 <td>Returns <a class="reference internal" href="#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> with swapped axis</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.tocell" title="sisl.supercell.SuperCell.tocell"><code class="xref py py-obj docutils literal"><span class="pre">tocell</span></code></a>(\*args)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.tocell" title="sisl.supercell.SuperCell.tocell"><code class="xref py py-obj docutils literal"><span class="pre">tocell</span></code></a>(*args)</td>
 <td>Returns a 3x3 unit-cell dependent on the input</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.translate" title="sisl.supercell.SuperCell.translate"><code class="xref py py-obj docutils literal"><span class="pre">translate</span></code></a>(v)</td>
@@ -177,7 +176,7 @@ and number of supercells in each direction.</p>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.prepend" title="sisl.supercell.SuperCell.prepend"><code class="xref py py-obj docutils literal"><span class="pre">prepend</span></code></a>(other,&nbsp;axis)</td>
 <td>Prepends other <a class="reference internal" href="#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> to this grid along axis</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.read" title="sisl.supercell.SuperCell.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.read" title="sisl.supercell.SuperCell.read"><code class="xref py py-obj docutils literal"><span class="pre">read</span></code></a>(sile,&nbsp;*args,&nbsp;**kwargs)</td>
 <td>Reads SuperCell from the <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a> using <code class="xref any docutils literal"><span class="pre">Sile.read_sc</span></code></td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.rotate" title="sisl.supercell.SuperCell.rotate"><code class="xref py py-obj docutils literal"><span class="pre">rotate</span></code></a>(angle,&nbsp;v[,&nbsp;only,&nbsp;radians])</td>
@@ -204,7 +203,7 @@ and number of supercells in each direction.</p>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.swapaxes" title="sisl.supercell.SuperCell.swapaxes"><code class="xref py py-obj docutils literal"><span class="pre">swapaxes</span></code></a>(a,&nbsp;b)</td>
 <td>Returns <a class="reference internal" href="#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> with swapped axis</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.tocell" title="sisl.supercell.SuperCell.tocell"><code class="xref py py-obj docutils literal"><span class="pre">tocell</span></code></a>(\*args)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCell.tocell" title="sisl.supercell.SuperCell.tocell"><code class="xref py py-obj docutils literal"><span class="pre">tocell</span></code></a>(*args)</td>
 <td>Returns a 3x3 unit-cell dependent on the input</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCell.translate" title="sisl.supercell.SuperCell.translate"><code class="xref py py-obj docutils literal"><span class="pre">translate</span></code></a>(v)</td>
@@ -473,7 +472,7 @@ routines directly related to the <a class="reference internal" href="#sisl.super
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCellChild.is_orthogonal" title="sisl.supercell.SuperCellChild.is_orthogonal"><code class="xref py py-obj docutils literal"><span class="pre">is_orthogonal</span></code></a>()</td>
 <td>Return true if all cell vectors are linearly independent</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCellChild.sc_index" title="sisl.supercell.SuperCellChild.sc_index"><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.supercell.SuperCellChild.sc_index" title="sisl.supercell.SuperCellChild.sc_index"><code class="xref py py-obj docutils literal"><span class="pre">sc_index</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td>Call local <a class="reference internal" href="#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object <a class="reference internal" href="#sisl.supercell.SuperCellChild.sc_index" title="sisl.supercell.SuperCellChild.sc_index"><code class="xref any py py-meth docutils literal"><span class="pre">sc_index</span></code></a> function</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.supercell.SuperCellChild.set_nsc" title="sisl.supercell.SuperCellChild.set_nsc"><code class="xref py py-obj docutils literal"><span class="pre">set_nsc</span></code></a>(nsc)</td>
@@ -572,7 +571,7 @@ routines directly related to the <a class="reference internal" href="#sisl.super
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/sisl.supercell.txt"
+      <li><a href="_sources/sisl.supercell.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -591,14 +590,14 @@ routines directly related to the <a class="reference internal" href="#sisl.super
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2015, Nick R. Papior.
+      &copy;2015-2017, Nick R. Papior.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="_sources/sisl.supercell.txt"
+      <a href="_sources/sisl.supercell.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

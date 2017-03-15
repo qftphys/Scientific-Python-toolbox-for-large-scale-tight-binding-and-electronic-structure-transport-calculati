@@ -42,6 +42,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,9 +84,8 @@
             
             
                 <ul>
-<li class="toctree-l1"><a class="reference internal" href="scripts/sgeom.html"><code class="docutils literal"><span class="pre">sgeom</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="scripts/sgrid.html"><code class="docutils literal"><span class="pre">sgrid</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="scripts/sdata.html"><code class="docutils literal"><span class="pre">sdata</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="files.html">File formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scripts.html">Scripts</a></li>
 </ul>
 
             
@@ -98,8 +98,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">sisl</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">sisl</a>
+        
       </nav>
 
 
@@ -108,23 +110,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>sisl.io.siesta.fdf module</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>sisl.io.siesta.fdf module</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/sisl.io.siesta.fdf.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/sisl.io.siesta.fdf.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -166,7 +185,7 @@
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.get" title="sisl.io.siesta.fdf.fdfSileSiesta.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(key[,&nbsp;unit,&nbsp;default,&nbsp;with_unit])</td>
 <td>Retrieve fdf-keyword from the file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.includes" title="sisl.io.siesta.fdf.fdfSileSiesta.includes"><code class="xref py py-obj docutils literal"><span class="pre">includes</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.includes" title="sisl.io.siesta.fdf.fdfSileSiesta.includes"><code class="xref py py-obj docutils literal"><span class="pre">includes</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
@@ -190,31 +209,34 @@
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.print" title="sisl.io.siesta.fdf.fdfSileSiesta.print"><code class="xref py py-obj docutils literal"><span class="pre">print</span></code></a>(key,&nbsp;value)</td>
 <td>Return a string which is pretty-printing the key+value</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_geom" title="sisl.io.siesta.fdf.fdfSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic read method which should be overloaded in child-classes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_geom" title="sisl.io.siesta.fdf.fdfSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td>Returns Geometry object from the FDF file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_sc" title="sisl.io.siesta.fdf.fdfSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_sc" title="sisl.io.siesta.fdf.fdfSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td>Returns <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from the FDF file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.readline" title="sisl.io.siesta.fdf.fdfSileSiesta.readline"><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code></a>([comment])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.readline" title="sisl.io.siesta.fdf.fdfSileSiesta.readline"><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code></a>([comment])</td>
 <td>Reads the next line of the file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.set" title="sisl.io.siesta.fdf.fdfSileSiesta.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(key,&nbsp;value[,&nbsp;keep])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.set" title="sisl.io.siesta.fdf.fdfSileSiesta.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(key,&nbsp;value[,&nbsp;keep])</td>
 <td>Add the key and value to the FDF file</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.type" title="sisl.io.siesta.fdf.fdfSileSiesta.type"><code class="xref py py-obj docutils literal"><span class="pre">type</span></code></a>(key)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.type" title="sisl.io.siesta.fdf.fdfSileSiesta.type"><code class="xref py py-obj docutils literal"><span class="pre">type</span></code></a>(key)</td>
 <td>Return the type of the fdf-keyword</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(\*args,&nbsp;\*\*kwargs)</td>
-<td>Wrapper for the file-handle write statement</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic write method which should be overloaded in child-classes</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.write_geom" title="sisl.io.siesta.fdf.fdfSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.write_geom" title="sisl.io.siesta.fdf.fdfSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
 </tbody>
@@ -250,7 +272,7 @@ By default the <code class="docutils literal"><span class="pre">base</span></cod
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.get" title="sisl.io.siesta.fdf.fdfSileSiesta.get"><code class="xref py py-obj docutils literal"><span class="pre">get</span></code></a>(key[,&nbsp;unit,&nbsp;default,&nbsp;with_unit])</td>
 <td>Retrieve fdf-keyword from the file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.includes" title="sisl.io.siesta.fdf.fdfSileSiesta.includes"><code class="xref py py-obj docutils literal"><span class="pre">includes</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.includes" title="sisl.io.siesta.fdf.fdfSileSiesta.includes"><code class="xref py py-obj docutils literal"><span class="pre">includes</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">is_keys</span></code>(keys)</td>
@@ -274,31 +296,34 @@ By default the <code class="docutils literal"><span class="pre">base</span></cod
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.print" title="sisl.io.siesta.fdf.fdfSileSiesta.print"><code class="xref py py-obj docutils literal"><span class="pre">print</span></code></a>(key,&nbsp;value)</td>
 <td>Return a string which is pretty-printing the key+value</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_geom" title="sisl.io.siesta.fdf.fdfSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic read method which should be overloaded in child-classes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_geom" title="sisl.io.siesta.fdf.fdfSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td>Returns Geometry object from the FDF file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_sc" title="sisl.io.siesta.fdf.fdfSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.read_sc" title="sisl.io.siesta.fdf.fdfSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td>Returns <a class="reference internal" href="sisl.supercell.html#sisl.supercell.SuperCell" title="sisl.supercell.SuperCell"><code class="xref any py py-class docutils literal"><span class="pre">SuperCell</span></code></a> object from the FDF file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.readline" title="sisl.io.siesta.fdf.fdfSileSiesta.readline"><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code></a>([comment])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.readline" title="sisl.io.siesta.fdf.fdfSileSiesta.readline"><code class="xref py py-obj docutils literal"><span class="pre">readline</span></code></a>([comment])</td>
 <td>Reads the next line of the file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.set" title="sisl.io.siesta.fdf.fdfSileSiesta.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(key,&nbsp;value[,&nbsp;keep])</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.set" title="sisl.io.siesta.fdf.fdfSileSiesta.set"><code class="xref py py-obj docutils literal"><span class="pre">set</span></code></a>(key,&nbsp;value[,&nbsp;keep])</td>
 <td>Add the key and value to the FDF file</td>
 </tr>
-<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_either</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.type" title="sisl.io.siesta.fdf.fdfSileSiesta.type"><code class="xref py py-obj docutils literal"><span class="pre">type</span></code></a>(key)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.type" title="sisl.io.siesta.fdf.fdfSileSiesta.type"><code class="xref py py-obj docutils literal"><span class="pre">type</span></code></a>(key)</td>
 <td>Return the type of the fdf-keyword</td>
 </tr>
-<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(\*args,&nbsp;\*\*kwargs)</td>
-<td>Wrapper for the file-handle write statement</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic write method which should be overloaded in child-classes</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.write_geom" title="sisl.io.siesta.fdf.fdfSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.fdf.fdfSileSiesta.write_geom" title="sisl.io.siesta.fdf.fdfSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td></td>
 </tr>
 </tbody>
@@ -400,6 +425,9 @@ fdf-key is used, if a <code class="xref any docutils literal"><span class="pre">
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -408,7 +436,7 @@ fdf-key is used, if a <code class="xref any docutils literal"><span class="pre">
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2015, Nick R. Papior.
+        &copy; Copyright 2015-2017, Nick R. Papior.
 
     </p>
   </div>
@@ -430,11 +458,11 @@ fdf-key is used, if a <code class="xref any docutils literal"><span class="pre">
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'v0.8.1
-',
+            VERSION:'v0.8.1-47-geded579',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

@@ -14,11 +14,11 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v0.8.1
-',
+        VERSION:     'v0.8.1-47-geded579',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -27,7 +27,6 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="sisl |release| documentation" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -59,7 +58,7 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">file</span></code></td>
-<td>File of the current <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a></td>
+<td>Filename of the current <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -70,7 +69,7 @@
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser" title="sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser" title="sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td>Returns the arguments that is available for this Sile</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
@@ -79,19 +78,43 @@
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.grids" title="sisl.io.siesta.siesta.ncSileSiesta.grids"><code class="xref py py-obj docutils literal"><span class="pre">grids</span></code></a>()</td>
 <td>Return a list of available grids in this file.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_es" title="sisl.io.siesta.siesta.ncSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(\*\*kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">isDataset</span></code>(obj)</td>
+<td>Return true if <code class="docutils literal"><span class="pre">obj</span></code> is an instance of the NetCDF4 <code class="docutils literal"><span class="pre">Dataset</span></code> type</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">isDimension</span></code>(obj)</td>
+<td>Return true if <code class="docutils literal"><span class="pre">obj</span></code> is an instance of the NetCDF4 <code class="docutils literal"><span class="pre">Dimension</span></code> type</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">isGroup</span></code>(obj)</td>
+<td>Return true if <code class="docutils literal"><span class="pre">obj</span></code> is an instance of the NetCDF4 <code class="docutils literal"><span class="pre">Group</span></code> type</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">isRoot</span></code>(obj)</td>
+<td>Return true if <code class="docutils literal"><span class="pre">obj</span></code> is an instance of the NetCDF4 <code class="docutils literal"><span class="pre">Dataset</span></code> type</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">isVariable</span></code>(obj)</td>
+<td>Return true if <code class="docutils literal"><span class="pre">obj</span></code> is an instance of the NetCDF4 <code class="docutils literal"><span class="pre">Variable</span></code> type</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">iter</span></code>([group,&nbsp;dimension,&nbsp;variable,&nbsp;levels,&nbsp;root])</td>
+<td>Iterator on all groups, variables and dimensions.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic read method which should be overloaded in child-classes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_es" title="sisl.io.siesta.siesta.ncSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(**kwargs)</td>
 <td>Returns a tight-binding model from the underlying NetCDF file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_geom" title="sisl.io.siesta.siesta.ncSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_geom" title="sisl.io.siesta.siesta.ncSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
 <td>Returns Geometry object from a SIESTA.nc file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_grid" title="sisl.io.siesta.siesta.ncSileSiesta.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>(name[,&nbsp;idx])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_grid" title="sisl.io.siesta.siesta.ncSileSiesta.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>(name[,&nbsp;idx])</td>
 <td>Reads a grid in the current SIESTA.nc file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_sc" title="sisl.io.siesta.siesta.ncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_sc" title="sisl.io.siesta.siesta.ncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
 <td>Returns a SuperCell object from a SIESTA.nc file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.write_es" title="sisl.io.siesta.siesta.ncSileSiesta.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(ham,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic write method which should be overloaded in child-classes</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.write_es" title="sisl.io.siesta.siesta.ncSileSiesta.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(ham,&nbsp;**kwargs)</td>
 <td>Writes Hamiltonian model to file</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.write_geom" title="sisl.io.siesta.siesta.ncSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom)</td>
@@ -117,7 +140,7 @@ open and subsequently accessed.</p>
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">file</span></code></td>
-<td>File of the current <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a></td>
+<td>Filename of the current <a class="reference internal" href="sisl.io.sile.html#sisl.io.sile.Sile" title="sisl.io.sile.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a></td>
 </tr>
 </tbody>
 </table>
@@ -128,7 +151,7 @@ open and subsequently accessed.</p>
 <col width="90%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser" title="sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>(\*args,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser" title="sisl.io.siesta.siesta.ncSileSiesta.ArgumentParser"><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser</span></code></a>(*args,&nbsp;**kwargs)</td>
 <td>Returns the arguments that is available for this Sile</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">ArgumentParser_out</span></code>([parser])</td>
@@ -137,19 +160,43 @@ open and subsequently accessed.</p>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.grids" title="sisl.io.siesta.siesta.ncSileSiesta.grids"><code class="xref py py-obj docutils literal"><span class="pre">grids</span></code></a>()</td>
 <td>Return a list of available grids in this file.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_es" title="sisl.io.siesta.siesta.ncSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(\*\*kwargs)</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">isDataset</span></code>(obj)</td>
+<td>Return true if <code class="docutils literal"><span class="pre">obj</span></code> is an instance of the NetCDF4 <code class="docutils literal"><span class="pre">Dataset</span></code> type</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">isDimension</span></code>(obj)</td>
+<td>Return true if <code class="docutils literal"><span class="pre">obj</span></code> is an instance of the NetCDF4 <code class="docutils literal"><span class="pre">Dimension</span></code> type</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">isGroup</span></code>(obj)</td>
+<td>Return true if <code class="docutils literal"><span class="pre">obj</span></code> is an instance of the NetCDF4 <code class="docutils literal"><span class="pre">Group</span></code> type</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">isRoot</span></code>(obj)</td>
+<td>Return true if <code class="docutils literal"><span class="pre">obj</span></code> is an instance of the NetCDF4 <code class="docutils literal"><span class="pre">Dataset</span></code> type</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">isVariable</span></code>(obj)</td>
+<td>Return true if <code class="docutils literal"><span class="pre">obj</span></code> is an instance of the NetCDF4 <code class="docutils literal"><span class="pre">Variable</span></code> type</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">iter</span></code>([group,&nbsp;dimension,&nbsp;variable,&nbsp;levels,&nbsp;root])</td>
+<td>Iterator on all groups, variables and dimensions.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">read</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic read method which should be overloaded in child-classes</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_es" title="sisl.io.siesta.siesta.ncSileSiesta.read_es"><code class="xref py py-obj docutils literal"><span class="pre">read_es</span></code></a>(**kwargs)</td>
 <td>Returns a tight-binding model from the underlying NetCDF file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_geom" title="sisl.io.siesta.siesta.ncSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_geom" title="sisl.io.siesta.siesta.ncSileSiesta.read_geom"><code class="xref py py-obj docutils literal"><span class="pre">read_geom</span></code></a>()</td>
 <td>Returns Geometry object from a SIESTA.nc file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_grid" title="sisl.io.siesta.siesta.ncSileSiesta.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>(name[,&nbsp;idx])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_grid" title="sisl.io.siesta.siesta.ncSileSiesta.read_grid"><code class="xref py py-obj docutils literal"><span class="pre">read_grid</span></code></a>(name[,&nbsp;idx])</td>
 <td>Reads a grid in the current SIESTA.nc file</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_sc" title="sisl.io.siesta.siesta.ncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.read_sc" title="sisl.io.siesta.siesta.ncSileSiesta.read_sc"><code class="xref py py-obj docutils literal"><span class="pre">read_sc</span></code></a>()</td>
 <td>Returns a SuperCell object from a SIESTA.nc file</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.write_es" title="sisl.io.siesta.siesta.ncSileSiesta.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(ham,&nbsp;\*\*kwargs)</td>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic write method which should be overloaded in child-classes</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.write_es" title="sisl.io.siesta.siesta.ncSileSiesta.write_es"><code class="xref py py-obj docutils literal"><span class="pre">write_es</span></code></a>(ham,&nbsp;**kwargs)</td>
 <td>Writes Hamiltonian model to file</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.siesta.siesta.ncSileSiesta.write_geom" title="sisl.io.siesta.siesta.ncSileSiesta.write_geom"><code class="xref py py-obj docutils literal"><span class="pre">write_geom</span></code></a>(geom)</td>
@@ -242,7 +289,7 @@ open and subsequently accessed.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/sisl.io.siesta.siesta.txt"
+      <li><a href="_sources/sisl.io.siesta.siesta.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -261,14 +308,14 @@ open and subsequently accessed.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2015, Nick R. Papior.
+      &copy;2015-2017, Nick R. Papior.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
       
       |
-      <a href="_sources/sisl.io.siesta.siesta.txt"
+      <a href="_sources/sisl.io.siesta.siesta.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

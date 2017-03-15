@@ -1,0 +1,7 @@
+sisl.quantity.self_energy module
+================================
+
+.. automodule:: sisl.quantity.self_energy
+    :members:
+    :undoc-members:
+    :show-inheritance:
