@@ -15,7 +15,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     'v0.8.1-47-geded579',
+        VERSION:     'v0.8.1-50-g55bc1e8',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true,
@@ -2908,12 +2908,12 @@ open and subsequently accessed.</p>
 <em class="property">class </em><code class="descclassname">sisl.io.</code><code class="descname">tbtncSileSiesta</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>lvl=0</em>, <em>access=1</em>, <em>_open=True</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.tbtncSileSiesta" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="sisl.io.siesta.sile.html#sisl.io.siesta.sile.SileCDFSIESTA" title="sisl.io.siesta.sile.SileCDFSIESTA"><code class="xref py py-class docutils literal"><span class="pre">sisl.io.siesta.sile.SileCDFSIESTA</span></code></a></p>
 <p>TBtrans file object</p>
-<p>This <a class="reference internal" href="#sisl.io.SileCDF" title="sisl.io.SileCDF"><code class="xref any py py-class docutils literal"><span class="pre">SileCDF</span></code></a> implements the TBtrans output <code class="xref any docutils literal"><span class="pre">*.TBT.nc</span></code> sile which contains
+<p>This <code class="docutils literal"><span class="pre">SileCDF</span></code> implements the TBtrans output <code class="xref any docutils literal"><span class="pre">*.TBT.nc</span></code> sile which contains
 calculated quantities related to the NEGF code TBtrans.</p>
 <p>Although the TBtrans code is in fortran and the resulting NetCDF file variables
 are in fortran indexing (1-based), everything is returned as Python indexing (0-based)
 when scripting.</p>
-<p>This is vital when using this <a class="reference internal" href="#sisl.io.Sile" title="sisl.io.Sile"><code class="xref any py py-class docutils literal"><span class="pre">Sile</span></code></a>.</p>
+<p>This is vital when using this <code class="docutils literal"><span class="pre">Sile</span></code>.</p>
 <p>Note that when using the command-line utility <code class="docutils literal"><span class="pre">sdata</span></code> the indexing is fortran based 
 because the data handlers are meant for _easy_ use.</p>
 <p class="rubric">Attributes</p>
@@ -6980,20 +6980,14 @@ open and subsequently accessed.</p>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal"><span class="pre">step_to</span></code>(keywords[,&nbsp;case])</td>
 <td>Steps the file-handle until the keyword is found in the input</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#sisl.io.TableSile.write" title="sisl.io.TableSile.write"><code class="xref py py-obj docutils literal"><span class="pre">write</span></code></a>(data[,&nbsp;header,&nbsp;footer,&nbsp;newline,&nbsp;fmt,&nbsp;...])</td>
-<td>Write tabular data to the file with optional header.</td>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal"><span class="pre">write</span></code>(*args,&nbsp;**kwargs)</td>
+<td>Generic write method which should be overloaded in child-classes</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#sisl.io.TableSile.write_data" title="sisl.io.TableSile.write_data"><code class="xref py py-obj docutils literal"><span class="pre">write_data</span></code></a>(data[,&nbsp;header,&nbsp;footer,&nbsp;newline,&nbsp;...])</td>
 <td>Write tabular data to the file with optional header.</td>
 </tr>
 </tbody>
 </table>
-<dl class="method">
-<dt id="sisl.io.TableSile.write">
-<code class="descname">write</code><span class="sig-paren">(</span><em>data</em>, <em>header=None</em>, <em>footer=None</em>, <em>newline='\n'</em>, <em>fmt='%.5e'</em>, <em>comment=None</em>, <em>delimiter='\t'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.TableSile.write" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write tabular data to the file with optional header.</p>
-</dd></dl>
-
 <dl class="method">
 <dt id="sisl.io.TableSile.write_data">
 <code class="descname">write_data</code><span class="sig-paren">(</span><em>data</em>, <em>header=None</em>, <em>footer=None</em>, <em>newline='\n'</em>, <em>fmt='%.5e'</em>, <em>comment=None</em>, <em>delimiter='\t'</em><span class="sig-paren">)</span><a class="headerlink" href="#sisl.io.TableSile.write_data" title="Permalink to this definition">¶</a></dt>

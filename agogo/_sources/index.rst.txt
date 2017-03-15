@@ -1,5 +1,3 @@
-.. include:: links.rst
-
 .. highlight:: python
 
 .. sisl documentation master file, created by
@@ -127,7 +125,7 @@ If you have any preferences please let me know.
 * `Bizstyle`_ theme (default, good)
 * `Classic`_ theme (ok)
 * `Scrolls`_ theme (good)
-* `Sphinx RTD`_ theme (ok)
+* `ReadTheDocs`_ theme (ok)
 
 
 .. _Alabaster: ../alabaster/index.html
@@ -135,19 +133,7 @@ If you have any preferences please let me know.
 .. _Bizstyle: ../bizstyle/index.html
 .. _Classic: ../classic/index.html
 .. _Scrolls: ../scrolls/index.html
-.. _Sphinx RTD: ../sphinx_rtd_theme/index.html
-.. _gh-releases: http://github.com/zerothi/sisl/releases
-.. _pypi-releases: http://pypi.python.org/pypi/sisl/
-
-.. These are external links:
-.. _six: https://pypi.python.org/pypi/six
-.. _netcdf4-python: http://github.com/Unidata/netcdf4-python
-.. _numpy: http://github.com/numpy/numpy
-.. _scipy: http://github.com/scipy/scipy
-.. _SIESTA: https://departments.icmab.es/leem/siesta/
-.. _TranSIESTA: https://launchpad.net/siesta
-.. _TBtrans: https://launchpad.net/siesta
-
+.. _ReadTheDocs: ../sphinx_rtd_theme/index.html
 
 .. |buildstatus| image:: https://travis-ci.org/zerothi/sisl.svg
 .. _buildstatus: https://travis-ci.org/zerothi/sisl
