@@ -10,15 +10,16 @@ sisl.quantity.hamiltonian
 Classes:
  * TightBinding -- missing methods:
 
-   - Hk
-   - Sk
    - construct
+   - copy
+   - create_construct
    - cut
    - eigh
    - eigsh
    - empty
    - finalize
-   - iter_linear
+   - iter
+   - iter_nnz
    - read
    - repeat
    - reset
@@ -26,4 +27,9 @@ Classes:
    - tile
    - tocsr
    - write
+
+sisl.utils.sdata
+----------------
+Functions:
+ * argparse_patch
 

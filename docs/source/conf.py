@@ -63,6 +63,10 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 
+# Append this snippet in _all_ sources
+rst_epilog = """
+.. include:: links.rst.dummy
+"""
 
 import glob
 autosummary_generate = glob.glob("source/*.rst")
