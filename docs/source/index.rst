@@ -1,3 +1,5 @@
+.. include:: links.rst
+
 .. highlight:: python
 
 .. sisl documentation master file, created by
