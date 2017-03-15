@@ -63,6 +63,10 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 
+
+import glob
+autosummary_generate = glob.glob("source/*.rst")
+
 # General information about the project.
 project = u'sisl'
 copyright = u'2015-2017, Nick R. Papior'
