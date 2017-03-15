@@ -31,7 +31,6 @@ sys.path.insert(0, os.path.abspath('../../..'))
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.autosummary',
     'sphinx.ext.doctest',
     'numpydoc',
     'sphinx.ext.todo',
@@ -47,9 +46,6 @@ extensions += [
 #    'matplotlib.sphinxext.ipython_directive',
 #    'matplotlib.sphinxext.ipython_console_highlighting'
 ]
-
-# Enable automatic summary
-autosummary_generate = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../templates']
@@ -67,7 +63,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'sisl'
-copyright = u'2015, Nick R. Papior'
+copyright = u'2015-2017, Nick R. Papior'
 author = u'Nick R. Papior'
 
 # The version info for the project you're documenting, acts as replacement for
