@@ -43,7 +43,7 @@ Below there is a list of file formats especially targetting a variety of DFT cod
       `fdfSileSiesta` input file for SIESTA_
 
   `bands`
-      `bandsSileSiesta` contains the band-structure output of SIESTA_, with `sdata` one may plot this file using the command-line.
+      `bandsSileSiesta` contains the band-structure output of SIESTA_, with :ref:`script_sdata` one may plot this file using the command-line.
 
   `out`
       `outSileSiesta` output file of SIESTA_, currently this may be used to
@@ -67,7 +67,7 @@ Below there is a list of file formats especially targetting a variety of DFT cod
 
   `TBT.AV.nc`
       `tbtavncSileSiesta` is the **k**-averaged equivalent of `tbtncSileSiesta`,
-      this may be generated using `sdata siesta.TBT.nc --tbt-av<sdata>`.
+      this may be generated using `sdata siesta.TBT.nc --tbt-av<script_sdata>`.
 
   `XV`
       `XVSileSiesta` is the currently runned geometry in SIESTA_.
