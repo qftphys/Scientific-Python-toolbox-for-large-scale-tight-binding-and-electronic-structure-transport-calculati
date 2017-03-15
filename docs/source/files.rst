@@ -4,7 +4,7 @@ File formats
 `sisl` implements a generic interface for interacting with many different file
 formats. When using the :doc:`command line utilities<scripts>` all these files
 are accepted as input for, especially :ref:`script_sdata` while only those which
-contains geometries (:py:class:`Geometry`) may be used with :ref:`script_sgeom`.
+contains geometries (`Geometry`) may be used with :ref:`script_sgeom`.
 
 In `sisl` any file is named a `Sile` to destinguish it from `File`.
 
