@@ -65,4 +65,4 @@ When using sisl as tight-binding setup for Hamiltonians and dynamical matrices f
 
 
 .. |zenodo| image:: https://zenodo.org/badge/doi/10.5281/zenodo.597181.svg
-.. _zenodo: http://dx.doi.org/10.5281/zenodo.597181
+.. _zenodo: https://doi.org/10.5281/zenodo.597181
