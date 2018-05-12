@@ -1,7 +1,7 @@
 # sisl #
 
 [![Build Status](https://travis-ci.org/zerothi/sisl.svg?branch=master)](https://travis-ci.org/zerothi/sisl)
-[![DOI for citation](https://zenodo.org/badge/doi/10.5281/zenodo.597181.svg)](http://dx.doi.org/10.5281/zenodo.597181)
+[![DOI for citation](https://zenodo.org/badge/doi/10.5281/zenodo.597181.svg)](https://doi.org/10.5281/zenodo.597181)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Join the chat at https://gitter.im/sisl-tool/Lobby](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/sisl-tool/Lobby)
 <!--- [![Documentation on RTD](https://readthedocs.org/projects/docs/badge/?version=latest)](http://sisl.readthedocs.io/en/latest/) -->
@@ -271,7 +271,7 @@ Links to external and internal sites.
 [sisl-api]: https://zerothi.github.io/sisl
 [issue]: https://github.com/zerothi/sisl/issues
 [tbtrans]: https://launchpad.net/siesta
-[doi]: http://dx.doi.org/10.5281/zenodo.597181
+[doi]: https://doi.org/10.5281/zenodo.597181
 [pr]: https://github.com/zerothi/sisl/pulls
 [lgpl]: http://www.gnu.org/licenses/lgpl.html
 [ase]: https://wiki.fysik.dtu.dk/ase/
